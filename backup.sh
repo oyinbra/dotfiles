@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Author : Chandu J S
+# Copyright (c) chandujs.dev
+
 # This script copy files mentioned inside `backup.conf` to the root of the project.
 
 # file to look for the paths to backup.
@@ -31,11 +34,8 @@ sed '/^[ \t]*$/d' $backupPaths | while read filePath; do
   originalFile="${filePath//${findThis}/${replaceWith}}"
 
   # copying the files
-  cp --parents --recursive $originalFile ./configurations
+  cp --parents --recursive "$originalFile" ./configurations
   sleep 0.05
 done
 
-git add .
-
 echo -e "$sameLine🎉 Backup finished! You can review & commit your changes."
-
