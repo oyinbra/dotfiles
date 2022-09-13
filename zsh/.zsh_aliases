@@ -1,0 +1,109 @@
+# ##############################################
+# ############### LINUX ONLY ###################
+# ##############################################
+
+# apt Update all apps in terminal
+alias au="sudo apt update && sudo apt upgrade"
+alias nu="sudo nala update && sudo nala upgrade"
+alias nud="sudo nala update"
+alias nug="sudo nala upgrade"
+
+# Update all apps in terminal with apt-get
+alias agu="sudo apt-get update && apt-get upgrade"
+
+# Work Directory
+alias w="cd ~/Workspace"
+
+# Project Directory
+alias p="cd ~/Workspace/projects"
+
+# Switch Python Version
+alias pyconfig="sudo update-alternatives --config python3"
+
+# Delete locked Directory or files
+alias rmv="rm -rf"
+
+# Delete apt-repo
+alias rar="sudo add-apt-repository --remove"
+
+# Add apt-repo
+alias aar="sudo add-apt-repository"
+
+# List Users
+alias lusers="cat /etc/passwd"
+
+
+# List Upgradable packages
+alias alu='apt list --upgradable'
+
+# List Upgradable packages
+alias clean='sudo apt autoclean && sudo apt autoremove'
+
+# Coinmarketcapital
+alias pycmc='py ~/Workspace/Python/cmc.py'
+
+# Hibernate
+alias hbn='sudo systemctl hibernate'
+
+# Nethogs
+alias nethogs="sudo nethogs"
+
+
+# ##############################################
+# ############## GENERAL ALIASES ###############
+# ##############################################
+
+# Reload zsh
+alias rz="source ~/.zshrc"
+
+# Zsh config
+alias zshconfig="code ~/.zshrc"
+
+# Bash config
+alias bashconfig="code ~/.bashrc"
+
+# Neofetch Distro
+alias nfconfig="code ~/.config/neofetch/config.conf"
+
+# Zsh aliases config
+alias aliasconfig="code ~/.zsh_aliases"
+
+# ##############################################
+# ################# GIT ########################
+# ##############################################
+
+alias gi="git init"
+alias cl="clear"
+alias n="nano"
+alias v="code"
+alias m="mkdir"
+alias g="git"
+alias ga="git add"
+alias gaa="git add --all"
+alias grao="git remote add origin"
+
+
+# Check Git current version
+alias gv="git --version"
+
+# Watch SASS and output to dist folder
+alias wsod="sass --watch scss:dist/css"
+
+# List Color
+alias ls="ls --color=auto"
+
+# Python
+alias py="python3"
+alias python="python3"
+
+# Python version
+alias pv="py --version"
+
+# Git commit message
+alias gcmsg="git commit -m"
+
+# Pip3 List
+alias pl="pip3 list"
+
+# Dotfiles
+alias dotfiles="~/.dotfiles"
