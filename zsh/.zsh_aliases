@@ -3,10 +3,14 @@
 # ##############################################
 
 # apt Update all apps in terminal
-alias au="sudo apt update && sudo apt upgrade"
-alias nu="sudo nala update && sudo nala upgrade"
+alias auu="sudo apt update && sudo apt upgrade"
+alias nuu="sudo nala update && sudo nala upgrade"
 alias nud="sudo nala update"
 alias nug="sudo nala upgrade"
+
+# Install Packages
+alias ninstall="sudo nala install"
+alias nremove="sudo nala remove"
 
 # Update all apps in terminal with apt-get
 alias agu="sudo apt-get update && apt-get upgrade"

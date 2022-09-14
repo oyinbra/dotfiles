@@ -1,3 +1,4 @@
 # Igonre git
 git/
+.zsh_history
 zsh/.zsh_history
