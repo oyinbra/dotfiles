@@ -1,60 +1,71 @@
 # ##############################################
-# ############### LINUX ONLY ###################
+# ######## APT LINUX ONLY ######################
 # ##############################################
 
-# apt Update all apps in terminal
+# UPDATE and INSTALL PACKAGES
 alias auu="sudo apt update && sudo apt upgrade"
+alias nud="sudo apt update"
+alias nug="sudo apt upgrade"
+alias agu="sudo apt-get update && apt-get upgrade"
+# Delete apt-repo
+alias rar="sudo add-apt-repository --remove"
+# Add apt-repo
+alias aar="sudo add-apt-repository"
+# List Upgradable packages
+alias alu='apt list --upgradable'
+# Clean Packages
+alias clean='sudo apt autoclean && sudo apt autoremove'
+
+# ##############################################
+# ######## NALA LINUX ONLY #####################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
 alias nuu="sudo nala update && sudo nala upgrade"
 alias nud="sudo nala update"
 alias nug="sudo nala upgrade"
-
-# Install Packages
 alias ninstall="sudo nala install"
 alias nremove="sudo nala remove"
 
-# Update all apps in terminal with apt-get
-alias agu="sudo apt-get update && apt-get upgrade"
+# ##############################################
+# ######## PACMAN LINUX ONLY ###################
+# ##############################################
 
-# Work Directory
-alias w="cd ~/Workspace"
+# UPDATE and INSTALL PACKAGES
+alias pud="sudo pacman -Sy"
+alias pug="sudo pacman -Syu"
+alias puu="sudo pacman -Syyu"
+alias pinstall="sudo pacman -S"
+alias premove="sudo pacman -R"
 
-# Project Directory
-alias p="cd ~/Workspace/projects"
+# ##############################################
+# ######## YAY LINUX ONLY ######################
+# ##############################################
 
-# Switch Python Version
-alias pyconfig="sudo update-alternatives --config python3"
-
-# Delete locked Directory or files
-alias rmv="rm -rf"
-
-# Delete apt-repo
-alias rar="sudo add-apt-repository --remove"
-
-# Add apt-repo
-alias aar="sudo add-apt-repository"
-
-# List Users
-alias lusers="cat /etc/passwd"
-
-
-# List Upgradable packages
-alias alu='apt list --upgradable'
-
-# List Upgradable packages
-alias clean='sudo apt autoclean && sudo apt autoremove'
-
-# Coinmarketcapital
-alias pycmc='py ~/Workspace/Python/cmc.py'
-
-# Hibernate
-alias hbn='sudo systemctl hibernate'
-
-# Nethogs
-alias nethogs="sudo nethogs"
+# UPDATE and INSTALL PACKAGES
+alias yud="sudo yay -Sy"
+alias yug="sudo yay -Syu"
+alias yuu="sudo yay -Syyu"
 
 
 # ##############################################
-# ############## GENERAL ALIASES ###############
+# ################# GIT ########################
+# ##############################################
+
+alias gi="git init"
+alias cl="clear"
+alias n="nano"
+alias v="code"
+alias m="mkdir"
+alias g="git"
+alias ga="git add"
+alias gaa="git add --all"
+alias grao="git remote add origin"
+# Git commit message
+alias gcmsg="git commit -m"
+
+# ##############################################
+# ############## DIRECTORY ALIASES #############
 # ##############################################
 
 # Reload zsh
@@ -72,20 +83,18 @@ alias nfconfig="code ~/.config/neofetch/config.conf"
 # Zsh aliases config
 alias aliasconfig="code ~/.zsh_aliases"
 
-# ##############################################
-# ################# GIT ########################
-# ##############################################
+# Dotfiles
+alias dotfiles="~/.dotfiles"
 
-alias gi="git init"
-alias cl="clear"
-alias n="nano"
-alias v="code"
-alias m="mkdir"
-alias g="git"
-alias ga="git add"
-alias gaa="git add --all"
-alias grao="git remote add origin"
+# Work Directory
+alias w="cd ~/Workspace"
 
+# Project Directory
+alias p="cd ~/Workspace/projects"
+
+# ##############################################
+# ############## ACTION ALIASES ################
+# ##############################################
 
 # Check Git current version
 alias gv="git --version"
@@ -103,11 +112,23 @@ alias python="python3"
 # Python version
 alias pv="py --version"
 
-# Git commit message
-alias gcmsg="git commit -m"
-
 # Pip3 List
 alias pl="pip3 list"
 
-# Dotfiles
-alias dotfiles="~/.dotfiles"
+# Switch Python Version
+alias pyconfig="sudo update-alternatives --config python3"
+
+# Delete locked Directory or files
+alias rmv="rm -rf"
+
+# List Users
+alias lusers="cat /etc/passwd"
+
+# Coinmarketcapital
+alias pycmc='py ~/Workspace/Python/cmc.py'
+
+# Hibernate
+alias hbn='sudo systemctl hibernate'
+
+# Nethogs
+alias nethogs="sudo nethogs"
