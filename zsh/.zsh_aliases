@@ -1,5 +1,5 @@
 # ##############################################
-# ######## APT LINUX ONLY ######################
+# ################### APT ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
@@ -8,16 +8,16 @@ alias nud="sudo apt update"
 alias nug="sudo apt upgrade"
 alias agu="sudo apt-get update && apt-get upgrade"
 # Delete apt-repo
-alias rar="sudo add-apt-repository --remove"
+alias adel="sudo add-apt-repository --remove"
 # Add apt-repo
-alias aar="sudo add-apt-repository"
+alias aadd="sudo add-apt-repository"
 # List Upgradable packages
 alias alu='apt list --upgradable'
 # Clean Packages
 alias clean='sudo apt autoclean && sudo apt autoremove'
 
 # ##############################################
-# ######## NALA LINUX ONLY #####################
+# ################### NALA #####################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
@@ -28,7 +28,7 @@ alias ninstall="sudo nala install"
 alias nremove="sudo nala remove"
 
 # ##############################################
-# ######## PACMAN LINUX ONLY ###################
+# ################### PACMAN ###################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
@@ -39,7 +39,7 @@ alias pinstall="sudo pacman -S"
 alias premove="sudo pacman -R"
 
 # ##############################################
-# ######## YAY LINUX ONLY ######################
+# ################### YAY ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
@@ -68,8 +68,8 @@ alias gcmsg="git commit -m"
 # ############## DIRECTORY ALIASES #############
 # ##############################################
 
-# Reload zsh
-alias rz="source ~/.zshrc"
+# Refresh zsh
+alias rf="source ~/.zshrc"
 
 # Zsh config
 alias zshconfig="code ~/.zshrc"
