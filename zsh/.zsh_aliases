@@ -47,6 +47,12 @@ alias yud="sudo yay -Sy"
 alias yug="sudo yay -Syu"
 alias yuu="sudo yay -Syyu"
 
+# ##############################################
+# ############### FLATPAK ######################
+# ##############################################
+
+alias finstall="flatpak install"
+alias fremove="flatpak remove"
 
 # ##############################################
 # ################# GIT ########################
@@ -63,6 +69,8 @@ alias gaa="git add --all"
 alias grao="git remote add origin"
 # Git commit message
 alias gcmsg="git commit -m"
+# Git status
+alias gst="git status"
 
 # ##############################################
 # ############## DIRECTORY ALIASES #############
@@ -72,16 +80,16 @@ alias gcmsg="git commit -m"
 alias rf="source ~/.zshrc"
 
 # Zsh config
-alias zshconfig="code ~/.zshrc"
+alias zshconfig="gedit ~/.zshrc"
 
 # Bash config
-alias bashconfig="code ~/.bashrc"
+alias bashconfig="gedit ~/.bashrc"
 
 # Neofetch Distro
-alias nfconfig="code ~/.config/neofetch/config.conf"
+alias nfconfig="gedit ~/.config/neofetch/config.conf"
 
 # Zsh aliases config
-alias aliasconfig="code ~/.zsh_aliases"
+alias aliasconfig="gedit ~/.zsh_aliases"
 
 # Dotfiles
 alias dotfiles="~/.dotfiles"
@@ -91,6 +99,12 @@ alias w="cd ~/Workspace"
 
 # Project Directory
 alias p="cd ~/Workspace/projects"
+
+# Repository Packages
+alias repos="~/Repos"
+
+# Coinmarketcapital
+alias cmc='py ~/Workspace/Python/cmc.py'
 
 # ##############################################
 # ############## ACTION ALIASES ################
@@ -104,6 +118,8 @@ alias wsod="sass --watch scss:dist/css"
 
 # List Color
 alias ls="ls --color=auto"
+# List All
+alias la="ls -all"
 
 # Python
 alias py="python3"
@@ -123,9 +139,6 @@ alias rmv="rm -rf"
 
 # List Users
 alias lusers="cat /etc/passwd"
-
-# Coinmarketcapital
-alias pycmc='py ~/Workspace/Python/cmc.py'
 
 # Hibernate
 alias hbn='sudo systemctl hibernate'
