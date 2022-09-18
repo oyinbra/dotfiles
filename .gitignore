@@ -1,4 +1,6 @@
 # Igonre git
-git/
-.zsh_history
-zsh/.zsh_history
+git/.git-credentials
+git/.gitconfig
+# Ignore zsh history
+zshrc-manjaro/.zhistory
+zshrc-ubuntu/.zsh_history
