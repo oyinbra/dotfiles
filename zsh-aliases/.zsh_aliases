@@ -43,11 +43,22 @@ alias premove="sudo pacman -R"
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias yud="sudo yay -Sy"
-alias yug="sudo yay -Syu"
-alias yuu="sudo yay -Syyu"
+alias yud="yay -Sy"
+alias yug="yay -Syu"
+alias yuu="yay -Syyu"
 alias yinstall="yay -S"
 alias yremove="yay -R"
+
+# ##############################################
+# ################### PARU ######################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias prud="paru -Sy"
+alias prug="paru -Syu"
+alias pruu="paru -Syyu"
+alias prinstall="paru -S"
+alias prremove="paru -R"
 
 # ##############################################
 # ############### FLATPAK ######################
@@ -84,16 +95,16 @@ alias gp="git push"
 alias rf="source ~/.zshrc"
 
 # Zsh config
-alias zshconfig="gedit ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 
 # Bash config
-alias bashconfig="gedit ~/.bashrc"
+alias bashconfig="code ~/.bashrc"
 
 # Neofetch Distro
-alias nfconfig="gedit ~/.config/neofetch/config.conf"
+alias nfconfig="code ~/.config/neofetch/config.conf"
 
 # Zsh aliases config
-alias aliasconfig="gedit ~/.zsh_aliases"
+alias aliasconfig="code ~/.zsh_aliases"
 
 # Dotfiles
 alias dotfiles="~/.dotfiles"

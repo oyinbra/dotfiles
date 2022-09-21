@@ -14,3 +14,6 @@ fi
 
 # ZSH ALIASES
 source ~/.zsh_aliases
+
+# Set default Editor
+export EDITOR=nvim
