@@ -68,6 +68,13 @@ alias finstall="flatpak install"
 alias fremove="flatpak remove"
 
 # ##############################################
+# ############### SNAP #########################
+# ##############################################
+
+alias sinstall="sudo snap install"
+alias sremove="sudo snap remove"
+
+# ##############################################
 # ################# GIT ########################
 # ##############################################
 
@@ -160,3 +167,6 @@ alias hbn='sudo systemctl hibernate'
 
 # Nethogs
 alias nethogs="sudo nethogs"
+
+# Nefetch
+alias nf="neofetch"
