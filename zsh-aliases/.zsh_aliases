@@ -35,7 +35,7 @@ alias nremove="sudo nala remove"
 alias pud="sudo pacman -Sy"
 alias pug="sudo pacman -Syu"
 alias puu="sudo pacman -Syyu"
-alias pinstall="sudo pacman -S"
+alias pinstall="sudo pacman -Syu"
 alias premove="sudo pacman -R"
 
 # ##############################################
@@ -46,7 +46,7 @@ alias premove="sudo pacman -R"
 alias yud="yay -Sy"
 alias yug="yay -Syu"
 alias yuu="yay -Syyu"
-alias yinstall="yay -S"
+alias yinstall="yay -Syu"
 alias yremove="yay -R"
 
 # ##############################################
@@ -57,7 +57,7 @@ alias yremove="yay -R"
 alias prud="paru -Sy"
 alias prug="paru -Syu"
 alias pruu="paru -Syyu"
-alias prinstall="paru -S"
+alias prinstall="paru -Syu"
 alias prremove="paru -R"
 
 # ##############################################
@@ -124,6 +124,9 @@ alias p="cd ~/Workspace/projects"
 
 # Repository Packages
 alias repos="~/Repos"
+
+# Pictures Folder
+alias pictures="~/Pictures"
 
 # Coinmarketcapital
 alias cmc='py ~/Workspace/Python/cmc.py'

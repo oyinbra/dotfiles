@@ -17,3 +17,7 @@ source ~/.zsh_aliases
 
 # Set default Editor
 export EDITOR=nvim
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
