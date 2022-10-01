@@ -3,76 +3,76 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias auu="sudo apt update && sudo apt upgrade"
-alias nud="sudo apt update"
-alias nug="sudo apt upgrade"
-alias agu="sudo apt-get update && apt-get upgrade"
+alias apt-uu="sudo apt update && sudo apt upgrade"
+alias apt-ud="sudo apt update"
+alias apt-ug="sudo apt upgrade"
+alias apt-get="sudo apt-get update && apt-get upgrade"
 # Delete apt-repo
-alias adel="sudo add-apt-repository --remove"
+alias apt-d="sudo add-apt-repository --remove"
 # Add apt-repo
-alias aadd="sudo add-apt-repository"
+alias apt-a="sudo add-apt-repository"
 # List Upgradable packages
-alias alu='apt list --upgradable'
+alias apt-l='apt list --upgradable'
 # Clean Packages
-alias clean='sudo apt autoclean && sudo apt autoremove'
+alias apt-c='sudo apt autoclean && sudo apt autoremove'
 
 # ##############################################
 # ################### NALA #####################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias nuu="sudo nala update && sudo nala upgrade"
-alias nud="sudo nala update"
-alias nug="sudo nala upgrade"
-alias ninstall="sudo nala install"
-alias nremove="sudo nala remove"
+alias nala-uu="sudo nala update && sudo nala upgrade"
+alias nala-ud="sudo nala update"
+alias nala-ug="sudo nala upgrade"
+alias nala-i="sudo nala install"
+alias nala-r="sudo nala remove"
 
 # ##############################################
 # ################### PACMAN ###################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias pud="sudo pacman -Sy"
-alias pug="sudo pacman -Syu"
-alias puu="sudo pacman -Syyu"
-alias pinstall="sudo pacman -Syu"
-alias premove="sudo pacman -R"
+alias pacman-ud="sudo pacman -Sy"
+alias pacman-ug="sudo pacman -Syu"
+alias pacman-uu="sudo pacman -Syyu"
+alias pacman-i="sudo pacman -Syu"
+alias pacman-r="sudo pacman -R"
 
 # ##############################################
 # ################### YAY ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias yud="yay -Sy"
-alias yug="yay -Syu"
-alias yuu="yay -Syyu"
-alias yinstall="yay -Syu"
-alias yremove="yay -R"
+alias yay-ud="yay -Sy"
+alias yay-ug="yay -Syu"
+alias yay-uu="yay -Syyu"
+alias yay-i="yay -Syu"
+alias yay-r="yay -R"
 
 # ##############################################
 # ################### PARU ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias prud="paru -Sy"
-alias prug="paru -Syu"
-alias pruu="paru -Syyu"
-alias prinstall="paru -Syu"
-alias prremove="paru -R"
+alias paru-ud="paru -Sy"
+alias paru-ug="paru -Syu"
+alias paru-uu="paru -Syyu"
+alias paru-i="paru -Syu"
+alias paru-r="paru -R"
 
 # ##############################################
 # ############### FLATPAK ######################
 # ##############################################
 
-alias finstall="flatpak install"
-alias fremove="flatpak remove"
+alias flatpak-i="flatpak install"
+alias flatpak-r"flatpak remove"
 
 # ##############################################
 # ############### SNAP #########################
 # ##############################################
 
-alias sinstall="sudo snap install"
-alias sremove="sudo snap remove"
+alias snap-i="sudo snap install"
+alias snap-r="sudo snap remove"
 
 # ##############################################
 # ################# GIT ########################
@@ -158,6 +158,9 @@ alias pl="pip3 list"
 
 # Switch Python Version
 alias pyconfig="sudo update-alternatives --config python3"
+
+# Terminal config
+alias tconfig="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete locked Directory or files
 alias rmv="rm -rf"
