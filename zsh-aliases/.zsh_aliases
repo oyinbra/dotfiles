@@ -146,6 +146,9 @@ alias cmc='py ~/Workspace/Python/cmc.py'
 # Check Folder size
 alias fs="du -sh"
 
+# Check Folder size
+alias c="~"
+
 # ##############################################
 # ############## ACTION ALIASES ################
 # ##############################################
