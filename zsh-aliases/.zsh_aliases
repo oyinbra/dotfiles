@@ -3,88 +3,88 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias uu-apt="sudo apt update && sudo apt upgrade"
-alias ud-apt="sudo apt update"
-alias ug-apt="sudo apt upgrade"
-alias get-apt="sudo apt-get update && apt-get upgrade"
+alias apt-uu="sudo apt update && sudo apt upgrade"
+alias apt-ud="sudo apt update"
+alias apt-ug="sudo apt upgrade"
+alias apt-get="sudo apt-get update && apt-get upgrade"
 # Delete apt-repo
-alias r-apt="sudo add-apt-repository --remove"
+alias r-apt-r="sudo add-apt-repository --remove"
 # Add apt-repo
-alias a-apt="sudo add-apt-repository"
+alias apt-a="sudo add-apt-repository"
 # List Upgradable packages
-alias l-apt='apt list --upgradable'
+alias apt-l='apt list --upgradable'
 # Clean Packages
-alias c-apt='sudo apt autoclean && sudo apt autoremove'
+alias apt-c='sudo apt autoclean && sudo apt autoremove'
 
 # ##############################################
 # ################### NALA #####################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias uu-nala="sudo nala update && sudo nala upgrade"
-alias ud-nala="sudo nala update"
-alias ug-nala="sudo nala upgrade"
-alias i-nala="sudo nala install"
-alias r-nala="sudo nala remove"
+alias nala-uu="sudo nala update && sudo nala upgrade"
+alias nala-ud="sudo nala update"
+alias nala-ug="sudo nala upgrade"
+alias nala-i="sudo nala install"
+alias nala-r="sudo nala remove"
 
 # ##############################################
 # ################### PACMAN ###################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias ud-pacman="sudo pacman -Sy"
-alias ug-pacman="sudo pacman -Syu"
-alias uu-pacman="sudo pacman -Syyu"
-alias i-pacman="sudo pacman -Syu"
-alias r-pacman="sudo pacman -R"
+alias pacman-ud="sudo pacman -Sy"
+alias pacman-ug="sudo pacman -Syu"
+alias pacman-uu="sudo pacman -Syyu"
+alias pacman-i="sudo pacman -Syu"
+alias pacman-r="sudo pacman -R"
 # Install pkg files
-alias ip-pacman="sudo pacman -U"
+alias pacman-uf="sudo pacman -U"
 # List packages in pkg cache file
-alias lp-pacman="ls /var/cache/pacman/pkg | less"
+alias pacman-lp="ls /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
-alias cup-pacman="sudo pacman -Sc"
+alias pacman-cup="sudo pacman -Sc"
 # Clean all packages from cache
-alias cap-pacman="sudo pacman -Scc"
+alias pacman-cap="sudo pacman -Scc"
 # List orphan packages
-alias lop-pacman="sudo pacman -Qtdq"
+alias pacman-lop="sudo pacman -Qtdq"
 # Remove orphan packages
-alias rop-pacman="sudo pacman -R $(pacman -Qtdq)"
+alias pacman-rop="sudo pacman -R $(pacman -Qtdq)"
 
 # ##############################################
 # ################### YAY ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias ud-yay="yay -Sy"
-alias ug-yay="yay -Syu"
-alias uu-yay="yay -Syyu"
-alias i-yay="yay -Syu"
-alias r-yay="yay -R"
+alias yay-ud="yay -Sy"
+alias yay-ug="yay -Syu"
+alias yay-uu="yay -Syyu"
+alias yay-i="yay -Syu"
+alias yay-r="yay -R"
 
 # ##############################################
 # ################### PARU ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias ud-paru="paru -Sy"
-alias ug-paru="paru -Syu"
-alias uu-paru="paru -Syyu"
-alias i-paru="paru -Syu"
-alias r-paru="paru -R"
+alias paru-ud="paru -Sy"
+alias paru-ug="paru -Syu"
+alias paru-uu="paru -Syyu"
+alias paru-i="paru -Syu"
+alias paru-r="paru -R"
 
 # ##############################################
 # ############### FLATPAK ######################
 # ##############################################
 
-alias i-flatpak"flatpak install"
-alias r-flatpak"flatpak remove"
+alias flatpak-i"flatpak install"
+alias flatpak-r"flatpak remove"
 
 # ##############################################
 # ############### SNAP #########################
 # ##############################################
 
-alias i-snap="sudo snap install"
-alias r-snap="sudo snap remove"
+alias snap-i="sudo snap install"
+alias snap-r="sudo snap remove"
 
 # ##############################################
 # ################# GIT ########################
