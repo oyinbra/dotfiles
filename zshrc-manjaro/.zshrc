@@ -21,6 +21,7 @@ export EDITOR=nvim
 # Set default Terminal
 export TERMINAL=tilix
 
+# Tilix Terminal
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi

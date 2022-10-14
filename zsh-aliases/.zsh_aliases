@@ -1,90 +1,90 @@
 # ##############################################
-# ################### APT ######################
-# ##############################################
-
-# UPDATE and INSTALL PACKAGES
-alias apt-uu="sudo apt update && sudo apt upgrade"
-alias apt-ud="sudo apt update"
-alias apt-ug="sudo apt upgrade"
-alias apt-get="sudo apt-get update && apt-get upgrade"
-# Delete apt-repo
-alias r-apt-r="sudo add-apt-repository --remove"
-# Add apt-repo
-alias apt-a="sudo add-apt-repository"
-# List Upgradable packages
-alias apt-l='apt list --upgradable'
-# Clean Packages
-alias apt-c='sudo apt autoclean && sudo apt autoremove'
-
-# ##############################################
-# ################### NALA #####################
-# ##############################################
-
-# UPDATE and INSTALL PACKAGES
-alias nala-uu="sudo nala update && sudo nala upgrade"
-alias nala-ud="sudo nala update"
-alias nala-ug="sudo nala upgrade"
-alias nala-i="sudo nala install"
-alias nala-r="sudo nala remove"
-
-# ##############################################
 # ################### PACMAN ###################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias pacman-ud="sudo pacman -Sy"
-alias pacman-ug="sudo pacman -Syu"
-alias pacman-uu="sudo pacman -Syyu"
-alias pacman-i="sudo pacman -Syu"
-alias pacman-r="sudo pacman -R"
+alias pacman.ud="sudo pacman -Sy"
+alias pacman.ug="sudo pacman -Syu"
+alias pacman.uu="sudo pacman -Syyu"
+alias pacman.i="sudo pacman -Syu"
+alias pacman.r="sudo pacman -R"
 # Install pkg files
-alias pacman-uf="sudo pacman -U"
+alias pacman.uf="sudo pacman -U"
 # List packages in pkg cache file
-alias pacman-lp="ls /var/cache/pacman/pkg | less"
+alias pacman.lp="ls /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
-alias pacman-cup="sudo pacman -Sc"
+alias pacman.cup="sudo pacman -Sc"
 # Clean all packages from cache
-alias pacman-cap="sudo pacman -Scc"
+alias pacman.cap="sudo pacman -Scc"
 # List orphan packages
-alias pacman-lop="sudo pacman -Qtdq"
+alias pacman.lop="sudo pacman -Qtdq"
 # Remove orphan packages
-alias pacman-rop="sudo pacman -R $(pacman -Qtdq)"
+alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
 
 # ##############################################
 # ################### YAY ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias yay-ud="yay -Sy"
-alias yay-ug="yay -Syu"
-alias yay-uu="yay -Syyu"
-alias yay-i="yay -Syu"
-alias yay-r="yay -R"
+alias yay.ud="yay -Sy"
+alias yay.ug="yay -Syu"
+alias yay.uu="yay -Syyu"
+alias yay.i="yay -Syu"
+alias yay.r="yay -R"
 
 # ##############################################
 # ################### PARU ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias paru-ud="paru -Sy"
-alias paru-ug="paru -Syu"
-alias paru-uu="paru -Syyu"
-alias paru-i="paru -Syu"
-alias paru-r="paru -R"
+alias paru.ud="paru -Sy"
+alias paru.ug="paru -Syu"
+alias paru.uu="paru -Syyu"
+alias paru.i="paru -Syu"
+alias paru.r="paru -R"
+
+# ##############################################
+# ################### APT ######################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias apt.uu="sudo apt update && sudo apt upgrade"
+alias apt.ud="sudo apt update"
+alias apt.ug="sudo apt upgrade"
+alias apt.get="sudo apt-get update && apt-get upgrade"
+# Delete apt-repo
+alias apt.r="sudo add-apt-repository --remove"
+# Add apt-repo
+alias apt.a="sudo add-apt-repository"
+# List Upgradable packages
+alias apt.l='apt list --upgradable'
+# Clean Packages
+alias apt.c='sudo apt autoclean && sudo apt autoremove'
+
+# ##############################################
+# ################### NALA #####################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias nala.uu="sudo nala update && sudo nala upgrade"
+alias nala.ud="sudo nala update"
+alias nala.ug="sudo nala upgrade"
+alias nala.i="sudo nala install"
+alias nala.r="sudo nala remove"
 
 # ##############################################
 # ############### FLATPAK ######################
 # ##############################################
 
-alias flatpak-i"flatpak install"
-alias flatpak-r"flatpak remove"
+alias flatpak.i"flatpak install"
+alias flatpak.r"flatpak remove"
 
 # ##############################################
 # ############### SNAP #########################
 # ##############################################
 
-alias snap-i="sudo snap install"
-alias snap-r="sudo snap remove"
+alias snap.i="sudo snap install"
+alias snap.r="sudo snap remove"
 
 # ##############################################
 # ################# GIT ########################
@@ -106,6 +106,14 @@ alias gst="git status"
 # Git Push
 alias gp="git push"
 
+
+# ##############################################
+# ############## AUTO-CPUFREQ ##################
+# ##############################################
+alias cf.stats="auto-cpufreq --stats"
+alias cf.monitor="sudo auto-cpufreq --monitor"
+alias cf.live="sudo auto-cpufreq --live"
+
 # ##############################################
 # ############## DIRECTORY ALIASES #############
 # ##############################################
@@ -114,16 +122,16 @@ alias gp="git push"
 alias rf="source ~/.zshrc"
 
 # Zsh config
-alias zshconfig="code ~/.zshrc"
+alias zsh.c="code ~/.zshrc"
 
 # Bash config
-alias bashconfig="code ~/.bashrc"
+alias bash.c="code ~/.bashrc"
 
 # Neofetch Distro
-alias nfconfig="code ~/.config/neofetch/config.conf"
+alias nf.c="code ~/.config/neofetch/config.conf"
 
 # Zsh aliases config
-alias aliasconfig="code ~/.zsh_aliases"
+alias zsh.a="code ~/.zsh_aliases"
 
 # Dotfiles
 alias dotfiles="~/.dotfiles"
@@ -146,7 +154,7 @@ alias cmc='py ~/Workspace/Python/cmc.py'
 # Check Folder size
 alias fs="du -sh"
 
-# Check Folder size
+# Home Directory
 alias c="~"
 
 # ##############################################
@@ -157,16 +165,16 @@ alias c="~"
 alias gv="git --version"
 
 # Watch SASS and output to dist folder
-alias wsod="sass --watch scss:dist/css"
+alias sass.d="sass --watch scss:dist/css"
 
 # List Color
 alias ls="ls --color=auto"
 # List All
-alias la="ls -all"
+alias la="ls -a"
 
 # Python
 alias py="python3"
-alias python="python3"
+# alias python="python3"
 
 # Python version
 alias pv="py --version"
@@ -175,10 +183,10 @@ alias pv="py --version"
 alias pl="pip3 list"
 
 # Switch Python Version
-alias pyconfig="sudo update-alternatives --config python3"
+alias python.c="sudo update-alternatives --config python3"
 
 # Terminal config
-alias tconfig="sudo update-alternatives --config x-terminal-emulator"
+alias t.c="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete locked Directory or files
 alias rmv="rm -rf"
@@ -192,5 +200,5 @@ alias hbn='sudo systemctl hibernate'
 # Nethogs
 alias nethogs="sudo nethogs"
 
-# Nefetch
+# Neofetch
 alias nf="neofetch"
