@@ -3,23 +3,29 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias pacman.ud="sudo pacman -Sy"
-alias pacman.ug="sudo pacman -Syu"
-alias pacman.uu="sudo pacman -Syyu"
-alias pacman.i="sudo pacman -Syu"
-alias pacman.r="sudo pacman -R"
+alias man.ud="sudo pacman -Sy"
+alias man.ug="sudo pacman -Syu"
+alias man.uu="sudo pacman -Syyu"
+alias man.i="sudo pacman -Syu"
+alias man.r="sudo pacman -R"
+# Downgrade Packages
+alias man.dg="sudo pacman -Suu"
 # Install pkg files
-alias pacman.uf="sudo pacman -U"
+alias man.uf="sudo pacman -U"
 # List packages in pkg cache file
-alias pacman.lp="ls /var/cache/pacman/pkg | less"
+alias man.lp="ls /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
-alias pacman.cup="sudo pacman -Sc"
+alias man.cup="sudo pacman -Sc"
+# Clean alien packages
+alias man.c="sudo pacman -c"
 # Clean all packages from cache
-alias pacman.cap="sudo pacman -Scc"
+alias man.cap="sudo pacman -Scc"
 # List orphan packages
-alias pacman.lop="sudo pacman -Qtdq"
+alias man.lop="sudo pacman -Qtdq"
 # Remove orphan packages
-alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
+alias man.rop="sudo pacman -R $(pacman -Qtdq)"
+# Pactree
+alias man.t="pactree -r"
 
 # ##############################################
 # ################### YAY ######################
@@ -42,6 +48,8 @@ alias paru.ug="paru -Syu"
 alias paru.uu="paru -Syyu"
 alias paru.i="paru -Syu"
 alias paru.r="paru -R"
+alias paru.c="paru -c"
+alias paru.m="man paru"
 
 # ##############################################
 # ################### APT ######################
@@ -76,8 +84,8 @@ alias nala.r="sudo nala remove"
 # ############### FLATPAK ######################
 # ##############################################
 
-alias flatpak.i"flatpak install"
-alias flatpak.r"flatpak remove"
+alias flatpak.i="flatpak install flathub"
+alias flatpak.r="flatpak remove"
 
 # ##############################################
 # ############### SNAP #########################
@@ -202,3 +210,6 @@ alias nethogs="sudo nethogs"
 
 # Neofetch
 alias nf="neofetch"
+
+# Symlink
+alias sym="sudo ln -s"
