@@ -3,15 +3,15 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
+alias archupdate="sudo pacman -Syyu"
 alias man.ud="sudo pacman -Sy"
 alias man.ug="sudo pacman -Syu"
-alias man.uu="sudo pacman -Syyu"
 alias man.i="sudo pacman -Syu"
 alias man.r="sudo pacman -R"
 # Downgrade Packages
 alias man.dg="sudo pacman -Suu"
 # Install pkg files
-alias man.uf="sudo pacman -U"
+alias man.ip="sudo pacman -U"
 # List packages in pkg cache file
 alias man.lp="ls /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
@@ -28,6 +28,19 @@ alias man.rop="sudo pacman -R $(pacman -Qtdq)"
 alias man.t="pactree -r"
 
 # ##############################################
+# ################### PARU ######################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias aurupdate="paru -Syyu"
+alias paru.ud="paru -Sy"
+alias paru.ug="paru -Syu"
+alias paru.i="paru -Syu"
+alias paru.r="paru -R"
+alias paru.c="paru -c"
+alias paru.m="man paru"
+
+# ##############################################
 # ################### YAY ######################
 # ##############################################
 
@@ -37,19 +50,6 @@ alias yay.ug="yay -Syu"
 alias yay.uu="yay -Syyu"
 alias yay.i="yay -Syu"
 alias yay.r="yay -R"
-
-# ##############################################
-# ################### PARU ######################
-# ##############################################
-
-# UPDATE and INSTALL PACKAGES
-alias paru.ud="paru -Sy"
-alias paru.ug="paru -Syu"
-alias paru.uu="paru -Syyu"
-alias paru.i="paru -Syu"
-alias paru.r="paru -R"
-alias paru.c="paru -c"
-alias paru.m="man paru"
 
 # ##############################################
 # ################### APT ######################
