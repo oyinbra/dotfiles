@@ -1,5 +1,6 @@
 # NEOFETCH
-neofetch --ascii ~/.mog.sh
+# neofetch --ascii ~/.mog.sh
+neofetch --config ~/.neofetch-config2.conf
 
 # Use powerline
 USE_POWERLINE="true"
