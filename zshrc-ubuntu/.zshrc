@@ -1,5 +1,6 @@
 # NEOFETCH
-neofetch --ascii ~/.mog.sh
+# neofetch --ascii ~/.mog.sh
+neofetch --config ~/.neofetch-config2.conf
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
