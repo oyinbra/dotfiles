@@ -3,29 +3,29 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-# alias archupdate="sudo pacman -Syyu"
-alias pman.ud="sudo pacman -Sy"
-alias pman.ug="sudo pacman -Syu"
-alias pman.i="sudo pacman -Syu"
-alias pman.r="sudo pacman -R"
+alias pacman.uu="sudo pacman -Syyu"
+alias pacman.ud="sudo pacman -Sy"
+alias pacman.ug="sudo pacman -Syu"
+alias pacman.i="sudo pacman -Syu"
+alias pacman.r="sudo pacman -R"
 # Downgrade Packages
-alias pman.dg="sudo pacman -Suu"
+alias pacman.dg="sudo pacman -Suu"
 # Install pkg files
 alias pman.ip="sudo pacman -U"
 # List packages in pkg cache file
-alias pman.lp="ls /var/cache/pacman/pkg | less"
+alias pacman.lp="ls /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
-alias pman.cup="sudo pacman -Sc"
+alias pacman.cup="sudo pacman -Sc"
 # Clean alien packages
-alias pman.c="sudo pacman -c"
+alias pacman.c="sudo pacman -c"
 # Clean all packages from cache
-alias pman.cap="sudo pacman -Scc"
+alias pacman.cap="sudo pacman -Scc"
 # List orphan packages
-alias pman.lop="sudo pacman -Qtdq"
+alias pacman.lop="sudo pacman -Qtdq"
 # Remove orphan packages
-alias pman.rop="sudo pacman -R $(pacman -Qtdq)"
+alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
 # Pactree
-alias pman.t="pactree -r"
+alias pacman.t="pactree -r"
 
 # ##############################################
 # ################### PARU ######################
