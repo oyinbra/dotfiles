@@ -3,29 +3,29 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias pacman.uu="sudo pacman -Syyu"
-alias pacman.ud="sudo pacman -Sy"
-alias pacman.ug="sudo pacman -Syu"
-alias pacman.i="sudo pacman -Syu"
-alias pacman.r="sudo pacman -R"
+alias pac.uu="sudo pacman -Syyu"
+alias pac.ud="sudo pacman -Sy"
+alias pac.ug="sudo pacman -Syu"
+alias pac.i="sudo pacman -S"
+alias pac.r="sudo pacman -R"
 # Downgrade Packages
-alias pacman.dg="sudo pacman -Suu"
+alias pac.dg="sudo pacman -Suu"
 # Install pkg files
-alias pman.ip="sudo pacman -U"
+alias pac.ip="sudo pacman -U"
 # List packages in pkg cache file
-alias pacman.lp="ls /var/cache/pacman/pkg | less"
+alias pac.lp="ls /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
-alias pacman.cup="sudo pacman -Sc"
+alias pac.cup="sudo pacman -Sc"
 # Clean alien packages
-alias pacman.c="sudo pacman -c"
+alias pac.c="sudo pacman -c"
 # Clean all packages from cache
-alias pacman.cap="sudo pacman -Scc"
+alias pac.cap="sudo pacman -Scc"
 # List orphan packages
-alias pacman.lop="sudo pacman -Qtdq"
+alias pac.lop="sudo pacman -Qtdq"
 # Remove orphan packages
-alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
+alias pac.rop="sudo pacman -R $(pacman -Qtdq)"
 # Pactree
-alias pacman.t="pactree -r"
+alias pac.t="pactree -r"
 
 # ##############################################
 # ################### PARU ######################
@@ -35,7 +35,7 @@ alias pacman.t="pactree -r"
 alias archupdate="paru -Syyu"
 alias paru.ud="paru -Sy"
 alias paru.ug="paru -Syu"
-alias paru.i="paru -Syu"
+alias paru.i="paru -S"
 alias paru.r="paru -R"
 alias paru.c="paru -c"
 alias paru.m="man paru"
@@ -130,16 +130,16 @@ alias cf.live="sudo auto-cpufreq --live"
 alias rf="source ~/.zshrc"
 
 # Zsh config
-alias zsh.c="kate ~/.zshrc"
+alias c.zshrc="code ~/.zshrc"
 
 # Bash config
-alias bash.c="kate ~/.bashrc"
+alias bash.c="code ~/.bashrc"
 
 # Neofetch Distro
-alias nf.c="kate ~/.config/neofetch/config.conf"
+alias nf.c="code ~/.config/neofetch/config.conf"
 
 # Zsh aliases config
-alias zsh.a="kate ~/.zsh_aliases"
+alias c.alias="code ~/.zsh_aliases"
 
 # Dotfiles
 alias dotfiles="~/.dotfiles"
@@ -191,10 +191,10 @@ alias pv="py --version"
 alias pl="pip3 list"
 
 # Switch Python Version
-alias python.c="sudo update-alternatives --config python3"
+alias c.python="sudo update-alternatives --config python3"
 
 # Terminal config
-alias t.c="sudo update-alternatives --config x-terminal-emulator"
+alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete locked Directory or files
 alias rmv="rm -rf"
@@ -212,4 +212,13 @@ alias nethogs="sudo nethogs"
 alias nf="neofetch"
 
 # Symlink
-alias sym="sudo ln -s"
+alias sym="ln -s"
+
+# Grub file
+alias c.grub="sudo nano /etc/default/grub"
+
+# Update Grub
+alias u.grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+# Configure mirror list
+alias c.mirror="sudo nano /etc/pacman.d/mirrorlist "
