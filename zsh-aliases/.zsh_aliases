@@ -3,7 +3,7 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias pac.uu="sudo pacman -Syyu"
+alias archupdate="sudo pacman -Syyu"
 alias pac.ud="sudo pacman -Sy"
 alias pac.ug="sudo pacman -Syu"
 alias pac.i="sudo pacman -S"
@@ -32,7 +32,7 @@ alias pac.t="pactree -r"
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias archupdate="paru -Syyu"
+alias aurupdate="paru -Syyu"
 alias paru.ud="paru -Sy"
 alias paru.ug="paru -Syu"
 alias paru.i="paru -S"
@@ -222,3 +222,6 @@ alias u.grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Configure mirror list
 alias c.mirror="sudo nano /etc/pacman.d/mirrorlist "
+
+# TimeShift configuration settings
+alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
