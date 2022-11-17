@@ -165,6 +165,18 @@ alias fs="du -sh"
 # Home Directory
 alias c="~"
 
+# User Share Themes
+alias us.themes="/usr/share/themes"
+
+# User Share Icons
+alias us.icons="/usr/share/icons"
+
+# User Share Fonts
+alias us.fonts="/usr/share/fonts"
+
+# Hostname config
+alias c.hostname="sudo nano /etc/hostname "
+
 # ##############################################
 # ############## ACTION ALIASES ################
 # ##############################################
@@ -225,3 +237,9 @@ alias c.mirror="sudo nano /etc/pacman.d/mirrorlist "
 
 # TimeShift configuration settings
 alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
+
+# System error
+alias s.error="sudo journalctl -p 3 -xb"
+
+# Failed processes
+alias s.process="sudo systemctl --failed"

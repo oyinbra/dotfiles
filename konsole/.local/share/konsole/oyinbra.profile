@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Breeze
-Font=MesloLGS NF,10,-1,5,75,1,0,0,0,0,Bold Italic
+Font=CaskaydiaCove Nerd Font,11,-1,5,50,0,0,0,0,0
 
 [General]
 Name=oyinbra
