@@ -11,9 +11,9 @@ alias pac.r="sudo pacman -R"
 # Downgrade Packages
 alias pac.dg="sudo pacman -Suu"
 # Install pkg files
-alias pac.ip="sudo pacman -U"
+alias pac.pkg="sudo pacman -U"
 # List packages in pkg cache file
-alias pac.lp="ls /var/cache/pacman/pkg | less"
+alias pac.pkglist="l /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
 alias pac.cup="sudo pacman -Sc"
 # Clean alien packages
@@ -26,6 +26,12 @@ alias pac.lop="sudo pacman -Qtdq"
 alias pac.rop="sudo pacman -R $(pacman -Qtdq)"
 # Pactree
 alias pac.t="pactree -r"
+# Pacman pkg packages
+alias pkgdir="/var/cache/pacman/pkg"
+# Completely clean packages
+alias pac.rs="sudo pacman -Rs"
+# Completely remove packages
+alias pac.rns="sudo pacman -Rns"
 
 # ##############################################
 # ################### PARU ######################
