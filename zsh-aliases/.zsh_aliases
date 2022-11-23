@@ -221,7 +221,10 @@ alias rmv="rm -rf"
 alias lusers="cat /etc/passwd"
 
 # Hibernate
-alias hbn='sudo systemctl hibernate'
+alias hibernate='systemctl hibernate'
+
+# Suspend
+alias suspend="systemctl suspend"
 
 # Nethogs
 alias nethogs="sudo nethogs"
@@ -249,3 +252,6 @@ alias s.error="sudo journalctl -p 3 -xb"
 
 # Failed processes
 alias s.process="sudo systemctl --failed"
+
+# Bpytop
+alias s.bpytop="bpytop"
