@@ -1,0 +1,263 @@
+# ##############################################
+# ################### PACMAN ###################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias archupdate="sudo pacman -Syyu"
+alias pac.ud="sudo pacman -Sy"
+alias pac.ug="sudo pacman -Syu"
+alias pac.i="sudo pacman -S"
+alias pac.r="sudo pacman -R"
+# Downgrade Packages
+alias pac.dg="sudo pacman -Suu"
+# Install pkg files
+alias pac.pkg="sudo pacman -U"
+# List packages in pkg cache file
+alias pac.pkglist="l /var/cache/pacman/pkg | less"
+# Clean uninstalled packages from cache
+alias pac.cup="sudo pacman -Sc"
+# Clean alien packages
+alias pac.c="sudo pacman -c"
+# Clean all packages from cache
+alias pac.cap="sudo pacman -Scc"
+# List orphan packages
+alias pac.lop="sudo pacman -Qtdq"
+# Remove orphan packages
+alias pac.rop="sudo pacman -R $(pacman -Qtdq)"
+# Pactree
+alias pac.t="pactree -r"
+# Pacman pkg packages
+alias pkgdir="/var/cache/pacman/pkg"
+# Completely clean packages
+alias pac.rs="sudo pacman -Rs"
+# Completely remove packages
+alias pac.rns="sudo pacman -Rns"
+
+# ##############################################
+# ################### PARU ######################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias aurupdate="paru -Syyu"
+alias paru.ud="paru -Sy"
+alias paru.ug="paru -Syu"
+alias paru.i="paru -S"
+alias paru.r="paru -R"
+alias paru.c="paru -c"
+alias paru.m="man paru"
+
+# ##############################################
+# ################### YAY ######################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias yay.ud="yay -Sy"
+alias yay.ug="yay -Syu"
+alias yay.uu="yay -Syyu"
+alias yay.i="yay -Syu"
+alias yay.r="yay -R"
+
+# ##############################################
+# ################### APT ######################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias apt.uu="sudo apt update && sudo apt upgrade"
+alias apt.ud="sudo apt update"
+alias apt.ug="sudo apt upgrade"
+alias apt.get="sudo apt-get update && apt-get upgrade"
+# Delete apt-repo
+alias apt.r="sudo add-apt-repository --remove"
+# Add apt-repo
+alias apt.a="sudo add-apt-repository"
+# List Upgradable packages
+alias apt.l='apt list --upgradable'
+# Clean Packages
+alias apt.c='sudo apt autoclean && sudo apt autoremove'
+
+# ##############################################
+# ################### NALA #####################
+# ##############################################
+
+# UPDATE and INSTALL PACKAGES
+alias nala.uu="sudo nala update && sudo nala upgrade"
+alias nala.ud="sudo nala update"
+alias nala.ug="sudo nala upgrade"
+alias nala.i="sudo nala install"
+alias nala.r="sudo nala remove"
+
+# ##############################################
+# ############### FLATPAK ######################
+# ##############################################
+
+alias flatpak.i="flatpak install flathub"
+alias flatpak.r="flatpak remove"
+
+# ##############################################
+# ############### SNAP #########################
+# ##############################################
+
+alias snap.i="sudo snap install"
+alias snap.r="sudo snap remove"
+
+# ##############################################
+# ################# GIT ########################
+# ##############################################
+
+alias gi="git init"
+alias cl="clear"
+alias n="nano"
+alias v="code"
+alias m="mkdir"
+alias g="git"
+alias ga="git add"
+alias gaa="git add --all"
+alias grao="git remote add origin"
+# Git commit message
+alias gcmsg="git commit -m"
+# Git status
+alias gst="git status"
+# Git Push
+alias gp="git push"
+
+
+# ##############################################
+# ############## AUTO-CPUFREQ ##################
+# ##############################################
+alias cf.stats="auto-cpufreq --stats"
+alias cf.monitor="sudo auto-cpufreq --monitor"
+alias cf.live="sudo auto-cpufreq --live"
+
+# ##############################################
+# ############## DIRECTORY ALIASES #############
+# ##############################################
+
+# Refresh zsh
+alias rf="source ~/.zshrc"
+
+# Zsh config
+alias c.zshrc="code ~/.zshrc"
+
+# Bash config
+alias bash.c="code ~/.bashrc"
+
+# Neofetch Distro
+alias nf.c="code ~/.config/neofetch/config.conf"
+
+# Zsh aliases config
+alias c.alias="code ~/.zsh_aliases"
+
+# Dotfiles
+alias dotfiles="~/.dotfiles"
+
+# Work Directory
+alias w="cd ~/Workspace"
+
+# Project Directory
+alias p="cd ~/Workspace/projects"
+
+# Repository Packages
+alias repos="~/Repos"
+
+# Pictures Folder
+alias pictures="~/Pictures"
+
+# Coinmarketcapital
+alias cmc='py ~/Workspace/Python/cmc.py'
+
+# Check Folder size
+alias fs="du -sh"
+
+# Home Directory
+alias c="~"
+
+# User Share Themes
+alias us.themes="/usr/share/themes"
+
+# User Share Icons
+alias us.icons="/usr/share/icons"
+
+# User Share Fonts
+alias us.fonts="/usr/share/fonts"
+
+# Hostname config
+alias c.hostname="sudo nano /etc/hostname "
+
+# ##############################################
+# ############## ACTION ALIASES ################
+# ##############################################
+
+# Check Git current version
+alias gv="git --version"
+
+# Watch SASS and output to dist folder
+alias sass.d="sass --watch scss:dist/css"
+
+# List Color
+alias ls="ls --color=auto"
+# List All
+alias la="ls -all"
+
+# Python
+alias py="python3"
+# alias python="python3"
+
+# Python version
+alias pv="py --version"
+
+# Pip3 List
+alias pl="pip3 list"
+
+# Switch Python Version
+alias c.python="sudo update-alternatives --config python3"
+
+# Terminal config
+alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
+
+# Delete locked Directory or files
+alias rmv="rm -rf"
+
+# List Users
+alias lusers="cat /etc/passwd"
+
+# Hibernate
+alias hibernate='systemctl hibernate'
+
+# Suspend
+alias suspend="systemctl suspend"
+
+# Nethogs
+alias nethogs="sudo nethogs"
+
+# Neofetch
+alias nf="neofetch"
+
+# Symlink
+alias sym="ln -sf"
+
+# Grub file
+alias c.grub="sudo nano /etc/default/grub"
+
+# Update Grub
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+# Configure mirror list
+alias c.mirror="sudo nano /etc/pacman.d/mirrorlist "
+
+# Update Manjaro Mirrors
+alias u.manjaro-mirrors="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
+
+# Update Arch Mirrors
+alias u.arch.mirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
+
+# TimeShift configuration settings
+alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
+
+# System error
+alias s.error="sudo journalctl -p 3 -xb"
+
+# Failed processes
+alias s.process="sudo systemctl --failed"
+
+# Bpytop
+alias s.bpytop="bpytop"
