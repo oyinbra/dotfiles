@@ -264,3 +264,6 @@ alias s.bpytop="bpytop"
 
 # Log out
 alias logout="loginctl terminate-user oyinbra"
+
+# Process ID
+alias pid="ps -ef|grep -i"
