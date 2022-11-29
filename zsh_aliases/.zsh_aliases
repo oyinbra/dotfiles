@@ -261,3 +261,6 @@ alias s.process="sudo systemctl --failed"
 
 # Bpytop
 alias s.bpytop="bpytop"
+
+# Log out
+alias logout="loginctl terminate-user oyinbra"

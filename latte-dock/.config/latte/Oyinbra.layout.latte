@@ -36,7 +36,7 @@ animationWindowAddedInGroup=false
 animationWindowInAttention=false
 hoverAction=PreviewAndHighlightWindows
 isInLatteDock=true
-launchers59=applications:org.kde.dolphin.desktop,applications:org.kde.latte-dock.desktop,applications:notion-app-enhanced.desktop,applications:org.kde.konsole.desktop,applications:com.obsproject.Studio.desktop,applications:google-chrome.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:brave-browser.desktop,applications:pycharm.desktop,applications:systemsettings.desktop,applications:android-studio.desktop,applications:timeshift-gtk.desktop,applications:discord.desktop,applications:org.manjaro.pamac.manager.desktop,applications:uget-gtk.desktop,applications:virtualbox.desktop,applications:fluent-reader.desktop,applications:Mailspring.desktop,applications:bitwarden.desktop,applications:spotify.desktop,applications:telegramdesktop.desktop,applications:code.desktop,applications:motrix.desktop
+launchers59=applications:org.kde.dolphin.desktop,applications:org.kde.latte-dock.desktop,applications:notion-app-enhanced.desktop,applications:org.kde.konsole.desktop,applications:com.obsproject.Studio.desktop,applications:google-chrome.desktop,applications:org.kde.plasma-systemmonitor.desktop,applications:brave-browser.desktop,applications:pycharm.desktop,applications:systemsettings.desktop,applications:android-studio.desktop,applications:timeshift-gtk.desktop,applications:discord.desktop,applications:org.manjaro.pamac.manager.desktop,applications:uget-gtk.desktop,applications:virtualbox.desktop,applications:fluent-reader.desktop,applications:Mailspring.desktop,applications:bitwarden.desktop,applications:spotify.desktop,applications:telegramdesktop.desktop,applications:code.desktop,applications:motrix.desktop,applications:org.kde.kdeconnect.app.desktop
 
 [Containments][1][Applets][303]
 immutability=1
@@ -71,6 +71,19 @@ DialogWidth=720
 immutability=1
 plugin=org.kde.plasma.lock_logout
 
+[Containments][1][Applets][306][Configuration]
+PreloadWeight=10
+
+[Containments][1][Applets][310]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][1][Applets][310][Configuration]
+PreloadWeight=100
+
+[Containments][1][Applets][310][Configuration][General]
+favoritesPortedToKAstats=true
+
 [Containments][1][ConfigDialog]
 DialogHeight=600
 DialogWidth=586
@@ -82,7 +95,7 @@ PreloadWeight=0
 advanced=false
 alignment=10
 alignmentUpgraded=true
-appletOrder=2;306
+appletOrder=310;2;306
 appletShadowsEnabled=false
 autoSizeEnabled=false
 blurEnabled=false
@@ -101,8 +114,8 @@ shadowSize=45
 shadows=All
 shadowsUpgraded=true
 showGlow=false
-splitterPosition=1
-splitterPosition2=3
+splitterPosition=2
+splitterPosition2=4
 tasksUpgraded=true
 thickMargin=19
 zoomLevel=2
@@ -141,7 +154,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][25][Applets][277][Configuration]
-PreloadWeight=100
+PreloadWeight=97
 
 [Containments][25][Applets][277][Configuration][ConfigDialog]
 DialogHeight=540
@@ -157,7 +170,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][25][Applets][280][Configuration]
-PreloadWeight=100
+PreloadWeight=99
 SystrayContainmentId=281
 
 [Containments][25][Applets][299]
@@ -191,7 +204,7 @@ immutability=1
 plugin=org.kde.plasma.betterinlineclock
 
 [Containments][25][Applets][305][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][25][Applets][305][Configuration][Appearance]
 fixedFont=true
@@ -283,7 +296,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][281][Applets][284][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][281][Applets][285]
 immutability=1
@@ -318,7 +331,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][281][Applets][291][Configuration]
-PreloadWeight=56
+PreloadWeight=26
 
 [Containments][281][Applets][292]
 immutability=1
@@ -339,7 +352,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][281][Applets][294][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][281][Applets][295]
 immutability=1
@@ -353,14 +366,18 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][281][Applets][297][Configuration]
-PreloadWeight=10
+PreloadWeight=5
 
 [Containments][281][Applets][307]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][281][Applets][307][Configuration]
-PreloadWeight=10
+PreloadWeight=0
+
+[Containments][281][Applets][307][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
 
 [Containments][281][General]
 extraItems=org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.bluetooth,org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.manage-inputmethod,org.kde.plasma.printmanager,org.kde.plasma.devicenotifier,org.kde.kdeconnect,org.kde.plasma.networkmanagement,org.kde.plasma.keyboardindicator
