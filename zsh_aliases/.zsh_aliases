@@ -184,6 +184,26 @@ alias us.fonts="/usr/share/fonts"
 alias c.hostname="sudo nano /etc/hostname "
 
 # ##############################################
+# ############## MIRROR ALIASES ################
+# ##############################################
+
+
+# Configure Arch mirror list
+alias c.arch-mirror="sudo nano /etc/pacman.d/mirrorlist"
+
+# Configure EndeavourOS Mirror List
+alias c.endeavouros-mirror="nano /etc/pacman.d/endeavouros-mirrorlist"
+
+# Configure Chaotic Mirror List
+alias c.chaotic-mirror="nano /etc/pacman.d/chaotic-mirrorlistt"
+
+# Update Manjaro Mirrors
+alias u.manjaro-mirrors="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
+
+# Update Arch Mirrors
+alias u.arch.mirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
+
+# ##############################################
 # ############## ACTION ALIASES ################
 # ##############################################
 
@@ -240,15 +260,6 @@ alias c.grub="sudo nano /etc/default/grub"
 
 # Update Grub
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-# Configure mirror list
-alias c.mirror="sudo nano /etc/pacman.d/mirrorlist "
-
-# Update Manjaro Mirrors
-alias u.manjaro-mirrors="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
-
-# Update Arch Mirrors
-alias u.arch.mirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
 
 # TimeShift configuration settings
 alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
