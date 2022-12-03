@@ -15,13 +15,13 @@ eDP-1 Width 1920x1080 eDP-1=980
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Applications/Icons/FDM-Logo.png
-Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/Applications/Icons/,file:$HOME/Applications/,file:$HOME/
+Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Icons/FDM-Logo.png
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/Applications/Icons/,file:$HOME/Applications/,file:$HOME/,file:$HOME/Icons/
 detailViewIconSize=16
 
 [KPropertiesDialog]
 eDP-1 Height 1920x1080 eDP-1=491
-eDP-1 Width 1920x1080 eDP-1=413
+eDP-1 Width 1920x1080 eDP-1=404
 eDP1 Height 1920x1080 eDP1=491
 eDP1 Width 1920x1080 eDP1=407
 

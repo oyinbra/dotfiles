@@ -4,40 +4,42 @@
 
 # UPDATE and INSTALL PACKAGES
 alias archupdate="sudo pacman -Syyu"
-alias pac.ud="sudo pacman -Sy"
-alias pac.ug="sudo pacman -Syu"
-alias pac.i="sudo pacman -S"
-alias pac.r="sudo pacman -R"
+alias pacman.ud="sudo pacman -Sy"
+alias pacman.ug="sudo pacman -Syu"
+alias pacman.i="sudo pacman -S"
+alias pacman.r="sudo pacman -R"
 # Downgrade Packages
-alias pac.dg="sudo pacman -Suu"
+alias pacman.dg="sudo pacman -Suu"
 # Install pkg files
-alias pac.pkg="sudo pacman -U"
+alias pacman.pkg="sudo pacman -U"
 # List packages in pkg cache file
-alias pac.pkglist="l /var/cache/pacman/pkg | less"
+alias pacman.pkglist="l /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
-alias pac.cup="sudo pacman -Sc"
+alias pacman.cup="sudo pacman -Sc"
 # Clean alien packages
-alias pac.c="sudo pacman -c"
+alias pacman.c="sudo pacman -c"
 # Clean all packages from cache
-alias pac.cap="sudo pacman -Scc"
+alias pacman.cap="sudo pacman -Scc"
 # List orphan packages
-alias pac.lop="sudo pacman -Qtdq"
+alias pacman.lop="sudo pacman -Qtdq"
 # Remove orphan packages
-alias pac.rop="sudo pacman -R $(pacman -Qtdq)"
+alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
 # Pactree
-alias pac.t="pactree -r"
+alias pacman.t="pactree -r"
 # Pacman pkg packages
 alias pkgdir="/var/cache/pacman/pkg"
 # Completely clean packages
-alias pac.rs="sudo pacman -Rs"
+alias pacman.rs="sudo pacman -Rs"
 # Completely remove packages
-alias pac.rns="sudo pacman -Rns"
+alias pacman.rns="sudo pacman -Rns"
 
 # ##############################################
 # ################### PARU ######################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
+# Turn paru into yay
+alias yay="paru"
 alias aurupdate="paru -Syyu"
 alias paru.ud="paru -Sy"
 alias paru.ug="paru -Syu"
@@ -156,8 +158,8 @@ alias w="cd ~/Workspace"
 # Project Directory
 alias p="cd ~/Workspace/projects"
 
-# Repository Packages
-alias repos="~/Repos"
+# PKG Packages
+alias pkg="~/PKG"
 
 # Pictures Folder
 alias pictures="~/Pictures"
@@ -278,3 +280,6 @@ alias logout="loginctl terminate-user oyinbra"
 
 # Process ID
 alias pid="ps -ef|grep -i"
+
+# Systemctl Services
+alias s.systemctl="systemctl list-unit-files --type=service"
