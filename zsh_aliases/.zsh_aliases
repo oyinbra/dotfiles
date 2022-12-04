@@ -13,7 +13,7 @@ alias pacman.dg="sudo pacman -Suu"
 # Install pkg files
 alias pacman.pkg="sudo pacman -U"
 # List packages in pkg cache file
-alias pacman.pkglist="l /var/cache/pacman/pkg | less"
+alias pacman.pkg.list="l /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
 alias pacman.cup="sudo pacman -Sc"
 # Clean alien packages
@@ -27,7 +27,7 @@ alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
 # Pactree
 alias pacman.t="pactree -r"
 # Pacman pkg packages
-alias pkgdir="/var/cache/pacman/pkg"
+alias pkg.dir="/var/cache/pacman/pkg"
 # Completely clean packages
 alias pacman.rs="sudo pacman -Rs"
 # Completely remove packages
