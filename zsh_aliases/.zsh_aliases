@@ -3,21 +3,20 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
+alias update="sudo pacman -Sy"
 alias archupdate="sudo pacman -Syyu"
-alias pacman.ud="sudo pacman -Sy"
-alias pacman.ug="sudo pacman -Syu"
-alias pacman.i="sudo pacman -S"
+alias pacman.i="sudo pacman -Sy"
 alias pacman.r="sudo pacman -R"
 # Downgrade Packages
 alias pacman.dg="sudo pacman -Suu"
 # Install pkg files
-alias pacman.pkg="sudo pacman -U"
+alias pacman.u="sudo pacman -U"
 # List packages in pkg cache file
 alias pacman.pkg.list="l /var/cache/pacman/pkg | less"
 # Clean uninstalled packages from cache
 alias pacman.cup="sudo pacman -Sc"
 # Clean alien packages
-alias pacman.c="sudo pacman -c"
+#alias pacman.c="sudo pacman -c"
 # Clean all packages from cache
 alias pacman.cap="sudo pacman -Scc"
 # List orphan packages
@@ -126,9 +125,9 @@ alias gp="git push"
 # ##############################################
 # ############## AUTO-CPUFREQ ##################
 # ##############################################
-alias cf.stats="auto-cpufreq --stats"
-alias cf.monitor="sudo auto-cpufreq --monitor"
-alias cf.live="sudo auto-cpufreq --live"
+alias s.cpustats="auto-cpufreq --stats"
+alias s.cpumonitor="sudo auto-cpufreq --monitor"
+alias s.cpu.live="sudo auto-cpufreq --live"
 
 # ##############################################
 # ############## DIRECTORY ALIASES #############
@@ -243,7 +242,7 @@ alias rmv="rm -rf"
 alias lusers="cat /etc/passwd"
 
 # Hibernate
-alias hibernate='systemctl hibernate'
+# alias hibernate='systemctl hibernate'
 
 # Suspend
 alias suspend="systemctl suspend"
@@ -261,7 +260,7 @@ alias sym="ln -sf"
 alias c.grub="sudo nano /etc/default/grub"
 
 # Update Grub
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 
 # TimeShift configuration settings
 alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
