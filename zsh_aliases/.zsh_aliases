@@ -242,7 +242,7 @@ alias rmv="rm -rf"
 alias lusers="cat /etc/passwd"
 
 # Hibernate
-# alias hibernate='systemctl hibernate'
+alias hibernate="systemctl hibernate"
 
 # Suspend
 alias suspend="systemctl suspend"
@@ -260,7 +260,7 @@ alias sym="ln -sf"
 alias c.grub="sudo nano /etc/default/grub"
 
 # Update Grub
-alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # TimeShift configuration settings
 alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
