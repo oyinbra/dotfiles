@@ -28,6 +28,7 @@ ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf ~/
 ln -sf ~/.dotfiles/themes/.themes ~/
 # Enable color in nano editor for user
 ln -sf ~/.dotfiles/nano/.nanorc ~/
+ln -sf ~/.dotfiles/aurorae ~/.local/share/
 source ~/.zshrc
 
 # Enable color in nano editor for root user
