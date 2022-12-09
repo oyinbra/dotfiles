@@ -182,7 +182,10 @@ alias us.icons="/usr/share/icons"
 alias us.fonts="/usr/share/fonts"
 
 # Hostname config
-alias c.hostname="sudo nano /etc/hostname "
+alias c.hostname="sudo nano /etc/hostname"
+
+# Git folder
+alias repos="~/Repos"
 
 # ##############################################
 # ############## MIRROR ALIASES ################
@@ -282,3 +285,6 @@ alias pid="ps -ef|grep -i"
 
 # Systemctl Services
 alias s.systemctl="systemctl list-unit-files --type=service"
+
+# Btop settings
+alias btop="btop --utf-force"
