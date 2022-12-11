@@ -27,12 +27,10 @@ ln -sf ~/.dotfiles/icons/.icons ~/
 ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf ~/
 ln -sf ~/.dotfiles/themes/.themes ~/
 # Enable color in nano editor for user
-ln -sf ~/.dotfiles/nano/.nanorc ~/
 ln -sf ~/.dotfiles/aurorae ~/.local/share/
 source ~/.zshrc
 
-# Enable color in nano editor for root user
-sudo ln -sf ~/.dotfiles/nano/.nanorc /root
+
 # Arcolinux Mirror
 sudo ln -sf ~/.dotfiles/pacman-mirrior/etc/pacman.d/arcolinux-mirrorlist /etc/pacman.d/
 sudo cp -r ~/.oh-my-zsh /root
@@ -42,6 +40,9 @@ sudo ln -sf ~/.dotfiles/powerlevel10k-root/.p10k.zsh /root/
 sudo ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf /root
 sudo ln -sf ~/.dotfiles/neofetch-ascii/usr/bin/neofetch /usr/bin
 
+# Enable color in nano editor for root user
+sudo ln -sf ~/.dotfiles/nano/.nanorc /root
+ln -sf ~/.dotfiles/nano/.nanorc ~/
 
 
 
