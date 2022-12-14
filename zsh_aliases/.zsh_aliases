@@ -107,8 +107,7 @@ alias snap.r="sudo snap remove"
 
 alias gi="git init"
 alias cl="clear"
-alias n="nano"
-alias v="code"
+
 alias m="mkdir"
 alias g="git"
 alias ga="git add"
@@ -287,4 +286,11 @@ alias pid="ps -ef|grep -i"
 alias s.systemctl="systemctl list-unit-files --type=service"
 
 # Btop settings
-alias btop="btop --utf-force"
+# alias btop="btop --utf-force"
+
+# System Control Settings
+alias s.systemctl="systemctl list-unit-files --type=service"
+
+alias n="nano"
+# alias v="code"
+alias v="vim"

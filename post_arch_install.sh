@@ -33,13 +33,15 @@ source ~/.zshrc
 
 # Arcolinux Mirror
 sudo ln -sf ~/.dotfiles/pacman-mirrior/etc/pacman.d/arcolinux-mirrorlist /etc/pacman.d/
-sudo cp -r ~/.oh-my-zsh /root
-sudo ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases /root/
-sudo ln -sf ~/.dotfiles/zshrc/.zshrc /root
-sudo ln -sf ~/.dotfiles/powerlevel10k-root/.p10k.zsh /root/
-sudo ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf /root
-sudo ln -sf ~/.dotfiles/neofetch-ascii/usr/bin/neofetch /usr/bin
 
+sudo cp -r /home/oyinbra/oh-my-zsh /root
+
+sudo ln -sf /home/oyinbra/.dotfiles/zsh_aliases/.zsh_aliases /root/
+
+sudo ln -sf /home/oyinbra/dotfiles/powerlevel10k-root/.p10k.zsh /root/
+sudo ln -sf /home/oyinbra/dotfiles/neofetch-source/.neofetch-config2.conf /root
+sudo ln -sf /home/oyinbra/dotfiles/neofetch-ascii/usr/bin/neofetch /usr/bin
+sudo ln -sf /home/oyinbra/.dotfiles/zshrc/.zshrc /root
 # Enable color in nano editor for root user
 sudo ln -sf ~/.dotfiles/nano/.nanorc /root
 ln -sf ~/.dotfiles/nano/.nanorc ~/

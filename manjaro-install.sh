@@ -20,7 +20,7 @@ source ~/.zshrc
 sudo ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf /root
 sudo ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases /root/
 sudo ln -sf /home/oyinbra/.dotfiles/zhistory/.zhistory /root
-sudo ln -sf ~/.dotfiles/zshrc-manjaro/.zshrc /root
+sudo ln -sf /home/oyinbra/.dotfiles/zshrc-manjaro/.zshrc /root
 
 # Pictures Restore
 cd ~/Pictures
