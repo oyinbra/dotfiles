@@ -5,7 +5,8 @@
 # UPDATE and INSTALL PACKAGES
 alias update="sudo pacman -Sy"
 alias archupdate="sudo pacman -Syyu"
-alias pacman.i="sudo pacman -Sy"
+alias pacman.s="sudo pacman -S"
+alias pacman.sy="sudo pacman -Sy"
 alias pacman.r="sudo pacman -R"
 # Downgrade Packages
 alias pacman.dg="sudo pacman -Suu"
@@ -262,7 +263,7 @@ alias sym="ln -sf"
 alias c.grub="sudo nano /etc/default/grub"
 
 # Update Grub
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 
 # TimeShift configuration settings
 alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
@@ -294,3 +295,9 @@ alias s.systemctl="systemctl list-unit-files --type=service"
 alias n="nano"
 # alias v="code"
 alias v="vim"
+
+# Alacritty config
+alias c.alacritty="code ~/.config/alacritty/alacritty.yml"
+
+# Post arch install
+alias c.post-arch="code /home/oyinbra/.dotfiles/post-arch.sh"

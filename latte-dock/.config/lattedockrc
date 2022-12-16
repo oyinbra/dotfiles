@@ -27,7 +27,7 @@ eDP1 Width 1920x1080 eDP1=407
 
 [LatteSettingsDialog]
 downloadWindowSize=980,600
-windowSize=1100,796
+windowSize=1272,736
 
 [LatteSettingsDialog][TabLayouts]
 columnWidths=48,508,129,104
@@ -59,6 +59,6 @@ metaPressAndHoldEnabled=true
 mouseSensitivity=2
 screenTrackerInterval=2500
 showInfoWindow=true
-singleModeLayoutName=Oyinbra
+singleModeLayoutName=Oyinbra-panel-12.12.16\s
 userConfiguredAutostart=true
 version=2
