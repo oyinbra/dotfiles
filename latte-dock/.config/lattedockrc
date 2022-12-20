@@ -46,6 +46,7 @@ outlineWidth=1
 [ScreenConnectors]
 10=eDP-1:::0,0 1920x1080
 11=eDP1:::0,0 1920x1080
+12=eDP-1-1:::0,0 1920x1080
 
 [UniversalSettings]
 badges3DStyle=false

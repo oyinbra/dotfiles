@@ -125,9 +125,12 @@ alias gp="git push"
 # ##############################################
 # ############## AUTO-CPUFREQ ##################
 # ##############################################
-alias s.cpustats="auto-cpufreq --stats"
-alias s.cpumonitor="sudo auto-cpufreq --monitor"
-alias s.cpu.live="sudo auto-cpufreq --live"
+alias acf.stats="auto-cpufreq --stats"
+alias acf.monitor="sudo auto-cpufreq --monitor"
+alias acf.live="sudo auto-cpufreq --live"
+alias acf.daemon-start="sudo auto-cpufreq --install"
+alias acf.daemon-stop="sudo auto-cpufreq --remove"
+
 
 # ##############################################
 # ############## DIRECTORY ALIASES #############
@@ -193,19 +196,22 @@ alias repos="~/Repos"
 
 
 # Configure Arch mirror list
-alias c.arch-mirror="sudo nano /etc/pacman.d/mirrorlist"
+alias c.arch-mirror="sudo vim /etc/pacman.d/mirrorlist"
 
 # Configure EndeavourOS Mirror List
-alias c.endeavouros-mirror="nano /etc/pacman.d/endeavouros-mirrorlist"
+alias c.endeavouros-mirror="sudo vim /etc/pacman.d/endeavouros-mirrorlist"
 
 # Configure Chaotic Mirror List
-alias c.chaotic-mirror="nano /etc/pacman.d/chaotic-mirrorlistt"
+alias c.chaotic-mirror="sudo vim /etc/pacman.d/chaotic-mirrorlistt"
 
 # Update Manjaro Mirrors
 alias u.manjaro-mirrors="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
 
 # Update Arch Mirrors
 alias u.arch.mirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
+
+# Update EndeavourOS mirror
+alias u.endeavouros-mirror="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"
 
 # ##############################################
 # ############## ACTION ALIASES ################
@@ -263,13 +269,13 @@ alias sym="ln -sf"
 alias c.grub="sudo nano /etc/default/grub"
 
 # Update Grub
-alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # TimeShift configuration settings
 alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
 
 # System error
-alias s.error="sudo journalctl -p 3 -xb"
+alias s.journalctl="sudo journalctl -p 3 -xb"
 
 # Failed processes
 alias s.process="sudo systemctl --failed"
@@ -301,3 +307,6 @@ alias c.alacritty="code ~/.config/alacritty/alacritty.yml"
 
 # Post arch install
 alias c.post-arch="code /home/oyinbra/.dotfiles/post-arch.sh"
+
+# Reload systemctl daemo
+alias r.systemctl="sudo systemctl daemon-reload"

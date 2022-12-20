@@ -30,8 +30,7 @@ ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf ~/
 ln -sf ~/.dotfiles/themes/.themes ~/
 # Enable color in nano editor for user
 ln -sf ~/.dotfiles/aurorae ~/.local/share/
-ln -sf
-source ~/.zshrc
+ln -sf ~/.dotfiles/alacritty/.config/alacritty ~/.config 
 
 
 # Arcolinux Mirror
@@ -48,6 +47,7 @@ sudo ln -sf /home/oyinbra/.dotfiles/zshrc/.zshrc /root
 # Enable color in nano editor for root user
 sudo ln -sf /home/oyinbra/.dotfiles/nano/.nanorc /root
 ln -sf ~/.dotfiles/nano/.nanorc ~/
+source ~/.zshrc
 
 
 # ##############################################
@@ -77,8 +77,7 @@ sudo ln -sf /home/oyinbra/.dotfiles/zsh_aliases/.zsh_aliases /root/
 sudo ln -sf /home/oyinbra/.dotfiles/zshrc-manjaro/.zshrc /root
 
 
-
-sudo pacman -U obs-studio-28.1.2-2-x86_64.pkg.tar.zst brave-bin-1_1.45.133-1-x86_64.pkg.tar.zst pycharm-community-edition-2022.2.4-1-x86_64.pkg.tar.zst android-studio-2021.3.1.17-1-x86_64.pkg.tar.zst discord-0.0.21-2-x86_64.pkg.tar.zst uget-2.2.3-6-x86_64.pkg.tar.zst fluent-reader-bin-1.1.3-1-x86_64.pkg.tar.zst mailspring-1.10.7-1-x86_64.pkg.tar.zst bitwarden-2022.11.0-1-x86_64.pkg.tar.zst motrix-bin-1.6.11-1.1-x86_64.pkg.tar.zst visual-studio-code-bin-1.73.1-2-x86_64.pkg.tar.zst freedownloadmanager-6.18.1.4920-1-x86_64.pkg.tar.zst google-chrome-108.0.5359.71-1-x86_64.pkg.tar.zst notion-app-enhanced-2.0.18-1.1-x86_64.pkg.tar.zst timeshift-bin-22.11.1-1-x86_64.pkg.tar.zst timeshift-autosnap-0.9-1-any.pkg.tar.zst rust-1_1.65.0-1-x86_64.pkg.tar.zst paru-1.11.1-1-x86_64.pkg.tar.zst duf-0.8.1-2-x86_64.pkg.tar.zst btop-1.2.13-1-x86_64.pkg.tar.zst
+sudo pacman -U obs-studio-28.1.2-2-x86_64.pkg.tar.zst brave-bin-1_1.45.133-1-x86_64.pkg.tar.zst pycharm-community-edition-2022.2.4-1-x86_64.pkg.tar.zst android-studio-2021.3.1.17-1-x86_64.pkg.tar.zst discord-0.0.21-2-x86_64.pkg.tar.zst uget-2.2.3-6-x86_64.pkg.tar.zst fluent-reader-bin-1.1.3-1-x86_64.pkg.tar.zst mailspring-1.10.7-1-x86_64.pkg.tar.zst bitwarden-2022.11.0-1-x86_64.pkg.tar.zst motrix-bin-1.6.11-1.1-x86_64.pkg.tar.zst visual-studio-code-bin-1.73.1-2-x86_64.pkg.tar.zst freedownloadmanager-6.18.1.4920-1-x86_64.pkg.tar.zst google-chrome-108.0.5359.71-1-x86_64.pkg.tar.zst notion-app-enhanced-2.0.18-1.1-x86_64.pkg.tar.zst timeshift-bin-22.11.1-1-x86_64.pkg.tar.zst timeshift-autosnap-0.9-1-any.pkg.tar.zst rust-1_1.65.0-1-x86_64.pkg.tar.zst paru-1.11.1-1-x86_64.pkg.tar.zst duf-0.8.1-2-x86_64.pkg.tar.zst btop-1.2.13-1-x86_64.pkg.tar.zst ksysguard-5.22.0-1-x86_64.pkg.tar.zst telegram-desktop-4.3.4-1-x86_64.pkg.tar.zst alacritty-0.11.0-2-x86_64.pkg.tar.zst onlyoffice-bin-7.2.1-1.1-x86_64.pkg.tar.zst libreoffice-fresh-7.4.3-2-x86_64.pkg.tar.zst gthumb-3.12.2-1-x86_64.pkg.tar.zst clutter-1.26.4-2-x86_64.pkg.tar.zst imath-3.1.6-1-x86_64.pkg.tar.zst webkit2gtk-2.38.2-2-x86_64.pkg.tar.zst neovim-symlinks-5-1-any.pkg.tar.zst rate-mirrors-bin-0.11.1-1-x86_64.pkg.tar.zst
 
 
 
