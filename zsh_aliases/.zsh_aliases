@@ -121,6 +121,9 @@ alias gst="git status"
 # Git Push
 alias gp="git push"
 
+# Post Git push
+alias gp.pre="git add . && git commit -m "updated" && git config credential.helper store && git config --global user.email "onyinbra@gmail.com" && git config --global user.name "oyinbra" && git push"
+
 
 # ##############################################
 # ############## AUTO-CPUFREQ ##################
