@@ -34,8 +34,17 @@ ln -sf ~/.dotfiles/alacritty/.config/alacritty ~/.config
 
 
 # Arcolinux Mirror
-sudo ln -sf ~/.dotfiles/pacman-mirrior/etc/pacman.d/arcolinux-mirrorlist /etc/pacman.d/
+sudo ln -sf ~/.dotfiles/etc/pacman.d/arcolinux-mirrorlist /etc/pacman.d
+# Arch mirror list
+sudo ln -sf ~/.dotfiles/etc/pacman.d/mirrorlist /etc/pacman.d
+# Pacman configuration
+sudo ln -sf ~/.dotfiles/etc/pacman.conf /etc
+# Autocpufreq
+sudo ln -sf ~/.dotfiles/etc/auto-cpufreq.conf /etc
+# tlp
+sudo ln -sf ~/.dotfiles/etc/tlp.conf /etc
 
+# Copy oh=my=zsh to root
 sudo cp -r /home/oyinbra/.oh-my-zsh /root
 
 sudo ln -sf /home/oyinbra/.dotfiles/zsh_aliases/.zsh_aliases /root/

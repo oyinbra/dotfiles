@@ -1,0 +1,49 @@
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: "CaskaydiaCove Nerd Font"
+    style: Bold
+
+  # Bold font face
+  bold:
+    family: "CaskaydiaCove Nerd Font"
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: "CaskaydiaCove Nerd Font"
+    style: Bold
+
+  # Bold italic font face
+  bold_italic:
+    family: "CaskaydiaCove Nerd Font"
+    style: Bold
+
+  # Point size
+  size: 12
+
+  # Offset
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
+# font:
+#   normal:
+#     family: CaskaydiaCove Nerd Font
+#     style:  Bold
+#   bold:
+#     family: CaskaydiaCove Nerd Font
+#     style:  Bold
+#   italic:
+#     family: CaskaydiaCove Nerd Font
+#     style:  Bold
+#   bold_italic:
+#     family: CaskaydiaCove Nerd Font
+#     style: Bold
+#   size: 8
+draw_bold_text_with_bright_colors: true

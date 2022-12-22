@@ -6,6 +6,7 @@
 alias update="sudo pacman -Sy"
 alias archupdate="sudo pacman -Syyu"
 alias pacman.s="sudo pacman -S"
+alias pacman.n="sudo pacman -S --noconfirm"
 alias pacman.sy="sudo pacman -Sy"
 alias pacman.r="sudo pacman -R"
 # Downgrade Packages
@@ -39,7 +40,7 @@ alias pacman.rns="sudo pacman -Rns"
 
 # UPDATE and INSTALL PACKAGES
 # Turn paru into yay
-alias yay="paru"
+# alias yay="paru"
 alias aurupdate="paru -Syyu"
 alias paru.ud="paru -Sy"
 alias paru.ug="paru -Syu"
