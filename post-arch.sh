@@ -28,6 +28,7 @@ ln -sf ~/.dotfiles/git/.gitignore_global ~/
 ln -sf ~/.dotfiles/icons/.icons ~/
 ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf ~/
 ln -sf ~/.dotfiles/themes/.themes ~/
+ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 # Enable color in nano editor for user
 ln -sf ~/.dotfiles/aurorae ~/.local/share/
 ln -sf ~/.dotfiles/alacritty/.config/alacritty ~/.config 
