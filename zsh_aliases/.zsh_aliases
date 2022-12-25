@@ -4,6 +4,7 @@
 
 # UPDATE and INSTALL PACKAGES
 alias update="sudo pacman -Sy"
+alias refresh="sudo pacman -Fy"
 alias archupdate="sudo pacman -Syyu"
 alias pacman.s="sudo pacman -S"
 alias pacman.n="sudo pacman -S --noconfirm"
@@ -11,28 +12,42 @@ alias pacman.sy="sudo pacman -Sy"
 alias pacman.r="sudo pacman -R"
 # Downgrade Packages
 alias pacman.dg="sudo pacman -Suu"
+
 # Install pkg files
 alias pacman.u="sudo pacman -U"
+
 # List packages in pkg cache file
 alias pacman.pkg.list="l /var/cache/pacman/pkg | less"
+
 # Clean uninstalled packages from cache
 alias pacman.cup="sudo pacman -Sc"
+
 # Clean alien packages
-#alias pacman.c="sudo pacman -c"
+alias pacman.c="sudo pacman -c"
+
 # Clean all packages from cache
 alias pacman.cap="sudo pacman -Scc"
+
 # List orphan packages
 alias pacman.lop="sudo pacman -Qtdq"
+
 # Remove orphan packages
 alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
+
 # Pactree
 alias pacman.t="pactree -r"
+
 # Pacman pkg packages
 alias pkg.dir="/var/cache/pacman/pkg"
+
 # Completely clean packages
 alias pacman.rs="sudo pacman -Rs"
+
 # Completely remove packages
 alias pacman.rns="sudo pacman -Rns"
+
+# Find packages to install
+alias pacman.f="pacman -F"
 
 # ##############################################
 # ################### PARU ######################
@@ -143,6 +158,12 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 # ############## DIRECTORY ALIASES #############
 # ##############################################
 
+# Search for files or folders
+alias lf="ls | grep"
+
+# Search for files or folders including hidden folders and files
+alias laf="ls | grep"
+
 # Refresh zsh
 alias rf="source ~/.zshrc"
 
@@ -168,7 +189,7 @@ alias w="cd ~/Workspace"
 alias p="cd ~/Workspace/projects"
 
 # PKG Packages
-alias pkg="~/PKG"
+alias pkg="/var/cache/pacman/pkg"
 
 # Pictures Folder
 alias pictures="~/Pictures"
@@ -317,3 +338,9 @@ alias c.post-arch="code /home/oyinbra/.dotfiles/post-arch.sh"
 
 # Reload systemctl daemo
 alias r.systemctl="sudo systemctl daemon-reload"
+
+# Vim to sudo
+alias vi="sudo vi"
+
+# Vim to sudo
+alias nano="sudo nano"
