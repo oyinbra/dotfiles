@@ -3,7 +3,7 @@
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias update="sudo pacman -Sy"
+alias resync="sudo pacman -Sy"
 alias refresh="sudo pacman -Fy"
 alias archupdate="sudo pacman -Syyu"
 alias pacman.s="sudo pacman -S"
@@ -55,7 +55,7 @@ alias pacman.f="pacman -F"
 
 # UPDATE and INSTALL PACKAGES
 # Turn paru into yay
-# alias yay="paru"
+alias yay="paru"
 alias aurupdate="paru -Syyu"
 alias paru.ud="paru -Sy"
 alias paru.ug="paru -Syu"
@@ -344,3 +344,6 @@ alias vi="sudo vi"
 
 # Vim to sudo
 alias nano="sudo nano"
+
+# Listen to opened port
+alias listen="sudo lsof -i -P -n | grep LISTEN"

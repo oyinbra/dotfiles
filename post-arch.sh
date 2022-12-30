@@ -32,12 +32,21 @@ ln -sf ~/.dotfiles/alacritty/.config/alacritty ~/.config
 ln -sf ~/.dotfiles/aurorae ~/.local/share/
 sudo ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases /root/
 
+# CONFIGURATIONS
+ln -sf ~/.dotfiles/.config/obs-studio ~/.config
+ln -sf ~/.dotfiles/.config/fluent-reader ~/.config
+ln -sf ~/.dotfiles/.config/VirtualBox ~/.config
+
+# LOCAL SHARE
 ln -sf ~/.dotfiles/.local/share/color-schemes ~/.local/share
 ln -sf ~/.dotfiles/.local/share/icons ~/.local/share
 ln -sf ~/.dotfiles/.local/share/plasma ~/.local/share
-echo # Remove konsole folder
-rm -r .local/share/konsole/
+# Remove konsole folder
+mv ~/.local/share/konsole ~/.local/share/konsole.bak
 ln -sf ~/.dotfiles/.local/share/konsole/ ~/.local/share/
+
+# SDDM Themes
+sudo ln -sf ~/.dotfiles/usr/share/sddm/themes/Ocean /usr/share/sddm/themes/
 
 echo "#############################################################################"
 echo "#############################################################################"

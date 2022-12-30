@@ -1,0 +1,38 @@
+00:00:00.477037 VirtualBox GUI VM Selector Window 7.0.4 r154605 linux.amd64 (Nov 18 2022 12:54:46) release log
+00:00:00.477039 Log opened 2022-12-30T05:04:29.466454000Z
+00:00:00.477040 Build Type: release
+00:00:00.477041 OS Product: Linux
+00:00:00.477042 OS Release: 6.1.1-1-MANJARO
+00:00:00.477043 OS Version: #1 SMP PREEMPT_DYNAMIC Wed Dec 21 23:21:50 UTC 2022
+00:00:00.477063 DMI Product Name: Creator 15 A10SET
+00:00:00.477070 DMI Product Version: REV:1.0
+00:00:00.477074 Firmware type: UEFI
+00:00:00.477243 Secure Boot: Disabled
+00:00:00.477275 Host RAM: 15757MB (15.3GB) total, 14250MB (13.9GB) available
+00:00:00.477278 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.477278 Process ID: 2304
+00:00:00.477279 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.477304 Qt version: 5.15.7
+00:00:00.477986 GUI: UIMediumEnumerator: Initial medium-enumeration finished!
+00:00:00.516044 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:01.357271 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 0x43 x 1920x1037
+00:00:01.410881 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:16:26.409209 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:16:26.636765 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:16:26.644423 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:16:30.536864 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:16:30.544547 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:18:22.451736 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:19:53.327290 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:19:53.634003 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:19:58.430317 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:19:58.439214 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:20:07.933567 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:20:07.943639 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:20:09.311469 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:20:09.339542 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:31:26.721432 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:31:44.465718 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:31:45.198332 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:31:59.251153 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:32:13.756945 GUI: UIMediumEnumerator: Medium-enumeration finished!

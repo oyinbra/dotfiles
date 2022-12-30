@@ -1,0 +1,113 @@
+11:24:30.999: Using EGL/X11
+11:24:30.999: CPU Name: Intel(R) Core(TM) i7-10875H CPU @ 2.30GHz
+11:24:30.999: CPU Speed: 4599.815MHz
+11:24:30.999: Physical Cores: 8, Logical Cores: 16
+11:24:30.999: Physical Memory: 15757MB Total, 9848MB Free
+11:24:30.999: Kernel Version: Linux 6.1.1-1-MANJARO
+11:24:30.999: Distribution: "Manjaro Linux" Unknown
+11:24:30.999: Session Type: x11
+11:24:30.999: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+11:24:31.000: Qt Version: 6.4.1 (runtime), 6.4.1 (compiled)
+11:24:31.000: Portable mode: false
+11:24:31.029: OBS 28.1.2-2 (linux)
+11:24:31.029: ---------------------------------
+11:24:31.029: ---------------------------------
+11:24:31.029: audio settings reset:
+11:24:31.029: 	samples per sec: 48000
+11:24:31.029: 	speakers:        2
+11:24:31.029: 	max buffering:   960 milliseconds
+11:24:31.029: 	buffering type:  dynamically increasing
+11:24:31.031: ---------------------------------
+11:24:31.031: Initializing OpenGL...
+11:24:31.074: Loading up OpenGL on adapter Intel Mesa Intel(R) UHD Graphics (CML GT2)
+11:24:31.074: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 22.3.1, shading language 4.60
+11:24:31.096: ---------------------------------
+11:24:31.096: video settings reset:
+11:24:31.096: 	base resolution:   1920x1080
+11:24:31.096: 	output resolution: 1920x1080
+11:24:31.096: 	downscale filter:  Bicubic
+11:24:31.096: 	fps:               60/1
+11:24:31.096: 	format:            NV12
+11:24:31.096: 	YUV mode:          Rec. 709/Partial
+11:24:31.096: NV12 texture support not available
+11:24:31.096: P010 texture support not available
+11:24:31.099: Audio monitoring device:
+11:24:31.099: 	name: Default
+11:24:31.099: 	id: default
+11:24:31.099: ---------------------------------
+11:24:31.104: Failed to load 'en-US' text for module: 'decklink-captions.so'
+11:24:31.108: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+11:24:31.112: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+11:24:31.112: Failed to initialize module 'decklink.so'
+11:24:31.119: Failed to load 'en-GB' text for module: 'frontend-tools.so'
+11:24:31.184: Failed to load 'en-GB' text for module: 'linux-alsa.so'
+11:24:31.189: Failed to load 'en-GB' text for module: 'linux-capture.so'
+11:24:31.196: Failed to load 'en-GB' text for module: 'linux-jack.so'
+11:24:31.201: Failed to load 'en-GB' text for module: 'linux-pipewire.so'
+11:24:31.202: [pipewire] Available captures:
+11:24:31.202: [pipewire]     - Desktop capture
+11:24:31.202: [pipewire]     - Window capture
+11:24:31.207: Failed to load 'en-GB' text for module: 'linux-pulseaudio.so'
+11:24:31.215: v4l2loopback not installed, virtual camera disabled
+11:24:31.243: NVENC supported
+11:24:31.243: FFMPEG VAAPI supported
+11:24:31.255: Failed to load 'en-GB' text for module: 'obs-libfdk.so'
+11:24:31.270: Failed to load 'en-GB' text for module: 'obs-vst.so'
+11:24:31.274: Failed to load 'en-GB' text for module: 'obs-x264.so'
+11:24:31.279: Failed to load 'en-GB' text for module: 'rtmp-services.so'
+11:24:31.283: ---------------------------------
+11:24:31.283:   Loaded Modules:
+11:24:31.283:     text-freetype2.so
+11:24:31.283:     rtmp-services.so
+11:24:31.283:     obs-x264.so
+11:24:31.283:     obs-vst.so
+11:24:31.283:     obs-transitions.so
+11:24:31.283:     obs-outputs.so
+11:24:31.283:     obs-libfdk.so
+11:24:31.284:     obs-filters.so
+11:24:31.284:     obs-ffmpeg.so
+11:24:31.284:     linux-v4l2.so
+11:24:31.284:     linux-pulseaudio.so
+11:24:31.284:     linux-pipewire.so
+11:24:31.284:     linux-jack.so
+11:24:31.284:     linux-capture.so
+11:24:31.284:     linux-alsa.so
+11:24:31.284:     image-source.so
+11:24:31.284:     frontend-tools.so
+11:24:31.284:     decklink-output-ui.so
+11:24:31.284:     decklink-captions.so
+11:24:31.284: ---------------------------------
+11:24:31.284: ==== Startup complete ===============================================
+11:24:31.307: All scene data cleared
+11:24:31.307: ------------------------------------------------
+11:24:31.309: pulse-input: Server name: 'pulseaudio 16.1'
+11:24:31.309: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+11:24:31.309: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor' (default)
+11:24:31.309: [Loaded global audio device]: 'Desktop Audio'
+11:24:31.398: pulse-input: Server name: 'pulseaudio 16.1'
+11:24:31.398: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+11:24:31.398: pulse-input: Started recording from 'alsa_input.usb-MACROSILICON_USB_Video-02.analog-stereo' (default)
+11:24:31.398: [Loaded global audio device]: 'Mic/Aux'
+11:24:31.509: pulse-input: Server name: 'pulseaudio 16.1'
+11:24:31.509: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+11:24:31.510: pulse-input: Started recording from 'alsa_input.usb-MACROSILICON_USB_Video-02.analog-stereo'
+11:24:31.513: pulse-am: Server name: 'pulseaudio 16.1'
+11:24:31.513: pulse-am: Audio format: s16le, 48000 Hz, 2 channels
+11:24:31.514: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:24:31.515: v4l2-input: Start capture from /dev/video4
+11:24:31.518: v4l2-input: Input: 0
+11:24:31.518: v4l2-input: Resolution: 1920x1080
+11:24:31.518: v4l2-input: Pixelformat: BGR3
+11:24:31.518: v4l2-input: Linesize: 5760 Bytes
+11:24:31.518: v4l2-input: Framerate: 60.00 fps
+11:24:31.522: v4l2-input: /dev/video4: select timeout set to 83333 (5x frame periods)
+11:24:31.522: Switched to scene 'PS4'
+11:24:31.523: ------------------------------------------------
+11:24:31.523: Loaded scenes:
+11:24:31.523: - scene 'PS4':
+11:24:31.523:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+11:24:31.523:     - source: 'Audio Input Capture (PulseAudio)' (pulse_input_capture)
+11:24:31.523:         - monitoring: monitor and output
+11:24:31.523: ------------------------------------------------
+11:24:31.606: v4l2-input: /dev/video4: select timed out
+11:24:31.606: v4l2-input: /dev/video4: failed to log status

@@ -1,0 +1,62 @@
+{
+	"useNeDB": false,
+	"version": "1.1.3",
+	"menuOn": false,
+	"sourceGroups": [
+		{
+			"isMultiple": true,
+			"name": "Linux",
+			"expanded": true,
+			"sids": []
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				0
+			]
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				1
+			]
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				2
+			]
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				3
+			]
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				4
+			]
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				5
+			]
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				6
+			]
+		},
+		{
+			"isMultiple": false,
+			"sids": [
+				7
+			]
+		}
+	],
+	"view": 0
+}

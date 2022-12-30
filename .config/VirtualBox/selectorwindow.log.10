@@ -1,0 +1,24 @@
+00:00:00.851976 VirtualBox GUI VM Selector Window 7.0.4 r154605 linux.amd64 (Nov 18 2022 12:54:46) release log
+00:00:00.851978 Log opened 2022-12-25T07:43:42.156561000Z
+00:00:00.851978 Build Type: release
+00:00:00.851980 OS Product: Linux
+00:00:00.851981 OS Release: 6.1.1-1-MANJARO
+00:00:00.851982 OS Version: #1 SMP PREEMPT_DYNAMIC Wed Dec 21 23:21:50 UTC 2022
+00:00:00.852000 DMI Product Name: Creator 15 A10SET
+00:00:00.852006 DMI Product Version: REV:1.0
+00:00:00.852010 Firmware type: UEFI
+00:00:00.852157 Secure Boot: Disabled
+00:00:00.852187 Host RAM: 15757MB (15.3GB) total, 12094MB (11.8GB) available
+00:00:00.852189 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.852190 Process ID: 12624
+00:00:00.852190 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.852215 Qt version: 5.15.7
+00:00:00.853180 GUI: UIMediumEnumerator: Initial medium-enumeration finished!
+00:00:00.883992 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:01.791359 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 0x43 x 1920x1037
+00:00:01.849896 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:34.189804 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:35.062255 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:51.374681 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:23.447570 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:23.473638 GUI: UIMediumEnumerator: Medium-enumeration finished!
