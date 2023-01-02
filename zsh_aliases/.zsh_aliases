@@ -347,3 +347,7 @@ alias nano="sudo nano"
 
 # Listen to opened port
 alias listen="sudo lsof -i -P -n | grep LISTEN"
+
+# Find process
+alias lp="ps aux | grep"
+alias root="sudo -s"

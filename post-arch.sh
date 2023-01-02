@@ -68,7 +68,9 @@ sudo ln -sf /home/oyinbra/.dotfiles/zshrc/.zshrc /root
 # ln -sf ~/.dotfiles/nano/.nanorc ~/
 ln -sf ~/.dotfiles/home/.nanorc ~/
 
-echo Refrsh zshrc
+echo Refresh zshrc
+source ~/.zshrc
+echo Refresh zshrc
 source ~/.zshrc
 
 echo ###############################################################################
