@@ -10,8 +10,8 @@
     <ExtraData>
       <ExtraDataItem name="GUI/Details/Elements" value="general,system,preview,display,storage,audio,network,usb,sharedFolders,description"/>
       <ExtraDataItem name="GUI/GroupDefinitions/" value="n=GLOBAL,go=Installed,go=New group"/>
-      <ExtraDataItem name="GUI/GroupDefinitions/Installed" value="m=1b13a88e-a8f2-49c6-b29a-93512940fa43,m=890887fa-9779-4b8c-977f-97ee3c4227a1,m=a2070c50-6c61-4589-b0a4-e2c6154972ae,m=9d038e1c-136b-4c85-99aa-f878f4f848fa,m=87ccd0b3-9b45-4315-9a43-446ec59212ce,m=864e7e7c-a490-47b7-9a3e-3a8caff9a783,m=9e557946-f114-4c25-8b3c-11e092e4a319"/>
-      <ExtraDataItem name="GUI/GroupDefinitions/New group" value="m=08888250-b1f3-4870-be81-7aac9eb5719b,m=a13e10f8-d67a-4f94-a21c-b07b0b975632"/>
+      <ExtraDataItem name="GUI/GroupDefinitions/Installed" value="m=1b13a88e-a8f2-49c6-b29a-93512940fa43,m=890887fa-9779-4b8c-977f-97ee3c4227a1,m=a2070c50-6c61-4589-b0a4-e2c6154972ae,m=9d038e1c-136b-4c85-99aa-f878f4f848fa,m=87ccd0b3-9b45-4315-9a43-446ec59212ce,m=864e7e7c-a490-47b7-9a3e-3a8caff9a783,m=9e557946-f114-4c25-8b3c-11e092e4a319,m=a13e10f8-d67a-4f94-a21c-b07b0b975632,m=fc5d6312-c7f4-48ab-91a9-0ac0737b843f"/>
+      <ExtraDataItem name="GUI/GroupDefinitions/New group" value="m=08888250-b1f3-4870-be81-7aac9eb5719b"/>
       <ExtraDataItem name="GUI/LastItemSelected" value="m=fc5d6312-c7f4-48ab-91a9-0ac0737b843f"/>
       <ExtraDataItem name="GUI/LastWindowPosition" value="4,69,952,1005"/>
       <ExtraDataItem name="GUI/MediumSelector/DialogGeometry" value="894,77,960,721"/>
@@ -25,13 +25,12 @@
       <MachineEntry uuid="{1b13a88e-a8f2-49c6-b29a-93512940fa43}" src="/home/oyinbra/VirtualBox VMs/Installed/ArchLinux/ArchLinux.vbox"/>
       <MachineEntry uuid="{08888250-b1f3-4870-be81-7aac9eb5719b}" src="/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vbox"/>
       <MachineEntry uuid="{890887fa-9779-4b8c-977f-97ee3c4227a1}" src="/home/oyinbra/VirtualBox VMs/Installed/Manjaro/Manjaro.vbox"/>
-      <MachineEntry uuid="{a2070c50-6c61-4589-b0a4-e2c6154972ae}" src="/home/oyinbra/VirtualBox VMs/Installed/EndeavourOS/EndeavourOS.vbox"/>
       <MachineEntry uuid="{9d038e1c-136b-4c85-99aa-f878f4f848fa}" src="/home/oyinbra/VirtualBox VMs/Installed/ArchCraft/ArchCraft.vbox"/>
       <MachineEntry uuid="{87ccd0b3-9b45-4315-9a43-446ec59212ce}" src="/home/oyinbra/VirtualBox VMs/Installed/Arch Install/Arch Install.vbox"/>
       <MachineEntry uuid="{864e7e7c-a490-47b7-9a3e-3a8caff9a783}" src="/home/oyinbra/VirtualBox VMs/Installed/Archinstall 01/Archinstall 01.vbox"/>
       <MachineEntry uuid="{9e557946-f114-4c25-8b3c-11e092e4a319}" src="/home/oyinbra/VirtualBox VMs/Installed/ArchSnapper/ArchSnapper.vbox"/>
-      <MachineEntry uuid="{a13e10f8-d67a-4f94-a21c-b07b0b975632}" src="/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"/>
-      <MachineEntry uuid="{fc5d6312-c7f4-48ab-91a9-0ac0737b843f}" src="/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"/>
+      <MachineEntry uuid="{a13e10f8-d67a-4f94-a21c-b07b0b975632}" src="/home/oyinbra/VirtualBox VMs/Installed/EOS/EOS.vbox"/>
+      <MachineEntry uuid="{fc5d6312-c7f4-48ab-91a9-0ac0737b843f}" src="/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND-Snapper.vbox"/>
     </MachineRegistry>
     <NetserviceRegistry>
       <DHCPServers>

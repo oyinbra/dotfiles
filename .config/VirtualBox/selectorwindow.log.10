@@ -1,21 +1,2 @@
-00:00:00.374831 VirtualBox GUI VM Selector Window 7.0.4 r154605 linux.amd64 (Nov 18 2022 12:54:46) release log
-00:00:00.374832 Log opened 2022-12-30T19:14:23.983594000Z
-00:00:00.374833 Build Type: release
-00:00:00.374834 OS Product: Linux
-00:00:00.374835 OS Release: 6.1.1-1-MANJARO
-00:00:00.374835 OS Version: #1 SMP PREEMPT_DYNAMIC Wed Dec 21 23:21:50 UTC 2022
-00:00:00.374847 DMI Product Name: Creator 15 A10SET
-00:00:00.374851 DMI Product Version: REV:1.0
-00:00:00.374854 Firmware type: UEFI
-00:00:00.374990 Secure Boot: Disabled
-00:00:00.375009 Host RAM: 15757MB (15.3GB) total, 11788MB (11.5GB) available
-00:00:00.375010 Executable: /usr/lib/virtualbox/VirtualBox
-00:00:00.375011 Process ID: 37511
-00:00:00.375011 Package type: LINUX_64BITS_GENERIC (OSE)
-00:00:00.375025 Qt version: 5.15.7
-00:00:00.375497 GUI: UIMediumEnumerator: Initial medium-enumeration finished!
-00:00:00.394560 GUI: UIMediumEnumerator: Medium-enumeration started...
-00:00:00.876244 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 0x43 x 1920x1037
-00:00:00.922728 GUI: UIMediumEnumerator: Medium-enumeration finished!
-00:00:03.263525 GUI: UICommon: Handling aboutToQuit request..
-00:00:03.903858 GUI: UICommon: aboutToQuit request handled!
+04:22:19.018272 Log continuation - Log started 2022-12-31T04:07:49.391049000Z
+04:22:19.353236 GUI: UICommon: aboutToQuit request handled!

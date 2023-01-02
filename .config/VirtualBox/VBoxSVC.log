@@ -1,160 +1,92 @@
-00:00:00.001714 main     VirtualBox XPCOM Server 7.0.4 r154605 linux.amd64 (Nov 18 2022 12:54:46) release log
-00:00:00.001716 main     Log opened 2023-01-02T06:01:51.083163000Z
-00:00:00.001716 main     Build Type: release
-00:00:00.001717 main     OS Product: Linux
-00:00:00.001718 main     OS Release: 6.1.1-1-MANJARO
-00:00:00.001718 main     OS Version: #1 SMP PREEMPT_DYNAMIC Wed Dec 21 23:21:50 UTC 2022
-00:00:00.001731 main     DMI Product Name: Creator 15 A10SET
-00:00:00.001735 main     DMI Product Version: REV:1.0
-00:00:00.001738 main     Firmware type: UEFI
-00:00:00.001930 main     Secure Boot: Disabled
-00:00:00.001952 main     Host RAM: 15757MB (15.3GB) total, 13053MB (12.7GB) available
-00:00:00.001954 main     Executable: /usr/lib/virtualbox/VBoxSVC
-00:00:00.001954 main     Process ID: 93817
-00:00:00.001954 main     Package type: LINUX_64BITS_GENERIC (OSE)
-00:00:00.003059 main     IPC socket path: /tmp/.vbox-oyinbra-ipc/ipcd
-00:00:00.108470 nspr-2   VirtualBox: object creation starts
-00:00:00.108655 nspr-2   Home directory: '/home/oyinbra/.config/VirtualBox'
-00:00:00.109560 nspr-2   Loading settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:00.113006 nspr-2   USB: Unknown USB device detected (idVendor: 0x06cb, idProduct: 0x009b)
-00:00:00.113103 nspr-2   USB: Unknown USB device detected (idVendor: 0x8087, idProduct: 0x0026)
-00:00:00.113399 nspr-2   Successfully initialised host USB using sysfs
-00:00:00.147353 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
-00:00:00.149558 nspr-2   HostDnsMonitor: initializing
-00:00:00.150127 nspr-2   NAT: resolv.conf: nameserver 192.168.43.1
-00:00:00.150173 nspr-2   HostDnsMonitor: updating information
-00:00:00.150208 nspr-2   HostDnsMonitor: old information
-00:00:00.150217 nspr-2     no server entries
-00:00:00.150225 nspr-2     no domain set
-00:00:00.150232 nspr-2     no search string entries
-00:00:00.150240 nspr-2   HostDnsMonitor: new information
-00:00:00.150247 nspr-2     server 1: 192.168.43.1
-00:00:00.150256 nspr-2     no domain set
-00:00:00.150262 nspr-2     no search string entries
-00:00:00.156294 nspr-2   VD: VDInit finished with VINF_SUCCESS
-00:00:00.156494 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={aac6c7cb-a371-4c58-ab51-0616896b2f2c} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
-00:00:00.158989 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/ArchLinux/ArchLinux.vbox" with version "1.19-linux"
-00:00:00.160891 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vbox" with version "1.19-linux"
-00:00:00.162450 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/Manjaro/Manjaro.vbox" with version "1.19-linux"
-00:00:00.164200 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/EndeavourOS/EndeavourOS.vbox" with version "1.19-linux"
-00:00:00.166035 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/ArchCraft/ArchCraft.vbox" with version "1.19-linux"
-00:00:00.167731 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/Arch Install/Arch Install.vbox" with version "1.19-linux"
-00:00:00.169494 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/Archinstall 01/Archinstall 01.vbox" with version "1.19-linux"
-00:00:00.171177 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/ArchSnapper/ArchSnapper.vbox" with version "1.19-linux"
-00:00:00.172870 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/New group/Manjaro Manual/Manjaro Manual.vbox" with version "1.19-linux"
-00:00:00.174629 nspr-2   VirtualBox: object created
-00:00:00.986791 nspr-2   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:00:19.645487 nspr-5   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:19.648547 nspr-5   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:19.675986 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:00:27.981717 nspr-4   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:27.984492 nspr-4   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:27.984575 nspr-4   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:27.986734 nspr-4   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:28.017696 DeleteVM Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:28.020110 DeleteVM Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:28.021358 nspr-4   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:28.023601 nspr-4   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:28.032757 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={Could not find a registered machine with UUID {b4f54843-d063-4c78-9497-64c40f679c67}}, preserve=false aResultDetail=0
-00:00:28.050723 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={Could not find a registered machine with UUID {b4f54843-d063-4c78-9497-64c40f679c67}}, preserve=false aResultDetail=0
-00:00:28.075088 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:00:39.231586 createClone Saving settings file "/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vbox" with version "1.19-linux"
-00:00:39.239629 createClone Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vbox"
-00:00:39.239738 createClone Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:39.241914 createClone Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:39.242412 MachineClone Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox" with version "1.19-linux"
-00:00:39.244651 MachineClone Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"
-00:00:39.257494 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={Could not find a registered machine with UUID {a13e10f8-d67a-4f94-a21c-b07b0b975632}}, preserve=false aResultDetail=0
-00:00:39.259045 nspr-4   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:39.261737 nspr-4   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:39.297679 nspr-4   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:39.299857 nspr-4   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:39.333455 nspr-5   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:39.336066 nspr-5   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:00:39.339415 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:00:55.503870 USBPROXY USBProxyBackendLinux: Device 090c:2000 (sysfs:/sys/devices/pci0000:00/0000:00:14.0/usb2/2-2//device:/dev/vboxusb/002/008) isn't accessible. giving udev a few seconds to fix this...
-00:01:10.669989 nspr-2   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:01:10.672626 nspr-2   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:01:10.672928 nspr-5   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox" with version "1.19-linux"
-00:01:10.675055 nspr-5   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"
-00:01:10.694278 nspr-5   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:01:14.622958 nspr-4   Launched VM: 2617253216 pid: 93922 (0x16ee2) frontend: GUI/Qt name: EOS
-00:01:14.648992 nspr-5   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:01:14.961548 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:01:15.531415 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={No extension pack by the name 'Oracle VM VirtualBox Extension Pack' was found}, preserve=false aResultDetail=0
-00:01:15.626282 nspr-6   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
-00:01:15.694360 nspr-8   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
-00:01:15.777132 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Starting)}, preserve=false aResultDetail=0
-00:01:15.936881 nspr-5   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox" with version "1.19-linux"
-00:01:15.939231 nspr-5   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"
-00:01:15.955002 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Starting)}, preserve=false aResultDetail=0
-00:01:15.973948 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
-00:01:15.975201 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
-00:01:16.014591 nspr-8   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:01:16.809931 nspr-5   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox" with version "1.19-linux"
-00:01:16.812204 nspr-5   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"
-00:01:16.825154 nspr-8   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:01:22.324869 nspr-7   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox" with version "1.19-linux"
-00:01:22.327393 nspr-7   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"
-00:01:22.340546 nspr-8   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:01:55.334119 nspr-3   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
-00:01:55.355029 nspr-3   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox" with version "1.19-linux"
-00:01:55.357745 nspr-3   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"
-00:01:55.398808 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:26:42.016496 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Stopping)}, preserve=false aResultDetail=0
-00:26:42.071513 nspr-4   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox" with version "1.19-linux"
-00:26:42.074094 nspr-4   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS/EOS.vbox"
-00:26:42.091438 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:26:43.102623 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:26:48.298694 nspr-4   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:26:48.301723 nspr-4   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:26:48.311298 nspr-2   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:26:54.177484 nspr-6   ERROR [COM]: aRC=NS_ERROR_INVALID_ARG (0x80070057) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={Machine name is invalid, must not be empty}, preserve=false aResultDetail=0
-00:26:56.395602 nspr-6   ERROR [COM]: aRC=NS_ERROR_INVALID_ARG (0x80070057) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={Machine name is invalid, must not be empty}, preserve=false aResultDetail=0
-00:27:06.142016 createClone Saving settings file "/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vbox" with version "1.19-linux"
-00:27:06.144615 createClone Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vbox"
-00:27:06.144727 createClone Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:27:06.146903 createClone Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:27:06.147346 MachineClone Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:27:06.149685 MachineClone Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:27:06.158311 nspr-2   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={Could not find a registered machine with UUID {fc5d6312-c7f4-48ab-91a9-0ac0737b843f}}, preserve=false aResultDetail=0
-00:27:06.159968 nspr-6   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:27:06.162398 nspr-6   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:27:06.198980 nspr-5   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:27:06.201440 nspr-5   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:27:06.243179 nspr-7   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:27:06.245887 nspr-7   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
-00:27:06.249263 nspr-5   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:27:11.246164 nspr-6   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:27:11.248689 nspr-6   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:27:11.268537 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:27:12.991188 nspr-4   Launched VM: 2617255456 pid: 94439 (0x170e7) frontend: GUI/Qt name: EOS-ND
-00:27:13.015563 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:27:13.325372 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
-00:27:13.894847 nspr-5   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={No extension pack by the name 'Oracle VM VirtualBox Extension Pack' was found}, preserve=false aResultDetail=0
-00:27:13.989058 nspr-8   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
-00:27:14.056141 nspr-3   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
-00:27:14.118339 nspr-8   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Starting)}, preserve=false aResultDetail=0
-00:27:14.313478 nspr-7   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:27:14.315852 nspr-7   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:27:14.330889 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Starting)}, preserve=false aResultDetail=0
-00:27:14.375712 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
-00:27:14.376896 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
-00:27:14.417269 nspr-6   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:27:15.157555 nspr-8   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:27:15.160115 nspr-8   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:27:15.173128 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:27:42.235571 nspr-3   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:27:42.238133 nspr-3   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:27:42.251451 nspr-5   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:27:53.180003 nspr-7   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
-00:27:53.203220 nspr-7   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:27:53.205691 nspr-7   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:27:53.305655 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:44:23.188063 nspr-7   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
-00:44:23.250526 nspr-6   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:44:23.253017 nspr-6   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:44:23.287222 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
-00:44:23.504549 nspr-6   Saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox" with version "1.19-linux"
-00:44:23.507236 nspr-6   Finished saving settings file "/home/oyinbra/VirtualBox VMs/New group/EOS-ND/EOS-ND.vbox"
-00:44:23.522511 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
+00:00:00.000524 main     VirtualBox XPCOM Server 7.0.4 r154605 linux.amd64 (Nov 18 2022 12:54:46) release log
+00:00:00.000525 main     Log opened 2023-01-02T19:20:11.283380000Z
+00:00:00.000526 main     Build Type: release
+00:00:00.000527 main     OS Product: Linux
+00:00:00.000527 main     OS Release: 6.1.1-1-MANJARO
+00:00:00.000527 main     OS Version: #1 SMP PREEMPT_DYNAMIC Wed Dec 21 23:21:50 UTC 2022
+00:00:00.000539 main     DMI Product Name: Creator 15 A10SET
+00:00:00.000543 main     DMI Product Version: REV:1.0
+00:00:00.000545 main     Firmware type: UEFI
+00:00:00.000820 main     Secure Boot: Disabled
+00:00:00.000839 main     Host RAM: 15757MB (15.3GB) total, 10589MB (10.3GB) available
+00:00:00.000840 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.000841 main     Process ID: 4121
+00:00:00.000841 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.001864 main     IPC socket path: /tmp/.vbox-oyinbra-ipc/ipcd
+00:00:00.106034 nspr-2   VirtualBox: object creation starts
+00:00:00.106227 nspr-2   Home directory: '/home/oyinbra/.config/VirtualBox'
+00:00:00.108362 nspr-2   Loading settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.111687 nspr-2   USB: Unknown USB device detected (idVendor: 0x06cb, idProduct: 0x009b)
+00:00:00.111782 nspr-2   USB: Unknown USB device detected (idVendor: 0x8087, idProduct: 0x0026)
+00:00:00.112057 nspr-2   Successfully initialised host USB using sysfs
+00:00:00.146760 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.148894 nspr-2   HostDnsMonitor: initializing
+00:00:00.149534 nspr-2   NAT: resolv.conf: nameserver 192.168.43.1
+00:00:00.149581 nspr-2   HostDnsMonitor: updating information
+00:00:00.149616 nspr-2   HostDnsMonitor: old information
+00:00:00.149626 nspr-2     no server entries
+00:00:00.149635 nspr-2     no domain set
+00:00:00.149642 nspr-2     no search string entries
+00:00:00.149650 nspr-2   HostDnsMonitor: new information
+00:00:00.149658 nspr-2     server 1: 192.168.43.1
+00:00:00.149667 nspr-2     no domain set
+00:00:00.149674 nspr-2     no search string entries
+00:00:00.156093 nspr-2   VD: VDInit finished with VINF_SUCCESS
+00:00:00.156325 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={aac6c7cb-a371-4c58-ab51-0616896b2f2c} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.158677 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/ArchLinux/ArchLinux.vbox" with version "1.19-linux"
+00:00:00.160672 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vbox" with version "1.19-linux"
+00:00:00.162255 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/Manjaro/Manjaro.vbox" with version "1.19-linux"
+00:00:00.164001 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/ArchCraft/ArchCraft.vbox" with version "1.19-linux"
+00:00:00.165708 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/Arch Install/Arch Install.vbox" with version "1.19-linux"
+00:00:00.167372 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/Archinstall 01/Archinstall 01.vbox" with version "1.19-linux"
+00:00:00.168943 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/ArchSnapper/ArchSnapper.vbox" with version "1.19-linux"
+00:00:00.170607 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/EOS/EOS.vbox" with version "1.19-linux"
+00:00:00.172341 nspr-2   Loading settings file "/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND-Snapper.vbox" with version "1.19-linux"
+00:00:00.173946 nspr-2   VirtualBox: object created
+00:00:00.750722 nspr-2   Saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.753001 nspr-2   Finished saving settings file "/home/oyinbra/.config/VirtualBox/VirtualBox.xml"
+00:00:00.762985 nspr-2   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:00:09.423437 nspr-4   Launched VM: 335555952 pid: 4174 (0x104e) frontend: GUI/Qt name: EOS-ND-Snapper
+00:00:09.438852 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:00:09.654859 nspr-6   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:00:10.121848 nspr-6   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={No extension pack by the name 'Oracle VM VirtualBox Extension Pack' was found}, preserve=false aResultDetail=0
+00:00:10.149121 nspr-2   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:00:10.168356 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:10.203114 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Starting)}, preserve=false aResultDetail=0
+00:00:10.364193 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:00:10.364941 nspr-3   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:00:10.389166 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
+00:02:39.883166 nspr-5   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Stopping)}, preserve=false aResultDetail=0
+00:02:39.941690 nspr-8   Saving settings file "/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND-Snapper.vbox" with version "1.19-linux"
+00:02:39.946569 nspr-8   Finished saving settings file "/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND-Snapper.vbox"
+00:02:39.955422 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:02:41.458989 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:02:53.648898 nspr-8   Launched VM: 335553968 pid: 4356 (0x1104) frontend: GUI/Qt name: EOS-ND-Snapper
+00:02:53.660228 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:02:53.850369 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:02:54.324863 nspr-4   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={70401eef-c8e9-466b-9660-45cb3e9979e4} aComponent={ExtPackManagerWrap} aText={No extension pack by the name 'Oracle VM VirtualBox Extension Pack' was found}, preserve=false aResultDetail=0
+00:02:54.352146 nspr-6   ERROR [COM]: aRC=VBOX_E_IPRT_ERROR (0x80bb0005) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={SessionMachine} aText={Saved screenshot data is not available (VERR_NOT_SUPPORTED)}, preserve=false aResultDetail=-37
+00:02:54.371277 nspr-6   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:02:54.407726 nspr-7   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Starting)}, preserve=false aResultDetail=0
+00:02:54.558740 nspr-7   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:02:54.559356 nspr-7   ERROR [COM]: aRC=VBOX_E_OBJECT_NOT_FOUND (0x80bb0001) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Property 'CRYPT/KeyId' does not exist}, preserve=false aResultDetail=0
+00:02:54.579114 nspr-2   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Running)}, preserve=false aResultDetail=0
+00:04:27.495985 nspr-4   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is Stopping)}, preserve=false aResultDetail=0
+00:04:27.568631 nspr-6   Saving settings file "/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND-Snapper.vbox" with version "1.19-linux"
+00:04:27.570836 nspr-6   Finished saving settings file "/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND-Snapper.vbox"
+00:04:27.579673 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:04:28.581762 nspr-3   ERROR [COM]: aRC=VBOX_E_INVALID_VM_STATE (0x80bb0002) aIID={300763af-5d6b-46e6-aa96-273eac15538a} aComponent={MachineWrap} aText={The machine is not mutable (state is PoweredOff)}, preserve=false aResultDetail=0
+00:04:52.322440 main     VirtualBox: object deletion starts
+00:04:52.322485 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/ArchLinux/ArchLinux.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.322594 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/New group/Linux/Linux.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.322652 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/Manjaro/Manjaro.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.322711 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/ArchCraft/ArchCraft.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.322787 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/Arch Install/Linux Clone.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.322909 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/Archinstall 01/Archinstall 01.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.323001 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/ArchSnapper/Linux Clone.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.323086 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/EOS/EOS.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.323177 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={ad47ad09-787b-44ab-b343-a082a3f2dfb1} aComponent={MediumWrap} aText={Medium '/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND.vdi' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+00:04:52.323459 main     HostDnsMonitor: shutting down ...
+00:04:52.323673 main     HostDnsMonitor: shut down
+00:04:52.343597 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={7682d5eb-f00e-44f1-8ca2-99d08b1cd607} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:04:52.344083 main     VirtualBox: object deleted
