@@ -7,7 +7,7 @@ echo "##########################################################################
 echo "#############################################################################" 
 
 
-sudo pacman -Sy zsh git wget neofetch
+sudo pacman -Sy zsh git wget neofetch --noconfirm --needed
 
 cd
 git clone https://github.com/Oyinbra/.dotfiles.git

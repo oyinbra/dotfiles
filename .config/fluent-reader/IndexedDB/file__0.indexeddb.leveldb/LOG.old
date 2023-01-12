@@ -1,3 +1,3 @@
-2022/11/30-14:56:16.219 6caf Reusing MANIFEST /home/oyinbra/.config/fluent-reader/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
-2022/11/30-14:56:16.219 6caf Recovering log #3
-2022/11/30-14:56:16.223 6caf Reusing old log /home/oyinbra/.config/fluent-reader/IndexedDB/file__0.indexeddb.leveldb/000003.log 
+2022/12/25-10:43:46.910 397d Reusing MANIFEST /home/oyinbra/.config/fluent-reader/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2022/12/25-10:43:46.910 397d Recovering log #3
+2022/12/25-10:43:46.916 397d Reusing old log /home/oyinbra/.config/fluent-reader/IndexedDB/file__0.indexeddb.leveldb/000003.log 

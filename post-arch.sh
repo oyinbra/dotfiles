@@ -57,14 +57,14 @@ echo "##########################################################################
 echo "#############################################################################" 
 
 # Copy oh=my=zsh to root
-sudo cp -r /home/oyinbra/.oh-my-zsh /root
-sudo ln -sf /home/oyinbra/.dotfiles/powerlevel10k-root/.p10k.zsh /root/
-sudo ln -sf /home/oyinbra/.dotfiles/neofetch-source/.neofetch-config2.conf /root
-sudo ln -sf /home/oyinbra/.dotfiles/neofetch-ascii/usr/bin/neofetch /usr/bin
-sudo ln -sf /home/oyinbra/.dotfiles/zshrc/.zshrc /root
+sudo cp -r /home/$USER/.oh-my-zsh /root
+sudo ln -sf /home/$USER/.dotfiles/powerlevel10k-root/.p10k.zsh /root/
+sudo ln -sf /home/$USER/.dotfiles/neofetch-source/.neofetch-config2.conf /root
+sudo ln -sf /home/$USER/.dotfiles/neofetch-ascii/usr/bin/neofetch /usr/bin
+sudo ln -sf /home/$USER/.dotfiles/zshrc/.zshrc /root
 
 # Enable color in nano editor for root user (Comment for Manjaro)
-# sudo ln -sf /home/oyinbra/.dotfiles/home/.nanorc /root
+# sudo ln -sf /home/$USER/.dotfiles/home/.nanorc /root
 # ln -sf ~/.dotfiles/nano/.nanorc ~/
 ln -sf ~/.dotfiles/home/.nanorc ~/
 
@@ -92,8 +92,8 @@ echo ###########################################################################
 # echo Pacman configuration
 # sudo ln -sf ~/.dotfiles/etc/pacman.conf /etc
 
-# echo Paru configuration
-# sudo ln -sf ~/.dotfiles/etc/paru.conf /etc/
+echo Paru configuration
+sudo ln -sf ~/.dotfiles/etc/paru.conf /etc/
 
 
 ####################################################################################

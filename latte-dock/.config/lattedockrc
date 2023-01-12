@@ -1,11 +1,11 @@
 [ActionsWidget]
-ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkYAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAABTAAAAAEAAAAAAAAD6AAAAABk
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXwAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAAAggAAAAEAAAAAAAAD6AAAAABk
 
 [ConfigDialog]
 eDP-1 Height 1920x1080=508
-eDP-1 Height 1920x1080 eDP-1=510
+eDP-1 Height 1920x1080 eDP-1=522
 eDP-1 Width 1920x1080=575
-eDP-1 Width 1920x1080 eDP-1=768
+eDP-1 Width 1920x1080 eDP-1=792
 eDP1 Height 1920x1080 eDP1=510
 eDP1 Width 1920x1080 eDP1=768
 
@@ -17,13 +17,14 @@ eDP-1 Width 1920x1080 eDP-1=980
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Icons/FDM-Logo.png
-Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/Applications/Icons/,file:$HOME/Applications/,file:$HOME/,file:$HOME/Icons/,file:$HOME/Documents/
+Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Icons/duplicati-fb-share-v1.png
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Icons/,file:$HOME/Documents/
 detailViewIconSize=16
+iconViewIconSize=64
 
 [KPropertiesDialog]
-eDP-1 Height 1920x1080 eDP-1=529
-eDP-1 Width 1920x1080 eDP-1=501
+eDP-1 Height 1920x1080 eDP-1=537
+eDP-1 Width 1920x1080 eDP-1=416
 eDP1 Height 1920x1080 eDP1=491
 eDP1 Width 1920x1080 eDP1=407
 
@@ -44,6 +45,9 @@ windowSize=980,631
 
 [PlasmaThemeExtended]
 outlineWidth=1
+
+[PlasmaTransientsConfig]
+PreloadWeight=34
 
 [ScreenConnectors]
 10=eDP-1:::0,0 1920x1080

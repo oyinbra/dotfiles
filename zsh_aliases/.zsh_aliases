@@ -1,9 +1,128 @@
 # ##############################################
+# ############## ACTION ALIASES ################
+# ##############################################
+
+# Timeshift
+alias timeshift.o="sudo timeshift --create --comments"
+alias timeshift.r="sudo timeshift --restore"
+
+# Check Git current version
+alias gv="git --version"
+
+# Watch SASS and output to dist folder
+alias sass.d="sass --watch scss:dist/css"
+
+# List Color
+alias ls="ls --color=auto"
+# List All
+alias la="ls -all"
+
+# Python
+alias py="python3"
+# alias python="python3"
+
+# Python version
+alias pv="py --version"
+
+# Pip3 List
+alias pl="pip3 list"
+
+# Switch Python Version
+alias c.python="sudo update-alternatives --config python3"
+
+# Terminal config
+alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
+
+# Delete Directory or files
+alias rmf="sudo rm -rf"
+alias rm="sudo rm -r"
+
+# List Users
+alias lusers="cat /etc/passwd"
+
+# Hibernate
+alias hibernate="systemctl hibernate"
+
+# Suspend
+alias suspend="systemctl suspend"
+
+# Nethogs
+alias nethogs="sudo nethogs"
+
+# Neofetch
+alias nf="neofetch"
+
+# Symlink
+alias sym="ln -sf"
+
+# Grub file
+alias c.grub="sudo nano /etc/default/grub"
+
+# Update Grub
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+# TimeShift configuration settings
+alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
+
+# System error
+alias s.journalctl="sudo journalctl -p 3 -xb"
+
+# Failed processes
+alias s.process="sudo systemctl --failed"
+
+# Bpytop
+alias s.bpytop="bpytop"
+
+# Log out
+alias logout="loginctl terminate-user $USER"
+
+# Process ID
+alias pid="ps -ef|grep -i"
+
+# Systemctl Services
+alias s.systemctl="systemctl list-unit-files --type=service"
+
+# Btop settings
+# alias btop="btop --utf-force"
+
+# System Control Settings
+alias s.systemctl="systemctl list-unit-files --type=service"
+
+alias n="nano"
+# alias v="code"
+alias v="vim"
+
+# Alacritty config
+alias c.alacritty="code ~/.config/alacritty/alacritty.yml"
+
+# Post arch install
+alias c.post-arch="code /home/$USER/.dotfiles/post-arch.sh"
+
+# Reload systemctl daemo
+alias r.systemctl="sudo systemctl daemon-reload"
+
+# Vim to sudo
+alias vi="sudo vi"
+
+# Vim to sudo
+alias nano="sudo nano"
+
+# Listen to opened port
+alias listen="sudo lsof -i -P -n | grep LISTEN"
+
+# Find process
+alias lp="ps aux | grep"
+alias root="sudo -s"
+
+# Update clamav antivirus
+alias freshclam="sudo freshclam"
+
+# ##############################################
 # ################### PACMAN ###################
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias resync="sudo pacman -Sy"
+alias resync="sudo pacman -Syy"
 alias refresh="sudo pacman -Fy"
 alias archupdate="sudo pacman -Syyu"
 alias pacman.s="sudo pacman -S"
@@ -48,6 +167,9 @@ alias pacman.rns="sudo pacman -Rns"
 
 # Find packages to install
 alias pacman.f="pacman -F"
+
+# Pacman is currently in use, please wait...
+alias pacman.unlock="rm /var/lib/pacman/db.lck"
 
 # ##############################################
 # ################### PARU ######################
@@ -158,6 +280,9 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 # ############## DIRECTORY ALIASES #############
 # ##############################################
 
+# Local Backup
+alias backup="sudo /home/$USER/.dotfiles/backup.sh"
+
 # Search for files or folders
 alias lf="ls | grep"
 
@@ -240,114 +365,3 @@ alias u.arch.mirrors="rate-mirrors --allow-root --protocol https arch | sudo tee
 
 # Update EndeavourOS mirror
 alias u.endeavouros-mirror="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"
-
-# ##############################################
-# ############## ACTION ALIASES ################
-# ##############################################
-
-# Check Git current version
-alias gv="git --version"
-
-# Watch SASS and output to dist folder
-alias sass.d="sass --watch scss:dist/css"
-
-# List Color
-alias ls="ls --color=auto"
-# List All
-alias la="ls -all"
-
-# Python
-alias py="python3"
-# alias python="python3"
-
-# Python version
-alias pv="py --version"
-
-# Pip3 List
-alias pl="pip3 list"
-
-# Switch Python Version
-alias c.python="sudo update-alternatives --config python3"
-
-# Terminal config
-alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
-
-# Delete locked Directory or files
-alias rmv="rm -rf"
-
-# List Users
-alias lusers="cat /etc/passwd"
-
-# Hibernate
-alias hibernate="systemctl hibernate"
-
-# Suspend
-alias suspend="systemctl suspend"
-
-# Nethogs
-alias nethogs="sudo nethogs"
-
-# Neofetch
-alias nf="neofetch"
-
-# Symlink
-alias sym="ln -sf"
-
-# Grub file
-alias c.grub="sudo nano /etc/default/grub"
-
-# Update Grub
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-# TimeShift configuration settings
-alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
-
-# System error
-alias s.journalctl="sudo journalctl -p 3 -xb"
-
-# Failed processes
-alias s.process="sudo systemctl --failed"
-
-# Bpytop
-alias s.bpytop="bpytop"
-
-# Log out
-alias logout="loginctl terminate-user oyinbra"
-
-# Process ID
-alias pid="ps -ef|grep -i"
-
-# Systemctl Services
-alias s.systemctl="systemctl list-unit-files --type=service"
-
-# Btop settings
-# alias btop="btop --utf-force"
-
-# System Control Settings
-alias s.systemctl="systemctl list-unit-files --type=service"
-
-alias n="nano"
-# alias v="code"
-alias v="vim"
-
-# Alacritty config
-alias c.alacritty="code ~/.config/alacritty/alacritty.yml"
-
-# Post arch install
-alias c.post-arch="code /home/oyinbra/.dotfiles/post-arch.sh"
-
-# Reload systemctl daemo
-alias r.systemctl="sudo systemctl daemon-reload"
-
-# Vim to sudo
-alias vi="sudo vi"
-
-# Vim to sudo
-alias nano="sudo nano"
-
-# Listen to opened port
-alias listen="sudo lsof -i -P -n | grep LISTEN"
-
-# Find process
-alias lp="ps aux | grep"
-alias root="sudo -s"

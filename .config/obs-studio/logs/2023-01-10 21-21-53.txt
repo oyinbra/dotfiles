@@ -1,0 +1,152 @@
+21:21:53.952: Using EGL/X11
+21:21:53.952: CPU Name: Intel(R) Core(TM) i7-10875H CPU @ 2.30GHz
+21:21:53.952: CPU Speed: 4406.414MHz
+21:21:53.953: Physical Cores: 8, Logical Cores: 16
+21:21:53.953: Physical Memory: 15757MB Total, 9822MB Free
+21:21:53.953: Kernel Version: Linux 6.1.1-1-MANJARO
+21:21:53.953: Distribution: "Manjaro Linux" Unknown
+21:21:53.953: Session Type: x11
+21:21:53.953: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+21:21:53.953: Qt Version: 6.4.1 (runtime), 6.4.1 (compiled)
+21:21:53.953: Portable mode: false
+21:21:53.982: OBS 28.1.2-2 (linux)
+21:21:53.982: ---------------------------------
+21:21:53.982: ---------------------------------
+21:21:53.982: audio settings reset:
+21:21:53.982: 	samples per sec: 48000
+21:21:53.982: 	speakers:        2
+21:21:53.982: 	max buffering:   960 milliseconds
+21:21:53.982: 	buffering type:  dynamically increasing
+21:21:53.984: ---------------------------------
+21:21:53.984: Initializing OpenGL...
+21:21:54.025: Loading up OpenGL on adapter Intel Mesa Intel(R) UHD Graphics (CML GT2)
+21:21:54.025: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 22.3.1, shading language 4.60
+21:21:54.047: ---------------------------------
+21:21:54.047: video settings reset:
+21:21:54.047: 	base resolution:   1920x1080
+21:21:54.047: 	output resolution: 1920x1080
+21:21:54.047: 	downscale filter:  Bicubic
+21:21:54.047: 	fps:               60/1
+21:21:54.047: 	format:            NV12
+21:21:54.047: 	YUV mode:          Rec. 709/Partial
+21:21:54.047: NV12 texture support not available
+21:21:54.047: P010 texture support not available
+21:21:54.050: Audio monitoring device:
+21:21:54.050: 	name: Default
+21:21:54.050: 	id: default
+21:21:54.050: ---------------------------------
+21:21:54.055: Failed to load 'en-US' text for module: 'decklink-captions.so'
+21:21:54.059: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+21:21:54.062: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+21:21:54.062: Failed to initialize module 'decklink.so'
+21:21:54.069: Failed to load 'en-GB' text for module: 'frontend-tools.so'
+21:21:54.126: Failed to load 'en-GB' text for module: 'linux-alsa.so'
+21:21:54.130: Failed to load 'en-GB' text for module: 'linux-capture.so'
+21:21:54.138: Failed to load 'en-GB' text for module: 'linux-jack.so'
+21:21:54.142: Failed to load 'en-GB' text for module: 'linux-pipewire.so'
+21:21:54.143: [pipewire] Available captures:
+21:21:54.143: [pipewire]     - Desktop capture
+21:21:54.143: [pipewire]     - Window capture
+21:21:54.147: Failed to load 'en-GB' text for module: 'linux-pulseaudio.so'
+21:21:54.154: v4l2loopback not installed, virtual camera disabled
+21:21:54.180: NVENC supported
+21:21:54.181: FFMPEG VAAPI supported
+21:21:54.229: Failed to load 'en-GB' text for module: 'obs-libfdk.so'
+21:21:54.301: Failed to load 'en-GB' text for module: 'obs-vst.so'
+21:21:54.322: Failed to load 'en-GB' text for module: 'obs-x264.so'
+21:21:54.345: Failed to load 'en-GB' text for module: 'rtmp-services.so'
+21:21:54.361: ---------------------------------
+21:21:54.361:   Loaded Modules:
+21:21:54.361:     text-freetype2.so
+21:21:54.361:     rtmp-services.so
+21:21:54.361:     obs-x264.so
+21:21:54.361:     obs-vst.so
+21:21:54.362:     obs-transitions.so
+21:21:54.362:     obs-outputs.so
+21:21:54.362:     obs-libfdk.so
+21:21:54.362:     obs-filters.so
+21:21:54.362:     obs-ffmpeg.so
+21:21:54.362:     linux-v4l2.so
+21:21:54.362:     linux-pulseaudio.so
+21:21:54.362:     linux-pipewire.so
+21:21:54.362:     linux-jack.so
+21:21:54.362:     linux-capture.so
+21:21:54.362:     linux-alsa.so
+21:21:54.362:     image-source.so
+21:21:54.362:     frontend-tools.so
+21:21:54.362:     decklink-output-ui.so
+21:21:54.362:     decklink-captions.so
+21:21:54.362: ---------------------------------
+21:21:54.362: ==== Startup complete ===============================================
+21:21:54.388: All scene data cleared
+21:21:54.388: ------------------------------------------------
+21:21:54.390: pulse-input: Server name: 'pulseaudio 16.1'
+21:21:54.390: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+21:21:54.390: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor' (default)
+21:21:54.390: [Loaded global audio device]: 'Desktop Audio'
+21:21:54.479: pulse-input: Server name: 'pulseaudio 16.1'
+21:21:54.479: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+21:21:54.480: pulse-input: Started recording from 'alsa_input.usb-MACROSILICON_USB_Video-02.analog-stereo' (default)
+21:21:54.480: [Loaded global audio device]: 'Mic/Aux'
+21:21:54.593: pulse-input: Server name: 'pulseaudio 16.1'
+21:21:54.594: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+21:21:54.594: pulse-input: Started recording from 'alsa_input.usb-MACROSILICON_USB_Video-02.analog-stereo'
+21:21:54.598: pulse-am: Server name: 'pulseaudio 16.1'
+21:21:54.598: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+21:21:54.600: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+21:21:54.601: v4l2-input: Start capture from /dev/video4
+21:21:54.714: v4l2-input: Input: 0
+21:21:54.744: v4l2-input: Resolution: 640x360
+21:21:54.744: v4l2-input: Pixelformat: BGR3
+21:21:54.744: v4l2-input: Linesize: 1920 Bytes
+21:21:54.744: v4l2-input: Framerate: 30.00 fps
+21:21:54.745: v4l2-input: /dev/video4: select timeout set to 166666 (5x frame periods)
+21:21:54.746: Switched to scene 'PS4'
+21:21:54.747: ------------------------------------------------
+21:21:54.747: Loaded scenes:
+21:21:54.747: - scene 'PS4':
+21:21:54.747:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+21:21:54.747:     - source: 'Audio Input Capture (PulseAudio)' (pulse_input_capture)
+21:21:54.747:         - monitoring: monitor and output
+21:21:54.747: ------------------------------------------------
+21:21:54.918: v4l2-input: /dev/video4: select timed out
+21:21:54.918: v4l2-input: /dev/video4: failed to log status
+21:21:57.238: v4l2-input: /dev/video5 seems to not support video capture
+21:21:57.238: v4l2-input: /dev/video3 seems to not support video capture
+21:21:57.238: v4l2-input: /dev/video1 seems to not support video capture
+21:21:57.239: v4l2-input: Found device 'HD Camera: IR Camera' at /dev/video4
+21:21:57.239: v4l2-input: Found device 'HD Camera: HD Camera' at /dev/video2
+21:21:57.239: v4l2-input: Found device 'USB Video: USB Video' at /dev/video0
+21:21:57.239: v4l2-input: Found input 'Camera 1' (Index 0)
+21:21:57.240: v4l2-input: Pixelformat: 8-bit Greyscale (unavailable)
+21:21:57.240: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:21:57.240: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:21:57.240: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:21:57.240: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:21:57.240: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:21:57.240: v4l2-input: Pixelformat: 8-bit Greyscale (unavailable)
+21:21:57.240: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:21:57.240: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:21:57.240: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:21:57.240: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:21:57.241: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:21:57.241: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:21:57.242: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:22:00.103: v4l2-input: Found input 'Camera 1' (Index 0)
+21:22:00.104: v4l2-input: Pixelformat: Motion-JPEG (available)
+21:22:00.104: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+21:22:00.104: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+21:22:00.104: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+21:22:00.104: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+21:22:00.104: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+21:22:00.104: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+21:22:00.139: v4l2-input: /dev/video4: Stopped capture after 77 frames
+21:22:00.140: v4l2-input: Start capture from /dev/video0
+21:22:00.140: v4l2-input: Input: 0
+21:22:00.141: v4l2-input: Resolution: 1920x1080
+21:22:00.141: v4l2-input: Pixelformat: BGR3
+21:22:00.141: v4l2-input: Linesize: 5760 Bytes
+21:22:00.141: v4l2-input: Framerate: 60.00 fps
+21:22:00.142: v4l2-input: /dev/video0: select timeout set to 83333 (5x frame periods)
+21:22:14.185: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Mic/Aux)
+21:22:14.185: 

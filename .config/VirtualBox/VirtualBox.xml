@@ -12,12 +12,14 @@
       <ExtraDataItem name="GUI/GroupDefinitions/" value="n=GLOBAL,go=Installed,go=New group"/>
       <ExtraDataItem name="GUI/GroupDefinitions/Installed" value="m=1b13a88e-a8f2-49c6-b29a-93512940fa43,m=890887fa-9779-4b8c-977f-97ee3c4227a1,m=9d038e1c-136b-4c85-99aa-f878f4f848fa,m=87ccd0b3-9b45-4315-9a43-446ec59212ce,m=864e7e7c-a490-47b7-9a3e-3a8caff9a783,m=9e557946-f114-4c25-8b3c-11e092e4a319,m=a13e10f8-d67a-4f94-a21c-b07b0b975632,m=fc5d6312-c7f4-48ab-91a9-0ac0737b843f"/>
       <ExtraDataItem name="GUI/GroupDefinitions/New group" value="m=08888250-b1f3-4870-be81-7aac9eb5719b"/>
-      <ExtraDataItem name="GUI/LastItemSelected" value="m=fc5d6312-c7f4-48ab-91a9-0ac0737b843f"/>
+      <ExtraDataItem name="GUI/LastItemSelected" value="m=890887fa-9779-4b8c-977f-97ee3c4227a1"/>
       <ExtraDataItem name="GUI/LastWindowPosition" value="4,69,952,1005"/>
       <ExtraDataItem name="GUI/MediumSelector/DialogGeometry" value="894,77,960,721"/>
       <ExtraDataItem name="GUI/NotificationCenter/Alignment" value="Bottom"/>
       <ExtraDataItem name="GUI/RecentFolderCD" value="/run/media/oyinbra/Ventoy"/>
-      <ExtraDataItem name="GUI/RecentListCD" value="/run/media/oyinbra/Ventoy/manjaro-kde-22.0-minimal-221224-linux61.iso,/run/media/oyinbra/Ventoy/EndeavourOS_Cassini_22_12.iso,/run/media/oyinbra/Ventoy/EndeavourOS_Artemis_nova_22_9.iso,/run/media/oyinbra/Ventoy/archlinux-2022.12.01-x86_64.iso,/run/media/oyinbra/Ventoy/ubuntu-22.10-desktop-amd64.iso"/>
+      <ExtraDataItem name="GUI/RecentFolderHD" value="/home/oyinbra/VirtualBox VMs/New group/Qubes OS"/>
+      <ExtraDataItem name="GUI/RecentListCD" value="/run/media/oyinbra/Ventoy/Qubes-R4.1.1-x86_64.iso,/run/media/oyinbra/Ventoy/manjaro-kde-22.0-minimal-221224-linux61.iso,/run/media/oyinbra/Ventoy/EndeavourOS_Cassini_22_12.iso,/run/media/oyinbra/Ventoy/EndeavourOS_Artemis_nova_22_9.iso,/run/media/oyinbra/Ventoy/archlinux-2022.12.01-x86_64.iso"/>
+      <ExtraDataItem name="GUI/RecentListHD" value="/home/oyinbra/VirtualBox VMs/New group/Qubes OS/Qubes OS_1.vdi"/>
       <ExtraDataItem name="GUI/SuppressMessages" value="confirmGoingFullscreen,showRuntimeError.warning.DvdOrFloppyImageInaccessible,confirmInputCapture"/>
       <ExtraDataItem name="GUI/Tools/LastItemsSelected" value="Welcome,Details"/>
     </ExtraData>
@@ -32,6 +34,11 @@
       <MachineEntry uuid="{a13e10f8-d67a-4f94-a21c-b07b0b975632}" src="/home/oyinbra/VirtualBox VMs/Installed/EOS/EOS.vbox"/>
       <MachineEntry uuid="{fc5d6312-c7f4-48ab-91a9-0ac0737b843f}" src="/home/oyinbra/VirtualBox VMs/Installed/EOS-ND-Snapper/EOS-ND-Snapper.vbox"/>
     </MachineRegistry>
+    <MediaRegistry>
+      <HardDisks>
+        <HardDisk uuid="{0ff95231-ab31-41e5-80d4-9b6b241a94e3}" location="/home/oyinbra/VirtualBox VMs/New group/Qubes OS/Qubes OS.vdi" format="VDI" type="Normal"/>
+      </HardDisks>
+    </MediaRegistry>
     <NetserviceRegistry>
       <DHCPServers>
         <DHCPServer networkName="HostInterfaceNetworking-vboxnet0" IPAddress="192.168.56.100" networkMask="255.255.255.0" lowerIP="192.168.56.101" upperIP="192.168.56.254" enabled="1"/>

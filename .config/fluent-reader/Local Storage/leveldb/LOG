@@ -1,3 +1,3 @@
-2022/12/25-10:43:44.362 397d Reusing MANIFEST /home/oyinbra/.config/fluent-reader/Local Storage/leveldb/MANIFEST-000001
-2022/12/25-10:43:44.363 397d Recovering log #3
-2022/12/25-10:43:44.363 397d Reusing old log /home/oyinbra/.config/fluent-reader/Local Storage/leveldb/000003.log 
+2023/01/09-18:29:54.301 5418 Reusing MANIFEST /home/oyinbra/.config/fluent-reader/Local Storage/leveldb/MANIFEST-000001
+2023/01/09-18:29:54.302 5418 Recovering log #3
+2023/01/09-18:29:54.302 5418 Reusing old log /home/oyinbra/.config/fluent-reader/Local Storage/leveldb/000003.log 
