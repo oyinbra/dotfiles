@@ -18,7 +18,7 @@ alias ls="ls --color=auto"
 alias la="ls -all"
 
 # Python
-alias py="python3"
+alias py="python -uv"
 # alias python="python3"
 
 # Python version
