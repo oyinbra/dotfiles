@@ -34,8 +34,8 @@ alias c.python="sudo update-alternatives --config python3"
 alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete Directory or files
-alias rmf="sudo rm -rf"
-alias rm="sudo rm -r"
+alias rmf="rm -rf"
+alias rm="rm -r"
 
 # List Users
 alias lusers="cat /etc/passwd"
@@ -129,6 +129,7 @@ alias pacman.s="sudo pacman -S"
 alias pacman.n="sudo pacman -S --noconfirm"
 alias pacman.sy="sudo pacman -Sy"
 alias pacman.r="sudo pacman -R"
+alias pacman.i="sudo pacman -S --needed - <"
 # Downgrade Packages
 alias pacman.dg="sudo pacman -Suu"
 
@@ -155,9 +156,6 @@ alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
 
 # Pactree
 alias pacman.t="pactree -r"
-
-# Pacman pkg packages
-alias pkg.dir="/var/cache/pacman/pkg"
 
 # Completely clean packages
 alias pacman.rs="sudo pacman -Rs"
