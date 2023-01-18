@@ -17,8 +17,8 @@ eDP-1 Width 1920x1080 eDP-1=980
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Icons/duplicati-fb-share-v1.png
-Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Icons/,file:$HOME/Documents/
+Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Downloads/chatgpt-seeklogo.com.png.pdf,file:$HOME/Downloads/openai-clip-art-icon-vector.png,file:$HOME/Downloads/openai-logo.png,file:$HOME/Downloads/wpYDqrIf_400x400.png,file:$HOME/Icons/duplicati-fb-share-v1.png
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Icons/,file:$HOME/Documents/,file:$HOME/Desktop/
 detailViewIconSize=16
 iconViewIconSize=64
 

@@ -6,9 +6,6 @@
 alias timeshift.o="sudo timeshift --create --comments"
 alias timeshift.r="sudo timeshift --restore"
 
-# Check Git current version
-alias gv="git --version"
-
 # Watch SASS and output to dist folder
 alias sass.d="sass --watch scss:dist/css"
 
@@ -242,6 +239,12 @@ alias snap.r="sudo snap remove"
 # ################# GIT ########################
 # ##############################################
 
+# Check Git current version
+alias gv="git --version"
+
+# Git configuration
+alias git.config="git config --global --edit"
+
 alias gi="git init"
 alias cl="clear"
 
@@ -258,10 +261,10 @@ alias gst="git status"
 alias gp="git push"
 
 # Pre Git push
-alias gp.pre="git add . && git commit -m "updated" && git config credential.helper store && git config --global user.email "onyinbra@gmail.com" && git config --global user.name "oyinbra" && git push"
+alias gp.pre="git add . && git commit -m "updated" && git config --global credential.helper store && git config --global user.email "onyinbra@gmail.com" && git config --global user.name "oyinbra" && git push"
 
 # Post Git Push
-alias gp.post="git config credential.helper store && git config --global user.email "onyinbra@gmail.com" && git config --global user.name "oyinbra" && git push"
+alias gp.post="git config --global credential.helper store && git config --global user.email "onyinbra@gmail.com" && git config --global user.name "oyinbra" && git push"
 
 
 # ##############################################
@@ -318,7 +321,7 @@ alias pkg="/var/cache/pacman/pkg"
 alias pictures="~/Pictures"
 
 # Coinmarketcapital
-alias cmc='py ~/Workspace/Python/cmc.py'
+alias cmc="python -u /home/$USER/Workspace/PYTHON/cmc.py"
 
 # Check Folder size
 alias fs="du -sh"

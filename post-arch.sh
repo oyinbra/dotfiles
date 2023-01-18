@@ -1,4 +1,11 @@
-# POST ARCH INSTALL SCRIPT
+echo "
+#############################################################################
+#############################################################################
+##                                                                         ##
+##                        POST ARCH INSTALL SCRIPT                         ##
+##                                                                         ##
+#############################################################################
+#############################################################################"
 
 # ##############################################
 # ################## ARCH Pure  ###############
@@ -48,13 +55,14 @@ ln -sf ~/.dotfiles/.local/share/konsole/ ~/.local/share/
 # SDDM Themes
 sudo ln -sf ~/.dotfiles/usr/share/sddm/themes/Ocean /usr/share/sddm/themes/
 
-echo "#############################################################################"
-echo "#############################################################################"
-echo "##                                                                         ##"
-echo "##                     OH-MY-ZSH ROOT INSTALLATION                         ##"
-echo "##                                                                         ##"
-echo "#############################################################################"
-echo "#############################################################################" 
+echo "
+#############################################################################
+#############################################################################
+##                                                                         ##
+##                     OH-MY-ZSH ROOT INSTALLATION                         ##
+##                                                                         ##
+#############################################################################
+#############################################################################"
 
 # Copy oh=my=zsh to root
 sudo cp -r /home/$USER/.oh-my-zsh /root
@@ -68,52 +76,10 @@ sudo ln -sf /home/$USER/.dotfiles/zshrc/.zshrc /root
 # ln -sf ~/.dotfiles/nano/.nanorc ~/
 ln -sf ~/.dotfiles/home/.nanorc ~/
 
-echo Refresh zshrc
-source ~/.zshrc
-echo Refresh zshrc
-source ~/.zshrc
-
-echo ###############################################################################
-echo ###############################################################################
-echo ##                                                                           ## 
-echo ##                      Mirror Installation                                  ##
-echo ##                                                                           ##
-echo ###############################################################################
-echo ###############################################################################
-
-# Arch mirror list
-# sudo ln -sf ~/.dotfiles/etc/pacman.d/mirrorlist /etc/pacman.d
-
-# echo Enable color in nano editor for user
-
-# echo Arcolinux Mirror
-# sudo ln -sf ~/.dotfiles/etc/pacman.d/arcolinux-mirrorlist /etc/pacman.d
-
-# echo Pacman configuration
-# sudo ln -sf ~/.dotfiles/etc/pacman.conf /etc
-
 echo Paru configuration
 sudo ln -sf ~/.dotfiles/etc/paru.conf /etc/
 
-
-####################################################################################
-####################################################################################
-##                                                                                ## 
-##                         POWER MANAGEMENT Installation                          ##
-##                                                                                ##
-####################################################################################
-####################################################################################
-
-# echo Autocpufreq
-# sudo ln -sf ~/.dotfiles/etc/auto-cpufreq.conf /etc
-# echo tlp
-# sudo ln -sf ~/.dotfiles/etc/tlp.conf /etc
-
-
-# Pictures Restore
-#cd ~/Pictures
-#git clone https://github.com/Oyinbra/Pictures.git
-#cd Pictures
-#cp -r Screenshots Wallpaper ~/Pictures
-#cd ..
-#rm -rf Pictures
+echo Refresh zshrc
+source ~/.zshrc
+echo Refresh zshrc
+source ~/.zshrc
