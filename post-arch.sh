@@ -83,3 +83,5 @@ echo Refresh zshrc
 source ~/.zshrc
 echo Refresh zshrc
 source ~/.zshrc
+
+sudo ln -sf /home/$USER/.env /root

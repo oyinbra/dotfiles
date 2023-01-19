@@ -2,6 +2,8 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
+# Copy
+alias cp="cp -r"
 # Timeshift
 alias timeshift.o="sudo timeshift --create --comments"
 alias timeshift.r="sudo timeshift --restore"
@@ -12,7 +14,7 @@ alias sass.d="sass --watch scss:dist/css"
 # List Color
 alias ls="ls --color=auto"
 # List All
-alias la="ls -all"
+# alias la="ls -all"
 
 # Python
 alias py="python -uv"
@@ -85,7 +87,10 @@ alias s.systemctl="systemctl list-unit-files --type=service"
 # System Control Settings
 alias s.systemctl="systemctl list-unit-files --type=service"
 
+# Nano config
 alias n="nano"
+alias nano="sudo nano"
+
 # alias v="code"
 alias v="vim"
 
@@ -100,9 +105,6 @@ alias r.systemctl="sudo systemctl daemon-reload"
 
 # Vim to sudo
 alias vi="sudo vi"
-
-# Vim to sudo
-alias nano="sudo nano"
 
 # Listen to opened port
 alias listen="sudo lsof -i -P -n | grep LISTEN"
@@ -285,10 +287,10 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 alias backup="sudo /home/$USER/.dotfiles/backup.sh"
 
 # Search for files or folders
-alias lf="ls | grep"
+alias lsf="ls | grep"
 
 # Search for files or folders including hidden folders and files
-alias laf="ls | grep"
+alias lf="ls | grep"
 
 # Refresh zsh
 alias rf="source ~/.zshrc"
