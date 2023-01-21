@@ -88,11 +88,14 @@ alias s.systemctl="systemctl list-unit-files --type=service"
 alias s.systemctl="systemctl list-unit-files --type=service"
 
 # Nano config
-alias n="nano"
-alias nano="sudo nano"
+# alias n="nano"
+alias n="sudo nano"
 
-# alias v="code"
+# Vim config
+alias e="sudo -e"
 alias v="vim"
+# VIMRC Config
+alias c.vimrc="vim ~/.config/nvim/vimrc.vim"
 
 # Alacritty config
 alias c.alacritty="code ~/.config/alacritty/alacritty.yml"
@@ -102,9 +105,6 @@ alias c.post-arch="code /home/$USER/.dotfiles/post-arch.sh"
 
 # Reload systemctl daemo
 alias r.systemctl="sudo systemctl daemon-reload"
-
-# Vim to sudo
-alias vi="sudo vi"
 
 # Listen to opened port
 alias listen="sudo lsof -i -P -n | grep LISTEN"

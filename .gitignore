@@ -4,3 +4,5 @@ git/.gitconfig
 # Ignore zsh history
 zshrc-manjaro/.zhistory
 zshrc-ubuntu/.zsh_history
+# Vim Pluggins with .git
+.config/nvim/autoload/plugged

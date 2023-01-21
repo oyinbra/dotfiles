@@ -951,7 +951,7 @@ key_bindings:
   - { key: U,              mods: Super,                           chars: "pacman.u"        }
 
 
-  - { key: V,              mods: Control, mode: ~Vi,              action: Paste            }
+  # - { key: V,              mods: Control, mode: ~Vi,              action: Paste            }
   - { key: C,              mods: Control|shift,                   action: Copy             }
   - { key: F,              mods: Control,       mode: ~Search,    action: SearchForward    }
   - { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }

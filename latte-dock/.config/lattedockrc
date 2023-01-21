@@ -47,7 +47,7 @@ windowSize=980,631
 outlineWidth=1
 
 [PlasmaTransientsConfig]
-PreloadWeight=34
+PreloadWeight=10
 
 [ScreenConnectors]
 10=eDP-1:::0,0 1920x1080

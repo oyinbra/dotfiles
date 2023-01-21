@@ -43,6 +43,7 @@ sudo ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases /root/
 ln -sf ~/.dotfiles/.config/obs-studio ~/.config
 ln -sf ~/.dotfiles/.config/fluent-reader ~/.config
 ln -sf ~/.dotfiles/.config/VirtualBox ~/.config
+ln -sf ~/.dotfiles/.config/nvim ~/.config
 
 # LOCAL SHARE
 ln -sf ~/.dotfiles/.local/share/color-schemes ~/.local/share
