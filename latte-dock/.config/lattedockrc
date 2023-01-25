@@ -47,7 +47,18 @@ windowSize=980,631
 outlineWidth=1
 
 [PlasmaTransientsConfig]
-PreloadWeight=10
+PreloadWeight=0
+byPassWM=false
+isPreferredForShortcuts=false
+lastScreen=10
+name=Empty Panel
+onPrimary=true
+viewType=0
+
+[PlasmaTransientsConfig][Indicator]
+customType=
+enabled=true
+type=org.kde.latte.default
 
 [ScreenConnectors]
 10=eDP-1:::0,0 1920x1080
@@ -66,6 +77,6 @@ metaPressAndHoldEnabled=true
 mouseSensitivity=2
 screenTrackerInterval=2500
 showInfoWindow=true
-singleModeLayoutName=Oyinbra-panel-12.12.16\s
+singleModeLayoutName=Oyinbra-dock-12.12.16
 userConfiguredAutostart=true
 version=2

@@ -92,10 +92,11 @@ alias s.systemctl="systemctl list-unit-files --type=service"
 alias n="sudo nano"
 
 # Vim config
-alias e="sudo -e"
+# alias e="sudo -e"
+alias e="sudo vim"
 alias v="vim"
 # VIMRC Config
-alias c.vimrc="vim ~/.config/nvim/vimrc.vim"
+alias c.vimrc="vim ~/.config/nvim/.vimrc"
 
 # Alacritty config
 alias c.alacritty="code ~/.config/alacritty/alacritty.yml"
@@ -167,6 +168,9 @@ alias pacman.f="pacman -F"
 
 # Pacman is currently in use, please wait...
 alias pacman.unlock="rm /var/lib/pacman/db.lck"
+
+# Update Pacman Mirrors for Manjaro
+alias pacman.mirrors="sudo pacman-mirrors --fasttrack"
 
 # ##############################################
 # ################### PARU ######################

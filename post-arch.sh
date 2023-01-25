@@ -37,7 +37,7 @@ ln -sf ~/.dotfiles/themes/.themes ~/
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
 ln -sf ~/.dotfiles/alacritty/.config/alacritty ~/.config
 ln -sf ~/.dotfiles/aurorae ~/.local/share/
-sudo ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases /root/
+ln -sf ~/.dotfiles/home/.nanorc ~/
 
 # CONFIGURATIONS
 ln -sf ~/.dotfiles/.config/obs-studio ~/.config
@@ -75,14 +75,22 @@ sudo ln -sf /home/$USER/.dotfiles/zshrc/.zshrc /root
 # Enable color in nano editor for root user (Comment for Manjaro)
 # sudo ln -sf /home/$USER/.dotfiles/home/.nanorc /root
 # ln -sf ~/.dotfiles/nano/.nanorc ~/
-ln -sf ~/.dotfiles/home/.nanorc ~/
+sudo ln -sf /home/$USER/.dotfiles/.config/nvim /root/.config
+sudo ln -sf /home/$USER/.dotfiles/zsh_aliases/.zsh_aliases /root/
 
-echo Paru configuration
-sudo ln -sf ~/.dotfiles/etc/paru.conf /etc/
+echo "
+#############################################################################
+#############################################################################
+##                                                                         ##
+##                            PARU CONFIGURATION                           ##
+##                                                                         ##
+#############################################################################
+#############################################################################"
 
-echo Refresh zshrc
-source ~/.zshrc
-echo Refresh zshrc
-source ~/.zshrc
+sudo ln -sf /home/$USER/.dotfiles/etc/paru.conf /etc/
+
 
 sudo ln -sf /home/$USER/.env /root
+
+echo Refresh zshrc
+source ~/.zshrc
