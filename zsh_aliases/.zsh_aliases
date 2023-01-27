@@ -33,7 +33,7 @@ alias c.python="sudo update-alternatives --config python3"
 alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete Directory or files
-alias rmf="rm -rf"
+alias del="rm -rf"
 alias rm="rm -r"
 
 # List Users
