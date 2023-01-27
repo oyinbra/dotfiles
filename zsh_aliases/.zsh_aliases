@@ -91,18 +91,18 @@ alias s.systemctl="systemctl list-unit-files --type=service"
 # alias n="nano"
 alias n="sudo nano"
 
-# Vim config
+# VIMRC Config
 # alias e="sudo -e"
 alias e="sudo vim"
 alias v="vim"
-# VIMRC Config
-alias c.vimrc="vim ~/.config/nvim/.vimrc"
+alias c.nvim="nvim ~/.config/nvim/init.lua"
+alias c.plugins="nvim ~/.config/nvim/lua/plugins.lua"
 
 # Alacritty config
-alias c.alacritty="code ~/.config/alacritty/alacritty.yml"
+alias c.alacritty="nvim ~/.config/alacritty/alacritty.yml"
 
 # Post arch install
-alias c.post-arch="code /home/$USER/.dotfiles/post-arch.sh"
+alias c.post-arch="nvim /home/$USER/.dotfiles/post-arch.sh"
 
 # Reload systemctl daemo
 alias r.systemctl="sudo systemctl daemon-reload"
@@ -300,16 +300,16 @@ alias lf="ls | grep"
 alias rf="source ~/.zshrc"
 
 # Zsh config
-alias c.zshrc="code ~/.zshrc"
+alias c.zshrc="nvim ~/.zshrc"
 
 # Bash config
-alias bash.c="code ~/.bashrc"
+alias bash.c="nvim ~/.bashrc"
 
 # Neofetch Distro
-alias nf.c="code ~/.config/neofetch/config.conf"
+alias nf.c="nvim ~/.config/neofetch/config.conf"
 
 # Zsh aliases config
-alias c.alias="code ~/.zsh_aliases"
+alias c.alias="nvim ~/.zsh_aliases"
 
 # Dotfiles
 alias dotfiles="~/.dotfiles"

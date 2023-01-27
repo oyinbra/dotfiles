@@ -30,7 +30,7 @@ eDP1 Width 1920x1080 eDP1=407
 
 [LatteSettingsDialog]
 downloadWindowSize=980,600
-windowSize=1272,736
+windowSize=952,958
 
 [LatteSettingsDialog][TabLayouts]
 columnWidths=49,508,129,104
@@ -45,20 +45,6 @@ windowSize=980,631
 
 [PlasmaThemeExtended]
 outlineWidth=1
-
-[PlasmaTransientsConfig]
-PreloadWeight=0
-byPassWM=false
-isPreferredForShortcuts=false
-lastScreen=10
-name=Empty Panel
-onPrimary=true
-viewType=0
-
-[PlasmaTransientsConfig][Indicator]
-customType=
-enabled=true
-type=org.kde.latte.default
 
 [ScreenConnectors]
 10=eDP-1:::0,0 1920x1080

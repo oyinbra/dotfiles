@@ -1,0 +1,11 @@
+
+node_modules
+package-lock.json
+.vscode
+*.idea
+*.vscode
+*.git
+*.env
+*.pyc
+**/.git
+# when you want gitignore to ignore a folder, you can create a .gitinore in that folder and add just * into it
