@@ -14,6 +14,10 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- Packer Installation
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+  use "nvim-lua/plenary.nvim"
+  use {'windwp/nvim-ts-autotag'}
+  use {'windwp/nvim-autopairs'}
+  use {'p00f/nvim-ts-rainbow'}
   use 'nvim-tree/nvim-web-devicons' -- Icons for programming languages
   use {
     'nvim-lualine/lualine.nvim',
@@ -26,15 +30,19 @@ return require('packer').startup(function(use)
   -- :CocCommand snippets.edit... FOR EACH FILE TYPE
 
   use 'sheerun/vim-polyglot' -- Better Syntax Support
-
+  use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.1',
+  -- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+  }
   use {
   'nvim-tree/nvim-tree.lua',
   requires = 'nvim-tree/nvim-web-devicons', -- optional, for file icons
   }
 
-  use 'bronson/vim-trailing-whitespace' -- highlight trailing spaces
+  -- use 'bronson/vim-trailing-whitespace' -- highlight trailing spaces
 
-  use 'jiangmiao/auto-pairs' -- Auto pairs for '(' '[' '{'
+  -- use 'jiangmiao/auto-pairs' -- Auto pairs for '(' '[' '{'
   use 'tpope/vim-surround' -- Surrounding ysw
 
   use 'mattn/emmet-vim'
@@ -43,19 +51,28 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-commentary' -- gcc = comment | gc = uncomment
 
-  use 'junegunn/fzf.vim' -- :Ag = searches directory and file content
+  -- use 'junegunn/fzf.vim' -- :Ag = searches directory and file content
 
   use 'tpope/vim-fugitive' -- Fugutive is a git command wrapper
 
-  use 'codota/tabnine-nvim'
+  -- use 'codota/tabnine-nvim'
 
-  use 'frazrepo/vim-rainbow'
+  -- use 'frazrepo/vim-rainbow'
 
   use 'dmerejkowsky/vim-ale' -- ALE for displayong errors and warnings in real time
 
   use 'preservim/tagbar' -- Tag bar | fh = opens the side bar
 
-  use 'glepnir/dashboard-nvim'
+use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+    }
+  end,
+  requires = {'nvim-tree/nvim-web-devicons'}
+}
 
   use 'lifepillar/pgsql.vim' -- PSQL pluging needs :SQLSetType pgsql.vim
   -- use 'ap/vim-css-color' -- CSS Color Preview
@@ -63,6 +80,20 @@ return require('packer').startup(function(use)
   -- use 'ryanoasis/vim-devicons' -- Developer Icons
   use 'tc50cal/vim-terminal' -- Vim Terminal
   use 'terryma/vim-multiple-cursors' -- CTRL + N for multiple cursors
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}  
+  use {"folke/which-key.nvim",
+  config = function()
+    vim.o.timeout = true
+    vim.o.timeoutlen = 300
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
   if packer_bootstrap then
     require('packer').sync()
   end

@@ -1,4 +1,4 @@
-vim.cmd('colorscheme happy_hacking') -- options = gruvbox, nord purify onedark
+vim.cmd('colorscheme afterglow') -- options = gruvbox, nord purify onedark
 vim.opt.termguicolors = true
 vim.cmd('filetype plugin indent on')
 vim.o.shortmess = vim.o.shortmess .. 'c'

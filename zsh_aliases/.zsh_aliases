@@ -2,6 +2,7 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
+alias t="tree"
 # Copy
 alias cp="cp -r"
 # Timeshift
@@ -122,8 +123,8 @@ alias freshclam="sudo freshclam"
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias resync="sudo pacman -Syy"
-alias refresh="sudo pacman -Fy"
+alias sp="sudo pacman -Syy"
+alias sd="sudo pacman -Fy"
 alias archupdate="sudo pacman -Syyu"
 alias pacman.s="sudo pacman -S"
 alias pacman.n="sudo pacman -S --noconfirm"
@@ -297,7 +298,7 @@ alias lsf="ls | grep"
 alias lf="ls | grep"
 
 # Refresh zsh
-alias rf="source ~/.zshrc"
+alias sz="source ~/.zshrc"
 
 # Zsh config
 alias c.zshrc="nvim ~/.zshrc"
