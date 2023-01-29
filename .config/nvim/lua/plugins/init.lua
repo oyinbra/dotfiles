@@ -1,3 +1,8 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                  PLUGINS                                     #
+-- #                                                                              #
+-- ################################################################################
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -63,6 +68,14 @@ return require('packer').startup(function(use)
 
   use 'preservim/tagbar' -- Tag bar | fh = opens the side bar
 
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp' 
+  use 'onsails/lspkind.nvim'
+  use "williamboman/nvim-lsp-installer"
 use {
   'glepnir/dashboard-nvim',
   event = 'VimEnter',

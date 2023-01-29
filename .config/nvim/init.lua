@@ -1,5 +1,9 @@
+-- ################################################################################
+-- #                                                                              #
+-- #                                  MODULES                                     #
+-- #                                                                              #
+-- ################################################################################
 require('plugins')
--- require('options')
 require('treesitter-config')
 require('lualine-config')
 require('bufferline-config')
@@ -9,9 +13,12 @@ require('telescope-config')
 require('autopairs-config')
 require('whichkey-config')
 require('toggleterm-config')
+require('lsp')
 
 -- ################################################################################
--- #                               options                                        #
+-- #                                                                              #
+-- #                               CONFIGURATIONS                                 #
+-- #                                                                              #
 -- ################################################################################
 vim.cmd('colorscheme afterglow ') -- afterglow, gruvbox, nord purify onedark
 vim.opt.termguicolors = true
@@ -63,8 +70,11 @@ vim.opt.autoread = true
 -- use spaces for tabs and whatnot
 vim.opt.shiftround = true
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+
 -- ################################################################################
--- #                          keybindings                                         #
+-- #                                                                              #
+-- #                                KEYBINDINGS                                   #
+-- #                                                                              #
 -- ################################################################################
 vim.g.mapleader = ' '
 local map = vim.api.nvim_set_keymap
