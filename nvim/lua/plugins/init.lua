@@ -16,11 +16,16 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
+return require('packer').startup({
+  function(use)
   use 'wbthomason/packer.nvim' -- Packer Installation
+
+  use "lukas-reineke/indent-blankline.nvim"
   use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
   use "nvim-lua/plenary.nvim"
-  
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- git signs
   use {
   'lewis6991/gitsigns.nvim',
   config = function()
@@ -143,7 +148,7 @@ use {
 }
 
   use 'lifepillar/pgsql.vim' -- PSQL pluging needs :SQLSetType pgsql.vim
-  use 'ap/vim-css-color' -- CSS Color Preview
+  -- use 'ap/vim-css-color' -- CSS Color Preview
   use 'rafi/awesome-vim-colorschemes' -- Color Schemes
   -- use 'ryanoasis/vim-devicons' -- Developer Icons
   use 'tc50cal/vim-terminal' -- Vim Terminal
@@ -165,4 +170,13 @@ end}
   if packer_bootstrap then
     require('packer').sync()
   end
-end)
+end,
+
+-- Using a floating window
+config = {
+  display = {
+    open_fn = function()
+      return require('packer.util').float({ border = 'single' })
+    end
+  }
+}})
