@@ -15,7 +15,7 @@ alias sass.d="sass --watch scss:dist/css"
 # List Color
 alias ls="ls --color=auto"
 # List All
-# alias la="ls -all"
+alias la="ls -a"
 
 # Python
 alias py="python -uv"
@@ -97,7 +97,7 @@ alias n="sudo nano"
 alias e="sudo vim"
 alias v="vim"
 alias c.nvim="nvim ~/.config/nvim/init.lua"
-alias c.plugins="nvim ~/.config/nvim/lua/plugins.lua"
+alias c.plugins="nvim ~/.config/nvim/lua/modules/plugins.lua"
 
 # Alacritty config
 alias c.alacritty="nvim ~/.config/alacritty/alacritty.yml"

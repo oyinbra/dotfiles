@@ -3,6 +3,7 @@
 -- #                                  MODULES                                     #
 -- #                                                                              #
 -- ################################################################################
+
 require('plugins')
 require('treesitter-config')
 require('lualine-config')
@@ -14,12 +15,15 @@ require('autopairs-config')
 require('whichkey-config')
 require('toggleterm-config')
 require('lsp')
+require('twilight-config')
+require('zen-mode-config')
 
 -- ################################################################################
 -- #                                                                              #
 -- #                               CONFIGURATIONS                                 #
 -- #                                                                              #
 -- ################################################################################
+
 vim.cmd('colorscheme afterglow ') -- afterglow, gruvbox, nord purify onedark
 vim.opt.termguicolors = true
 vim.cmd('filetype plugin indent on')

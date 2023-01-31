@@ -29,21 +29,21 @@ ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases ~/
 
 ln -sf ~/.dotfiles/latte-dock/.config/lattedockrc ~/.config/
 ln -sf ~/.dotfiles/latte-dock/.config/latte ~/.config
-ln -sf ~/.dotfiles/fonts/.fonts ~/
+ln -sf ~/.dotfiles/.fonts ~/
 ln -sf ~/.dotfiles/git/.gitignore_global ~/
 ln -sf ~/.dotfiles/icons/.icons ~/
 ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf ~/
 ln -sf ~/.dotfiles/themes/.themes ~/
 ln -sf ~/.dotfiles/tmux/.tmux.conf ~/
-ln -sf ~/.dotfiles/alacritty/.config/alacritty ~/.config
 ln -sf ~/.dotfiles/aurorae ~/.local/share/
 ln -sf ~/.dotfiles/home/.nanorc ~/
 
 # CONFIGURATIONS
-ln -sf ~/.dotfiles/.config/obs-studio ~/.config
-ln -sf ~/.dotfiles/.config/fluent-reader ~/.config
-ln -sf ~/.dotfiles/.config/VirtualBox ~/.config
-ln -sf ~/.dotfiles/.config/nvim ~/.config
+ln -sf ~/.dotfiles/alacritty ~/.config
+ln -sf ~/.dotfiles/fluent-reader ~/.config
+ln -sf ~/.dotfiles/nvim ~/.config
+ln -sf ~/.dotfiles/obs-studio ~/.config
+ln -sf ~/.dotfiles/VirtualBox ~/.config
 
 # LOCAL SHARE
 ln -sf ~/.dotfiles/.local/share/color-schemes ~/.local/share

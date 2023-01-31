@@ -28,7 +28,8 @@ end
 
 local mappings = {
   s = { ":source %<cr>", "Source file" },
-  Q = { ":q!<cr>", "Quit Override" },
+  d = { ":Dashboard<cr>", "Dashboard" },
+  Q = { ":q!<cr>", "Cancel" },
   q = { ":q<cr>", "Quit" },
   x = { ":wq<cr>", "Save & Quit" },
   w = { ":w<cr>", "Save" },
