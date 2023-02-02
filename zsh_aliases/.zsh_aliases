@@ -3,6 +3,7 @@
 # ##############################################
 
 alias t="tree"
+alias x="exit"
 # Copy
 alias cp="cp -r"
 # Timeshift
@@ -34,7 +35,7 @@ alias c.python="sudo update-alternatives --config python3"
 alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete Directory or files
-alias del="rm -rf"
+alias rmf="rm -rf"
 alias rm="rm -r"
 
 # List Users
@@ -92,12 +93,11 @@ alias s.systemctl="systemctl list-unit-files --type=service"
 # alias n="nano"
 alias n="sudo nano"
 
-# VIMRC Config
-# alias e="sudo -e"
+# NVIM Config
 alias e="sudo vim"
 alias v="vim"
-alias c.nvim="nvim ~/.config/nvim/init.lua"
-alias c.plugins="nvim ~/.config/nvim/lua/modules/plugins.lua"
+alias c.nvim="~/.config/nvim"
+alias c.plugins="nvim ~/.config/nvim/lua/plugins/init.lua"
 
 # Alacritty config
 alias c.alacritty="nvim ~/.config/alacritty/alacritty.yml"
@@ -291,11 +291,8 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 # Local Backup
 alias backup="sudo /home/$USER/.dotfiles/backup.sh"
 
-# Search for files or folders
-alias lsf="ls | grep"
-
 # Search for files or folders including hidden folders and files
-alias lf="ls | grep"
+alias find="ls | grep -i"
 
 # Refresh zsh
 alias sz="source ~/.zshrc"
@@ -313,7 +310,7 @@ alias nf.c="nvim ~/.config/neofetch/config.conf"
 alias c.alias="nvim ~/.zsh_aliases"
 
 # Dotfiles
-alias dotfiles="~/.dotfiles"
+alias config="~/.dotfiles"
 
 # Work Directory
 alias w="cd ~/Workspace"
@@ -334,7 +331,7 @@ alias cmc="python -u /home/$USER/Workspace/PYTHON/cmc.py"
 alias fs="du -sh"
 
 # Home Directory
-alias c="~"
+alias z="cd"
 
 # User Share Themes
 alias us.themes="/usr/share/themes"

@@ -75,7 +75,7 @@ sudo ln -sf /home/$USER/.dotfiles/zshrc/.zshrc /root
 # Enable color in nano editor for root user (Comment for Manjaro)
 # sudo ln -sf /home/$USER/.dotfiles/home/.nanorc /root
 # ln -sf ~/.dotfiles/nano/.nanorc ~/
-sudo ln -sf /home/$USER/.dotfiles/.config/nvim /root/.config
+sudo ln -sf /home/$USER/.dotfiles/nvim /root/.config
 sudo ln -sf /home/$USER/.dotfiles/zsh_aliases/.zsh_aliases /root/
 
 echo "

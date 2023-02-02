@@ -1,3 +1,3 @@
 require('lsp/cmp')
-require('lsp/diagnostic-signs')
-require('lsp/language-servers')
+require('lsp/diagnostic_signs')
+require('lsp/language_servers')

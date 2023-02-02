@@ -63,10 +63,3 @@ cmp.setup({
   formatting = {format = lspkind.cmp_format({with_text = true, maxwidth = 50})}
 })
 
-
--- Set up lspconfig.
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require'lspconfig'.html.setup {
-    capabilities = capabilities
-  }
