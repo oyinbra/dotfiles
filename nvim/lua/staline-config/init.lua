@@ -1,1 +1,1 @@
-require('staline-config.simpler')
+require('staline-config.normal')

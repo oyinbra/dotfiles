@@ -1,5 +1,5 @@
 local null_ls = require('null-ls')
-
+-- format null_ls.builtins.formatting to formatting
 local formatting = null_ls.builtins.formatting
 
 null_ls.setup({
@@ -11,8 +11,8 @@ null_ls.setup({
         '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
         '--break-after-table-lb', '--indent-width=2'
       }
-    }), formatting.isort, formatting.codespell.with({filetypes = {'markdown'}})
-  },
+    }), formatting.isort, formatting.codespell.with({ filetypes = { 'markdown' } })
+  }, -- this will allow you to format the documents on save
   on_attach = function(client)
     if client.server_capabilities.documentFormattingProvider then
       vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")

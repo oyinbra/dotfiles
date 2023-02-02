@@ -15,22 +15,22 @@ require('staline').setup {
     font_active = "none", -- "bold", "italic", "bold,italic", etc
     branch_symbol = " "
   },
-  mode_colors = {n = "#EBBCBA", i = "#C4A7E7", c = "#9CCFD8", v = "#F6C177", V = "#F6C177"},
+  mode_colors = { n = "#FFFFFF", i = "#D70040", c = "#7CFC00", v = "#F6C177", V = "#F6C177" },
   mode_icons = {
     n = " NORMAL",
     i = " INSERT",
     c = " COMMAND",
     v = " VISUAL",
-    V = " VISUAL"
+    V = "並 VISUAL"
   },
   sections = {
-    left = {'-mode', 'left_sep_double', ' ', 'branch'},
-    mid = {'file_name'},
-    right = {'right_sep_double', '-line_column'}
+    left = { '-mode', 'left_sep_double', ' ', 'branch' },
+    mid = { 'file_name' },
+    right = { 'right_sep_double', '-line_column' }
   },
   special_table = {
-    NvimTree = {'NvimTree', ' '},
-    packer = {'Packer', ' '} -- etc
+    NvimTree = { 'NvimTree', ' ' },
+    packer = { 'Packer', ' ' } -- etc
   },
-  lsp_symbols = {Error = " ", Info = " ", Warn = " ", Hint = ""}
+  lsp_symbols = { Error = " ", Info = " ", Warn = " ", Hint = "" }
 }
