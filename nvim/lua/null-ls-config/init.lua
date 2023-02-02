@@ -15,7 +15,7 @@ null_ls.setup({
   }, -- this will allow you to format the documents on save
   on_attach = function(client)
     if client.server_capabilities.documentFormattingProvider then
-      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
+      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
     end
     vim.cmd [[
       augroup document_highlight
