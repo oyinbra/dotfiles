@@ -35,8 +35,7 @@ alias c.python="sudo update-alternatives --config python3"
 alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete Directory or files
-alias rmf="rm -rf"
-alias rm="rm -r"
+alias rm="rm -rf"
 
 # List Users
 alias lusers="cat /etc/passwd"
@@ -331,7 +330,7 @@ alias cmc="python -u /home/$USER/Workspace/PYTHON/cmc.py"
 alias fs="du -sh"
 
 # Home Directory
-alias z="cd"
+alias o="cd"
 
 # User Share Themes
 alias us.themes="/usr/share/themes"
