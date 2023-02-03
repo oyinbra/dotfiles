@@ -1,28 +1,42 @@
-local null_ls = require('null-ls')
--- format null_ls.builtins.formatting to formatting
-local formatting = null_ls.builtins.formatting
+local nls = require("null-ls")
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-null_ls.setup({
+nls.setup({
   sources = {
-    formatting.prettier, formatting.black, formatting.gofmt, formatting.shfmt,
-    formatting.clang_format, formatting.cmake_format, formatting.dart_format,
-    formatting.lua_format.with({
-      extra_args = {
-        '--no-keep-simple-function-one-line', '--no-break-after-operator', '--column-limit=100',
-        '--break-after-table-lb', '--indent-width=2'
+    nls.builtins.formatting.stylua.with({
+      extra_args = { "--indent-type", "Spaces", "--indent-width", "2" }
+    }), nls.builtins.diagnostics.eslint_d,
+    nls.builtins.formatting.prettier.with({ extra_args = { "--single-quote", "false" } }),
+    nls.builtins.formatting.terraform_fmt, nls.builtins.formatting.black,
+    nls.builtins.formatting.goimports, nls.builtins.formatting.gofumpt,
+    nls.builtins.formatting.latexindent.with({
+      extra_args = { "-g", "/dev/null" } -- https://github.com/cmhughes/latexindent.pl/releases/tag/V3.9.3
+    }), nls.builtins.code_actions.shellcheck, nls.builtins.code_actions.gitsigns,
+    nls.builtins.formatting.shfmt
+  },
+  on_attach = function(client, bufnr)
+    local wk = require("which-key")
+    local default_options = { silent = true }
+    wk.register({
+      m = {
+        F = {
+          "<cmd>lua require('core.plugins.lsp.utils').toggle_autoformat()<cr>",
+          "Toggle format on save"
+        }
       }
-    }), formatting.isort, formatting.codespell.with({ filetypes = { 'markdown' } })
-  }, -- this will allow you to format the documents on save
-  on_attach = function(client)
-    if client.server_capabilities.documentFormattingProvider then
-      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
+    }, { prefix = "<leader>", mode = "n", default_options })
+    if client.supports_method("textDocument/formatting") then
+      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = function()
+          if AUTOFORMAT_ACTIVE then -- global var defined in functions.lua
+            vim.lsp.buf.format({ bufnr = bufnr })
+          end
+        end
+      })
     end
-    vim.cmd [[
-      augroup document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]]
   end
 })
+

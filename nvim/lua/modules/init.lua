@@ -21,11 +21,9 @@ return require('packer').startup({
     }
     use {
       'tamton-aquib/staline.nvim',
-      -- 'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
       event = "BufRead",
       config = "require('staline-config')"
-      -- config = "require('lualine-config')"
     }
     use {
       'rcarriga/nvim-notify',
@@ -55,9 +53,9 @@ return require('packer').startup({
     use { 'terryma/vim-multiple-cursors' } -- CTRL + N for multiple cursors
     use { 'ap/vim-css-color' } -- CSS Color Preview
     use { 'rafi/awesome-vim-colorschemes' } -- Color Schemes
-    -- use 'tpope/vim-surround' -- Surrounding ysw
-    -- use 'mattn/emmet-vim'
-    -- use 'airblade/vim-gitgutter'
+    use { 'tpope/vim-surround' } -- Surrounding ysw
+    use { 'mattn/emmet-vim' }
+    use { 'airblade/vim-gitgutter' }
 
     use { 'windwp/nvim-ts-autotag', event = "InsertEnter", after = "nvim-treesitter" }
     use { 'p00f/nvim-ts-rainbow', after = "nvim-treesitter" }
@@ -88,11 +86,7 @@ return require('packer').startup({
     use {
       'glepnir/dashboard-nvim',
       event = 'VimEnter',
-      config = function()
-        require('dashboard').setup {
-          -- config
-        }
-      end,
+      config = "require('dashboard-config')",
       requires = { 'nvim-tree/nvim-web-devicons' }
     }
     use {
