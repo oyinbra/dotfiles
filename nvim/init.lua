@@ -3,7 +3,6 @@
 -- #                               CONFIGURATIONS                                 #
 -- #                                                                              #
 -- ################################################################################
-
 require('modules')
 
 -- vim.cmd('colorscheme afterglow') -- afterglow, gruvbox, nord purify onedark

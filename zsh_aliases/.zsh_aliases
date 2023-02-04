@@ -2,6 +2,7 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
+alias f="fd --hidden --exclude git | fzf-tmux -p --reverse | xargs nvim"
 alias t="tree"
 alias x="exit"
 # Copy
@@ -291,7 +292,7 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 alias backup="sudo /home/$USER/.dotfiles/backup.sh"
 
 # Search for files or folders including hidden folders and files
-alias find="ls | grep -i"
+alias list="ls | grep -i"
 
 # Refresh zsh
 alias sz="source ~/.zshrc"
@@ -330,7 +331,7 @@ alias cmc="python -u /home/$USER/Workspace/PYTHON/cmc.py"
 alias fs="du -sh"
 
 # Home Directory
-alias o="cd"
+alias z="cd"
 
 # User Share Themes
 alias us.themes="/usr/share/themes"
