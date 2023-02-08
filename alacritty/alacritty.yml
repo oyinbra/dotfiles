@@ -1,6 +1,8 @@
 ## Set environment variables
+
+
 env:
-  TERM: alacritty
+  TERM: xterm-256color
   WINIT_X11_SCALE_FACTOR: '1.0'
 
 ## Terminal window settings
@@ -10,12 +12,14 @@ window:
     lines: 24
 
   padding:
-    x: 12
-    y: 12
+    x: 6
+    y: 6
 
   decorations: full
   startup_mode: Windowed
   dynamic_title: true
+
+  
 
 ## scrolling
   history: 10000
@@ -85,18 +89,23 @@ selection:
 font:
   # Normal (roman) font face
   normal:
-    family: "CaskaydiaCove Nerd Font"
+    family: "JetBrainsMono Nerd Font"
     style: Light
 
   # Bold font face
   bold:
-    family: "CaskaydiaCove Nerd Font"
+    family: "JetBrainsMono Nerd Font"
     style: Medium
 
   # Italic font face
   italic:
-    family: "Hack"
-    style: Light Italic
+    family: "JetBrainsMono Nerd Font"
+    style: Medium Italic
+
+      # Bold italic font face
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold Italic
 
   # Point size
   size: 12
@@ -168,6 +177,8 @@ colors:
    magenta: '#75617b'
    cyan:    '#5b7d78'
    white:   '#828482'
+
+   
 
 
 key_bindings:

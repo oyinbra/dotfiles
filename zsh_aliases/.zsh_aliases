@@ -2,7 +2,8 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
-alias f="fd --hidden --exclude git | fzf-tmux -p --reverse | xargs nvim"
+alias f="fd --hidden --exclude .git | fzf-tmux -p | xargs nvim"
+# alias f="fd --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
 alias t="tree"
 alias x="exit"
 # Copy

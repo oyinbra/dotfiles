@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Breeze
-Font=CaskaydiaCove Nerd Font,11,-1,5,50,0,0,0,0,0
+Font=Iosevka Fixed Extended Oblique,11,-1,5,50,2,0,0,0,0
 
 [Cursor Options]
 CursorShape=0
