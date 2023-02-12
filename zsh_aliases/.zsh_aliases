@@ -2,18 +2,18 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
+# search for files
 alias f="fd --hidden --exclude .git | fzf-tmux -p | xargs nvim"
-# alias f="fd --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
 alias t="tree"
 alias x="exit"
 # Copy
 alias cp="cp -r"
 # Timeshift
-alias timeshift.o="sudo timeshift --create --comments"
-alias timeshift.r="sudo timeshift --restore"
+alias timeshift-ondemand="sudo timeshift --create --comments"
+alias timeshift-remove="sudo timeshift --restore"
 
 # Watch SASS and output to dist folder
-alias sass.d="sass --watch scss:dist/css"
+alias sass-watch="sass --watch scss:dist/css"
 
 # List Color
 alias ls="ls --color=auto"
@@ -21,26 +21,26 @@ alias ls="ls --color=auto"
 alias la="ls -a"
 
 # Python
-alias py="python -uv"
-# alias python="python3"
+alias python="python -uv"
 
 # Python version
 alias pv="py --version"
 
 # Pip3 List
-alias pl="pip3 list"
+alias pip-list="pip3 list"
 
 # Switch Python Version
-alias c.python="sudo update-alternatives --config python3"
+alias config-python="sudo update-alternatives --config python3"
 
 # Terminal config
-alias c.terminal="sudo update-alternatives --config x-terminal-emulator"
+alias cconfig-terminal="sudo update-alternatives --config x-terminal-emulator"
 
 # Delete Directory or files
-alias rm="rm -rf"
+alias rm="rm -r"
+alias rf="rm -rf"
 
 # List Users
-alias lusers="cat /etc/passwd"
+alias list-users="cat /etc/passwd"
 
 # Hibernate
 alias hibernate="systemctl hibernate"
@@ -51,20 +51,17 @@ alias suspend="systemctl suspend"
 # Nethogs
 alias nethogs="sudo nethogs"
 
-# Neofetch
-alias nf="neofetch"
-
 # Symlink
 alias sym="ln -sf"
 
 # Grub file
-alias c.grub="sudo nano /etc/default/grub"
+alias config-grub="sudo nvim /etc/default/grub"
 
 # Update Grub
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # TimeShift configuration settings
-alias c.timeshift="sudo nano /etc/timeshift-autosnap.conf"
+alias config-timeshift="sudo nvim /etc/timeshift-autosnap.conf"
 
 # System error
 alias s.journalctl="sudo journalctl -p 3 -xb"
@@ -91,29 +88,26 @@ alias s.systemctl="systemctl list-unit-files --type=service"
 alias s.systemctl="systemctl list-unit-files --type=service"
 
 # Nano config
-# alias n="nano"
 alias n="sudo nano"
 
 # NVIM Config
-alias e="sudo vim"
-alias v="vim"
-alias c.nvim="~/.config/nvim"
-alias c.plugins="nvim ~/.config/nvim/lua/plugins/init.lua"
+alias e="sudo nvim"
+alias config-nvim="~/.config/nvim"
 
 # Alacritty config
-alias c.alacritty="nvim ~/.config/alacritty/alacritty.yml"
+alias config-alacritty="nvim ~/.config/alacritty/alacritty.yml"
 
 # Post arch install
-alias c.post-arch="nvim /home/$USER/.dotfiles/post-arch.sh"
+alias config-post-arch="nvim /home/$USER/.dotfiles/post-arch.sh"
 
 # Reload systemctl daemo
-alias r.systemctl="sudo systemctl daemon-reload"
+alias source-systemctl="sudo systemctl daemon-reload"
 
 # Listen to opened port
-alias listen="sudo lsof -i -P -n | grep LISTEN"
+alias listen-port="sudo lsof -i -P -n | grep LISTEN"
 
 # Find process
-alias lp="ps aux | grep"
+alias ls-process="ps aux | grep"
 alias root="sudo -s"
 
 # Update clamav antivirus
@@ -124,55 +118,63 @@ alias freshclam="sudo freshclam"
 # ##############################################
 
 # UPDATE and INSTALL PACKAGES
-alias sp="sudo pacman -Syy"
-alias sd="sudo pacman -Fy"
-alias archupdate="sudo pacman -Syyu"
-alias pacman.s="sudo pacman -S"
-alias pacman.n="sudo pacman -S --noconfirm"
-alias pacman.sy="sudo pacman -Sy"
-alias pacman.r="sudo pacman -R"
-alias pacman.i="sudo pacman -S --needed - <"
+alias pacsync="sudo pacman -Syy"
+
+# refresh pacman database
+alias pacfresh="sudo pacman -Fy"
+alias pacupdate="sudo pacman -Syyu"
+alias pacinstall="sudo pacman -S"
+
+# search for packages in database
+alias pacsearch="sudo pacman -Ss"
+
+# to search for already installed packages
+alias pacsearch-installed="sudo paman -Qs"
+
+alias pacinstall-noconfirm="sudo pacman -S --noconfirm"
+alias pacremove="sudo pacman -R"
+alias pacinstall-file="sudo pacman -S --needed - <"
 # Downgrade Packages
-alias pacman.dg="sudo pacman -Suu"
+alias pacdowngrade="sudo pacman -Suu"
 
 # Install pkg files
-alias pacman.u="sudo pacman -U"
+alias pacinstall-pkg="sudo pacman -U"
 
 # List packages in pkg cache file
-alias pacman.pkg.list="l /var/cache/pacman/pkg | less"
+alias paclist-pkg="l /var/cache/pacman/pkg | less"
 
 # Clean uninstalled packages from cache
-alias pacman.cup="sudo pacman -Sc"
+alias pacclean="sudo pacman -Sc"
 
 # Clean alien packages
-alias pacman.c="sudo pacman -c"
+alias pacclean-alien="sudo pacman -c"
 
 # Clean all packages from cache
-alias pacman.cap="sudo pacman -Scc"
+alias pacclean-cache="sudo pacman -Scc"
 
 # List orphan packages
-alias pacman.lop="sudo pacman -Qtdq"
+alias paclist-orphan="sudo pacman -Qtdq"
 
 # Remove orphan packages
-alias pacman.rop="sudo pacman -R $(pacman -Qtdq)"
+alias pacremove-orphan="sudo pacman -R $(pacman -Qtdq)"
 
 # Pactree
-alias pacman.t="pactree -r"
+alias pactree-r="pactree -r"
 
 # Completely clean packages
-alias pacman.rs="sudo pacman -Rs"
+alias pacclean-rs="sudo pacman -Rs"
 
 # Completely remove packages
-alias pacman.rns="sudo pacman -Rns"
+alias pacclean-rns="sudo pacman -Rns"
 
 # Find packages to install
-alias pacman.f="pacman -F"
+alias pacfind="pacman -F"
 
 # Pacman is currently in use, please wait...
-alias pacman.unlock="rm /var/lib/pacman/db.lck"
+alias pacunlock="rm /var/lib/pacman/db.lck"
 
 # Update Pacman Mirrors for Manjaro
-alias pacman.mirrors="sudo pacman-mirrors --fasttrack"
+alias pacupdate-mirrors="sudo pacman-mirrors --fasttrack"
 
 # ##############################################
 # ################### PARU ######################
@@ -180,7 +182,6 @@ alias pacman.mirrors="sudo pacman-mirrors --fasttrack"
 
 # UPDATE and INSTALL PACKAGES
 # Turn paru into yay
-alias yay="paru"
 alias aurupdate="paru -Syyu"
 alias paru.ud="paru -Sy"
 alias paru.ug="paru -Syu"
@@ -233,15 +234,15 @@ alias nala.r="sudo nala remove"
 # ############### FLATPAK ######################
 # ##############################################
 
-alias flatpak.i="flatpak install flathub"
-alias flatpak.r="flatpak remove"
+alias flatinstall="flatpak install flathub"
+alias flatremove="flatpak remove"
 
 # ##############################################
 # ############### SNAP #########################
 # ##############################################
 
-alias snap.i="sudo snap install"
-alias snap.r="sudo snap remove"
+alias snapinstall="sudo snap install"
+alias snapremove="sudo snap remove"
 
 # ##############################################
 # ################# GIT ########################
@@ -256,7 +257,7 @@ alias git.config="git config --global --edit"
 alias gi="git init"
 alias cl="clear"
 
-alias m="mkdir"
+alias mkdir="mkdir -p"
 alias g="git"
 alias ga="git add"
 alias gaa="git add --all"
@@ -296,25 +297,25 @@ alias backup="sudo /home/$USER/.dotfiles/backup.sh"
 alias list="ls | grep -i"
 
 # Refresh zsh
-alias sz="source ~/.zshrc"
+alias zshrc="source ~/.zshrc"
 
 # Zsh config
-alias c.zshrc="nvim ~/.zshrc"
+alias config-zshrc="nvim ~/.zshrc"
 
 # Bash config
-alias bash.c="nvim ~/.bashrc"
+alias config-bash="nvim ~/.bashrc"
 
 # Neofetch Distro
-alias nf.c="nvim ~/.config/neofetch/config.conf"
+alias config-neofetch="nvim ~/.config/neofetch/config.conf"
 
 # Zsh aliases config
-alias c.alias="nvim ~/.zsh_aliases"
+alias config-alias="nvim ~/.zsh_aliases"
 
 # Dotfiles
-alias config="~/.dotfiles"
+alias dotfiles="~/.dotfiles"
 
 # Work Directory
-alias w="cd ~/Workspace"
+alias workspace="cd ~/Workspace"
 
 # Project Directory
 alias p="cd ~/Workspace/projects"
@@ -330,9 +331,6 @@ alias cmc="python -u /home/$USER/Workspace/PYTHON/cmc.py"
 
 # Check Folder size
 alias fs="du -sh"
-
-# Home Directory
-alias z="cd"
 
 # User Share Themes
 alias us.themes="/usr/share/themes"
@@ -355,19 +353,19 @@ alias repos="~/Repos"
 
 
 # Configure Arch mirror list
-alias c.arch-mirror="sudo vim /etc/pacman.d/mirrorlist"
+alias cconfig-arch-mirror="sudo vim /etc/pacman.d/mirrorlist"
 
 # Configure EndeavourOS Mirror List
-alias c.endeavouros-mirror="sudo vim /etc/pacman.d/endeavouros-mirrorlist"
+alias config-endeavouros-mirror="sudo vim /etc/pacman.d/endeavouros-mirrorlist"
 
 # Configure Chaotic Mirror List
-alias c.chaotic-mirror="sudo vim /etc/pacman.d/chaotic-mirrorlistt"
+alias config-chaotic-mirror="sudo vim /etc/pacman.d/chaotic-mirrorlistt"
 
 # Update Manjaro Mirrors
-alias u.manjaro-mirrors="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
+alias rate-manjaro="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
 
 # Update Arch Mirrors
-alias u.arch.mirrors="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
+alias rate-arch="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
 
 # Update EndeavourOS mirror
-alias u.endeavouros-mirror="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"
+alias rate-endeavouros="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"

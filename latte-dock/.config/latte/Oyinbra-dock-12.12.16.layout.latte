@@ -53,21 +53,28 @@ plugin=org.kde.plasma.lock_logout
 [Containments][1][Applets][306][Configuration]
 PreloadWeight=0
 
-[Containments][1][Applets][322]
+[Containments][1][Applets][395]
 immutability=1
-plugin=org.kde.plasma.kickoff
+plugin=org.kde.plasma.addons.katesessions
 
-[Containments][1][Applets][322][Configuration]
+[Containments][1][Applets][395][Configuration]
+PreloadWeight=60
+
+[Containments][1][Applets][397]
+immutability=1
+plugin=org.kde.plasma.kicker
+
+[Containments][1][Applets][397][Configuration]
 PreloadWeight=100
 
-[Containments][1][Applets][322][Configuration][ConfigDialog]
+[Containments][1][Applets][397][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][1][Applets][322][Configuration][General]
+[Containments][1][Applets][397][Configuration][General]
+customButtonImage=manjaro-settings-manager
 favoritesPortedToKAstats=true
-icon=manjarolinux
-systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
+useCustomButtonImage=true
 
 [Containments][1][ConfigDialog]
 DialogHeight=600
@@ -79,7 +86,7 @@ PreloadWeight=0
 [Containments][1][General]
 advanced=false
 alignmentUpgraded=true
-appletOrder=322;2;306
+appletOrder=397;2;395;306
 backgroundRadius=49
 blurEnabled=false
 configurationSticker=true
@@ -131,22 +138,6 @@ timerShow=200
 viewType=0
 visibility=0
 wallpaperplugin=org.kde.image
-
-[Containments][12][Applets][324]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][12][Applets][324][Configuration]
-PreloadWeight=52
-
-[Containments][12][Applets][324][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][12][Applets][324][Configuration][General]
-favoritesPortedToKAstats=true
-icon=manjarolinux
-systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
 [Containments][12][Applets][325]
 immutability=1
@@ -221,7 +212,7 @@ PreloadWeight=0
 [Containments][12][General]
 alignment=10
 alignmentUpgraded=true
-appletOrder=324;325;393;341;326;340
+appletOrder=393;341;325;326;340
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
 autoSizeEnabled=false
@@ -242,8 +233,8 @@ screenEdgeMargin=3
 shadowOpacity=25
 shadows=None
 shadowsUpgraded=true
-splitterPosition=2
-splitterPosition2=4
+splitterPosition=3
+splitterPosition2=5
 taskScrollAction=ScrollNone
 tasksUpgraded=true
 thickMargin=0
@@ -294,7 +285,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][327][Applets][330][Configuration]
-PreloadWeight=12
+PreloadWeight=42
 
 [Containments][327][Applets][331]
 immutability=1
@@ -350,14 +341,14 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][327][Applets][338][Configuration]
-PreloadWeight=12
+PreloadWeight=17
 
 [Containments][327][Applets][339]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][327][Applets][339][Configuration]
-PreloadWeight=7
+PreloadWeight=22
 
 [Containments][327][Applets][394]
 immutability=1
