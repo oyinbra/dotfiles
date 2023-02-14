@@ -29,7 +29,6 @@ ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases ~/
 
 ln -sf ~/.dotfiles/latte-dock/.config/lattedockrc ~/.config/
 ln -sf ~/.dotfiles/latte-dock/.config/latte ~/.config
-ln -sf ~/.dotfiles/.fonts ~/
 ln -sf ~/.dotfiles/git/.gitignore_global ~/
 ln -sf ~/.dotfiles/icons/.icons ~/
 ln -sf ~/.dotfiles/neofetch-source/.neofetch-config2.conf ~/
@@ -40,10 +39,10 @@ ln -sf ~/.dotfiles/home/.nanorc ~/
 
 # CONFIGURATIONS
 ln -sf ~/.dotfiles/alacritty ~/.config
-ln -sf ~/.dotfiles/fluent-reader ~/.config
-ln -sf ~/.dotfiles/nvim ~/.config
-ln -sf ~/.dotfiles/obs-studio ~/.config
-ln -sf ~/.dotfiles/VirtualBox ~/.config
+# ln -sf ~/.dotfiles/fluent-reader ~/.config
+# ln -sf ~/.dotfiles/nvim ~/.config
+# ln -sf ~/.dotfiles/obs-studio ~/.config
+# ln -sf ~/.dotfiles/VirtualBox ~/.config
 
 # LOCAL SHARE
 ln -sf ~/.dotfiles/.local/share/color-schemes ~/.local/share
@@ -75,7 +74,7 @@ sudo ln -sf /home/$USER/.dotfiles/zshrc/.zshrc /root
 # Enable color in nano editor for root user (Comment for Manjaro)
 # sudo ln -sf /home/$USER/.dotfiles/home/.nanorc /root
 # ln -sf ~/.dotfiles/nano/.nanorc ~/
-sudo ln -sf /home/$USER/.dotfiles/nvim /root/.config
+# sudo ln -sf /home/$USER/.dotfiles/nvim /root/.config
 sudo ln -sf /home/$USER/.dotfiles/zsh_aliases/.zsh_aliases /root/
 
 echo "
@@ -89,8 +88,6 @@ echo "
 
 sudo ln -sf /home/$USER/.dotfiles/etc/paru.conf /etc/
 
-
-sudo ln -sf /home/$USER/.env /root
 
 echo Refresh zshrc
 source ~/.zshrc

@@ -17,20 +17,20 @@ eDP-1 Width 1920x1080 eDP-1=980
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Downloads/chatgpt-seeklogo.com.png.pdf,file:$HOME/Downloads/openai-clip-art-icon-vector.png,file:$HOME/Downloads/openai-logo.png,file:$HOME/Downloads/wpYDqrIf_400x400.png,file:$HOME/Icons/duplicati-fb-share-v1.png
+Recent Files[$e]=cupmond-smart-color.layout.latte,file:$HOME/Downloads/chatgpt-icon.png,file:$HOME/Icons/duplicati-fb-share-v1.png
 Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/,file:$HOME/Icons/,file:$HOME/Documents/,file:$HOME/Desktop/
 detailViewIconSize=16
 iconViewIconSize=64
 
 [KPropertiesDialog]
-eDP-1 Height 1920x1080 eDP-1=537
-eDP-1 Width 1920x1080 eDP-1=416
+eDP-1 Height 1920x1080 eDP-1=478
+eDP-1 Width 1920x1080 eDP-1=428
 eDP1 Height 1920x1080 eDP1=491
 eDP1 Width 1920x1080 eDP1=407
 
 [LatteSettingsDialog]
 downloadWindowSize=980,600
-windowSize=952,958
+windowSize=952,948
 
 [LatteSettingsDialog][TabLayouts]
 columnWidths=49,508,129,104
@@ -45,9 +45,6 @@ windowSize=980,631
 
 [PlasmaThemeExtended]
 outlineWidth=1
-
-[PlasmaTransientsConfig]
-PreloadWeight=76
 
 [ScreenConnectors]
 10=eDP-1:::0,0 1920x1080

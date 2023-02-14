@@ -2,7 +2,7 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
-# search for files
+# search for files requires fzf and fd packages
 alias f="fd --hidden --exclude .git | fzf-tmux -p | xargs nvim"
 alias t="tree"
 alias x="exit"
@@ -131,14 +131,14 @@ alias pacsearch="sudo pacman -Ss"
 # to search for already installed packages
 alias pacsearch-installed="sudo paman -Qs"
 
-alias pacinstall-noconfirm="sudo pacman -S --noconfirm"
+alias pacnoconfirm="sudo pacman -S --noconfirm"
 alias pacremove="sudo pacman -R"
-alias pacinstall-file="sudo pacman -S --needed - <"
+alias pacfile="sudo pacman -S --needed - <"
 # Downgrade Packages
 alias pacdowngrade="sudo pacman -Suu"
 
 # Install pkg files
-alias pacinstall-pkg="sudo pacman -U"
+alias pacpkg="sudo pacman -U"
 
 # List packages in pkg cache file
 alias paclist-pkg="l /var/cache/pacman/pkg | less"
@@ -171,7 +171,7 @@ alias pacclean-rns="sudo pacman -Rns"
 alias pacfind="pacman -F"
 
 # Pacman is currently in use, please wait...
-alias pacunlock="rm /var/lib/pacman/db.lck"
+alias pacunlock="sudo rm -rf /var/lib/pacman/db.lck"
 
 # Update Pacman Mirrors for Manjaro
 alias pacupdate-mirrors="sudo pacman-mirrors --fasttrack"
@@ -289,6 +289,9 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 # ##############################################
 # ############## DIRECTORY ALIASES #############
 # ##############################################
+
+# .config
+alias config="~/.config"
 
 # Local Backup
 alias backup="sudo /home/$USER/.dotfiles/backup.sh"
