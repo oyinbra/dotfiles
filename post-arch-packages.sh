@@ -1,4 +1,13 @@
 gimp
+zoxide
+fzf
+lazygit
+appimagelauncher
+arcolinux-pamac-all
+sublime-text-4
+vifm
+fd
+ripgrep
 gthumb
 chatgpt-desktop-bin
 ttf-ms-fonts
@@ -21,6 +30,7 @@ freedownloadmanager
 google-chrome
 notion-app-enhanced
 rust
+xclip
 paru
 duf
 btop
@@ -39,7 +49,6 @@ bat
 firewalld
 python-pyqt5
 nethogs
-timeshift-autosnap
 visual-studio-code-bin
 kdeconnect
 adobe-source-sans-pro-fonts
@@ -52,7 +61,6 @@ jre8-openjdk
 languagetool
 libmythes
 mythes-en
-pkgstats
 ttf-anonymous-pro
 ttf-bitstream-vera
 ttf-dejavu

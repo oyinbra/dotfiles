@@ -25,7 +25,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 ln -sf ~/.dotfiles/zshrc/.zshrc ~/
 ln -sf ~/.dotfiles/powerlevel10k/.p10k.zsh ~/
-ln -sf ~/.dotfiles/zsh_aliases/.zsh_aliases ~/
+ln -sf ~/.dotfiles/zsh ~/.config/
 
 ln -sf ~/.dotfiles/latte-dock/.config/lattedockrc ~/.config/
 ln -sf ~/.dotfiles/latte-dock/.config/latte ~/.config
@@ -39,6 +39,7 @@ ln -sf ~/.dotfiles/home/.nanorc ~/
 
 # CONFIGURATIONS
 ln -sf ~/.dotfiles/alacritty ~/.config
+ln -sf ~/.dotfiles/kitty ~/.config
 # ln -sf ~/.dotfiles/fluent-reader ~/.config
 # ln -sf ~/.dotfiles/nvim ~/.config
 # ln -sf ~/.dotfiles/obs-studio ~/.config
@@ -75,7 +76,7 @@ sudo ln -sf /home/$USER/.dotfiles/zshrc/.zshrc /root
 # sudo ln -sf /home/$USER/.dotfiles/home/.nanorc /root
 # ln -sf ~/.dotfiles/nano/.nanorc ~/
 # sudo ln -sf /home/$USER/.dotfiles/nvim /root/.config
-sudo ln -sf /home/$USER/.dotfiles/zsh_aliases/.zsh_aliases /root/
+sudo ln -sf /home/$USER/.dotfiles/zsh /root/.config/
 
 echo "
 #############################################################################

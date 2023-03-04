@@ -2,7 +2,7 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
-
+alias vide="neovide"
 # search for files requires ripgrep, fzf and fd packages
 alias f="fd --hidden --exclude .git | fzf-tmux -p | xargs nvim"
 # alias z="zoxide"
@@ -46,6 +46,11 @@ alias list-users="cat /etc/passwd"
 
 # Hibernate
 alias hibernate="systemctl hibernate"
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 # Suspend
 alias suspend="systemctl suspend"
@@ -94,10 +99,11 @@ alias n="sudo nano"
 
 # NVIM Config
 alias e="sudo nvim"
-alias cd-nvim="~/.config/nvim"
+alias cdnvim="~/.config/nvim"
 
 # Alacritty config
 alias config-alacritty="nvim ~/.config/alacritty/alacritty.yml"
+alias cdalacritty="~/.config/alacritty/"
 
 # Post arch install
 alias config-post-arch="nvim /home/$USER/.dotfiles/post-arch.sh"
@@ -109,7 +115,7 @@ alias source-systemctl="sudo systemctl daemon-reload"
 alias listen-port="sudo lsof -i -P -n | grep LISTEN"
 
 # Find process
-alias ls-process="ps aux | grep"
+alias lsp="ps aux | grep"
 alias root="sudo -s"
 
 # Update clamav antivirus
@@ -129,7 +135,7 @@ alias pacdate="sudo pacman -Sy"
 # upgrade packages
 alias pacgrade="sudo pacman -Syu"
 alias pacins="sudo pacman -S"
-
+alias upgrade="pacfresh ; pacsync ; paru"
 # search for packages in database
 alias pacsearch="sudo pacman -Ss"
 
@@ -257,7 +263,7 @@ alias snapremove="sudo snap remove"
 alias gv="git --version"
 
 # Git configuration
-alias git.config="git config --global --edit"
+alias git-config="git config --global --edit"
 
 alias gi="git init"
 alias cl="clear"
@@ -289,7 +295,7 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 # ##############################################
 
 # .config
-alias config="~/.config"
+alias cdconfig="~/.config"
 
 # Local Backup
 alias backup="sudo /home/$USER/.dotfiles/backup.sh"

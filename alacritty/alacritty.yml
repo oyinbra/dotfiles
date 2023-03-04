@@ -89,7 +89,7 @@ selection:
 font:
   # Normal (roman) font face
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Light
 
   # Bold font face
@@ -108,7 +108,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 11
+  size: 12
 
   draw_bold_text_with_bright_colors: true
 
@@ -191,10 +191,10 @@ key_bindings:
 
 
   - { key: V,              mods: Control|shift, mode: ~Vi,        action: Paste            }
-  - { key: C,              mods: Control|shift, mode: ~Vi,        action: Copy             }
+  # - { key: C,              mods: Control|shift, mode: ~Vi,        action: Copy             }
   - { key: F,              mods: Control,       mode: ~Search,    action: SearchForward    }
   - { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
-  - { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
+  # - { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
   - { key: Insert,         mods: Shift,                           action: PasteSelection   }
   - { key: Key0,           mods: Control,                         action: ResetFontSize    }
   - { key: Equals,         mods: Control,                         action: IncreaseFontSize }

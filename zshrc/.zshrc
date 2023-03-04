@@ -38,6 +38,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# zstyle ':completion:*' menu select
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -85,6 +86,16 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+  sudo
+  alias-finder
+  # urltools
+  copyfile # copyfile file/location/you/need/to/copy
+  # encode64
+  # emoji
+  web-search
+  copybuffer # copy the text currently typed in the command line.
+  dirhistory # alt + left or alt + right to navigate directory
+  history # hsi nvim will give all history command with nvim
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,11 +127,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ZSH ALIASES
-source ~/.zsh_aliases
+source ~/.config/zsh/zsh-alias
 
 # Environment Variables
 source ~/.env
+# zoxide
+eval "$(zoxide init zsh)"
 
+zle_highlight=('paste:none')
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
