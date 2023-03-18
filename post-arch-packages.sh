@@ -1,3 +1,6 @@
+wl-clipboard
+caffeine-ng
+noto-fonts-emoji
 gimp
 zoxide
 fzf

@@ -40,7 +40,7 @@ alias cconfig-terminal="sudo update-alternatives --config x-terminal-emulator"
 # Delete Directory or files
 alias rmr="rm -r"
 alias rm="rm -rf"
-
+alias cp="cp -r"
 # List Users
 alias list-users="cat /etc/passwd"
 
@@ -99,7 +99,6 @@ alias n="sudo nano"
 
 # NVIM Config
 alias e="sudo nvim"
-alias cdnvim="~/.config/nvim"
 
 # Alacritty config
 alias config-alacritty="nvim ~/.config/alacritty/alacritty.yml"
@@ -193,6 +192,7 @@ alias pacmanjaro="sudo pacman-mirrors --fasttrack"
 
 # UPDATE and INSTALL PACKAGES
 # Turn paru into yay
+alias paru="yay"
 alias aurupdate="paru -Syyu"
 alias paru.ud="paru -Sy"
 alias paru.ug="paru -Syu"
@@ -295,7 +295,8 @@ alias acf.daemon-stop="sudo auto-cpufreq --remove"
 # ##############################################
 
 # .config
-alias cdconfig="~/.config"
+alias zzconfig="~/.config"
+alias zznvim="~/.config/nvim"
 
 # Local Backup
 alias backup="sudo /home/$USER/.dotfiles/backup.sh"
@@ -319,19 +320,21 @@ alias config-neofetch="nvim ~/.config/neofetch/config.conf"
 alias config-alias="nvim ~/.zsh_aliases"
 
 # Dotfiles
-alias dotfiles="~/.dotfiles"
+alias zzdotfiles="~/.dotfiles"
 
 # Work Directory
-alias workspace="cd ~/Workspace"
+alias zzworkspace="cd ~/Workspace"
+alias zzpython="cd ~/Workspace/python"
+alias zzopensource="cd ~/Workspace/OpenSourceContribution/"
 
 # Project Directory
-alias p="cd ~/Workspace/projects"
+alias zzprojects="cd ~/Workspace/projects"
 
 # PKG Packages
-alias cdpkg="/var/cache/pacman/pkg"
+alias zzpkg="/var/cache/pacman/pkg"
 
 # Pictures Folder
-alias pictures="~/Pictures"
+alias zzpictures="~/Pictures"
 
 # Coinmarketcapital
 alias cmc="python -u /home/$USER/Workspace/python/cmc.py"
@@ -340,19 +343,19 @@ alias cmc="python -u /home/$USER/Workspace/python/cmc.py"
 alias fs="du -sh"
 
 # User Share Themes
-alias us.themes="/usr/share/themes"
+alias zzthemes="/usr/share/themes"
 
 # User Share Icons
-alias us.icons="/usr/share/icons"
+alias zzicons="/usr/share/icons"
 
 # User Share Fonts
-alias us.fonts="/usr/share/fonts"
+alias zzfonts="/usr/share/fonts"
 
 # Hostname config
-alias c.hostname="sudo nano /etc/hostname"
+alias zzhostname="sudo nano /etc/hostname"
 
 # Git folder
-alias repos="~/repos"
+alias zzrepos="~/repos"
 
 # ##############################################
 # ############## MIRROR ALIASES ################
