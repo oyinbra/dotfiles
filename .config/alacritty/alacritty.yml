@@ -1,0 +1,204 @@
+## Set environment variables
+
+
+env:
+  TERM: xterm-256color
+  WINIT_X11_SCALE_FACTOR: '1.0'
+
+## Terminal window settings
+window:
+  dimensions:
+    columns: 82
+    lines: 24
+
+  padding:
+    x: 6
+    y: 6
+
+  decorations: full
+  startup_mode: Windowed
+  dynamic_title: true
+
+  
+
+## scrolling
+  history: 10000
+  multiplier: 3
+
+## Background opacity
+  opacity: 0.7
+
+      # - ▇ Block
+      # - _ Underline
+      # - | Beam
+    #shape: Block
+## Cursor
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+
+  unfocused_hollow: false
+
+  selection:
+  save_to_clipboard: false
+
+  # To completely disable the visual bell, set its duration to 0.
+#
+bell:
+  animation: EaseOutExpo
+  color: '0xffffff'
+  duration: 0
+
+
+shell:
+  program: /usr/bin/zsh
+
+key_bindings:
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
+
+mouse_bindings:
+ - { mouse: Middle, action: Paste }
+
+## Live config reload
+live_config_reload: true
+
+hints:
+  enabled:
+   - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+             [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+     hyperlinks: true
+     command: xdg-open
+     post_processing: true
+     mouse:
+       enabled: true
+       mods: None
+     binding:
+       key: U
+       mods: Control|Shift
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+
+  # When set to `true`, selected text will be copied to both the primary and
+  # the selection clipboard. Otherwise, it will only be copied to the selection
+  # clipboard.
+  save_to_clipboard: true
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: "JetBrains Mono Nerd Font"
+    style: Light
+
+  # Bold font face
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: Medium
+
+  # Italic font face
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Medium Italic
+
+      # Bold italic font face
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: Bold Italic
+
+  # Point size
+  size: 12
+
+  draw_bold_text_with_bright_colors: true
+
+
+## Shell
+shell:
+ program: /bin/zsh
+ args:
+   - --login
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+offset:
+   x: -1
+   y: -1
+
+####################################################################################
+####################################################################################
+##                                                                                ## 
+##                                       COLOURS                                  ##
+##                                                                                ##
+####################################################################################
+####################################################################################
+
+# Colors (Tomorrow Night)
+colors:
+  # Default colors
+  primary:
+   background: '#1E2128'  # Terminal background color
+   foreground: '#fcfcfc'  # Neofetch details color text
+
+
+  # Normal colors
+  normal:
+   black:   '#1d1f21'
+   red:     '#b02626'
+   green:   '#34be5b'
+   yellow:  '#C4A000' # git status   color
+   blue:    '#3465A4' # p10k directory background
+   magenta: '#b294bb'
+   cyan:    '#8abeb7'
+   white:   '#fcfcfc'  # p10k logo background
+
+  # Bright colors
+  bright:
+   black:   '#666666'
+   red:     '#EA757E'
+   green:   '#34be5b'  # Neofetch ascii logo
+   yellow:  '#e7c547'
+   blue:    '#7aa6da'
+   magenta: '#c397d8'
+   cyan:    '#70c0b1'
+   white:   '#eaeaea'
+
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
+  dim:
+   black:   '#131415'
+   red:     '#864343'
+   green:   '#777c44'
+   yellow:  '#9e824c'
+   blue:    '#556a7d'
+   magenta: '#75617b'
+   cyan:    '#5b7d78'
+   white:   '#828482'
+
+   
+
+
+key_bindings:
+
+  # (Windows, Linux, and BSD only)
+  - { key: Y,              mods: Super,                           chars: "update"          }
+  - { key: A,              mods: Super,                           chars: "archupdate"      }
+  - { key: I,              mods: Super,                           chars: "pacman.s"        }
+  - { key: U,              mods: Super,                           chars: "pacman.u"        }
+
+
+  - { key: V,              mods: Control|shift, mode: ~Vi,        action: Paste            }
+  # - { key: C,              mods: Control|shift, mode: ~Vi,        action: Copy             }
+  - { key: F,              mods: Control,       mode: ~Search,    action: SearchForward    }
+  - { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
+  # - { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
+  - { key: Insert,         mods: Shift,                           action: PasteSelection   }
+  - { key: Key0,           mods: Control,                         action: ResetFontSize    }
+  - { key: Equals,         mods: Control,                         action: IncreaseFontSize }
+  - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+  - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
+  - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }

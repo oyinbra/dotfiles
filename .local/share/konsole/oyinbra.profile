@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Linux
-Font=Symbols Nerd Font Mono,12,-1,5,50,0,0,0,0,0,1000-em
+Font=FiraCode NF,12,-1,5,50,0,0,0,0,0
 TabColor=128,255,128
 
 [Cursor Options]
