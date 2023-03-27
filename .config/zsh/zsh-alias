@@ -285,7 +285,7 @@ alias gp="git push"
 # ############## AUTO-CPUFREQ ##################
 # ##############################################
 
-alias acf-stats="auto-cpufreq --stats"
+alias cpu="auto-cpufreq --stats"
 # alias acf-monitor="sudo auto-cpufreq --monitor"
 # alias acf-live="sudo auto-cpufreq --live"
 alias acf-daemon-start="sudo auto-cpufreq --install"

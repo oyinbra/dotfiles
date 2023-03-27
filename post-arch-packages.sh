@@ -1,4 +1,10 @@
 wl-clipboard
+linux-lts
+linux-lts-headers
+jdk-openjdk
+plasma-wayland-protocols
+npm
+spectacle
 caffeine-ng
 noto-fonts-emoji
 gimp

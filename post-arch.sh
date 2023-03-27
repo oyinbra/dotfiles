@@ -7,6 +7,8 @@ echo "
 #############################################################################
 #############################################################################"
 
+# Restore backup
+sudo rsync -aAXv /run/media/$USER/Backup/pkg/. /var/cache/pacman/pkg
 # ##############################################
 # ################## ARCH Pure  ###############
 # ##############################################
@@ -25,8 +27,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 ln -sf ~/.dotfiles/zshrc/.zshrc ~/
 ln -sf ~/.dotfiles/powerlevel10k/.p10k.zsh ~/
-ln -sf ~/.dotfiles/zsh ~/.config/
-
+ln -sf ~/.dotfiles/.config/zsh ~/.config/
+ln -sf ~/.dotfiles/.config/kitty ~/.config
 ln -sf ~/.dotfiles/latte-dock/.config/lattedockrc ~/.config/
 ln -sf ~/.dotfiles/latte-dock/.config/latte ~/.config
 ln -sf ~/.dotfiles/git/.gitignore_global ~/
@@ -38,12 +40,9 @@ ln -sf ~/.dotfiles/aurorae ~/.local/share/
 ln -sf ~/.dotfiles/home/.nanorc ~/
 
 # CONFIGURATIONS
-ln -sf ~/.dotfiles/alacritty ~/.config
+ln -sf ~/.dotfiles/.config/alacritty ~/.config
 ln -sf ~/.dotfiles/kitty ~/.config
-# ln -sf ~/.dotfiles/fluent-reader ~/.config
-# ln -sf ~/.dotfiles/nvim ~/.config
-# ln -sf ~/.dotfiles/obs-studio ~/.config
-# ln -sf ~/.dotfiles/VirtualBox ~/.config
+ln -sf ~/Workspace/nvim ~/.config
 
 # LOCAL SHARE
 ln -sf ~/.dotfiles/.local/share/color-schemes ~/.local/share
@@ -72,11 +71,10 @@ sudo ln -sf /home/$USER/.dotfiles/neofetch-source/.neofetch-config2.conf /root
 sudo ln -sf /home/$USER/.dotfiles/neofetch-ascii/usr/bin/neofetch /usr/bin
 sudo ln -sf /home/$USER/.dotfiles/zshrc/.zshrc /root
 
-# Enable color in nano editor for root user (Comment for Manjaro)
-# sudo ln -sf /home/$USER/.dotfiles/home/.nanorc /root
-# ln -sf ~/.dotfiles/nano/.nanorc ~/
-# sudo ln -sf /home/$USER/.dotfiles/nvim /root/.config
-sudo ln -sf /home/$USER/.dotfiles/zsh /root/.config/
+sudo ln -sf /home/$USER/.dotfiles/.config/zsh /root/.config/
+
+sudo ln -sf /home/$USER/.env /root
+sudo ln -sf /home/$USER/Workspace/nvim /root/.config
 
 echo "
 #############################################################################
@@ -90,7 +88,7 @@ echo "
 sudo ln -sf /home/$USER/.dotfiles/etc/paru.conf /etc/
 
 
+echo "DONE"
 echo Refresh zshrc
 source ~/.zshrc
 
-echo "DONE"
