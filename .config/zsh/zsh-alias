@@ -291,7 +291,7 @@ alias cpu="auto-cpufreq --stats"
 alias acf-daemon-start="sudo auto-cpufreq --install"
 alias acf-daemon-stop="sudo auto-cpufreq --remove"
 
-
+alias zxoptimus="nvim /usr/share/optimus-manager.conf"
 # ##############################################
 # ############## DIRECTORY ALIASES #############
 # ##############################################
