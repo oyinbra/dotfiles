@@ -48,7 +48,7 @@ ln -sf ~/Workspace/nvim ~/.config
 ln -sf ~/.dotfiles/.local/share/color-schemes ~/.local/share
 ln -sf ~/.dotfiles/.local/share/icons ~/.local/share
 ln -sf ~/.dotfiles/.local/share/plasma ~/.local/share
-# Remove konsole folder
+# Backup konsole folder
 mv ~/.local/share/konsole ~/.local/share/konsole.bak
 ln -sf ~/.dotfiles/.local/share/konsole/ ~/.local/share/
 
