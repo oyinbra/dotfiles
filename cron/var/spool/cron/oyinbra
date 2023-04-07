@@ -13,8 +13,11 @@
 #
 # mh dom mon dow command
 
-# Backup System
-0 * * * * /home/$USER/.dotfiles/backup.sh
+# Backup System every hour
+0 * * * * /home/$USER/Dotfiles/backup.sh
 
-0 0 * * * /usr/bin/clamscan --exclude-dir=/home/$USER/.clamtk/viruses --exclude-dir=smb4k --exclude-dir=/run/user/$USER/gvfs --exclude-dir=/home/$USER/.gvfs --exclude-dir=.thunderbird --exclude-dir=.mozilla-thunderbird --exclude-dir=.evolution --exclude-dir=Mail --exclude-dir=kmail -i -r /home/$USER --log="$HOME/.clamtk/history/$(date +\%b-\%d-\%Y).log" 2>/dev/null # clamtk-scan
+# Backup System daily at 8am
+0 8 * * * /home/$USER/Dotfiles/backup.sh
+
+# 0 0 * * * /usr/bin/clamscan --exclude-dir=/home/$USER/.clamtk/viruses --exclude-dir=smb4k --exclude-dir=/run/user/$USER/gvfs --exclude-dir=/home/$USER/.gvfs --exclude-dir=.thunderbird --exclude-dir=.mozilla-thunderbird --exclude-dir=.evolution --exclude-dir=Mail --exclude-dir=kmail -i -r /home/$USER --log="$HOME/.clamtk/history/$(date +\%b-\%d-\%Y).log" 2>/dev/null # clamtk-scan
 

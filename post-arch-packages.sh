@@ -1,6 +1,8 @@
+grub-btrfs
+auto-cpufreq
 wl-clipboard
-linux-lts
-linux-lts-headers
+virtualbox
+whatsapp-for-linux
 jdk-openjdk
 plasma-wayland-protocols
 npm
@@ -40,7 +42,6 @@ google-chrome
 notion-app-enhanced
 rust
 xclip
-paru
 duf
 btop
 ksysguard
