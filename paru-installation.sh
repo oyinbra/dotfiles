@@ -1,6 +1,6 @@
-mkdir ~/repos
-cd ~/repos
-sudo pacman -S --needed base-devel
+sudo pacman -Sy --needed base-devel
+mkdir ~/tmp
+cd ~/tmp
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
