@@ -1,9 +1,10 @@
+#!/bin/sh
 # ##############################################
 # ############## ACTION ALIASES ################
 # ##############################################
 
 # set crontab
-alias setcron="sudo ln -sf /home/$USER/Dotfiles/cron/var/spool/cron/oyinbra /var/spool/cron/"
+alias setcron="sudo cp -r /Backup/cron/* /var/spool/cron/"
 alias vide="neovide"
 alias v="nvim"
 # search for files requires ripgrep, fzf and fd packages
