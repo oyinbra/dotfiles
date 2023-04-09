@@ -10,9 +10,17 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
+# Clone zplug if not present
+function clone_zplug() {
+  if [ ! -d "$HOME/.zplug" ]; then
+    git clone https://github.com/zplug/zplug ~/.zplug
+  fi
+}
+
+# Call the function to clone zplug if not present
+clone_zplug
+# Source zplug
 source ~/.zplug/init.zsh
-# export ZPLUG_HOME=/path/to/.zplug
 # history
 HISTFILE=~/.zsh_history
 
