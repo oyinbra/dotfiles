@@ -35,13 +35,13 @@ source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.config/zsh/plugins/sudo/sudo.plugin.zsh
 source "$HOME/.config/zsh/plugins/web-search/web-search.plugin.zsh"
 # copyfile file/location/you/need/to/copy
-source "$HOME/.config/zsh/plugins/copyfile/"
+source "$HOME/.config/zsh/plugins/copyfile/copyfile.plugin.zsh"
 # copy the text currently typed in the command line.
-source "$HOME/.config/zsh/plugins/copybuffer/"
+source "$HOME/.config/zsh/plugins/copybuffer/copybuffer.plugin.zsh"
  # alt + left or alt + right to navigate directory
-source "$HOME/.config/zsh/plugins/dirhistory/"
+source "$HOME/.config/zsh/plugins/dirhistory/dirhistory.plugin.zsh"
 # hsi nvim will give all history command with nvim
-source "$HOME/.config/zsh/plugins/history/"
+source "$HOME/.config/zsh/plugins/history/history.plugin.zsh"
 # source nvim switcher
 source "$HOME/.config/zsh/nvim-switcher.zsh"
 

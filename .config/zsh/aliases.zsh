@@ -304,8 +304,10 @@ alias zxoptimus="nvim /usr/share/optimus-manager.conf"
 alias zzconfig="~/.config"
 alias zznvim="~/.config/nvim"
 
-# Local Backup
-alias backup="sudo /home/$USER/Dotfiles/backup.sh"
+# Local user Backup
+alias backup="sudo /home/oyinbra/Dotfiles/backup.sh"
+# Local user Restore  
+alias restore="sudo /home/oyinbra/Dotfiles/restore.sh"      
 
 # Search for files or folders including hidden folders and files
 alias list="ls -a | grep -i"
