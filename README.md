@@ -20,7 +20,7 @@
 </div>
 <div align="center">
     
-![Screenshot (1423)](https://github.com/Oyinbra/img/raw/main/dotfiles-img/Screenshot_20230412_162738.png)
+![Screenshot (1423)](https://github.com/Oyinbra/img/raw/main/dotfiles-img/img-001.png)
 
 </div>
 
