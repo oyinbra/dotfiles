@@ -1,7 +1,7 @@
 #!/bin/sh
 # NEOFETCH
 # neofetch --ascii ~/.mog.sh
-# neofetch --config ~/.neofetch-config2.conf
+neofetch --config ~/.neofetch-config2.conf
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -46,16 +46,16 @@ source "$HOME/.config/zsh/plugins/history/history.plugin.zsh"
 source "$HOME/.config/zsh/nvim-switcher.zsh"
 
 # plugins
-# zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 zplug "esc/conda-zsh-completion"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "hlissner/zsh-autopair"
 zplug "zap-zsh/supercharge"
-# plug "zap-zsh/exa"
 zplug "zap-zsh/vim"
 zplug "zap-zsh/fzf"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "djui/alias-tips"
+# Load theme file
+# zplug "dracula/zsh", as:theme
 # keybinds
 bindkey '^ ' autosuggest-accept
 
@@ -80,6 +80,8 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
+# Foundry setup
+export PATH="$PATH:/home/oyinbra/.foundry/bin"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
