@@ -9,7 +9,7 @@ sudo rsync -aAXv --delete /var/cache/pacman/pkg /Backup
 # sudo rsync -aAXv --delete /etc /Backup
 
 # crontab backup
-# sudo rsync -aAXv --delete /var/spool/cron /Backup
+sudo rsync -aAXv --delete /var/spool/cron /Backup
 
 # Root usr share
 # sudo rsync -aAXv --delete /usr/share /Backup

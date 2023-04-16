@@ -28,7 +28,7 @@ sudo rsync -aAXv /run/media/$USER/Backup/pkg/. /var/cache/pacman/pkg
 # sudo rsync -aAXv /Backup/pkg/. /var/cache/pacman/pkg
 
 # zsh shell configurations
-ln -sf ~/Dotfiles/.local/share/zap ~/.local/share
+ln -sf ~/Dotfiles/zplug ~/.zplug
 ln -sf ~/Dotfiles/.config/zsh/.zshrc ~/
 ln -sf ~/Dotfiles/.config/zsh ~/.config/
 ln -sf ~/Dotfiles/p10k-user/.p10k.zsh ~/
@@ -70,13 +70,14 @@ echo "
 #############################################################################
 #############################################################################"
 
-sudo cp -r /home/$USER/Dotfiles/.local/share/zap /root/.local/share
 sudo ln -sf /home/$USER/Dotfiles/.config/zsh/.zshrc /root
 sudo ln -sf /home/$USER/Dotfiles/p10k-root/.p10k.zsh /root/
 sudo ln -sf /home/$USER/Dotfiles/.config/zsh /root/.config
 sudo ln -sf /home/$USER/Dotfiles/neofetch-source/.neofetch-config2.conf /root/.config
 sudo ln -sf /home/$USER/.zshenv /root
 sudo ln -sf /home/$USER/.local/share/nvim /root/.local/share/
+sudo ln -sf /home/$USER/Dotfiles/neofetch-source/.neofetch-config2.conf /root
+sudo ln -sf /home/$USER/Dotfiles/neofetch-ascii/usr/bin/neofetch /usr/bin
 
 # enable auto-cpufreq
 sudo systemctl enable --now auto-cpufreq.service
