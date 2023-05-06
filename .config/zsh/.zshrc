@@ -54,6 +54,7 @@ zplug "zap-zsh/vim"
 zplug "zap-zsh/fzf"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "djui/alias-tips"
+zplug "plugins/git",   from:oh-my-zsh
 # Load theme file
 # zplug "dracula/zsh", as:theme
 # keybinds

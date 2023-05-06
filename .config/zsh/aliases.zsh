@@ -67,7 +67,7 @@ alias sym="ln -sf"
 
 # Grub file
 alias zxgrub="sudo nvim /etc/default/grub"
-alias zxacf="nvim ~/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf"
+alias zxacf="vim ~/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf"
 # Update Grub
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
