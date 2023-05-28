@@ -72,7 +72,7 @@ zle_highlight=('paste:none')
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
+    printf "Install? [Y/n]: "
     if read -q; then
         echo; zplug install
     fi

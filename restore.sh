@@ -35,7 +35,8 @@ ln -sf ~/Dotfiles/p10k-user/.p10k.zsh ~/
 ln -sf ~/Dotfiles/neofetch-source/.neofetch-config2.conf ~/
 # latte-dock
 ln -sf ~/Dotfiles/latte-dock/.config/lattedockrc ~/.config/
-ln -sf ~/Dotfiles/latte-dock/.config/latte ~/.config
+# ln -sf ~/Dotfiles/latte-dock/.config/latte ~/.config
+ln -sf ~/Dotfiles/.config/latte ~/.config
 ln -sf ~/Dotfiles/git/.gitignore_global ~/
 ln -sf ~/Dotfiles/icons/.icons ~/
 ln -sf ~/Dotfiles/aurorae ~/.local/share/

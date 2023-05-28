@@ -3,6 +3,12 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
+# System Control
+# cronie.service 
+alias enable.cronie="sudo systemctl enable --now cronie.service"
+alias stop.cronie="sudo systemctl stop cronie.service"
+alias disable.cronie="sudo systemctl disable --now cronie.service"
+alias status.cronie="sudo systemctl status cronie.service"
 # set crontab
 alias setcron="sudo cp -r /Backup/cron/* /var/spool/cron/"
 alias vide="neovide"
@@ -15,11 +21,11 @@ alias q="exit"
 # Copy
 alias cp="cp -r"
 # Timeshift
-alias timeshift-ondemand="sudo timeshift --create --comments"
-alias timeshift-restore="sudo timeshift --restore"
+alias timeshift.ondemand="sudo timeshift --create --comments"
+alias timeshift.restore="sudo timeshift --restore"
 
 # Watch SASS and output to dist folder
-alias sass-watch="sass --watch scss:dist/css"
+alias sass.watch="sass --watch scss:dist/css"
 
 # List Color
 alias ls="ls --color=auto"
@@ -33,7 +39,7 @@ alias py="python"
 alias pv="py --version"
 
 # Pip3 List
-alias pip-list="pip3 list"
+alias pip.list="pip3 list"
 
 # Switch Python Version
 alias zxpython="sudo update-alternatives --config python3"
@@ -46,7 +52,7 @@ alias rmr="rm -r"
 alias rm="rm -rf"
 alias cp="cp -r"
 # List Users
-alias list-users="cat /etc/passwd"
+alias list.users="cat /etc/passwd"
 
 # Hibernate
 alias hibernate="systemctl hibernate"
@@ -60,7 +66,7 @@ alias fgrep='fgrep --color=auto'
 alias suspend="systemctl suspend"
 
 # Nethogs
-alias nethogs="sudo nethogs"
+alias netlog="sudo nethogs"
 
 # Symlink
 alias sym="ln -sf"
@@ -69,7 +75,7 @@ alias sym="ln -sf"
 alias zxgrub="sudo nvim /etc/default/grub"
 alias zxacf="vim ~/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf"
 # Update Grub
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias update.grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # TimeShift configuration settings
 alias zxtimeshift="sudo nvim /etc/timeshift-autosnap.conf"
@@ -109,13 +115,13 @@ alias zxalacritty="nvim ~/.config/alacritty/alacritty.yml"
 alias zzalacritty="~/.config/alacritty/"
 
 # Post arch install
-alias zxpost-arch="nvim /home/$USER/Dotfiles/post-arch.sh"
+alias zxpost.arch="nvim /home/$USER/Dotfiles/post-arch.sh"
 
 # Reload systemctl daemo
-alias source-systemctl="sudo systemctl daemon-reload"
+alias source.systemctl="sudo systemctl daemon-reload"
 
 # Listen to opened port
-alias listen-port="sudo lsof -i -P -n | grep LISTEN"
+alias listen.port="sudo lsof -i -P -n | grep LISTEN"
 
 # Find process
 alias lsp="ps aux | grep"
@@ -155,7 +161,7 @@ alias pacdgrade="sudo pacman -Suu"
 alias pacpkg="sudo pacman -U"
 
 # List packages in pkg cache file
-alias paclist-pkg="l /var/cache/pacman/pkg | less"
+alias paclist.pkg="l /var/cache/pacman/pkg | less"
 
 # Clean uninstalled packages from cache
 alias pacclean="sudo pacman -Sc"
@@ -167,13 +173,13 @@ alias pacalien="sudo pacman -c"
 alias paccache="sudo pacman -Scc"
 
 # List orphan packages
-alias paclist-orphan="sudo pacman -Qtdq"
+alias paclist.orphan="sudo pacman -Qtdq"
 
 # Remove orphan packages
 alias pacorphan="sudo pacman -R $(pacman -Qtdq)"
 
 # Pactree
-alias pactree-r="pactree -r"
+alias pactree.r="pactree -r"
 
 # Completely clean packages
 alias pacrs="sudo pacman -Rs"
@@ -268,7 +274,7 @@ alias lg="lazygit"
 alias gv="git --version"
 
 # Git configuration
-alias git-config="git config --global --edit"
+alias git.config="git config --global --edit"
 
 alias gi="git init"
 alias cl="clear"
@@ -292,8 +298,8 @@ alias gp="git push"
 alias acf="auto-cpufreq --stats"
 # alias acf-monitor="sudo auto-cpufreq --monitor"
 # alias acf-live="sudo auto-cpufreq --live"
-alias acf-daemon-start="sudo auto-cpufreq --install"
-alias acf-daemon-stop="sudo auto-cpufreq --remove"
+alias acf.daemon.start="sudo auto-cpufreq --install"
+alias acf.daemon.stop="sudo auto-cpufreq --remove"
 
 alias zxoptimus="nvim /usr/share/optimus-manager.conf"
 # ##############################################
@@ -306,6 +312,7 @@ alias zznvim="~/.config/nvim"
 
 # Local user Backup
 alias backup="sudo /home/oyinbra/Dotfiles/backup.sh"
+alias backup.pkg="sudo rsync -aAXv --delete /var/cache/pacman/pkg /Backup"
 # Local user Restore  
 alias restore="sudo /home/oyinbra/Dotfiles/restore.sh"      
 
@@ -373,23 +380,23 @@ alias zztmp="~/Tmp"
 
 
 # Configure Arch mirror list
-alias zxarch-mirror="sudo vim /etc/pacman.d/mirrorlist"
+alias zxarch.mirror="sudo vim /etc/pacman.d/mirrorlist"
 
 # Configure EndeavourOS Mirror List
-alias zxendeavouros-mirror="sudo vim /etc/pacman.d/endeavouros-mirrorlist"
+alias zxendeavouros.mirror="sudo vim /etc/pacman.d/endeavouros-mirrorlist"
 
 # Configure Chaotic Mirror List
-alias zxchaotic-mirror="sudo vim /etc/pacman.d/chaotic-mirrorlistt"
+alias zxchaotic.mirror="sudo vim /etc/pacman.d/chaotic-mirrorlistt"
 
 # Update Manjaro Mirrors
-alias rate-manjaro="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
+alias rate.manjaro="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
 
 # Update Arch Mirrors
-alias rate-arch="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
-alias reflector-arch="sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+alias rate.arch="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
+alias reflector.arch="sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 
 # Update EndeavourOS mirror
-alias rate-endeavouros="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"
+alias rate.endeavouros="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"
 
 # ##############################################
 # ############## NEW ALIASES    ################
@@ -398,7 +405,7 @@ alias rate-endeavouros="rate-mirrors --allow-root --protocol https endeavouros |
 #!/bin/sh
 alias j='z'
 alias zz='zi'
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias zsh.update.plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
 
@@ -429,12 +436,12 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
 # gpg encryption
 # verify signature for isos
-alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
+alias gpg.check="gpg2 --keyserver-options auto-key-retrieve --verify"
 # receive the key of a developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
+alias gpg.retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
 # For when keys break
-alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+alias archlinx.fix.keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 
 # systemd
 alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
