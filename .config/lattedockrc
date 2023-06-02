@@ -1,7 +1,11 @@
 [KFileDialog Settings]
-Recent Files[$e]=arch-logo.png,file:$HOME/Icons/arch-logo.png
-Recent URLs[$e]=file:$HOME/Icons/
+Recent Files[$e]=arch-logo.png,file:$HOME/Icons/Bard.png,file:$HOME/Downloads/bing.png,file:$HOME/Icons/arch-logo.png
+Recent URLs[$e]=file:$HOME/Icons/,file:$HOME/Downloads/,file:$HOME/
 iconViewIconSize=64
+
+[KPropertiesDialog]
+1920x1080 screen: Height=537
+1920x1080 screen: Width=422
 
 [PlasmaThemeExtended]
 outlineWidth=1
