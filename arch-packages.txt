@@ -1,3 +1,5 @@
+spotify
+brave-nightly-bin
 grub-btrfs
 auto-cpufreq
 wl-clipboard

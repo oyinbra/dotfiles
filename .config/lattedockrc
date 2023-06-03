@@ -1,6 +1,6 @@
 [KFileDialog Settings]
-Recent Files[$e]=arch-logo.png,file:$HOME/Icons/Bard.png,file:$HOME/Downloads/bing.png,file:$HOME/Icons/arch-logo.png
-Recent URLs[$e]=file:$HOME/Icons/,file:$HOME/Downloads/,file:$HOME/
+Recent Files[$e]=arch-logo.png,file:$HOME/Icons/Manjaro_logo_white.png,file:$HOME/Icons/manjaro.png,file:$HOME/Icons/Bard.png,file:$HOME/Icons/arch-logo.png
+Recent URLs[$e]=file:$HOME/Icons/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/Documents/
 iconViewIconSize=64
 
 [KPropertiesDialog]
