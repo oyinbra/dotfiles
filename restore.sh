@@ -88,5 +88,5 @@ echo "RebootWatchdogSec=0" | sudo tee --append /etc/systemd/system.conf
 sudo systemctl enable --now cronie.service
 
 echo "DONE"
-echo "Refresh zshrc"
+echo "Source zshrc"
 source ~/.zshrc
