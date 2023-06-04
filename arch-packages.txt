@@ -35,10 +35,8 @@ brave-bin
 pycharm-community-edition
 android-studio
 discord
-uget
 mailspring
 bitwarden
-motrix-bin
 freedownloadmanager
 google-chrome
 notion-app-enhanced
@@ -48,7 +46,6 @@ duf
 btop
 ksysguard
 telegram-desktop
-alacritty
 onlyoffice-bin
 libreoffice-fresh
 gthumb
@@ -79,5 +76,3 @@ ttf-dejavu
 ttf-droid
 ttf-liberation
 ttf-ubuntu-font-family
-
-
