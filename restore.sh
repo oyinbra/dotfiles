@@ -7,17 +7,18 @@ echo "
 #############################################################################
 #############################################################################"
 
-# Restore Backup
-rsync -aAXv --ignore-times /run/media/$USER/Backup/home/$USER /home/
-
 # Restore pkg backup
 sudo rsync -aAXv --ignore-times /run/media/$USER/Backup/pkg/. /var/cache/pacman/pkg
 
+# Sync and install required packages
+sudo pacman -Sy latte-dock zsh timeshift-autosnap neovim zoxide ksysguard kitty firewalld kdeconnect cronie git --noconfirm --needed
+# Restore Backup
+rsync -aAXv --ignore-times /run/media/$USER/Backup/home/$USER /home/
+
 # Add backup partition to fstab
 echo "/dev/nvme0n1p4                            /Backup        btrfs   defaults                 0 0" | sudo tee --append /etc/fstab
-
-# Sync packages
-sudo pacman -Sy latte-dock zsh neovim zoxide ksysguard kitty firewalld kdeconnect git
+# echo "Defaults timestamp_timeout=120" | sudo tee --append /etc/sudoers.tmp
+# echo "Defaults timestamp_timeout=120" | sudo tee --append /etc/sudoers.d/10-installer.tmp
 
 sudo systemctl enable --now firewalld
 sudo firewall-cmd --state
@@ -90,3 +91,4 @@ sudo systemctl enable --now cronie.service
 echo "DONE"
 echo "Source zshrc"
 source ~/.zshrc
+loginctl terminate-user $USER
