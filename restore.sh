@@ -11,7 +11,7 @@ echo "
 sudo rsync -aAXv --ignore-times /run/media/$USER/Backup/pkg/. /var/cache/pacman/pkg
 
 # Sync and install required packages
-sudo pacman -Sy latte-dock zsh timeshift-autosnap neovim zoxide ksysguard kitty firewalld kdeconnect cronie git --noconfirm --needed
+sudo pacman -Sy latte-dock zsh neovim zoxide ksysguard kitty firewalld kdeconnect cronie git --noconfirm --needed
 # Restore Backup
 rsync -aAXv --ignore-times /run/media/$USER/Backup/home/$USER /home/
 
