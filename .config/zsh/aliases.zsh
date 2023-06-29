@@ -13,6 +13,7 @@ alias status.cronie="sudo systemctl status cronie.service"
 alias setcron="sudo cp -r /Backup/cron/* /var/spool/cron/"
 alias vide="neovide"
 alias v="nvim"
+alias mount.all="sudo mount -a"
 # search for files requires ripgrep, fzf and fd packages
 alias f="fd --hidden --exclude .git | fzf-tmux -p | xargs nvim"
 # alias z="zoxide"
@@ -92,6 +93,9 @@ alias s.bpytop="bpytop"
 # Log out
 alias logout="loginctl terminate-user $USER"
 
+# check swappiness
+alias swap="bat /proc/sys/vm/swappiness"
+
 # Process ID
 alias pid="ps -ef|grep -i"
 
@@ -118,7 +122,7 @@ alias zzalacritty="~/.config/alacritty/"
 alias zxpost.arch="nvim /home/$USER/Dotfiles/post-arch.sh"
 
 # Reload systemctl daemo
-alias source.systemctl="sudo systemctl daemon-reload"
+alias systemctl.reload="sudo systemctl daemon-reload"
 
 # Listen to opened port
 alias listen.port="sudo lsof -i -P -n | grep LISTEN"
@@ -295,7 +299,7 @@ alias gp="git push"
 # ############## AUTO-CPUFREQ ##################
 # ##############################################
 
-alias acf="auto-cpufreq --stats"
+alias acf="sudo auto-cpufreq --stats"
 # alias acf-monitor="sudo auto-cpufreq --monitor"
 # alias acf-live="sudo auto-cpufreq --live"
 alias acf.daemon.start="sudo auto-cpufreq --install"
@@ -320,7 +324,7 @@ alias restore="sudo /home/oyinbra/Dotfiles/restore.sh"
 alias list="ls -a | grep -i"
 
 # Refresh zsh
-alias src="source ~/.zshrc"
+alias sz="source ~/.zshrc"
 
 # Zsh config
 alias zxzshrc="nvim ~/.zshrc"
