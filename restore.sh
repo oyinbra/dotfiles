@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 echo "
 #############################################################################
 #############################################################################
@@ -8,14 +8,8 @@ echo "
 #############################################################################
 #############################################################################"
 
-# Restore pkg backup
-sudo rsync -aAXv --ignore-times "/run/media/$USER/Backup/pkg/." "/var/cache/pacman/pkg"
-
 # Sync and install required packages
 sudo pacman -Sy --noconfirm --needed latte-dock zsh neovim zoxide ksysguard kitty firewalld kdeconnect cronie git
-
-# Restore User Home
-rsync -aAXv --ignore-times "/run/media/$USER/Backup/home/$USER" "/home/"
 
 # Add backup partition to fstab
 echo "/dev/nvme0n1p4                            /Backup        btrfs   defaults                 0 0" | sudo tee --append /etc/fstab
@@ -89,7 +83,6 @@ echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.conf"
 
 # Enable crontab
 sudo systemctl enable --now cronie.service
-sudo cp -r "/Backup/cron/"* "/var/spool/cron/"
 
 # Change shell for root and user
 sudo chsh -s /bin/zsh root
@@ -99,7 +92,6 @@ chsh -s /bin/zsh "$USER"
 if [ ! -d "$HOME/Tmp/auto-cpufreq/" ]; then
   git clone "https://github.com/AdnanHodzic/auto-cpufreq.git" "$HOME/Tmp/auto-cpufreq"
 fi
-cd "$HOME/Tmp/auto-cpufreq"
 sudo "$HOME/Tmp/auto-cpufreq/auto-cpufreq-installer"
 
 sudo ln -sf "$HOME/Dotfiles/etc/paru.conf" "/etc/"
@@ -120,9 +112,16 @@ fi
 cd "$HOME/Tmp/yay/"
 makepkg -si
 
+# Update grub themes
+if [ ! -d "$HOME/Tmp/grub2-themes/" ]; then
+  git clone "https://github.com/vinceliuice/grub2-themes.git" "$HOME/Tmp/grub2-themes/"
+fi
+cd ""
+sudo $HOME/Tmp/grub2-themes/install.sh -b -t tela
+
+# Install Arcolinux and Chaotic repos
+$HOME/Dotfiles/arcolinux-chaotic-repo.sh
+
 # Install custom packages
 cd "$HOME/Dotfiles/"
 sudo pacman -S --needed - < "$HOME/Dotfiles/packages-arch.txt"
-
-# Root configuration
-sudo -s

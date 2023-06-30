@@ -30,7 +30,7 @@ Include = /etc/pacman.d/arcolinux-mirrorlist
 SigLevel = Optional TrustedOnly
 Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
 
-sudo pacman -Sy zsh archlinux-tweak-tool-git --noconfirm --needed
+sudo pacman -Sy zsh archlinux-tweak-tool-git kitty latte-dock neovim zsh zoxide --noconfirm --needed
 ######################################################################################################################
 echo '
 [chaotic-aur]
