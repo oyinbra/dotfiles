@@ -1,6 +1,5 @@
 # System Directory Restores
 directories=(
-   "/opt/Mechvibes"
    "/root"
    "/usr/bin"
    "/usr/share"

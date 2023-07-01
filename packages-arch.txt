@@ -1,3 +1,4 @@
+noto-fonts-emoji
 spotify
 kdeplasma-addons
 brave-nightly-bin

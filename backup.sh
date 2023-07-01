@@ -5,7 +5,6 @@ sudo rsync -aAXv --delete --exclude={"/home/oyinbra/.local/share/Trash/","/home/
 
 # System Directory Backups
 directories=(
-    "/opt"
     "/root"
     "/usr"
     "/var"

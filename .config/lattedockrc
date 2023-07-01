@@ -1,5 +1,9 @@
+[FileDialogSize]
+1920x1080 screen: Height=422
+1920x1080 screen: Width=639
+
 [KFileDialog Settings]
-Recent Files[$e]=arch-logo.png,file:$HOME/Icons/Linux-01.png,file:$HOME/Icons/Linux-02.png,file:$HOME/Icons/Manjar0-3.png,file:$HOME/Icons/eos-03-2ncN8dT6pv8Lbdxz3k60.png,file:$HOME/Icons/chatgpt-03.png,file:$HOME/Icons/calendar-06.png,file:$HOME/Icons/task.png,file:$HOME/Icons/task-board.png,file:$HOME/Icons/task_done.png,file:$HOME/Icons/Manjaro_logo_white.png,file:$HOME/Icons/eos-01.png,file:$HOME/Icons/eos-02.png,file:$HOME/Icons/manjaro.png,file:$HOME/Icons/Bard.png,file:$HOME/Icons/arch-logo.png
+Recent Files[$e]=arch-logo.png,file:$HOME/Icons/Linux-01.png,file:$HOME/Icons/kde-02.png,file:$HOME/Icons/kde.png,file:$HOME/Icons/Linux-02.png,file:$HOME/Icons/Manjar0-3.png,file:$HOME/Icons/eos-03-2ncN8dT6pv8Lbdxz3k60.png,file:$HOME/Icons/chatgpt-03.png,file:$HOME/Icons/calendar-06.png,file:$HOME/Icons/task.png,file:$HOME/Icons/task-board.png,file:$HOME/Icons/task_done.png,file:$HOME/Icons/Manjaro_logo_white.png,file:$HOME/Icons/eos-01.png,file:$HOME/Icons/eos-02.png
 Recent URLs[$e]=file:$HOME/Icons/,file:$HOME/Downloads/,file:$HOME/,file:$HOME/Documents/,file:$HOME/Desktop/
 iconViewIconSize=64
 
