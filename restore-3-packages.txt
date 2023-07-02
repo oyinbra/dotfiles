@@ -1,4 +1,5 @@
 noto-fonts-emoji
+zsh
 spotify
 kdeplasma-addons
 brave-nightly-bin
@@ -13,6 +14,7 @@ caffeine-ng
 zoxide
 fzf
 lazygit
+git
 appimagelauncher
 arcolinux-pamac-all
 sublime-text-4
@@ -46,6 +48,9 @@ gthumb
 clutter
 imath
 webkit2gtk
+neovim
+kitty
+cronie
 neovim-symlinks
 rate-mirrors
 bat
