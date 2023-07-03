@@ -29,7 +29,6 @@ alacritty
 obs-studio
 gparted
 brave-bin
-timeshift-autosnap
 android-studio
 discord
 mailspring

@@ -19,6 +19,7 @@ echo "/dev/nvme0n1p4                            /Backup        btrfs   defaults 
 
 # Enable and configure firewalld
 sudo systemctl enable --now firewalld
+sudo systemctl start firewalld
 sudo firewall-cmd --state
 sudo ufw disable
 sudo firewall-cmd --permanent --add-service=https

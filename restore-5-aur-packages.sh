@@ -1,2 +1,2 @@
 paru -Sy preload tradingview
-sudo systemctl enable --now preload.service
+systemctl enable --now preload.service

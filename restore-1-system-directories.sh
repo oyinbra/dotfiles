@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # System Directory Restores
 directories=(
    "/root"
@@ -13,7 +14,11 @@ sudo cp -R /usr/bin /usr/bin.bak
 sudo cp -R /usr/share /usr/share.bak
 
 for directory in "${directories[@]}"; do
-    sudo rsync -aAXv --delete --ignore-times /run/media/$USER/Backup/"$directory"/ "$directory"
+    if [[ "$directory" == "/usr/bin" || "$directory" == "/usr/share" ]]; then
+        sudo rsync -aAXv /run/media/$USER/Backup/"$directory"/ "$directory"
+    else
+        sudo rsync -aAXv --delete --ignore-times /run/media/$USER/Backup/"$directory"/ "$directory"
+    fi
 done
 
 # Restore Home Directory
