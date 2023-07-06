@@ -8,4 +8,8 @@ echo "
 #############################################################################
 #############################################################################"
 
-./restore-1-system-directories.sh
+./restore-system-directories.sh
+./restore-arcolinux-chaotic-repos.sh
+sudo pacman -S --needed - < ./restore-packages.txt
+./restore-system-settings.sh
+./restore-aur-packages.sh

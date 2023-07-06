@@ -26,9 +26,12 @@ firefox
 latte-dock
 nano-syntax-highlighting
 alacritty
+chromium
 obs-studio
 gparted
 brave-bin
+jdk8-openjdk
+nodejs
 android-studio
 discord
 mailspring

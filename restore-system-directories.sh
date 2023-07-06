@@ -13,14 +13,14 @@ directories=(
 
 for directory in "${directories[@]}"; do
     if [[ "$directory" == "/usr/share/sddm/themes" ]]; then
-        sudo rsync -aAXv /run/media/$USER/Backup/"$directory"/ "$directory"
+        sudo rsync -aAXv /Backup/"$directory"/ "$directory"
     else
-        sudo rsync -aAXv --delete --ignore-times /run/media/$USER/Backup/"$directory"/ "$directory"
+        sudo rsync -aAXv --delete --ignore-times /Backup/"$directory"/ "$directory"
     fi
 done
 
 # Restore Home Directory
-sudo rsync -aAXv --delete --ignore-times /run/media/$USER/Backup/home/ /home
+sudo rsync -aAXv --delete --ignore-times /Backup/home/ /home
 
 # Update system
 sudo pacman -Syu

@@ -68,7 +68,6 @@ echo "
 
 # Create symbolic links for root's shell configurations
 sudo ln -sf "$HOME/Workspace/nvim" "/root/.config/"
-sudo ln -sf "$HOME/Dotfiles/usr/share/sddm/themes/Ocean" "/usr/share/sddm/themes/"
 sudo ln -sf "$HOME/Dotfiles/.config/zsh/.zshrc" "/root"
 sudo ln -sf "$HOME/Dotfiles/p10k-root/.p10k.zsh" "/root/"
 sudo ln -sf "$HOME/Dotfiles/.config/zsh" "/root/.config"
@@ -93,16 +92,6 @@ sudo systemctl enable --now cronie.service
 sudo chsh -s /bin/zsh root
 chsh -s /bin/zsh "$USER"
 
-# Install auto-cpufreq
-if [ ! -d "$HOME/Tmp/auto-cpufreq/" ]; then
-  git clone "https://github.com/AdnanHodzic/auto-cpufreq.git" "$HOME/Tmp/auto-cpufreq"
-fi
-sudo "$HOME/Tmp/auto-cpufreq/auto-cpufreq-installer"
-# Enable auto-cpufreq daemon
-sudo auto-cpufreq --install
-# Enable auto-cpufreq custom settings
-sudo ln -sf "$HOME/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf" "/etc"
-
 # Install Paru
 sudo pacman -Sy --needed base-devel
 mkdir -p "$HOME/Tmp"
@@ -126,11 +115,19 @@ if [ ! -d "$HOME/Tmp/grub2-themes/" ]; then
   git clone "https://github.com/vinceliuice/grub2-themes.git" "$HOME/Tmp/grub2-themes/"
 fi
 cd ""
-sudo $HOME/Tmp/grub2-themes/install.sh -b -t tela
+# sudo $HOME/Tmp/grub2-themes/install.sh -b -t tela
 
-# Install Arcolinux and Chaotic repos
-# $HOME/Dotfiles/arcolinux-chaotic-repo.sh
+# Install auto-cpufreq
+if [ ! -d "$HOME/Tmp/auto-cpufreq/" ]; then
+  git clone "https://github.com/AdnanHodzic/auto-cpufreq.git" "$HOME/Tmp/auto-cpufreq"
+fi
+sudo "$HOME/Tmp/auto-cpufreq/auto-cpufreq-installer"
+# Enable auto-cpufreq daemon
+sudo auto-cpufreq --install
+# Enable auto-cpufreq custom settings
+sudo ln -sf "$HOME/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf" "/etc"
 
-# Install custom packages
-# cd "$HOME/Dotfiles/"
-# sudo pacman -S --needed - < "$HOME/Dotfiles/packages-arch.txt"
+# Install Yarn, a package manager for Node.js
+# sudo npm install -g yarn
+# Install the React Native Command Line Interface (CLI) globally using npm
+# sudo npm install -g react-native-cli
