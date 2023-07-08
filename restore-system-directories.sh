@@ -8,12 +8,9 @@ directories=(
    "/var/spool/cron"
 )
 
-# Creating a backup of bin and share diretory
-# sudo cp -R /usr/share /usr/share.bak
-
 for directory in "${directories[@]}"; do
-    if [[ "$directory" == "/usr/share/sddm/themes" ]]; then
-        sudo rsync -aAXv /Backup/"$directory"/ "$directory"
+    if [[ "$directory" == "/usr/share/sddm/themes" || "$directory" == "/var/cache/pacman/pkg" ]]; then
+        sudo rsync -aAXv --ignore-times /Backup/"$directory"/ "$directory"
     else
         sudo rsync -aAXv --delete --ignore-times /Backup/"$directory"/ "$directory"
     fi
