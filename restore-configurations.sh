@@ -14,9 +14,6 @@ echo "
 # Install mechvibes
 sudo pacman -U --noconfirm /var/cache/pacman/pkg/mechvibes-2.3.0-1-x86_64.pkg.tar.zst
 
-# Add backup partition to fstab
-echo "/dev/nvme0n1p4                            /Backup        btrfs   defaults                 0 0" | sudo tee --append /etc/fstab
-
 # Enable and configure firewalld
 sudo systemctl enable --now firewalld
 sudo systemctl start firewalld
