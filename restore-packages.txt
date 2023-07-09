@@ -2,8 +2,8 @@ noto-fonts-emoji
 zsh
 spotify
 kdeplasma-addons
-brave-nightly-bin
 grub-btrfs
+microsoft-edge-dev-bin
 auto-cpufreq
 wl-clipboard
 whatsapp-for-linux
@@ -37,7 +37,6 @@ discord
 mailspring
 bitwarden
 freedownloadmanager
-google-chrome
 notion-app-enhanced
 rust
 xclip
