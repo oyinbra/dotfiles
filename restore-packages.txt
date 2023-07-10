@@ -4,6 +4,10 @@ spotify
 kdeplasma-addons
 grub-btrfs
 microsoft-edge-dev-bin
+slack-desktop
+zoom
+btrfs-progs
+cryptsetup
 auto-cpufreq
 wl-clipboard
 whatsapp-for-linux
