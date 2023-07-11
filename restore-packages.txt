@@ -1,4 +1,5 @@
 noto-fonts-emoji
+yarn
 zsh
 spotify
 kdeplasma-addons
@@ -8,6 +9,8 @@ slack-desktop
 zoom
 btrfs-progs
 cryptsetup
+anaconda
+intellij-idea-community-edition
 auto-cpufreq
 wl-clipboard
 whatsapp-for-linux
