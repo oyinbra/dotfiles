@@ -81,42 +81,9 @@ sudo systemctl enable --now cronie.service
 sudo chsh -s /bin/zsh root
 chsh -s /bin/zsh "$USER"
 
-# Install Paru
-sudo pacman -Sy --needed base-devel
-mkdir -p "$HOME/Tmp"
-if [ ! -d "$HOME/Tmp/paru/" ]; then
-  git clone "https://aur.archlinux.org/paru.git" "$HOME/Tmp/paru/"
-fi
-cd "$HOME/Tmp/paru/"
-makepkg -si
-# Paru configurations
-sudo ln -sf "$HOME/Dotfiles/etc/paru.conf" "/etc/"
-
-# Install yay
-if [ ! -d "$HOME/Tmp/yay/" ]; then
-  git clone "https://aur.archlinux.org/yay.git" "$HOME/Tmp/yay/"
-fi
-cd "$HOME/Tmp/yay/"
-makepkg -si
-
 # Update grub themes
 if [ ! -d "$HOME/Tmp/grub2-themes/" ]; then
   git clone "https://github.com/vinceliuice/grub2-themes.git" "$HOME/Tmp/grub2-themes/"
 fi
 cd ""
 # sudo $HOME/Tmp/grub2-themes/install.sh -b -t tela
-
-# Install auto-cpufreq
-if [ ! -d "$HOME/Tmp/auto-cpufreq/" ]; then
-  git clone "https://github.com/AdnanHodzic/auto-cpufreq.git" "$HOME/Tmp/auto-cpufreq"
-fi
-sudo "$HOME/Tmp/auto-cpufreq/auto-cpufreq-installer"
-# Enable auto-cpufreq daemon
-sudo auto-cpufreq --install
-# Enable auto-cpufreq custom settings
-sudo ln -sf "$HOME/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf" "/etc"
-
-# Install Yarn, a package manager for Node.js
-# sudo npm install -g yarn
-# Install the React Native Command Line Interface (CLI) globally using npm
-# sudo npm install -g react-native-cli
