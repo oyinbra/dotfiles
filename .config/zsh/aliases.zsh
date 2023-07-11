@@ -93,6 +93,13 @@ alias s.bpytop="bpytop"
 # Log out
 alias logout="loginctl terminate-user $USER"
 
+ # List npm package owners
+alias npm.owner="ls -la $(npm root -g)"
+ # List npm packages
+alias npm.installed="npm list -g --depth=0"
+# Change npm package ownership
+alias npm.chown="sudo chown -R $USER $(npm root -g)"
+
 # check swappiness
 alias swap="bat /proc/sys/vm/swappiness"
 
