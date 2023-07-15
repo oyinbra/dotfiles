@@ -3,6 +3,8 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
+# Magic link
+alias magic="while sleep .1; do ps aux | grep slack | grep -v grep | grep magic; done"
 # System Control
 # cronie.service 
 alias enable.cronie="sudo systemctl enable --now cronie.service"
@@ -266,15 +268,15 @@ alias nala.r="sudo nala remove"
 # ############### FLATPAK ######################
 # ##############################################
 
-alias flatinstall="flatpak install flathub"
-alias flatremove="flatpak remove"
+alias flatins="flatpak install flathub"
+alias flatrem="flatpak remove"
 
 # ##############################################
 # ############### SNAP #########################
 # ##############################################
 
-alias snapinstall="sudo snap install"
-alias snapremove="sudo snap remove"
+alias snapins="sudo snap install"
+alias snaprem="sudo snap remove"
 
 # ##############################################
 # ################# GIT ########################
