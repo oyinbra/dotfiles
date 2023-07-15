@@ -17,7 +17,8 @@ for directory in "${directories[@]}"; do
 done
 
 # Restore Home Directory
-sudo rsync -aAXv --delete --ignore-times /Backup/home/ /home
+sudo rsync -aAXv --delete --ignore-times --exclude='Download' /Backup/home/ /home
+
 
 # Update system
 sudo pacman -Syu
