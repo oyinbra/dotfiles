@@ -27,7 +27,7 @@ HISTFILE=~/.zsh_history
 # ZSH ALIASES
 source "$HOME/.config/zsh/aliases.zsh"
 # Environment Variables
-source "$HOME/.zshenv"
+source "$HOME/.env"
 # Source Exports
 source "$HOME/.config/zsh/exports.zsh"
 # Source Power level 10k theme
