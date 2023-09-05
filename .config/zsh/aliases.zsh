@@ -3,8 +3,13 @@
 # ############## ACTION ALIASES ################
 # ##############################################
 
+# Nvidia settings
+alias s.graphics='glxinfo | grep "OpenGL renderer"'
+alias nvidia="optimus-manager --switch nvidia --no-confirm"
+alias intel="optimus-manager --switch integrated --no-confirm"
+alias hybrid="optimus-manager --switch hybrid --no-confirm"
 # Magic link
-alias magic="while sleep .1; do ps aux | grep slack | grep -v grep | grep magic; done"
+alias magic.slack="while sleep .1; do ps aux | grep slack | grep -v grep | grep magic; done"
 # System Control
 # cronie.service 
 alias enable.cronie="sudo systemctl enable --now cronie.service"
@@ -30,19 +35,24 @@ alias timeshift.restore="sudo timeshift --restore"
 # Watch SASS and output to dist folder
 alias sass.watch="sass --watch scss:dist/css"
 
+alias cl="clear"
+alias mkdir="mkdir -p"
 # List Color
 alias ls="ls --color=auto"
 # List All
 alias la="ls -a"
 
-# Python
+# PYTHON-------------------------------------------------------------
 alias py="python"
+alias myenv="source /home/$USER/Myenv/bin/activate"
+alias dmyenv="deactivate"
 
 # Python version
 alias pv="py --version"
 
 # Pip3 List
 alias pip.list="pip3 list"
+alias pipug="pip3 install --upgrade"
 
 # Switch Python Version
 alias zxpython="sudo update-alternatives --config python3"
@@ -153,16 +163,16 @@ alias pacsync="sudo pacman -Syy"
 # refresh pacman database
 alias pacfresh="sudo pacman -Fy"
 # update packages
-alias pacdate="sudo pacman -Sy"
+alias ud="sudo pacman -Sy --noconfirm"
 # upgrade packages
-alias pacgrade="sudo pacman -Syu"
+alias ug="sudo pacman -Syu --noconfirm"
 alias pacins="sudo pacman -S"
 alias upgrade="pacfresh ; pacsync ; paru"
 # search for packages in database
 alias pacsearch="sudo pacman -Ss"
 
 # to search for already installed packages
-alias pacinstalled="sudo paman -Qs"
+alias pacqs="pacman -Qs"
 
 alias pacinsnc="sudo pacman -S --noconfirm"
 alias pacrem="sudo pacman -R"
@@ -290,9 +300,7 @@ alias gv="git --version"
 alias git.config="git config --global --edit"
 
 alias gi="git init"
-alias cl="clear"
 
-alias mkdir="mkdir -p"
 alias g="git"
 alias ga="git add"
 alias gaa="git add --all"
@@ -415,12 +423,9 @@ alias rate.endeavouros="rate-mirrors --allow-root --protocol https endeavouros |
 # ############## NEW ALIASES    ################
 # ##############################################
 
-#!/bin/sh
 alias j='z'
 alias zz='zi'
 alias zsh.update.plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-
-# alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
 
 # get fastest mirrors
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
@@ -429,7 +434,6 @@ alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Remarkable
-alias remarkable_ssh='ssh root@10.11.99.1'
 alias restream='restream -p'
 
 # Colorize grep output (good for log files)
@@ -454,15 +458,7 @@ alias gpg.check="gpg2 --keyserver-options auto-key-retrieve --verify"
 alias gpg.retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
 # For when keys break
-alias archlinx.fix.keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
-
-# systemd
-alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
-
-alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh""
-
-alias m="git checkout master"
-alias s="git checkout stable"
+alias archlinux.fix.keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
