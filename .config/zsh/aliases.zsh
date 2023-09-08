@@ -1,5 +1,101 @@
 #!/bin/sh
 # ##############################################
+# ################# GIT ########################
+# ##############################################
+
+# Check the remote link
+alias gl="git remote -v"
+
+# Lazy Git (assuming 'lazygit' is a Git interface tool)
+alias lg="lazygit"
+
+# Check Git current version
+alias gv="git --version"
+
+# To edit your global Git configuration
+alias gcedit="git config --global --edit"
+
+# To initialize a new Git repository in your current directory
+alias gi="git init"
+
+# Add and commit all changes with a message
+alias gacm="git add --all && git commit -m"
+
+# To add all changes, including modified, new, and deleted files
+alias gaa="git add --all"
+
+# To make a Git commit with a commit message
+alias gcmsg="git commit -m"
+
+# Add a remote GitHub Repository Link
+git config --global alias.rao'!f() { \
+  read -p "Enter the repository URL for 'origin': " origin_url && \
+  git remote add origin "$origin_url"; \
+}; f'
+alias grao="git remote add origin"
+
+# Check the status of your current Git repository
+alias gst="git status"
+
+# Push to the current branch with set-upstream
+alias gpsu="git push --set-upstream origin \$(git symbolic-ref --short HEAD)"
+
+# Check your list of branch
+alias gb="git branch"
+
+# Rename the current branch
+alias gbr="git branch -m"
+
+# Git checkout
+alias gco="git checkout"
+
+# Create and switch to the new branch
+alias gcb="git checkout -b"
+
+# fetch the new data from the remote repo without merging them
+alias gf="git fetch"
+
+# Merge the current branch with the remote branch
+alias gm="git merge"
+
+# Update your local Git repository with changes from the remote repository
+alias glp="git pull"
+
+# replace the entire history of one branch with another. 
+alias grb="git rebase"
+
+# update upstream branch link
+git config --global alias.addupstream '!f() { \
+  read -p "Enter the upstream repository URL: " upstream_url && \
+  git remote add upstream "$upstream_url"; \
+}; f'
+
+# update downstream branch link 
+git config --global alias.adddownstream '!f() { \
+  read -p "Enter the downstream repository URL: " downstream_url && \
+  git remote add downstream "$downstream_url"; \
+}; f'
+
+# Git log
+alias glg="git log"
+
+# remove files that have been staged
+alias gun="git rm --cached"
+
+# set the Git configuration option for enabling fast-forward merges
+alias gf="git config --global pull.ff true"
+
+# Set git credential
+alias gitconfig="f() { \
+  git config --global credential.helper cache && \
+  read -p 'Enter your username: ' username && \
+  read -p 'Enter your email address: ' email && \
+  git config --global user.name \"$username\" && \
+  git config --global user.email \"$email\"; \
+}; f"
+
+
+# ##############################################
 # ############## ACTION ALIASES ################
 # ##############################################
 
@@ -287,30 +383,6 @@ alias flatrem="flatpak remove"
 
 alias snapins="sudo snap install"
 alias snaprem="sudo snap remove"
-
-# ##############################################
-# ################# GIT ########################
-# ##############################################
-
-alias lg="lazygit"
-# Check Git current version
-alias gv="git --version"
-
-# Git configuration
-alias git.config="git config --global --edit"
-
-alias gi="git init"
-
-alias g="git"
-alias ga="git add"
-alias gaa="git add --all"
-alias grao="git remote add origin"
-# Git commit message
-alias gcmsg="git commit -m"
-# Git status
-alias gst="git status"
-# Git Push
-alias gp="git push"
 
 # ##############################################
 # ############## AUTO-CPUFREQ ##################
