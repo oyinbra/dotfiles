@@ -28,8 +28,8 @@ alias gaa="git add --all"
 alias gcmsg="git commit -m"
 
 # Add a remote GitHub Repository Link
-git config --global alias.rao'!f() { \
-  read -p "Enter the repository URL for 'origin': " origin_url && \
+git config --global alias.rao '!f() { \
+  read -p "Enter the repository URL for '\''origin'\'': " origin_url && \
   git remote add origin "$origin_url"; \
 }; f'
 alias grao="git remote add origin"
