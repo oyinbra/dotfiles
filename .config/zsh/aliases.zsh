@@ -34,6 +34,9 @@ git config --global alias.rao '!f() { \
 }; f'
 alias grao="git remote add origin"
 
+# push to the current branch
+alias gp="git push"
+
 # Check the status of your current Git repository
 alias gst="git status"
 
@@ -279,9 +282,6 @@ alias pacdgrade="sudo pacman -Suu"
 # Install pkg files
 alias pacpkg="sudo pacman -U"
 
-# List packages in pkg cache file
-alias paclist.pkg="l /var/cache/pacman/pkg | less"
-
 # Clean uninstalled packages from cache
 alias pacclean="sudo pacman -Sc"
 
@@ -291,11 +291,14 @@ alias pacalien="sudo pacman -c"
 # Clean all packages from cache
 alias paccache="sudo pacman -Scc"
 
-# List orphan packages
-alias paclist.orphan="sudo pacman -Qtdq"
+# List packages in pkg cache file
+alias paclistpkg="l /var/cache/pacman/pkg | less"
 
-# Remove orphan packages
-alias pacorphan="sudo pacman -R $(pacman -Qtdq)"
+# List orphan packages
+alias paclistorphan="sudo pacman -Qtdq"
+
+# List and Remove orphan packages
+alias pacremorphan="sudo pacman -R $(pacman -Qtdq)"
 
 # Pactree
 alias pactree.r="pactree -r"
@@ -314,6 +317,9 @@ alias pacunlock="sudo rm -rf /var/lib/pacman/db.lck"
 
 # Update Pacman Mirrors for Manjaro
 alias pacmanjaro="sudo pacman-mirrors --fasttrack"
+
+# List the last installed packeages
+alias paclast='if [ -f /var/log/pacman.log ]; then expac --timefmt="%Y-%m-%d %T" "%l|%-30n|%-15d" $(zcat /var/log/pacman.log* 2>/dev/null | awk "/^\[.*\] installed/ {print \$1}") | sort | tail -n 100; else echo "Pacman log file not found or not in gzip format"; fi'
 
 # ##############################################
 # ################### PARU ######################
