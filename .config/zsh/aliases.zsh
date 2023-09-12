@@ -3,9 +3,6 @@
 # ################# GIT ########################
 # ##############################################
 
-# Check the remote link
-alias gl="git remote -v"
-
 # Lazy Git (assuming 'lazygit' is a Git interface tool)
 alias lg="lazygit"
 
@@ -32,6 +29,7 @@ git config --global alias.rao '!f() { \
   read -p "Enter the repository URL for '\''origin'\'': " origin_url && \
   git remote add origin "$origin_url"; \
 }; f'
+# alias grao="git rao"
 alias grao="git remote add origin"
 
 # push to the current branch
@@ -39,9 +37,6 @@ alias gp="git push"
 
 # Check the status of your current Git repository
 alias gst="git status"
-
-# Push to the current branch with set-upstream
-alias gpsu="git push --set-upstream origin \$(git symbolic-ref --short HEAD)"
 
 # Check your list of branch
 alias gb="git branch"
@@ -67,17 +62,8 @@ alias glp="git pull"
 # replace the entire history of one branch with another. 
 alias grb="git rebase"
 
-# update upstream branch link
-git config --global alias.addupstream '!f() { \
-  read -p "Enter the upstream repository URL: " upstream_url && \
-  git remote add upstream "$upstream_url"; \
-}; f'
-
-# update downstream branch link 
-git config --global alias.adddownstream '!f() { \
-  read -p "Enter the downstream repository URL: " downstream_url && \
-  git remote add downstream "$downstream_url"; \
-}; f'
+# Check the remote link
+alias gl="git remote -v"
 
 # Git log
 alias glg="git log"
@@ -444,7 +430,7 @@ alias zzopensource="cd ~/Workspace/OpenSourceContribution/"
 
 alias zzkitty="~/.config/kitty/"
 # Project Directory
-alias zzprojects="cd ~/Workspace/projects"
+alias zzprojects="cd ~/Workspace/Projects"
 
 # PKG Packages
 alias zzpkg="/var/cache/pacman/pkg"
