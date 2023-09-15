@@ -3,7 +3,7 @@
 # ################# GIT ########################
 # ##############################################
 
-# Lazy Git (assuming 'lazygit' is a Git interface tool)
+# Lazy Git
 alias lg="lazygit"
 
 # Check Git current version
@@ -14,6 +14,9 @@ alias gcedit="git config --global --edit"
 
 # To initialize a new Git repository in your current directory
 alias gi="git init"
+
+# Add files to staging
+alias ga="git add"
 
 # Add and commit all changes with a message
 alias gacm="git add --all && git commit -m"
@@ -87,6 +90,9 @@ alias gitconfig="f() { \
 # ##############################################
 # ############## ACTION ALIASES ################
 # ##############################################
+
+# jupyter notebook
+alias jn="jupyter notebook"
 
 # Nvidia settings
 alias s.graphics='glxinfo | grep "OpenGL renderer"'
