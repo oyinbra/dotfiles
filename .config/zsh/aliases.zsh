@@ -38,6 +38,9 @@ alias grao="git remote add origin"
 # push to the current branch
 alias gp="git push"
 
+# force push to the current branch
+alias gpf="git push -f"
+
 # Check the status of your current Git repository
 alias gst="git status"
 
@@ -64,6 +67,15 @@ alias glp="git pull"
 
 # replace the entire history of one branch with another. 
 alias grb="git rebase"
+
+# Create a new commit to undo changes of last commit without deleting history
+alias grvh="git revert HEAD"
+
+# Create a new commit to undo changes of last commit and deleting history
+alias grsh="git reset HEAD~1"
+
+# Create a new commit to undo changes of last commit and delete unstaged changes
+alias grshh="git reset --hard HEAD~1"
 
 # Check the remote link
 alias gl="git remote -v"
@@ -93,6 +105,12 @@ alias gitconfig="f() { \
 
 # jupyter notebook
 alias jn="jupyter notebook"
+
+# check update-notifier
+alias un="update-notifier"
+alias h='history'
+alias hs='history | grep'
+alias hsi='history | grep -i'
 
 # Nvidia settings
 alias s.graphics='glxinfo | grep "OpenGL renderer"'

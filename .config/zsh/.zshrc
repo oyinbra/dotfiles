@@ -1,11 +1,8 @@
-#!/bin/sh
+#!/bin/zsh
 # NEOFETCH
-# neofetch --ascii ~/.mog.sh
 neofetch --config ~/.neofetch-config2.conf
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -67,7 +64,6 @@ if command -v bat &> /dev/null; then
   alias catt="bat --theme \"Visual Studio Dark+\"" 
 fi
 
-# source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/
 zle_highlight=('paste:none')
 
 # Install plugins if there are plugins that have not been installed

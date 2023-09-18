@@ -1,9 +1,9 @@
 #!/bin/sh
 # Name on folder in .config directory
-alias v.lazy="NVIM_APPNAME=LazyVim nvim"
-alias v.kick="NVIM_APPNAME=KickStart nvim"
-alias v.chad="NVIM_APPNAME=NvChad nvim"
-alias v.astro="NVIM_APPNAME=AstroNvim nvim"
+alias lazy="NVIM_APPNAME=LazyVim nvim"
+alias kick="NVIM_APPNAME=KickStart nvim"
+alias chad="NVIM_APPNAME=NvChad nvim"
+alias astro="NVIM_APPNAME=AstroNvim nvim"
 
 # vs function to switch between neovim configuration
 function vs() {
