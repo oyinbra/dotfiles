@@ -138,8 +138,8 @@ alias q="exit"
 # Copy
 alias cp="cp -r"
 # Timeshift
-alias timeshift.ondemand="sudo timeshift --create --comments"
-alias timeshift.restore="sudo timeshift --restore"
+alias tsb="sudo timeshift --create --comments"
+alias tsr="sudo timeshift --restore"
 
 # Watch SASS and output to dist folder
 alias sass.watch="sass --watch scss:dist/css"

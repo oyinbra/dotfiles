@@ -11,5 +11,5 @@ echo "
 ./restore-system-directories.sh
 ./restore-arcolinux-chaotic-repos.sh
 sudo pacman -S --needed - < ./restore-packages.txt
-./restore-system-settings.sh
+./restore-symlinks.sh
 ./restore-aur-packages.sh

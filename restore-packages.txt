@@ -1,5 +1,11 @@
+expac
+electron
+nvidia
+nvidia-utils
+nvidia-settings
 noto-fonts-emoji
 yarn
+sass
 zsh
 spotify
 kdeplasma-addons
