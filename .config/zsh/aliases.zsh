@@ -74,6 +74,9 @@ alias grvh="git revert HEAD"
 # Create a new commit to undo changes of last commit and deleting history
 alias grsh="git reset HEAD~1"
 
+# Reset local branch to origin main branch
+alias grm="git reset --hard origin/main"
+
 # Create a new commit to undo changes of last commit and delete unstaged changes
 alias grshh="git reset --hard HEAD~1"
 
@@ -107,7 +110,7 @@ alias gitconfig="f() { \
 alias jn="jupyter notebook"
 
 # check update-notifier
-alias un="update-notifier"
+alias pacau="update-notifier"
 alias h='history'
 alias hs='history | grep'
 alias hsi='history | grep -i'

@@ -34,9 +34,6 @@ sortOrder=0
 [PlasmaThemeExtended]
 outlineWidth=1
 
-[PlasmaTransientsConfig]
-PreloadWeight=92
-
 [ScreenConnectors]
 10=eDP-2:::0,0 1920x1080
 11=eDP-1:::0,0 1920x1080

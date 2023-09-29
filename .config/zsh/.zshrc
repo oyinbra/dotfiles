@@ -80,5 +80,8 @@ zplug load
 # Foundry setup
 export PATH="$PATH:/home/oyinbra/.foundry/bin"
 
+# export kvantum
+export QT_QPA_PLATFORMTHEME="kvantum"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
