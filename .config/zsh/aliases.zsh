@@ -33,7 +33,7 @@ git config --global alias.rao '!f() { \
   git remote add origin "$origin_url"; \
 }; f'
 # alias grao="git rao"
-alias grao="git remote add origin"
+alias grao="git rao"
 
 # push to the current branch
 alias gp="git push"
@@ -71,8 +71,8 @@ alias grb="git rebase"
 # Create a new commit to undo changes of last commit without deleting history
 alias grvh="git revert HEAD"
 
-# Create a new commit to undo changes of last commit and deleting history
-alias grsh="git reset HEAD~1"
+# Create a new commit to undo changes of last commit and deleting it from history
+alias grh-1="git reset HEAD~1"
 
 # Reset local branch to origin main branch
 alias grm="git reset --hard origin/main"

@@ -24,6 +24,9 @@ package-lock.json
 # Ignore the '.git' directory, which contains Git repository metadata.
 *.git
 
+# Ignore all workspace files
+*.code-workspace
+
 # Ignore '.env' files, typically used for environment configuration.
 *.env
 

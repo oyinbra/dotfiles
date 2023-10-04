@@ -13,23 +13,29 @@ ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY4AAAACAQAAAQAA
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=arch-logo.png,file:$HOME/Icons/arch-logo.png,file:$HOME/Icons/task.png,file:$HOME/Icons/task-board.png,file:$HOME/Icons/emoji.png,file:$HOME/Icons/Bard.png,file:$HOME/Icons/calendar-06.png,file:$HOME/Icons/x-black.png,file:$HOME/Icons/x-blue.png,file:$HOME/Icons/chatgpt-03.png,file:$HOME/Icons/calenda-04.png,file:$HOME/Icons/Bing-Chat.png,file:$HOME/Icons/git-purple.png,file:$HOME/Icons/kde.png,file:$HOME/Icons/Manjaro_logo_white.png
+Recent Files[$e]=arch-logo.png,file:$HOME/Icons/taskade.png,file:$HOME/Icons/arch-logo.png,file:$HOME/Icons/task.png,file:$HOME/Icons/task-board.png,file:$HOME/Icons/emoji.png,file:$HOME/Icons/Bard.png,file:$HOME/Icons/calendar-06.png,file:$HOME/Icons/x-black.png,file:$HOME/Icons/x-blue.png,file:$HOME/Icons/chatgpt-03.png,file:$HOME/Icons/calenda-04.png,file:$HOME/Icons/Bing-Chat.png,file:$HOME/Icons/git-purple.png,file:$HOME/Icons/kde.png
 Recent URLs[$e]=file:$HOME/Icons/,file:$HOME/,file:$HOME/Documents/,file:$HOME/Desktop/,file:$HOME/Pictures/
 detailViewIconSize=16
 iconViewIconSize=64
 
 [KPropertiesDialog]
-1920x1080 screen: Height=529
-1920x1080 screen: Width=410
+1920x1080 screen: Height=534
+1920x1080 screen: Width=541
 
 [LatteSettingsDialog]
 downloadWindowSize=980,600
-windowSize=500,630
+windowSize=784,954
 
 [LatteSettingsDialog][TabLayouts]
 columnWidths=49,508,129,104
 sortColumn=3
 sortOrder=0
+
+[LatteSettingsDialog][ViewsDialog]
+columnWidths=59,256,142,135,131
+sortColumn=2
+sortOrder=0
+windowSize=980,630
 
 [PlasmaThemeExtended]
 outlineWidth=1
@@ -54,6 +60,6 @@ parabolicSpread=3
 parabolicThicknessMarginInfluence=1
 screenTrackerInterval=2500
 showInfoWindow=true
-singleModeLayoutName=Oyinbra-panel-12.12.16\s
+singleModeLayoutName=Oyinbra-panel-2023.10.02
 userConfiguredAutostart=true
 version=2
