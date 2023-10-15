@@ -33,7 +33,7 @@ git config --global alias.rao '!f() { \
   git remote add origin "$origin_url"; \
 }; f'
 # alias grao="git rao"
-alias grao="git rao"
+alias grao="git remote add origin"
 
 # push to the current branch
 alias gp="git push"
@@ -156,7 +156,10 @@ alias la="ls -a"
 
 # PYTHON-------------------------------------------------------------
 alias py="python"
-alias myenv="source /home/$USER/Myenv/bin/activate"
+# Run python app
+alias app="python app.py"
+# alias myenv="source /home/$USER/Myenv/bin/activate"
+alias venv="source /home/$USER/Workspace/Python/venv/bin/activate"
 alias dmyenv="deactivate"
 
 # Python version
@@ -277,7 +280,7 @@ alias pacfresh="sudo pacman -Fy"
 # update packages
 alias ud="sudo pacman -Sy --noconfirm"
 # upgrade packages
-alias ug="sudo pacman -Syu --noconfirm"
+alias ug="sudo pacman -Syu"
 alias pacins="sudo pacman -S"
 alias upgrade="pacfresh ; pacsync ; paru"
 # search for packages in database
