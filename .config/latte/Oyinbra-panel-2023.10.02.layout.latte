@@ -55,7 +55,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][1][Applets][362][Configuration]
-PreloadWeight=90
+PreloadWeight=100
 SystrayContainmentId=363
 
 [Containments][1][Applets][376]
@@ -144,21 +144,21 @@ DialogWidth=720
 [Containments][1][Applets][444][Configuration][General]
 resources=[{"sourceName":"lmsensors/coretemp-isa-0000/Core_0","alias":"CPU","overrideLimitTemperatures":false,"warningTemperature":70,"meltdownTemperature":90,"virtual":false,"childSourceObjects":{"acpi/Thermal_Zone/0-acpitz/Temperature":{"temperature":0},"acpi/Thermal_Zone/1-INT3400 Thermal/Temperature":{"temperature":0},"acpi/Thermal_Zone/2-SEN2/Temperature":{"temperature":0},"acpi/Thermal_Zone/3-pch_cometlake/Temperature":{"temperature":0},"acpi/Thermal_Zone/4-B0D4/Temperature":{"temperature":0},"acpi/Thermal_Zone/5-iwlwifi_1/Temperature":{"temperature":0},"acpi/Thermal_Zone/6-x86_pkg_temp/Temperature":{"temperature":0},"lmsensors/BAT1-acpi-0/curr1":{"temperature":0},"lmsensors/BAT1-acpi-0/in0":{"temperature":0},"lmsensors/acpitz-acpi-0/temp1":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_0":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_1":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_2":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_3":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_4":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_5":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_6":{"temperature":0},"lmsensors/coretemp-isa-0000/Core_7":{"temperature":0},"lmsensors/coretemp-isa-0000/Package_id_0":{"temperature":0},"lmsensors/iwlwifi_1-virtual-0/temp1":{"temperature":0},"lmsensors/nouveau-pci-0100/temp1":{"temperature":0},"lmsensors/nvme-pci-3b00/Composite":{"temperature":0},"lmsensors/pch_cometlake-virtual-0/temp1":{"temperature":0},"udisks/WDC_PC_SN730_SDBPNTY_1T00_1032_20256F800240":{"temperature":0}}}]
 
-[Containments][1][Applets][450]
+[Containments][1][Applets][454]
 immutability=1
-plugin=org.kde.plasma.kickoff
+plugin=org.kde.plasma.kickerdash
 
-[Containments][1][Applets][450][Configuration]
+[Containments][1][Applets][454][Configuration]
 PreloadWeight=100
 
-[Containments][1][Applets][450][Configuration][ConfigDialog]
+[Containments][1][Applets][454][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
-[Containments][1][Applets][450][Configuration][General]
+[Containments][1][Applets][454][Configuration][General]
+customButtonImage=/home/oyinbra/Icons/arch-logo.png
 favoritesPortedToKAstats=true
-icon=/home/oyinbra/Icons/arch-logo.png
-systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
+useCustomButtonImage=true
 
 [Containments][1][ConfigDialog]
 DialogHeight=600
@@ -171,7 +171,7 @@ PreloadWeight=0
 advanced=false
 alignment=10
 alignmentUpgraded=true
-appletOrder=450;2;444;376;430;362;384;386
+appletOrder=454;2;444;376;430;362;384;386
 appletShadowsEnabled=false
 autoSizeEnabled=false
 backgroundRadius=45
@@ -261,7 +261,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][363][Applets][372][Configuration]
-PreloadWeight=10
+PreloadWeight=15
 
 [Containments][363][Applets][372][Configuration][General]
 currentTab=streams
@@ -272,7 +272,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][363][Applets][373][Configuration]
-PreloadWeight=50
+PreloadWeight=55
 
 [Containments][363][Applets][382]
 immutability=1

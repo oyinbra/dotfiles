@@ -13,7 +13,7 @@ ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY4AAAACAQAAAQAA
 Number of Actions=0
 
 [KFileDialog Settings]
-Recent Files[$e]=arch-logo.png,file:$HOME/Icons/taskade.png,file:$HOME/Icons/arch-logo.png,file:$HOME/Icons/task.png,file:$HOME/Icons/task-board.png,file:$HOME/Icons/emoji.png,file:$HOME/Icons/Bard.png,file:$HOME/Icons/calendar-06.png,file:$HOME/Icons/x-black.png,file:$HOME/Icons/x-blue.png,file:$HOME/Icons/chatgpt-03.png,file:$HOME/Icons/calenda-04.png,file:$HOME/Icons/Bing-Chat.png,file:$HOME/Icons/git-purple.png,file:$HOME/Icons/kde.png
+Recent Files[$e]=arch-logo.png,file:$HOME/Icons/arch-logo.png,file:$HOME/Icons/taskade.png,file:$HOME/Icons/task.png,file:$HOME/Icons/task-board.png,file:$HOME/Icons/emoji.png,file:$HOME/Icons/Bard.png,file:$HOME/Icons/calendar-06.png,file:$HOME/Icons/x-black.png,file:$HOME/Icons/x-blue.png,file:$HOME/Icons/chatgpt-03.png,file:$HOME/Icons/calenda-04.png,file:$HOME/Icons/Bing-Chat.png,file:$HOME/Icons/git-purple.png,file:$HOME/Icons/kde.png
 Recent URLs[$e]=file:$HOME/Icons/,file:$HOME/,file:$HOME/Documents/,file:$HOME/Desktop/,file:$HOME/Pictures/
 detailViewIconSize=16
 iconViewIconSize=64
@@ -39,6 +39,9 @@ windowSize=980,630
 
 [PlasmaThemeExtended]
 outlineWidth=1
+
+[PlasmaTransientsConfig]
+PreloadWeight=52
 
 [ScreenConnectors]
 10=eDP-2:::0,0 1920x1080
