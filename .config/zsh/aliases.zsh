@@ -158,10 +158,10 @@ alias la="ls -a"
 alias py="python"
 # Run python app
 alias app="python app.py"
-# alias myenv="source /home/$USER/Myenv/bin/activate"
 alias venv="source /home/$USER/Workspace/Python/venv/bin/activate"
 alias dmyenv="deactivate"
-
+# Create and source new myenv in current location
+alias myenv="python -m venv myenv ; source ./myenv/bin/activate"
 # Python version
 alias pv="py --version"
 
