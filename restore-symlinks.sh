@@ -57,7 +57,6 @@ echo "
 #############################################################################"
 
 # Create symbolic links for root's shell configurations
-sudo ln -sf "$HOME/Workspace/nvim" "/root/.config/"
 sudo ln -sf "$HOME/Dotfiles/.config/zsh/.zshrc" "/root"
 sudo ln -sf "$HOME/Dotfiles/p10k-root/.p10k.zsh" "/root/"
 sudo ln -sf "$HOME/Dotfiles/.config/zsh" "/root/.config"

@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/zsh
+
 # Name on folder in .config directory
 alias lazy="NVIM_APPNAME=LazyVim nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"

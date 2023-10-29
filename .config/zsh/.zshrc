@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 # NEOFETCH
 neofetch --config ~/.neofetch-config2.conf
 
@@ -22,7 +23,11 @@ source ~/.zplug/init.zsh
 HISTFILE=~/.zsh_history
 
 # ZSH ALIASES
-source "$HOME/.config/zsh/aliases.zsh"
+source "$HOME/.config/zsh/actionAliases.zsh"
+source "$HOME/.config/zsh/directoryAliases.zsh"
+source "$HOME/.config/zsh/gitAliases.zsh"
+source "$HOME/.config/zsh/mirrorAliases.zsh"
+source "$HOME/.config/zsh/packageManagerAliases.zsh"
 # Environment Variables
 source "$HOME/.env"
 # Source Exports
