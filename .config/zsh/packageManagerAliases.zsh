@@ -7,33 +7,133 @@
 set_package_aliases() {
     if [ -x "$(command -v lsb_release)" ]; then
         if [ "$(lsb_release -si)" = "Debian" ]; then
-        
+
             # ##############################################
             # ####### DEBIAN BASED DISTROS ALIASES #########
             # ##############################################
+
+            # Install a package using sudo
             alias deploy="sudo apt install"
+
+            # Remove a package using sudo
             alias purge="sudo apt remove"
+
+            # Update the package list
             alias update="sudo apt update"
+
+            # Upgrade installed packages
             alias upgrade="sudo apt upgrade"
-            # Delete apt-repo
-            alias apt.r="sudo add-apt-repository --remove"
-            # Add apt-repo
-            alias apt.a="sudo add-apt-repository"
-            # List Upgradable packages
-            alias apt.l='apt list --upgradable'
-            # Clean Packages
-            alias apt.c='sudo apt autoclean && sudo apt autoremove'
+
+            # Remove an apt repository
+            alias addrepo="sudo add-apt-repository --remove"
+
+            # Add an apt repository
+            alias remrepo="sudo add-apt-repository"
+
+            # List upgradable packages
+            alias applist='apt list --upgradable'
+
+            # Clean and remove unnecessary packages
+            alias autoclean='sudo apt autoclean && sudo apt autoremove'
+
+            # Refresh the package list
+            alias refresh="sudo apt-get update"
+
+            # Search for packages using apt-cache
+            alias search="apt-cache search"
+
+            # List installed packages matching a pattern
+            alias query="dpkg -l | grep"
+
+            # Install a package from a file using dpkg
+            alias pacfile="sudo dpkg -i"
+
+            # Install a package from a file using dpkg
+            alias pacpkg="sudo dpkg -i"
+
+            # Clean the local repository cache
+            alias pacclean="sudo apt-get clean"
+
+            # Find the package providing a specific file
+            alias pacfind="dpkg -S"
+
         elif [ "$(lsb_release -si)" = "Arch" ]; then
 
             # ##############################################
             # ######## ARCH BASED DISTROS ALIASES ##########
             # ##############################################
+
+            # Use 'paru' as 'yay' (AUR helper)
             alias yay="paru"
+
+            # Install a package using 'paru' (AUR helper)
             alias deploy="yay -S"
+
+            # Remove a package using 'paru' (AUR helper)
             alias purge="yay -R"
+
+            # Update the package list with 'sudo pacman'
             alias update="sudo pacman -Sy"
+
+            # Upgrade installed packages with 'sudo pacman'
             alias upgrade="sudo pacman -Syu"
-            alias align="yay -Syy"
+
+            # Refresh the file database with 'sudo pacman'
+            alias refresh="sudo pacman -Fy"
+
+            # Search for packages using 'sudo pacman'
+            alias search="sudo pacman -Ss"
+
+            # Query installed packages with 'pacman'
+            alias query="pacman -Qs"
+
+            # Install a package from a file using 'sudo pacman'
+            alias pacfile="sudo pacman -S --needed - <"
+
+            # Downgrade a package using 'sudo pacman'
+            alias downgrade="sudo pacman -Suu"
+
+            # Upgrade a package using 'sudo pacman'
+            alias pacpkg="sudo pacman -U"
+
+            # Clean package cache with 'sudo pacman'
+            alias pacclean="sudo pacman -Sc"
+
+            # Remove old packages from the cache with 'sudo pacman'
+            alias pacalien="sudo pacman -c"
+
+            # Clean all package cache with 'sudo pacman'
+            alias paccache="sudo pacman -Scc"
+
+            # List cached packages in /var/cache/pacman/pkg
+            alias paclistpkg="ls /var/cache/pacman/pkg | less"
+
+            # List orphan packages with 'sudo pacman'
+            alias paclistorphan="sudo pacman -Qtdq"
+
+            # Remove orphan packages with 'sudo pacman'
+            alias pacremorphan="sudo pacman -R $(pacman -Qtdq)"
+
+            # Display package dependencies recursively with 'pactree'
+            alias pactree.r="pactree -r"
+
+            # Remove a package and its unneeded dependencies with 'sudo pacman'
+            alias pacrs="sudo pacman -Rs"
+
+            # Remove a package and its dependencies with 'sudo pacman'
+            alias pacrns="sudo pacman -Rns"
+
+            # Find the package providing a specific file with 'pacman -F'
+            alias pacfind="pacman -F"
+
+            # Unlock pacman database if stuck by removing the lock file
+            alias pacunlock="sudo rm -rf /var/lib/pacman/db.lck"
+
+            # Set mirrors for Arch Linux (Jaro) using 'sudo pacman-mirrors'
+            alias pacmanjaro="sudo pacman-mirrors --fasttrack"
+
+            # View last installed packages
+            alias paclast='if [ -f /var/log/pacman.log ]; then expac --timefmt="%Y-%m-%d %T" "%l|%-30n|%-15d" $(zcat /var/log/pacman.log* 2>/dev/null | awk "/^\[.*\] installed/ {print \$1}") | sort | tail -n 100; else echo "Pacman log file not found or not in gzip format"; fi'
         else
             echo "Unsupported distribution"
         fi
@@ -43,70 +143,6 @@ set_package_aliases() {
 }
 
 set_package_aliases
-
-
-# ##############################################
-# ############### PACMAN #######################
-# ##############################################
-
-# refresh pacman database
-alias pacfresh="sudo pacman -Fy"
-# update packages
-alias ud="sudo pacman -Sy --noconfirm"
-# upgrade packages
-alias ug="sudo pacman -Syu"
-alias pacins="sudo pacman -S"
-alias pacsearch="sudo pacman -Ss"
-
-# to search for already installed packages
-alias pacqs="pacman -Qs"
-alias pacinsnc="sudo pacman -S --noconfirm"
-alias pacrem="sudo pacman -R"
-alias pacfile="sudo pacman -S --needed - <"
-# Downgrade Packages
-alias pacdgrade="sudo pacman -Suu"
-
-# Install pkg files
-alias pacpkg="sudo pacman -U"
-
-# Clean uninstalled packages from cache
-alias pacclean="sudo pacman -Sc"
-
-# Clean alien packages
-alias pacalien="sudo pacman -c"
-
-# Clean all packages from cache
-alias paccache="sudo pacman -Scc"
-
-# List packages in pkg cache file
-alias paclistpkg="l /var/cache/pacman/pkg | less"
-
-# List orphan packages
-alias paclistorphan="sudo pacman -Qtdq"
-
-# List and Remove orphan packages
-alias pacremorphan="sudo pacman -R $(pacman -Qtdq)"
-
-# Pactree
-alias pactree.r="pactree -r"
-
-# Completely clean packages
-alias pacrs="sudo pacman -Rs"
-
-# Completely remove packages
-alias pacrns="sudo pacman -Rns"
-
-# Find packages to install
-alias pacfind="pacman -F"
-
-# Pacman is currently in use, please wait...
-alias pacunlock="sudo rm -rf /var/lib/pacman/db.lck"
-
-# Update Pacman Mirrors for Manjaro
-alias pacmanjaro="sudo pacman-mirrors --fasttrack"
-
-# List the last installed packeages
-alias paclast='if [ -f /var/log/pacman.log ]; then expac --timefmt="%Y-%m-%d %T" "%l|%-30n|%-15d" $(zcat /var/log/pacman.log* 2>/dev/null | awk "/^\[.*\] installed/ {print \$1}") | sort | tail -n 100; else echo "Pacman log file not found or not in gzip format"; fi'
 
 # ##############################################
 # ############### FLATPAK ######################

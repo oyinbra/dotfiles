@@ -1,1 +1,0 @@
-/home/oyinbra/.dotfiles/.config/zsh/.zshrc
