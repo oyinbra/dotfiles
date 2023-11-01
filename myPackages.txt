@@ -29,7 +29,6 @@ fzf
 lazygit
 git
 appimagelauncher
-arcolinux-pamac-all
 tree
 sublime-text-4
 vifm

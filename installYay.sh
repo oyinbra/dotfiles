@@ -1,5 +1,7 @@
 cd ~/Repos
-pacman -S --needed git base-devel
+sudo pacman -Sy --needed git base-devel
+mkdir ~/Tmp
+cd ~/Tmp
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si

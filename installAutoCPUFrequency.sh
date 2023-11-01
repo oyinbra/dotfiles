@@ -1,15 +1,20 @@
 #!/bin/bash
+
 echo "
 #############################################################################
 #############################################################################
 ##                                                                         ##
-##                        KDE PLASMA RESTORE SCRIPT                        ##
+##                     AUTO CPU Frequency Installation                     ##
 ##                                                                         ##
 #############################################################################
 #############################################################################"
 
-# ./restore-system-directories.sh
-# ./restore-arcolinux-chaotic-repos.sh
-sudo pacman -S --needed - < ./restore-packages.txt
-# ./restore-symlinks.sh
-# ./restore-aur-packages.sh
+# Install auto-cpufreq
+if [ ! -d "$HOME/Tmp/auto-cpufreq/" ]; then
+  git clone "https://github.com/AdnanHodzic/auto-cpufreq.git" "$HOME/Tmp/auto-cpufreq"
+fi
+sudo "$HOME/Tmp/auto-cpufreq/auto-cpufreq-installer"
+# Enable auto-cpufreq daemon
+sudo auto-cpufreq --install
+# Enable auto-cpufreq custom settings
+sudo ln -sf "$HOME/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf" "/etc"

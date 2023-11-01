@@ -15,7 +15,10 @@ echo "Getting the latest arcolinux mirrors file"
 
 sudo wget https://github.com/arcolinux/arcolinux_repo/raw/main/x86_64/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst -O /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
 sudo pacman -U --noconfirm --needed /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
+
+# Create backup for pacman.conf
 sudo cp /etc/pacman.conf /etc/pacman.bak
+
 echo '
 #[arcolinux_repo_testing]
 #SigLevel = Optional TrustedOnly
@@ -30,7 +33,7 @@ Include = /etc/pacman.d/arcolinux-mirrorlist
 SigLevel = Optional TrustedOnly
 Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
 
-sudo pacman -Sy zsh archlinux-tweak-tool-git kitty latte-dock neovim zsh zoxide --noconfirm --needed
+sudo pacman -Sy archlinux-tweak-tool-git --noconfirm --needed
 ######################################################################################################################
 echo '
 [chaotic-aur]

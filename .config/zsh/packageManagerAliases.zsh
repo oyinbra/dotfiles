@@ -63,9 +63,6 @@ set_package_aliases() {
             # ######## ARCH BASED DISTROS ALIASES ##########
             # ##############################################
 
-            # Use 'paru' as 'yay' (AUR helper)
-            alias yay="paru"
-
             # Install a package using 'paru' (AUR helper)
             alias deploy="yay -S"
 

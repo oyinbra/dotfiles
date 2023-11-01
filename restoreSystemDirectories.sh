@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# System Directory Restores
+# Restore Root, PKG files, Themes and cron
 directories=(
    "/root"
    "/usr/share/sddm/themes"
@@ -17,7 +17,6 @@ for directory in "${directories[@]}"; do
 done
 
 # Restore Home Directory
-# sudo rsync -aAXv --delete --ignore-times /Backup/home/ /home
 sudo rsync -aAXv --ignore-times /Backup/home/ /home
 
 # Update system

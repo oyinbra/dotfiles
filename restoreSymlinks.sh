@@ -26,11 +26,13 @@ sudo firewall-cmd --permanent --zone=public --add-service=kdeconnect
 sudo firewall-cmd --reload
 
 # Create symbolic links for zsh shell configurations
+sudo pacman -S npm zoxide fzf
 ln -sf "$HOME/Dotfiles/zplug" "$HOME/.zplug"
 ln -sf "$HOME/Dotfiles/.config/zsh/.zshrc" "$HOME/"
 ln -sf "$HOME/Dotfiles/.config/zsh" "$HOME/.config/"
 ln -sf "$HOME/Dotfiles/p10k-user/.p10k.zsh" "$HOME/"
 ln -sf "$HOME/Dotfiles/neofetch-source/.neofetch-config2.conf" "$HOME/"
+chsh -s /bin/zsh "$USER"
 
 # Create symbolic links for latte-dock
 ln -sf "$HOME/Dotfiles/.config/lattedockrc" "$HOME/.config"
@@ -79,7 +81,6 @@ sudo systemctl enable --now cronie.service
 
 # Change shell for root and user
 sudo chsh -s /bin/zsh root
-chsh -s /bin/zsh "$USER"
 
 # Update grub themes
 if [ ! -d "$HOME/Tmp/grub2-themes/" ]; then

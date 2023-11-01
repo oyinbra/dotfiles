@@ -1,6 +1,6 @@
 sudo pacman -Sy --needed base-devel
-mkdir ~/tmp
-cd ~/tmp
+mkdir ~/Tmp
+cd ~/Tmp
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
