@@ -24,7 +24,6 @@ HISTFILE=~/.zsh_history
 
 # ZSH ALIASES
 source "$HOME/.config/zsh/systemAliases.zsh"
-source "$HOME/.config/zsh/directoryAliases.zsh"
 source "$HOME/.config/zsh/gitAliases.zsh"
 source "$HOME/.config/zsh/mirrorAliases.zsh"
 source "$HOME/.config/zsh/packageManagerAliases.zsh"

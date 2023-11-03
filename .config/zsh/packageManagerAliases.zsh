@@ -78,6 +78,12 @@ set_package_aliases() {
             # Refresh the file database with 'sudo pacman'
             alias refresh="sudo pacman -Fy"
 
+            # Check if a package in install
+            alias check="pacman -Q | grep"
+
+            # Sync Packages
+            alias align="yay -Syy"
+
             # Search for packages using 'sudo pacman'
             alias search="sudo pacman -Ss"
 

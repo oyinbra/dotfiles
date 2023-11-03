@@ -32,6 +32,7 @@ ln -sf "$HOME/Dotfiles/.config/zsh/.zshrc" "$HOME/"
 ln -sf "$HOME/Dotfiles/.config/zsh" "$HOME/.config/"
 ln -sf "$HOME/Dotfiles/p10k-user/.p10k.zsh" "$HOME/"
 ln -sf "$HOME/Dotfiles/neofetch-source/.neofetch-config2.conf" "$HOME/"
+sudo ln -sf "$HOME/Dotfiles/neofetch-ascii/usr/bin/neofetch" "/usr/bin"
 chsh -s /bin/zsh "$USER"
 
 # Create symbolic links for latte-dock
@@ -68,7 +69,6 @@ sudo mkdir -p "/root/.local/share"
 sudo rm -rf "/root/.local/share/nvim"
 sudo ln -sf "$HOME/.local/share/nvim" "/root/.local/share/"
 sudo ln -sf "$HOME/Dotfiles/neofetch-source/.neofetch-config2.conf" "/root"
-sudo ln -sf "$HOME/Dotfiles/neofetch-ascii/usr/bin/neofetch" "/usr/bin"
 
 # Stop reboot watchdog on boot
 echo "RebootWatchdogSec=0" | sudo tee --append "/etc/systemd/system.conf"
@@ -87,4 +87,4 @@ if [ ! -d "$HOME/Tmp/grub2-themes/" ]; then
   git clone "https://github.com/vinceliuice/grub2-themes.git" "$HOME/Tmp/grub2-themes/"
 fi
 cd ""
-# sudo $HOME/Tmp/grub2-themes/install.sh -b -t tela
+sudo $HOME/Tmp/grub2-themes/install.sh -b -t tela

@@ -1,4 +1,9 @@
+webapp-manager
 expac
+dbeaver
+mysql-workbench
+marktext
+haruna
 electron
 nvidia
 nvidia-utils
