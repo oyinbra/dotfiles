@@ -4,6 +4,8 @@
 # ############## SYSTEM ALIASES ################
 # ##############################################
 
+# Check swapp value 
+alias swappiness="bat /proc/sys/vm/swappiness"
 # jupyter notebook
 alias jn="jupyter notebook"
 

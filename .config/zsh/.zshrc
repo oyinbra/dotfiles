@@ -61,8 +61,6 @@ zplug "djui/alias-tips"
 # keybinds
 bindkey '^ ' autosuggest-accept
 
-export PATH="$HOME/.local/bin":$PATH
-
 if command -v bat &> /dev/null; then
   alias cat="bat -pp --theme \"Visual Studio Dark+\"" 
   alias catt="bat --theme \"Visual Studio Dark+\"" 
@@ -80,12 +78,6 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
-
-# Foundry setup
-export PATH="$PATH:/home/oyinbra/.foundry/bin"
-
-# export kvantum
-export QT_QPA_PLATFORMTHEME="kvantum"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
