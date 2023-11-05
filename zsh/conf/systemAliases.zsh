@@ -54,30 +54,6 @@ alias ls="ls --color=auto"
 # List All
 alias la="ls -a"
 
-# PYTHON-------------------------------------------------------------
-alias py="python"
-# Run python app
-alias pyapp="python app.py"
-# Run flask app with port 8000
-alias flaskrun="flask run --port=8000"
-# Global myenv
-alias myenv.g="source /home/$USER/Workspace/Python/venv/bin/activate"
-# Activate Project myenv in current directory
-alias myenv="source ./myenv/bin/activate"
-# Deactivate myenv
-alias myenv.d="deactivate"
-# Create and source new myenv in current location
-alias myenv.c="python -m venv myenv ; source ./myenv/bin/activate"
-# Python version
-alias pv="py --version"
-
-# Pip3 List
-alias pip.list="pip3 list"
-alias pipug="pip3 install --upgrade"
-
-# Switch Python Version
-alias zxpython="sudo update-alternatives --config python3"
-
 # Terminal config
 alias zxterminal="sudo update-alternatives --config x-terminal-emulator"
 

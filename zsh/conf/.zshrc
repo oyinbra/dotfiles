@@ -23,14 +23,17 @@ source ~/.zplug/init.zsh
 HISTFILE=~/.zsh_history
 
 # ZSH ALIASES
-source "$HOME/.config/zsh/systemAliases.zsh"
-source "$HOME/.config/zsh/gitAliases.zsh"
-source "$HOME/.config/zsh/mirrorAliases.zsh"
-source "$HOME/.config/zsh/packageManagerAliases.zsh"
+source "$HOME/.config/zsh/conf/systemAliases.zsh"
+source "$HOME/.config/zsh/conf/gitAliases.zsh"
+source "$HOME/.config/zsh/conf/mirrorAliases.zsh"
+source "$HOME/.config/zsh/conf/packageManagerAliases.zsh"
+source "$HOME/.config/zsh/conf/langAliases.zsh"
+# Source Exports
+source "$HOME/.config/zsh/conf/exports.zsh"
+# source nvim switcher
+source "$HOME/.config/zsh/conf/nvim-switcher.zsh"
 # Environment Variables
 source "$HOME/.env"
-# Source Exports
-source "$HOME/.config/zsh/exports.zsh"
 # Source Power level 10k theme
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.config/zsh/plugins/sudo/sudo.plugin.zsh
@@ -43,8 +46,6 @@ source "$HOME/.config/zsh/plugins/copybuffer/copybuffer.plugin.zsh"
 source "$HOME/.config/zsh/plugins/dirhistory/dirhistory.plugin.zsh"
 # hsi nvim will give all history command with nvim
 source "$HOME/.config/zsh/plugins/history/history.plugin.zsh"
-# source nvim switcher
-source "$HOME/.config/zsh/nvim-switcher.zsh"
 
 # plugins
 zplug "esc/conda-zsh-completion"
