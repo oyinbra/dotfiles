@@ -10,6 +10,6 @@ echo "
 
 # ./restore-system-directories.sh
 # ./restore-arcolinux-chaotic-repos.sh
-sudo pacman -S --needed - < ./restore-packages.txt
+sudo pacman -S --needed - < ./myPackages.txt
 # ./restore-symlinks.sh
 # ./restore-aur-packages.sh
