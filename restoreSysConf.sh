@@ -28,7 +28,7 @@ sudo firewall-cmd --reload
 ln -sf "$HOME/Dotfiles/git/.gitignore_global" "$HOME/"
 
 # Cursors
-ln -sf "$HOME/Dotfiles/icons/.icons" "$HOME/"
+ln -sf "$HOME/Dotfiles/cursors/.icons" "$HOME/"
 
 # Create symbolic links for latte-dock
 ln -sf "$HOME/Dotfiles/.config/lattedockrc" "$HOME/.config"
