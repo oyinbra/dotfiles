@@ -72,6 +72,8 @@ alias grb="git rebase"
 # Create a new commit to undo changes of last commit without deleting history
 alias grvh="git revert HEAD"
 
+# Unstaged changes when used with options or specific files/folders
+alias gr="git reset"
 # Create a new commit to undo changes of last commit and deleting it from history
 alias grh-1="git reset HEAD~1"
 alias grh-2="git reset HEAD~2"
