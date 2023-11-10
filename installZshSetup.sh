@@ -60,8 +60,8 @@ create_symlink() {
     # Check if the target is a directory
     # ------------------------------------------------------
     if [ -d "$target" ]; then
-        read -p "The target directory '$target' exists. Do you want to replace it? (yes/no): " replace_dir
-        if [ "$replace_dir" != "yes" ]; then
+        read -p "The target directory '$target' exists. Do you want to replace it? (y/n): " replace_dir
+        if [ "${replace_dir,}" != "y" ]; then
             echo "Skipping symlink creation for $source"
             return
         fi
@@ -71,8 +71,17 @@ create_symlink() {
     # Check if the symlink already exists
     # ------------------------------------------------------
     if [ -e "$target" ]; then
-        read -p "The symlink '$target' already exists. Do you want to replace it? (yes/no): " replace_symlink
-        if [ "$replace_symlink" != "yes" ]; then
+        read -p "The symlink '$target' already exists. Do you want to replace it? (y/n): " replace_symlink
+        if [ "${replace_symlink,}" != "y" ]; then
+            echo "Skipping symlink creation for $source"
+            return
+        fi
+    else
+        # ------------------------------------------------------
+        # Ask whether to create the symlink if the target does not exist
+        # ------------------------------------------------------
+        read -p "The target '$target' does not exist. Do you want to create the symlink? (y/n): " create_symlink
+        if [ "${create_symlink,}" != "y" ]; then
             echo "Skipping symlink creation for $source"
             return
         fi
@@ -94,6 +103,7 @@ create_symlink "$HOME/Dotfiles/zsh" "$HOME/.config/zsh"
 create_symlink "$HOME/Dotfiles/zsh/p10k-user/.p10k.zsh" "$HOME/.p10k.zsh"
 create_symlink "$HOME/Dotfiles/zsh/neofetch-source/.neofetch-config2.conf" "$HOME/.neofetch-config2.conf"
 sudo create_symlink "$HOME/Dotfiles/zsh/neofetch-ascii/usr/bin/neofetch" "/usr/bin/neofetch"
+
 
 # ------------------------------------------------------
 # Change the default shell to Zsh
