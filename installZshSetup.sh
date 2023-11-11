@@ -17,6 +17,12 @@ EOF
 # ZSH SHELL SETUP
 # ------------------------------------------------------
 
+# ------------------------------------------------------
+# Load library from modules directory in Dotfiles
+# ------------------------------------------------------
+source $(dirname "$0")/modules/library.sh
+clear
+
 cat << "EOF"
 
  █████                     █████              ████  ████ 
@@ -33,79 +39,55 @@ EOF
 # ------------------------------------------------------
 # Install required packages
 # ------------------------------------------------------
-packages=("zsh" "npm" "zoxide" "fzf")
-
-for package in "${packages[@]}"; do
-    if ! pacman -Qs "$package" > /dev/null; then
-        echo "Installing $package..."
-        if sudo pacman -S --noconfirm "$package"; then
-            echo "$package installed successfully."
-        else
-            echo "Error: Failed to install $package. Exiting script."
-            exit 1
-        fi
-    else
-        echo "$package is already installed."
-    fi
-done
+packagesPacman=(
+    "zsh"
+    "npm"
+    "zoxide"
+    "fzf"
+);
 
 # ------------------------------------------------------
-# Function to prompt for symlink creation
+# Install required packages
 # ------------------------------------------------------
-create_symlink() {
-    source="$1"
-    target="$2"
-
-    # ------------------------------------------------------
-    # Check if the target is a directory
-    # ------------------------------------------------------
-    if [ -d "$target" ]; then
-        read -p "The target directory '$target' exists. Do you want to replace it? (y/n): " replace_dir
-        if [ "${replace_dir,}" != "y" ]; then
-            echo "Skipping symlink creation for $source"
-            return
-        fi
-    fi
-
-    # ------------------------------------------------------
-    # Check if the symlink already exists
-    # ------------------------------------------------------
-    if [ -e "$target" ]; then
-        read -p "The symlink '$target' already exists. Do you want to replace it? (y/n): " replace_symlink
-        if [ "${replace_symlink,}" != "y" ]; then
-            echo "Skipping symlink creation for $source"
-            return
-        fi
-    else
-        # ------------------------------------------------------
-        # Ask whether to create the symlink if the target does not exist
-        # ------------------------------------------------------
-        read -p "The target '$target' does not exist. Do you want to create the symlink? (y/n): " create_symlink
-        if [ "${create_symlink,}" != "y" ]; then
-            echo "Skipping symlink creation for $source"
-            return
-        fi
-    fi
-
-    # ------------------------------------------------------
-    # Create the symlink
-    # ------------------------------------------------------
-    ln -sTf "$source" "$target"
-    echo "Symlink created: $target -> $source"
-}
+_installPackagesPacman "${packagesPacman[@]}";
+clear
 
 # ------------------------------------------------------
 # Create symbolic links for zsh shell configurations
 # ------------------------------------------------------
-create_symlink "$HOME/Dotfiles/zsh/zplug" "$HOME/.zplug"
-create_symlink "$HOME/Dotfiles/zsh/conf/.zshrc" "$HOME/.zshrc"
-create_symlink "$HOME/Dotfiles/zsh" "$HOME/.config/zsh"
-create_symlink "$HOME/Dotfiles/zsh/p10k-user/.p10k.zsh" "$HOME/.p10k.zsh"
-create_symlink "$HOME/Dotfiles/zsh/neofetch-source/.neofetch-config2.conf" "$HOME/.neofetch-config2.conf"
-sudo create_symlink "$HOME/Dotfiles/zsh/neofetch-ascii/usr/bin/neofetch" "/usr/bin/neofetch"
+_installSymLink "zplug" "$HOME/.zplug" "$HOME/Dotfiles/zsh/zplug" "$HOME/.zplug"
+_installSymLink ".zshrc" "$HOME/.zshrc" "$HOME/Dotfiles/zsh/conf/.zshrc" "$HOME/.zshrc"
+_installSymLink "zsh" "$HOME/.config/zsh" "$HOME/Dotfiles/zsh" "$HOME/.config/zsh"
+_installSymLink ".p10k.zsh" "$HOME/.p10k.zsh" "$HOME/Dotfiles/zsh/p10k-user/.p10k.zsh" "$HOME/.p10k.zsh"
+_installSymLink ".neofetch-config2.conf" "$HOME/.neofetch-config2.conf" "$HOME/Dotfiles/zsh/neofetch-source/.neofetch-config2.conf" "$HOME/.neofetch-config2.conf"
 
+# ------------------------------------------------------
+# install a symbolic link for neofetch
+# ------------------------------------------------------
+_installSymLink "neofetch" "/usr/bin/neofetch" "$HOME/Dotfiles/zsh/neofetch-ascii/usr/bin/neofetch" "/usr/bin/neofetch"
+clear
 
 # ------------------------------------------------------
 # Change the default shell to Zsh
 # ------------------------------------------------------
-chsh -s /bin/zsh "$USER"
+read -p "DO YOU WANT TO CHANGE YOUR SHELL TO ZSH? (y/n): " choice
+
+if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
+    chsh -s /bin/zsh "$USER"
+    echo "Shell changed to Zsh."
+elif [ "$choice" == "n" ] || [ "$choice" == "N" ]; then
+    echo "Shell remains unchanged."
+else
+    echo "Invalid choice. Please enter 'y' or 'n'."
+fi
+
+# ------------------------------------------------------
+# Source Zsh configuration
+# ------------------------------------------------------
+read -p "DO YOU WANT TO LOG INTO ZSH? (y/n): " answer
+
+if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
+    exec zsh -c "source ~/.zshrc"
+else
+    echo "Command execution aborted."
+fi
