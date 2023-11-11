@@ -1,22 +1,47 @@
-#/bin/bash
+#!/bin/bash
 
-# ----------------------------------------------------- 
-# Install Script for my packages
-# ------------------------------------------------------
+cat << "EOF"
+
+ ███████████                     █████                                         
+░░███░░░░░███                   ░░███                                          
+ ░███    ░███  ██████    ██████  ░███ █████  ██████    ███████  ██████   █████ 
+ ░██████████  ░░░░░███  ███░░███ ░███░░███  ░░░░░███  ███░░███ ███░░███ ███░░  
+ ░███░░░░░░    ███████ ░███ ░░░  ░██████░    ███████ ░███ ░███░███████ ░░█████ 
+ ░███         ███░░███ ░███  ███ ░███░░███  ███░░███ ░███ ░███░███░░░   ░░░░███
+ █████       ░░████████░░██████  ████ █████░░████████░░███████░░██████  ██████ 
+░░░░░         ░░░░░░░░  ░░░░░░  ░░░░ ░░░░░  ░░░░░░░░  ░░░░░███ ░░░░░░  ░░░░░░  
+                                                      ███ ░███                 
+                                                     ░░██████                  
+                                                      ░░░░░░                                  
+
+EOF
 
 # ------------------------------------------------------
 # Load Library
 # ------------------------------------------------------
-source $(dirname "$0")/scripts/library.sh
+source $(dirname "$0")/modules/library.sh
 clear
-echo "  ___           _        _ _  "
-echo " |_ _|_ __  ___| |_ __ _| | | "
-echo "  | ||  _ \/ __| __/ _  | | | "
-echo "  | || | | \__ \ || (_| | | | "
-echo " |___|_| |_|___/\__\__,_|_|_| "
-echo "                              "
-echo "-------------------------------------"
-echo ""
+
+cat << "EOF"
+
+ █████                     █████              ████  ████ 
+░░███                     ░░███              ░░███ ░░███ 
+ ░███  ████████    █████  ███████    ██████   ░███  ░███ 
+ ░███ ░░███░░███  ███░░  ░░░███░    ░░░░░███  ░███  ░███ 
+ ░███  ░███ ░███ ░░█████   ░███      ███████  ░███  ░███ 
+ ░███  ░███ ░███  ░░░░███  ░███ ███ ███░░███  ░███  ░███ 
+ █████ ████ █████ ██████   ░░█████ ░░████████ █████ █████
+░░░░░ ░░░░ ░░░░░ ░░░░░░     ░░░░░   ░░░░░░░░ ░░░░░ ░░░░░ 
+
+EOF
+
+# ------------------------------------------------------
+# Check and create ~/Tmp directory
+# ------------------------------------------------------
+TMP_DIR="$HOME/Tmp"
+if [ ! -d "$TMP_DIR" ]; then
+  mkdir "$TMP_DIR"
+fi
 
 # ------------------------------------------------------
 # Check if yay is installed
@@ -26,21 +51,12 @@ if sudo pacman -Qs yay > /dev/null ; then
 else
     echo "yay is not installed. Will be installed now!"
     _installPackagesPacman "base-devel"
-    git clone https://aur.archlinux.org/yay-git.git ~/yay-git
-    cd ~/yay-git
+    git clone https://aur.archlinux.org/yay-git.git "$TMP_DIR/yay-git"
+    cd "$TMP_DIR/yay-git"
     makepkg -si
-    cd ~/Dotfiles/
+    cd "$HOME/Dotfiles/"
     clear
     echo "yay has been installed successfully."
-    echo ""
-    echo "  ___           _        _ _  "
-    echo " |_ _|_ __  ___| |_ __ _| | | "
-    echo "  | ||  _ \/ __| __/ _  | | | "
-    echo "  | || | | \__ \ || (_| | | | "
-    echo " |___|_| |_|___/\__\__,_|_|_| "
-    echo "                              "
-    echo "-------------------------------------"
-    echo ""
 fi
 
 # ------------------------------------------------------
@@ -51,21 +67,12 @@ if sudo pacman -Qs paru > /dev/null ; then
 else
     echo "paru is not installed. Will be installed now!"
     _installPackagesPacman "base-devel"
-    git clone https://aur.archlinux.org/paru-bin.git ~/paru-bin
-    cd ~/paru-bin
+    git clone https://aur.archlinux.org/paru-bin.git "$TMP_DIR/paru-bin"
+    cd "$TMP_DIR/paru-bin"
     makepkg -si
-    cd ~/Dotfiles/
+    cd "$HOME/Dotfiles/"
     clear
     echo "paru has been installed successfully."
-    echo ""
-    echo "  ___           _        _ _  "
-    echo " |_ _|_ __  ___| |_ __ _| | | "
-    echo "  | ||  _ \/ __| __/ _  | | | "
-    echo "  | || | | \__ \ || (_| | | | "
-    echo " |___|_| |_|___/\__\__,_|_|_| "
-    echo "                              "
-    echo "-------------------------------------"
-    echo ""
 fi
 
 # ------------------------------------------------------
@@ -100,22 +107,22 @@ packagesPacman=(
     "marktext"
     "haruna"
     "electron"
-    "nvidia"
-    "nvidia-utils"
-    "nvidia-settings"
+    # "nvidia"
+    # "nvidia-utils"
+    # "nvidia-settings"
     "noto-fonts-emoji"
     "yarn"
     "sass"
     "zsh"
     "spotify"
-    "kdeplasma-addons"
+    # "kdeplasma-addons"
     "grub-btrfs"
-    "microsoft-edge-dev-bin"
-    "slack-desktop"
+    # "microsoft-edge-dev-bin"
+    # "slack-desktop"
     "zoom"
     "btrfs-progs"
     "cryptsetup"
-    "anaconda"
+    # "anaconda"
     "intellij-idea-community-edition"
     "auto-cpufreq"
     "wl-clipboard"
@@ -123,7 +130,7 @@ packagesPacman=(
     "plasma-wayland-protocols"
     "npm"
     "spectacle"
-    "caffeine-ng"
+    # "caffeine-ng"
     "zoxide"
     "fzf"
     "lazygit"
@@ -142,7 +149,7 @@ packagesPacman=(
     "chromium"
     "obs-studio"
     "gparted"
-    "brave-bin"
+    # "brave-bin"
     "jdk8-openjdk"
     "nodejs"
     "android-studio"
@@ -206,4 +213,27 @@ _installPackagesYay "${packagesYay[@]}";
 # ------------------------------------------------------
 # Enable preload services
 # ------------------------------------------------------
+cat << "EOF"
+
+ ██████████                      █████     ████                    
+░░███░░░░░█                     ░░███     ░░███                    
+ ░███  █ ░  ████████    ██████   ░███████  ░███   ██████           
+ ░██████   ░░███░░███  ░░░░░███  ░███░░███ ░███  ███░░███          
+ ░███░░█    ░███ ░███   ███████  ░███ ░███ ░███ ░███████           
+ ░███ ░   █ ░███ ░███  ███░░███  ░███ ░███ ░███ ░███░░░            
+ ██████████ ████ █████░░████████ ████████  █████░░██████           
+░░░░░░░░░░ ░░░░ ░░░░░  ░░░░░░░░ ░░░░░░░░  ░░░░░  ░░░░░░            
+                                                                   
+                                                                   
+                                                                   
+ ███████████                     ████                         █████
+░░███░░░░░███                   ░░███                        ░░███ 
+ ░███    ░███ ████████   ██████  ░███   ██████   ██████    ███████ 
+ ░██████████ ░░███░░███ ███░░███ ░███  ███░░███ ░░░░░███  ███░░███ 
+ ░███░░░░░░   ░███ ░░░ ░███████  ░███ ░███ ░███  ███████ ░███ ░███ 
+ ░███         ░███     ░███░░░   ░███ ░███ ░███ ███░░███ ░███ ░███ 
+ █████        █████    ░░██████  █████░░██████ ░░████████░░████████
+░░░░░        ░░░░░      ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░░░  ░░░░░░░░ 
+
+EOF
 systemctl enable --now preload.service
