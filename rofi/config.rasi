@@ -23,9 +23,9 @@ configuration {
     terminal: "alacritty";
     separator-style: "solid";
     display-run:	"❯";
-    display-drun:	"";
+    display-drun:	"";
     display-window: "";
-    display-emoji:  "";
+    display-emoji:  "";
 }
 
 @theme "themes/nord.rasi"
@@ -49,3 +49,5 @@ window {
     border-radius:                10px;
     background-color:             transparent;
 }
+
+
