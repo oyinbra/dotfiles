@@ -1,9 +1,23 @@
 #!/bin/zsh
 
-# ##############################################
-# ############## SYSTEM ALIASES ################
-# ##############################################
+# ███████╗██╗   ██╗███████╗     █████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
+# ██╔════╝╚██╗ ██╔╝██╔════╝    ██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+# ███████╗ ╚████╔╝ ███████╗    ███████║██║     ██║███████║███████╗█████╗  ███████╗
+# ╚════██║  ╚██╔╝  ╚════██║    ██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
+# ███████║   ██║   ███████║    ██║  ██║███████╗██║██║  ██║███████║███████╗███████║
+# ╚══════╝   ╚═╝   ╚══════╝    ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 
+# Show figlet fonts
+alias figfonts="showfigfonts"
+# Reconfigure kwin
+alias kwin="qdbus org.kde.KWin /KWin reconfigure"
+# List Kwin Meta shortcutNames
+alias kwinlist="qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.shortcutNames"
+# Change META key in kwin
+alias kwinkrunner='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.krunner,/App,,toggleDisplay" && kwin'
+alias kwinexposeall='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,ExposeAll" && kwin'
+# Windows overview
+alias kwinoverview='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview" && kwin'
 # Check swapp value 
 alias swappiness="bat /proc/sys/vm/swappiness"
 # jupyter notebook
@@ -23,12 +37,6 @@ alias hybrid="optimus-manager --switch hybrid --no-confirm"
 # Magic link
 alias magic.slack="while sleep .1; do ps aux | grep slack | grep -v grep | grep magic; done"
 alias magic.discord="while sleep .1; do ps aux | grep discord | grep -v grep | grep magic; done"
-# System Control
-# cronie.service 
-alias enable.cronie="sudo systemctl enable --now cronie.service"
-alias stop.cronie="sudo systemctl stop cronie.service"
-alias disable.cronie="sudo systemctl disable --now cronie.service"
-alias status.cronie="sudo systemctl status cronie.service"
 # set crontab
 alias setcron="sudo cp -r /Backup/cron/* /var/spool/cron/"
 alias vide="neovide"
@@ -83,7 +91,7 @@ alias sym="ln -sf"
 
 # Grub file
 alias zxgrub="sudo nvim /etc/default/grub"
-alias zxacf="vim ~/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf"
+alias zxacf="nvim ~/Dotfiles/etc/auto-cpufreq.conf"
 # Update Grub
 alias update.grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
@@ -94,13 +102,13 @@ alias zxtimeshift="sudo nvim /etc/timeshift-autosnap.conf"
 alias s.journalctl="sudo journalctl -p 3 -xb"
 
 # Failed processes
-alias s.process="sudo systemctl --failed"
+alias sysmprocess="sudo systemctl --failed"
 
 # Bpytop
 alias s.bpytop="bpytop"
 
 # Log out
-alias logout="loginctl terminate-user $USER"
+alias logout="qdbus org.kde.ksmserver /KSMServer logout 0 0 0"
 
  # List npm package owners
 alias npm.owner="ls -la $(npm root -g)"
@@ -116,13 +124,13 @@ alias swap="bat /proc/sys/vm/swappiness"
 alias pid="ps -ef|grep -i"
 
 # Systemctl Services
-alias s.systemctl="systemctl list-unit-files --type=service"
+alias sysmservices="systemctl list-unit-files --type=service"
 
 # Btop settings
 # alias btop="btop --utf-force"
 
 # System Control Settings
-alias s.systemctl="systemctl list-unit-files --type=service"
+alias sysmctl="systemctl list-unit-files --type=service"
 
 # Nano config
 alias n="sudo nano"
@@ -138,7 +146,7 @@ alias zzalacritty="~/.config/alacritty/"
 alias zxpost.arch="nvim /home/$USER/Dotfiles/post-arch.sh"
 
 # Reload systemctl daemo
-alias systemctl.reload="sudo systemctl daemon-reload"
+alias sysmreload="sudo systemctl daemon-reload"
 
 # Listen to opened port
 alias listen.port="sudo lsof -i -P -n | grep LISTEN"
@@ -157,8 +165,8 @@ alias freshclam="sudo freshclam"
 alias acf="sudo auto-cpufreq --stats"
 # alias acf-monitor="sudo auto-cpufreq --monitor"
 # alias acf-live="sudo auto-cpufreq --live"
-alias acf.daemon.start="sudo auto-cpufreq --install"
-alias acf.daemon.stop="sudo auto-cpufreq --remove"
+alias acfstart="sudo auto-cpufreq --install"
+alias acfstop="sudo auto-cpufreq --remove"
 
 alias zxoptimus="nvim /usr/share/optimus-manager.conf"
 
@@ -167,8 +175,27 @@ alias zxoptimus="nvim /usr/share/optimus-manager.conf"
 # ##############################################
 
 # .config
-alias zzconfig="~/.config"
-alias zznvim="~/.config/nvim"
+alias config="~/.config"
+alias nvimd="~/.config/nvim"
+alias zshd="~/.config/zsh/conf/"
+
+#Dotfiles
+alias dotfiles="~/Dotfiles"
+
+# Work Directory
+alias workspace="cd ~/Workspace"
+alias pythond="cd ~/Workspace/python"
+alias opensource="cd ~/Workspace/OpenSourceContribution/"
+
+alias kittyd="~/.config/kitty/"
+# Project Directory
+alias projects="cd ~/Workspace/Projects"
+
+# PKG Packages
+alias pkg="/var/cache/pacman/pkg"
+
+# Pictures Folder
+alias pictures="~/Pictures"
 
 # Local user Backup
 alias backup="sudo /home/oyinbra/Dotfiles/backup.sh"
@@ -194,24 +221,6 @@ alias zxneofetch="nvim ~/.config/neofetch/config.conf"
 # Zsh aliases config
 alias zxalias="nvim ~/.config/zsh/aliases.zsh"
 alias zxkitty="nvim ~/.config/kitty/kitty.conf"
-
-#Dotfiles
-alias zzdotfiles="~/Dotfiles"
-
-# Work Directory
-alias zzworkspace="cd ~/Workspace"
-alias zzpython="cd ~/Workspace/python"
-alias zzopensource="cd ~/Workspace/OpenSourceContribution/"
-
-alias zzkitty="~/.config/kitty/"
-# Project Directory
-alias zzprojects="cd ~/Workspace/Projects"
-
-# PKG Packages
-alias zzpkg="/var/cache/pacman/pkg"
-
-# Pictures Folder
-alias zzpictures="~/Pictures"
 
 # Coinmarketcapital
 alias cmc="python -u /home/$USER/Workspace/python/cmc.py"
