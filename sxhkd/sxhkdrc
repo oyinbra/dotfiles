@@ -23,8 +23,8 @@ super + period
     rofi -show emoji
 
 # Show window switcher with Super + W
-super + w
-  rofi -show window
+; super + w
+;   rofi -show window
 
 # Run application
 super + o {r,c}

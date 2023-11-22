@@ -1,0 +1,22 @@
+[Desktop Action Remove]
+Exec=/usr/lib/appimagelauncher/remove "/home/oyinbra/Applications/Mechvibes-2.1.1.AppImage"
+Icon=AppImageLauncher
+Name[en_NG]=Remove AppImage from system
+Name=Remove AppImage from system
+
+[Desktop Entry]
+Actions=Remove;
+Categories=Utility;
+Comment=Play mechanical keyboard sounds as you type.
+Exec=/home/oyinbra/Applications/Mechvibes-2.1.1.AppImage
+Icon=appimagekit_658fcc860d7728e4d700abab2c2c3acd_mechvibes
+Name=Mechvibes (2.1.1)
+StartupWMClass=Mechvibes
+Terminal=false
+TryExec=/home/oyinbra/Applications/Mechvibes-2.1.1.AppImage
+Type=Application
+X-AppImage-Identifier=658fcc860d7728e4d700abab2c2c3acd
+X-AppImage-Old-Icon=mechvibes
+X-AppImage-Old-Name=Mechvibes
+X-AppImage-Version=2.1.1
+X-AppImageLauncher-Version=2.2.0 (git commit 0f91801), built on 2022-05-30 05:04:12 UTC

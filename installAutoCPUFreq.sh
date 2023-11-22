@@ -1,20 +1,58 @@
 #!/bin/bash
 
-echo "
-#############################################################################
-#############################################################################
-##                                                                         ##
-##                     AUTO CPU Frequency Installation                     ##
-##                                                                         ##
-#############################################################################
-#############################################################################"
+cat << "EOF"
 
-# Install auto-cpufreq
-if [ ! -d "$HOME/Tmp/auto-cpufreq/" ]; then
-  git clone "https://github.com/AdnanHodzic/auto-cpufreq.git" "$HOME/Tmp/auto-cpufreq"
+ █████╗ ██╗   ██╗████████╗ ██████╗  ██████╗██████╗ ██╗   ██╗      ███████╗
+██╔══██╗██║   ██║╚══██╔══╝██╔═══██╗██╔════╝██╔══██╗██║   ██║      ██╔════╝
+███████║██║   ██║   ██║   ██║   ██║██║     ██████╔╝██║   ██║█████╗█████╗
+██╔══██║██║   ██║   ██║   ██║   ██║██║     ██╔═══╝ ██║   ██║╚════╝██╔══╝
+██║  ██║╚██████╔╝   ██║   ╚██████╔╝╚██████╗██║     ╚██████╔╝      ██║
+╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝  ╚═════╝╚═╝      ╚═════╝       ╚═╝ 
+
+EOF
+
+# ------------------------------------------------------
+# Check and create ~/Tmp directory
+# ------------------------------------------------------
+TMP_DIR="$HOME/Tmp"
+if [ ! -d "$TMP_DIR" ]; then
+  mkdir "$TMP_DIR"
 fi
-sudo "$HOME/Tmp/auto-cpufreq/auto-cpufreq-installer"
+
+# ------------------------------------------------------
+# Backup old version
+# ------------------------------------------------------
+if [ -d "$TMP_DIR/auto-cpufreq/" ]; then
+  mv "$TMP_DIR/auto-cpufreq/" "$TMP_DIR/auto-cpufreq.bak"
+fi
+
+# ------------------------------------------------------
+# Clone the auto-cpufreq repo
+# ------------------------------------------------------
+git clone "https://github.com/AdnanHodzic/auto-cpufreq.git" "$TMP_DIR/auto-cpufreq"
+
+# ------------------------------------------------------
+# Change Directory to auto-cpufreq
+# ------------------------------------------------------
+cd "$TMP_DIR/auto-cpufreq"
+
+# ------------------------------------------------------
+# Install auto-cpufreq
+# ------------------------------------------------------
+sudo ./auto-cpufreq-installer
+
+# ------------------------------------------------------
 # Enable auto-cpufreq daemon
+# ------------------------------------------------------
 sudo auto-cpufreq --install
+
+# ------------------------------------------------------
 # Enable auto-cpufreq custom settings
-sudo ln -sf "$HOME/Dotfiles/auto-cpufreq/etc/auto-cpufreq.conf" "/etc"
+# ------------------------------------------------------
+CONFIG_FILE="$HOME/Dotfiles/etc/auto-cpufreq.conf"
+
+if [ -e "$CONFIG_FILE" ]; then
+  sudo ln -sTf "$CONFIG_FILE" "/etc/auto-cpufreq.conf"
+else
+  echo "Error: $CONFIG_FILE does not exist. Please create the configuration file first."
+fi

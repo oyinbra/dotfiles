@@ -1,7 +1,24 @@
 #!/bin/bash
 
-######################################################################################################################
+cat << "EOF"
 
+ ██████████            ███████████                                      
+░░███░░░░░█           ░░███░░░░░███                                     
+ ░███  █ ░             ░███    ░███   ██████  ████████   ██████   █████ 
+ ░██████    ██████████ ░██████████   ███░░███░░███░░███ ███░░███ ███░░  
+ ░███░░█   ░░░░░░░░░░  ░███░░░░░███ ░███████  ░███ ░███░███ ░███░░█████ 
+ ░███ ░   █            ░███    ░███ ░███░░░   ░███ ░███░███ ░███ ░░░░███
+ ██████████            █████   █████░░██████  ░███████ ░░██████  ██████ 
+░░░░░░░░░░            ░░░░░   ░░░░░  ░░░░░░   ░███░░░   ░░░░░░  ░░░░░░  
+                                              ░███                      
+                                              █████                     
+                                             ░░░░░                      
+
+EOF
+
+# ------------------------------------------------------
+# Install required packages
+# ------------------------------------------------------
 sudo pacman -S wget --noconfirm --needed
 
 echo "Getting the ArcoLinux keys from the ArcoLinux repo"
@@ -9,14 +26,17 @@ echo "Getting the ArcoLinux keys from the ArcoLinux repo"
 sudo wget https://github.com/arcolinux/arcolinux_repo/raw/main/x86_64/arcolinux-keyring-20251209-3-any.pkg.tar.zst -O /tmp/arcolinux-keyring-20251209-3-any.pkg.tar.zst
 sudo pacman -U --noconfirm --needed /tmp/arcolinux-keyring-20251209-3-any.pkg.tar.zst
 
-######################################################################################################################
-
+# ------------------------------------------------------
+# Get the latest mirror file
+# ------------------------------------------------------
 echo "Getting the latest arcolinux mirrors file"
 
 sudo wget https://github.com/arcolinux/arcolinux_repo/raw/main/x86_64/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst -O /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
 sudo pacman -U --noconfirm --needed /tmp/arcolinux-mirrorlist-git-23.06-01-any.pkg.tar.zst
 
+# ------------------------------------------------------
 # Create backup for pacman.conf
+# ------------------------------------------------------
 sudo cp /etc/pacman.conf /etc/pacman.bak
 
 echo '
@@ -34,7 +54,10 @@ SigLevel = Optional TrustedOnly
 Include = /etc/pacman.d/arcolinux-mirrorlist' | sudo tee --append /etc/pacman.conf
 
 sudo pacman -Sy archlinux-tweak-tool-git --noconfirm --needed
-######################################################################################################################
+
+# ------------------------------------------------------
+# Add chaotic repo to pacman.conf
+# ------------------------------------------------------
 echo '
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist' | sudo tee --append /etc/pacman.conf

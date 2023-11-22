@@ -64,7 +64,7 @@ alias gf="git fetch"
 alias gm="git merge"
 
 # Update your local Git repository with changes from the remote repository
-alias glp="git pull"
+alias gpull="git pull"
 
 # replace the entire history of one branch with another. 
 alias grb="git rebase"
