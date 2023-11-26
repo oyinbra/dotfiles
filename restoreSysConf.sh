@@ -92,9 +92,7 @@ echo "RebootWatchdogSec=0" | sudo tee --append "/etc/systemd/system.conf"
 # ------------------------------------------------------
 # Reduce swappiness to 10
 # ------------------------------------------------------
-echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.conf"
 echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.d/99-swappiness.conf"
-echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.d/100-manjaro.conf"
 
 # ------------------------------------------------------
 # Reload the sysctl configuration
