@@ -1,0 +1,54 @@
+/*
+
+ ███████     ███████   ████████ ██
+░██░░░░██   ██░░░░░██ ░██░░░░░ ░██
+░██   ░██  ██     ░░██░██      ░██
+░███████  ░██      ░██░███████ ░██
+░██░░░██  ░██      ░██░██░░░░  ░██
+░██  ░░██ ░░██     ██ ░██      ░██
+░██   ░░██ ░░███████  ░██      ░██
+░░     ░░   ░░░░░░░   ░░       ░░
+
+*/
+
+configuration {
+    drun-display-format: "{icon} {name}";
+    font: "JetBrainsMono Nerd Font Medium 15";
+    modi: "window,run,drun,emoji,calc";
+    show-icons: true;
+    icon-theme: "Tela Circle";
+    combi-modi: "drun,run,emoji,window";
+    disable-history: false;
+    hide-scrollbar: true;
+    terminal: "alacritty";
+    separator-style: "solid";
+    display-run:	               "❯";
+    display-drun:	               "";
+    display-calc:                "";
+    display-emoji:               "";
+    display-window:              "";
+}
+
+@theme "themes/nord.rasi"
+
+window {
+    width:                        800px;
+    x-offset:                     0px;
+    y-offset:                     0px;
+    spacing:                      0px;
+    padding:                      0px;
+    margin:                       0px; 
+    color:                        #FFFFFF;
+    border:                       1px;
+    border-color:                 #FFFFFF;
+    cursor:                       "default";
+    transparency:                 "real";
+    location:                     center;
+    anchor:                       center;
+    fullscreen:                   false;
+    enabled:                      true;
+    border-radius:                10px;
+    background-color:             transparent;
+}
+
+

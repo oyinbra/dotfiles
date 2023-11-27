@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/home/oyinbra/Dotfiles/modules/killMechvibes.sh
+Icon=dialog-scripts
+Name=killMechvibes.sh
+Type=Application
+X-KDE-AutostartScript=true

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Utility;
+Comment=Play mechanical keyboard sounds as you type.
+Exec=/opt/Mechvibes/mechvibes %U
+Icon=mechvibes
+Name=Mechvibes
+StartupWMClass=Mechvibes
+Terminal=false
+Type=Application
