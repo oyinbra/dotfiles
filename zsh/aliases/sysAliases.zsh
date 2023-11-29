@@ -1,25 +1,30 @@
 #!/bin/zsh
 
-# ███████╗██╗   ██╗███████╗     █████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
-# ██╔════╝╚██╗ ██╔╝██╔════╝    ██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
-# ███████╗ ╚████╔╝ ███████╗    ███████║██║     ██║███████║███████╗█████╗  ███████╗
-# ╚════██║  ╚██╔╝  ╚════██║    ██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
-# ███████║   ██║   ███████║    ██║  ██║███████╗██║██║  ██║███████║███████╗███████║
-# ╚══════╝   ╚═╝   ╚══════╝    ╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+#   ████████                        ██      ██ ██
+#  ██░░░░░░   ██   ██              ████    ░██░░
+# ░██        ░░██ ██   ██████     ██░░██   ░██ ██  ██████    ██████  █████   ██████
+# ░█████████  ░░███   ██░░░░     ██  ░░██  ░██░██ ░░░░░░██  ██░░░░  ██░░░██ ██░░░░
+# ░░░░░░░░██   ░██   ░░█████    ██████████ ░██░██  ███████ ░░█████ ░███████░░█████
+#        ░██   ██     ░░░░░██  ░██░░░░░░██ ░██░██ ██░░░░██  ░░░░░██░██░░░░  ░░░░░██
+#  ████████   ██      ██████   ░██     ░██ ███░██░░████████ ██████ ░░██████ ██████
+# ░░░░░░░░   ░░      ░░░░░░    ░░      ░░ ░░░ ░░  ░░░░░░░░ ░░░░░░   ░░░░░░ ░░░░░░
 
 # Show figlet fonts
 alias figfonts="showfigfonts"
+
 # Reconfigure kwin
-alias kwin="qdbus org.kde.KWin /KWin reconfigure"
+alias metareload="qdbus org.kde.KWin /KWin reconfigure"
 # List Kwin Meta shortcutNames
-alias kwinlist="qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.shortcutNames"
+alias metalist="qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.shortcutNames"
 # Change META key in kwin
-alias kwinkrunner='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.krunner,/App,,toggleDisplay" && kwin'
-alias kwinexposeall='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,ExposeAll" && kwin'
+alias metakrunner='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.krunner,/App,,toggleDisplay" && metareload'
+alias metalauncher='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu" && metareload'
+alias metaexposeall='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,ExposeAll" && metareload'
 # Windows overview
-alias kwinoverview='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview" && kwin'
+alias metaoverview='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview" && metareload'
 # Check swapp value 
 alias swappiness="bat /proc/sys/vm/swappiness"
+alias swappiness.10='echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.conf"'
 # jupyter notebook
 alias jn="jupyter notebook"
 
@@ -60,8 +65,10 @@ alias mkdir="mkdir -p"
 # List Color
 alias ls="ls --color=auto"
 # List All
-alias la="ls -a"
-
+alias  ll='eza -lh  --icons=auto' # long list
+alias l='eza -1   --icons=auto' # short list
+alias la='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias ld='eza -lhD --icons=auto' # long list dirs
 # Terminal config
 alias zxterminal="sudo update-alternatives --config x-terminal-emulator"
 
@@ -74,14 +81,25 @@ alias list.users="cat /etc/passwd"
 
 # Hibernate
 alias hibernate="systemctl hibernate"
+# Suspend
+alias suspend="systemctl suspend"
+# Failed processes
+alias ctlprocess="sudo systemctl --failed"
+# Systemctl Services
+alias ctlservices="systemctl list-unit-files --type=service"
+# System Control Settings
+alias ctllist="systemctl list-unit-files --type=service"
+# Reload systemctl daemo
+alias ctlreload="sudo systemctl daemon-reload"
+alias ctlenable="sudo systemctl enable"
+alias ctlstart="sudo systemctl start"
+alias ctlrestart="sudo systemctl restart"
+alias ctlstatus="sudo systemctl status"
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
-# Suspend
-alias suspend="systemctl suspend"
 
 # Nethogs
 alias netlog="sudo nethogs"
@@ -91,7 +109,7 @@ alias sym="ln -sf"
 
 # Grub file
 alias zxgrub="sudo nvim /etc/default/grub"
-alias zxacf="nvim ~/Dotfiles/etc/auto-cpufreq.conf"
+alias zxacf="nvim ~/dotfiles/etc/auto-cpufreq.conf"
 # Update Grub
 alias update.grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
@@ -100,9 +118,6 @@ alias zxtimeshift="sudo nvim /etc/timeshift-autosnap.conf"
 
 # System error
 alias s.journalctl="sudo journalctl -p 3 -xb"
-
-# Failed processes
-alias sysmprocess="sudo systemctl --failed"
 
 # Bpytop
 alias s.bpytop="bpytop"
@@ -117,20 +132,11 @@ alias npm.installed="npm list -g --depth=0"
 # Change npm package ownership
 alias npm.chown="sudo chown -R $USER $(npm root -g)"
 
-# check swappiness
-alias swap="bat /proc/sys/vm/swappiness"
-
 # Process ID
 alias pid="ps -ef|grep -i"
 
-# Systemctl Services
-alias sysmservices="systemctl list-unit-files --type=service"
-
 # Btop settings
 # alias btop="btop --utf-force"
-
-# System Control Settings
-alias sysmctl="systemctl list-unit-files --type=service"
 
 # Nano config
 alias n="sudo nano"
@@ -141,12 +147,6 @@ alias vim="sudo nvim"
 # Alacritty config
 alias zxalacritty="nvim ~/.config/alacritty/alacritty.yml"
 alias zzalacritty="~/.config/alacritty/"
-
-# Post arch install
-alias zxpost.arch="nvim /home/$USER/Dotfiles/post-arch.sh"
-
-# Reload systemctl daemo
-alias sysmreload="sudo systemctl daemon-reload"
 
 # Listen to opened port
 alias listen.port="sudo lsof -i -P -n | grep LISTEN"
@@ -175,39 +175,36 @@ alias zxoptimus="nvim /usr/share/optimus-manager.conf"
 # ##############################################
 
 # .config
-alias config="~/.config"
-alias nvimd="~/.config/nvim"
-alias zshd="~/.config/zsh/conf/"
+alias config=" cd ~/.config"
+alias nvimd="cd ~/.config/nvim"
+alias zshd="cd ~/.config/zsh/conf/"
 
 #Dotfiles
-alias dotfiles="~/Dotfiles"
+alias dotfiles="cd ~/dotfiles"
 
 # Work Directory
 alias workspace="cd ~/Workspace"
 alias pythond="cd ~/Workspace/python"
 alias opensource="cd ~/Workspace/OpenSourceContribution/"
 
-alias kittyd="~/.config/kitty/"
+alias kittyd="cd ~/.config/kitty/"
 # Project Directory
 alias projects="cd ~/Workspace/Projects"
 
 # PKG Packages
-alias pkg="/var/cache/pacman/pkg"
+alias pkgd="cd /var/cache/pacman/pkg"
 
 # Pictures Folder
-alias pictures="~/Pictures"
+alias pictures="cd ~/Pictures"
 
 # Local user Backup
-alias backup="sudo /home/oyinbra/Dotfiles/backup.sh"
+alias backup="sudo /home/oyinbra/dotfiles/backup.sh"
 alias backup.pkg="sudo rsync -aAXv --delete /var/cache/pacman/pkg /Backup"
 # Local user Restore  
-alias restore="sudo /home/oyinbra/Dotfiles/restore.sh"      
+alias restore="sudo /home/oyinbra/dotfiles/restore.sh"      
 
 # Search for files or folders including hidden folders and files
-alias list="ls -a | grep -i"
-
-# Refresh zsh
-alias reload="source ~/.zshrc"
+alias lsp="ls -a | grep -i"
 
 # Zsh config
 alias zxzshrc="nvim ~/.zshrc"
@@ -278,25 +275,3 @@ alias gpg.retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 # For when keys break
 alias archlinux.fix.keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
 
-if [[ $TERM == "xterm-kitty" ]]; then
-  alias ssh="kitty +kitten ssh"
-fi
-
-case "$(uname -s)" in
-
-Darwin)
-	# echo 'Mac OS X'
-	alias ls='ls -G'
-	;;
-
-Linux)
-	alias ls='ls --color=auto'
-	;;
-
-CYGWIN* | MINGW32* | MSYS* | MINGW*)
-	# echo 'MS Windows'
-	;;
-*)
-	# echo 'Other OS'
-	;;
-esac

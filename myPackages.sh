@@ -163,3 +163,13 @@ EOF
 
 confirm_execution systemctl enable --now preload.service
 
+cat << "EOF"
+
+██  ███ █   █ ███
+█ █ █ █ ██  █ █
+█ █ █ █ █ █ █ ███
+█ █ █ █ █  ██ █
+██  ███ █   █ ███
+
+EOF
+

@@ -46,7 +46,7 @@ set_package_aliases() {
             alias downgrade="sudo pacman -Suu"
 
             # Upgrade/Install a package using package file
-            alias pacpkg="sudo pacman -U"
+            alias pkg="sudo pacman -U"
 
             # Clean package cache with 'sudo pacman'
             alias pacclean="sudo pacman -Sc"

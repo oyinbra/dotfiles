@@ -7,30 +7,30 @@
 # ███ ███ █ █ █ █ ███
 
 # -------------------------------------------------------
+# Use zap zshrc
+# -------------------------------------------------------
+# source ~/.zshrc.zap && return
+
+# -------------------------------------------------------
+# Use plugless zshrc
+# -------------------------------------------------------
+# source ~/.zshrc.plugless && return
+
+# -------------------------------------------------------
 # Constants
 # -------------------------------------------------------
 ZPLUG_DIR="$HOME/.zplug"
-NEOFETCH_CONFIG="$HOME/.neofetch-config2.conf"
-ZSH_CONFIG_DIR="$HOME/.config/zsh"
-ZSH_ADDONS_DIR="$HOME/.config/zsh-addons"
-ZPLUG_URL="https://github.com/zplug/zplug"
-ZSH_AUTOSUGGESTIONS_URL="https://github.com/zsh-users/zsh-autosuggestions"
-POWERLEVEL10K_URL="https://github.com/romkatv/powerlevel10k.git"
+NEOFETCH_CONFIG="$HOME/.neofetch-config.conf"
+ZSH_CONFIG_DIR="$HOME/.zsh"
 ZPLUG_URL="https://github.com/zplug/zplug"
 ZPLUG_INIT_FILE="$HOME/.zplug/init.zsh"
 ENV_FILE="$HOME/.env"
 
 # -------------------------------------------------------
-# zsh History settings for auto suggestions
-# -------------------------------------------------------
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-# -------------------------------------------------------
 # Source username
 # -------------------------------------------------------
-source "$HOME/Dotfiles/zsh/p10k-user/username.zsh"
+# figlet -f dosrebel "$(echo $USER | tr '[:lower:]' '[:upper:]' | head -c 1)${USER:1}" | lolcat
+figlet -f dosrebel "ZPL" | lolcat
 
 # -------------------------------------------------------
 # Function to clone zplug if not present and clone it
@@ -46,56 +46,67 @@ clone_zplug
 # -------------------------------------------------------
 # Function to clone powerlevel10k and clone it
 # -------------------------------------------------------
-clone_powerlevel10k() {
-  if [ ! -d "$ZSH_ADDONS_DIR/powerlevel10k" ]; then
-    git clone "$POWERLEVEL10K_URL" "$ZSH_ADDONS_DIR/powerlevel10k"
-  fi
-}
-
-clone_powerlevel10k
+# clone_powerlevel10k() {
+#   if [ ! -d "$ZSH_ADDONS_DIR/powerlevel10k" ]; then
+#     git clone "$POWERLEVEL10K_URL" "$ZSH_ADDONS_DIR/powerlevel10k"
+#   fi
+# }
+#
+# clone_powerlevel10k
 
 # -------------------------------------------------------
 # Function to clone zsh-autosuggestions
 # -------------------------------------------------------
-clone_zsh_autosuggestions() {
-  if [ ! -d "$ZSH_ADDONS_DIR/zsh-autosuggestions" ]; then
-    git clone "$ZSH_AUTOSUGGESTIONS_URL" "$ZSH_ADDONS_DIR/zsh-autosuggestions"
-  fi
-}
-
-clone_zsh_autosuggestions
+# clone_zsh_autosuggestions() {
+#   if [ ! -d "$ZSH_ADDONS_DIR/zsh-autosuggestions" ]; then
+#     git clone "$ZSH_AUTOSUGGESTIONS_URL" "$ZSH_ADDONS_DIR/zsh-autosuggestions"
+#   fi
+# }
+#
+# clone_zsh_autosuggestions
 
 # -------------------------------------------------------
 # Function to install plugins with zplug installer
 # -------------------------------------------------------
 install_plugins() {
-  zplug "esc/conda-zsh-completion" # Conda Zsh completion
-  zplug "zsh-users/zsh-autosuggestions" # Zsh autosuggestions like double "", ()
-  zplug "hlissner/zsh-autopair" # Autopair for Zsh
-  # zplug "zap-zsh/supercharge" # Supercharge Zsh with directory completions
+  zplug "zsh-users/zsh-history-substring-search", as:plugin
+  zplug "esc/conda-zsh-completion", defer:"3" # Conda Zsh completion
+  zplug "zsh-users/zsh-autosuggestions" 
+  zplug "hlissner/zsh-autopair" # Zsh autopairs like double "", ()
+  zplug "oyinbra/supercharge" # Supercharge Zsh with directory completions
   zplug "zap-zsh/vim" # Vim integration for Zsh
   zplug "zap-zsh/fzf" # Fuzzy finder for Zsh
+  zplug "zap-zsh/sudo", defer:"2"
+  zplug "zap-zsh/web-search", defer:"3" 
   zplug "zsh-users/zsh-syntax-highlighting" # Syntax highlighting for Zsh
-  zplug "djui/alias-tips" # Display helpful alias usage tips
+  zplug "djui/alias-tips", defer:"2" # Display helpful alias usage tips
+  # zplug 'dracula/zsh', as:theme
+  zplug "romkatv/powerlevel10k", as:theme
+  zplug "zsh-users/zsh-autosuggestions"
+  zplug "ohmyzsh/ohmyzsh", defer:"3"
+  zplug "plugins/copyfile", from:oh-my-zsh, defer:"3" 
+  zplug "plugins/copybuffer", from:oh-my-zsh, defer:"3" 
+  zplug "plugins/dirhistory", from:oh-my-zsh, defer:"3" 
+  zplug "plugins/history", from:oh-my-zsh, defer:"3" 
 }
 
 # -------------------------------------------------------
 # Function to source custom plugins
 # -------------------------------------------------------
-source_plugins() {
-  source "$ZSH_CONFIG_DIR/plugins/sudo/sudo.plugin.zsh"
-  source "$ZSH_CONFIG_DIR/plugins/web-search/web-search.plugin.zsh"
-  # copyfile file/location/you/need/to/copy
-  source "$ZSH_CONFIG_DIR/plugins/copyfile/copyfile.plugin.zsh"
-  # copy the text currently typed in the command line.
-  source "$ZSH_CONFIG_DIR/plugins/copybuffer/copybuffer.plugin.zsh"
-  # alt + left or alt + right to navigate directory
-  source "$ZSH_CONFIG_DIR/plugins/dirhistory/dirhistory.plugin.zsh"
-  # hs/hsi nvim will give all history command with nvim
-  source "$ZSH_CONFIG_DIR/plugins/history/history.plugin.zsh"
-  for file in "$ZSH_CONFIG_DIR/plugins/custom/"*.zsh; do source "$file"; done
-
-}
+# # omz_plugins() {
+#   source "$ZSH_CONFIG_DIR/plugins/sudo/sudo.plugin.zsh"
+#   source "$ZSH_CONFIG_DIR/plugins/web-search/web-search.plugin.zsh"
+#   # copyfile file/location/you/need/to/copy
+#   source "$ZSH_CONFIG_DIR/plugins/copyfile/copyfile.plugin.zsh"
+#   # copy the text currently typed in the command line.
+#   source "$ZSH_CONFIG_DIR/plugins/copybuffer/copybuffer.plugin.zsh"
+#   # alt + left or alt + right to navigate directory
+#   source "$ZSH_CONFIG_DIR/plugins/dirhistory/dirhistory.plugin.zsh"
+#   # hs/hsi nvim will give all history command with nvim
+#   source "$ZSH_CONFIG_DIR/plugins/history/history.plugin.zsh"
+#   for file in "$ZSH_CONFIG_DIR/plugins/custom/"*.zsh; do source "$file"; done
+#
+# }
 
 # -------------------------------------------------------
 # NEOFETCH
@@ -117,7 +128,7 @@ source "$ZPLUG_INIT_FILE"
 # -------------------------------------------------------
 # Source plugins
 # -------------------------------------------------------
-source_plugins
+# omz_plugins
 
 # -------------------------------------------------------
 # install plugins
@@ -127,13 +138,15 @@ install_plugins
 # -------------------------------------------------------
 # Zsh addons
 # -------------------------------------------------------
-source "$ZSH_ADDONS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
-source "$ZSH_ADDONS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# source "$ZSH_ADDONS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
+# source "$ZSH_ADDONS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # -------------------------------------------------------
 # keybinds
 # -------------------------------------------------------
 bindkey '^ ' autosuggest-accept
+
+# zstyle ':completion:*' case-insensitive
 
 zle_highlight=('paste:none')
 
@@ -156,10 +169,13 @@ zplug load
 # pokemon-colorscripts --no-title -r 1,3,6
 
 # -------------------------------------------------------
-# Function to source aliases
+# Function to source aliases and custom plugins
 # -------------------------------------------------------
-for file in "$ZSH_CONFIG_DIR/conf/"*.zsh; do source "$file"; done
-
+for file in "$ZSH_CONFIG_DIR/custom_plugins/"*.zsh; do source "$file"; done
+for file in "$ZSH_CONFIG_DIR/aliases/"*.zsh; do source "$file"; done
+alias q="exit"
+alias ezsh="exec zsh"
+alias v="nvim"
 # -------------------------------------------------------
 # Function to suppress powerlevel 10 prompt if any
 # -------------------------------------------------------
@@ -168,5 +184,7 @@ for file in "$ZSH_CONFIG_DIR/conf/"*.zsh; do source "$file"; done
 # -------------------------------------------------------
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # -------------------------------------------------------
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
+[[ ! -f "$ZSH_CONFIG_DIR/.p10k.zsh" ]] || source "$ZSH_CONFIG_DIR/.p10k.zsh"
