@@ -14,7 +14,7 @@
 # -------------------------------------------------------
 # Use plugless zshrc
 # -------------------------------------------------------
-# source ~/.zshrc.plugless && return
+source ~/.zshrc.plugless && return
 
 # -------------------------------------------------------
 # Constants
@@ -44,28 +44,6 @@ clone_zplug() {
 clone_zplug
 
 # -------------------------------------------------------
-# Function to clone powerlevel10k and clone it
-# -------------------------------------------------------
-# clone_powerlevel10k() {
-#   if [ ! -d "$ZSH_ADDONS_DIR/powerlevel10k" ]; then
-#     git clone "$POWERLEVEL10K_URL" "$ZSH_ADDONS_DIR/powerlevel10k"
-#   fi
-# }
-#
-# clone_powerlevel10k
-
-# -------------------------------------------------------
-# Function to clone zsh-autosuggestions
-# -------------------------------------------------------
-# clone_zsh_autosuggestions() {
-#   if [ ! -d "$ZSH_ADDONS_DIR/zsh-autosuggestions" ]; then
-#     git clone "$ZSH_AUTOSUGGESTIONS_URL" "$ZSH_ADDONS_DIR/zsh-autosuggestions"
-#   fi
-# }
-#
-# clone_zsh_autosuggestions
-
-# -------------------------------------------------------
 # Function to install plugins with zplug installer
 # -------------------------------------------------------
 install_plugins() {
@@ -91,24 +69,6 @@ install_plugins() {
 }
 
 # -------------------------------------------------------
-# Function to source custom plugins
-# -------------------------------------------------------
-# # omz_plugins() {
-#   source "$ZSH_CONFIG_DIR/plugins/sudo/sudo.plugin.zsh"
-#   source "$ZSH_CONFIG_DIR/plugins/web-search/web-search.plugin.zsh"
-#   # copyfile file/location/you/need/to/copy
-#   source "$ZSH_CONFIG_DIR/plugins/copyfile/copyfile.plugin.zsh"
-#   # copy the text currently typed in the command line.
-#   source "$ZSH_CONFIG_DIR/plugins/copybuffer/copybuffer.plugin.zsh"
-#   # alt + left or alt + right to navigate directory
-#   source "$ZSH_CONFIG_DIR/plugins/dirhistory/dirhistory.plugin.zsh"
-#   # hs/hsi nvim will give all history command with nvim
-#   source "$ZSH_CONFIG_DIR/plugins/history/history.plugin.zsh"
-#   for file in "$ZSH_CONFIG_DIR/plugins/custom/"*.zsh; do source "$file"; done
-#
-# }
-
-# -------------------------------------------------------
 # NEOFETCH
 # -------------------------------------------------------
 neofetch --config "$NEOFETCH_CONFIG"
@@ -126,27 +86,14 @@ fi
 source "$ZPLUG_INIT_FILE"
 
 # -------------------------------------------------------
-# Source plugins
-# -------------------------------------------------------
-# omz_plugins
-
-# -------------------------------------------------------
 # install plugins
 # -------------------------------------------------------
 install_plugins
 
 # -------------------------------------------------------
-# Zsh addons
-# -------------------------------------------------------
-# source "$ZSH_ADDONS_DIR/powerlevel10k/powerlevel10k.zsh-theme"
-# source "$ZSH_ADDONS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
-# -------------------------------------------------------
 # keybinds
 # -------------------------------------------------------
 bindkey '^ ' autosuggest-accept
-
-# zstyle ':completion:*' case-insensitive
 
 zle_highlight=('paste:none')
 
@@ -176,6 +123,7 @@ for file in "$ZSH_CONFIG_DIR/aliases/"*.zsh; do source "$file"; done
 alias q="exit"
 alias ezsh="exec zsh"
 alias v="nvim"
+
 # -------------------------------------------------------
 # Function to suppress powerlevel 10 prompt if any
 # -------------------------------------------------------
