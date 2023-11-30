@@ -109,7 +109,7 @@ alias sym="ln -sf"
 
 # Grub file
 alias zxgrub="sudo nvim /etc/default/grub"
-alias zxacf="nvim ~/dotfiles/etc/auto-cpufreq.conf"
+alias zxacf="nvim ~/Dotfiles/etc/auto-cpufreq.conf"
 # Update Grub
 alias update.grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
@@ -180,7 +180,7 @@ alias nvimd="cd ~/.config/nvim"
 alias zshd="cd ~/.config/zsh/conf/"
 
 #Dotfiles
-alias dotfiles="cd ~/dotfiles"
+alias dotfiles="cd ~/Dotfiles"
 
 # Work Directory
 alias workspace="cd ~/Workspace"
@@ -198,10 +198,10 @@ alias pkgd="cd /var/cache/pacman/pkg"
 alias pictures="cd ~/Pictures"
 
 # Local user Backup
-alias backup="sudo /home/oyinbra/dotfiles/backup.sh"
+alias backup="sudo /home/oyinbra/Dotfiles/backup.sh"
 alias backup.pkg="sudo rsync -aAXv --delete /var/cache/pacman/pkg /Backup"
 # Local user Restore  
-alias restore="sudo /home/oyinbra/dotfiles/restore.sh"      
+alias restore="sudo /home/oyinbra/Dotfiles/restore.sh"      
 
 # Search for files or folders including hidden folders and files
 alias lsp="ls -a | grep -i"

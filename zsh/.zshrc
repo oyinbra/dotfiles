@@ -7,67 +7,40 @@
 # ███ ███ █ █ █ █ ███
 
 # -------------------------------------------------------
-# Use zap zshrc
-# -------------------------------------------------------
-# source ~/.zshrc.zap && return
-
-# -------------------------------------------------------
-# Use plugless zshrc
-# -------------------------------------------------------
-source ~/.zshrc.plugless && return
-
-# -------------------------------------------------------
 # Constants
 # -------------------------------------------------------
-ZPLUG_DIR="$HOME/.zplug"
-NEOFETCH_CONFIG="$HOME/.neofetch-config.conf"
+NEOFETCH_CONFIG="$HOME/.zsh/.neofetch-config.conf"
 ZSH_CONFIG_DIR="$HOME/.zsh"
-ZPLUG_URL="https://github.com/zplug/zplug"
-ZPLUG_INIT_FILE="$HOME/.zplug/init.zsh"
 ENV_FILE="$HOME/.env"
+ZSH_PLUGINS_DIR="$HOME/.zsh-plugins"
 
 # -------------------------------------------------------
 # Source username
 # -------------------------------------------------------
-# figlet -f dosrebel "$(echo $USER | tr '[:lower:]' '[:upper:]' | head -c 1)${USER:1}" | lolcat
-figlet -f dosrebel "ZPL" | lolcat
+figlet -f dosrebel "$(echo $USER | tr '[:lower:]' '[:upper:]' | head -c 1)${USER:1}" | lolcat
 
 # -------------------------------------------------------
-# Function to clone zplug if not present and clone it
+# Define an array of plugin paths
 # -------------------------------------------------------
-clone_zplug() {
-  if [ ! -d "$ZPLUG_DIR" ]; then
-    git clone "$ZPLUG_URL" "$ZPLUG_DIR"
-  fi
-}
-
-clone_zplug
-
-# -------------------------------------------------------
-# Function to install plugins with zplug installer
-# -------------------------------------------------------
-install_plugins() {
-  zplug "zsh-users/zsh-history-substring-search", as:plugin
-  zplug "esc/conda-zsh-completion", defer:"3" # Conda Zsh completion
-  zplug "zsh-users/zsh-autosuggestions" 
-  zplug "hlissner/zsh-autopair" # Zsh autopairs like double "", ()
-  zplug "oyinbra/supercharge" # Supercharge Zsh with directory completions
-  zplug "zap-zsh/vim" # Vim integration for Zsh
-  zplug "zap-zsh/fzf" # Fuzzy finder for Zsh
-  zplug "zap-zsh/sudo", defer:"2"
-  zplug "zap-zsh/web-search", defer:"3" 
-  zplug "zsh-users/zsh-syntax-highlighting" # Syntax highlighting for Zsh
-  zplug "djui/alias-tips", defer:"2" # Display helpful alias usage tips
-  # zplug 'dracula/zsh', as:theme
-  zplug "romkatv/powerlevel10k", as:theme
-  zplug "zsh-users/zsh-autosuggestions"
-  zplug "ohmyzsh/ohmyzsh", defer:"3"
-  zplug "plugins/copyfile", from:oh-my-zsh, defer:"3" 
-  zplug "plugins/copybuffer", from:oh-my-zsh, defer:"3" 
-  zplug "plugins/dirhistory", from:oh-my-zsh, defer:"3" 
-  zplug "plugins/history", from:oh-my-zsh, defer:"3" 
-}
-
+plugins=(
+    "zsh-history-substring-search/zsh-history-substring-search.plugin.zsh"
+    "zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+    "zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
+    "alias-tips/alias-tips.plugin.zsh"
+    "conda-zsh-completion/conda-zsh-completion.plugin.zsh"
+    "fzf/fzf.plugin.zsh"
+    "powerlevel10k/powerlevel10k.zsh-theme"
+    "sudo/sudo.plugin.zsh"
+    "supercharge/supercharge.plugin.zsh"
+    "vim/vim.plugin.zsh"
+    "web-search/web-search.plugin.zsh"
+    "zap-prompt/zap-prompt.zsh-theme"
+    "zsh-autopair/autopair.plugin.zsh"
+    "ohmyzsh/plugins/copybuffer/copybuffer.plugin.zsh"
+    "ohmyzsh/plugins/copyfile/copyfile.plugin.zsh"
+    "ohmyzsh/plugins/dirhistory/dirhistory.plugin.zsh"
+    "ohmyzsh/plugins/history/history.plugin.zsh"
+)
 # -------------------------------------------------------
 # NEOFETCH
 # -------------------------------------------------------
@@ -81,39 +54,21 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # -------------------------------------------------------
-# Source zplug
+# Load plugins
 # -------------------------------------------------------
-source "$ZPLUG_INIT_FILE"
+for plugin in "${plugins[@]}"; do
+    source "$ZSH_PLUGINS_DIR/$plugin"
+done
 
 # -------------------------------------------------------
-# install plugins
-# -------------------------------------------------------
-install_plugins
-
-# -------------------------------------------------------
-# keybinds
+# 'Ctrl + Space' key combination to accept autosuggestions
 # -------------------------------------------------------
 bindkey '^ ' autosuggest-accept
 
+# -------------------------------------------------------
+# Set the zle_highlight style for paste to 'none'
+# -------------------------------------------------------
 zle_highlight=('paste:none')
-
-# -------------------------------------------------------
-# Install plugins if there are plugins that have not been installed
-# -------------------------------------------------------
-if ! zplug check --verbose; then
-    printf "Install? [Y/n]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# -------------------------------------------------------
-# Then, source plugins and add commands to $PATH
-# -------------------------------------------------------
-zplug load
-
-# Display Pokemon color
-# pokemon-colorscripts --no-title -r 1,3,6
 
 # -------------------------------------------------------
 # Function to source aliases and custom plugins
@@ -128,11 +83,6 @@ alias v="nvim"
 # Function to suppress powerlevel 10 prompt if any
 # -------------------------------------------------------
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
-# -------------------------------------------------------
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# -------------------------------------------------------
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
 [[ ! -f "$ZSH_CONFIG_DIR/.p10k.zsh" ]] || source "$ZSH_CONFIG_DIR/.p10k.zsh"
