@@ -65,8 +65,9 @@ alias mkdir="mkdir -p"
 # List Color
 alias ls="ls --color=auto"
 # List All
-alias  ll='eza -lh  --icons=auto' # long list
-alias l='eza -1   --icons=auto' # short list
+alias l='eza -h   --icons=auto' # Grid
+alias lv='eza -1   --icons=auto' # List
+alias ll='eza -lh  --icons=auto' # long list
 alias la='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 # Terminal config

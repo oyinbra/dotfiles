@@ -14,12 +14,36 @@ export XDG_CURRENT_DESKTOP="Wayland"
 eval "$(zoxide init zsh)"
 export PATH="$HOME/.local/bin":$PATH
 
+# -------------------------------------------------------
 # Foundry setup
+# -------------------------------------------------------
 export PATH="$PATH:/home/oyinbra/.foundry/bin"
 
+# -------------------------------------------------------
 # export kvantum
+# -------------------------------------------------------
 export QT_QPA_PLATFORMTHEME="kvantum"
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
+
+# -------------------------------------------------------
+# Function to load environment variables
+# -------------------------------------------------------
+load_environment() {
+  if [ -f "$ENV_FILE" ]; then
+    source "$ENV_FILE"
+  else
+    echo "Warning: $ENV_FILE not found. Consider creating it with your environment variables." >&2
+  fi
+}
+
+load_environment
+
+# -------------------------------------------------------
+# SSH Alias for Kitty Terminal: 
+# -------------------------------------------------------
+if [[ $TERM == "xterm-kitty" ]]; then
+  alias ssh="kitty +kitten ssh"
+fi
