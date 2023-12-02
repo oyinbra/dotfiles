@@ -209,6 +209,7 @@ alias lsp="ls -a | grep -i"
 
 # Zsh config
 alias zxzshrc="nvim ~/.zshrc"
+alias ezsh="exec zsh"
 
 # Bash config
 alias zxbash="nvim ~/.bashrc"
