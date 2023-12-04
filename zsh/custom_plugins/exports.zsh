@@ -2,7 +2,7 @@
 
 export EDITOR="nvim"
 export TERMINAL="kitty"
-export BROWSER="chromium"
+export BROWSER="vivaldi"
 export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
@@ -47,3 +47,19 @@ load_environment
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
 fi
+
+# -------------------------------------------------------
+# 'Ctrl + Space' key combination to accept autosuggestions
+# -------------------------------------------------------
+bindkey '^ ' autosuggest-accept
+
+# -------------------------------------------------------
+# Set the zle_highlight style for paste to 'none'
+# -------------------------------------------------------
+zle_highlight=('paste:none')
+
+# -------------------------------------------------------
+# keybinds for zsh-history-substring-search
+# -------------------------------------------------------
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
