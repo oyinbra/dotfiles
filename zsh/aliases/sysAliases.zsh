@@ -1,13 +1,10 @@
 #!/bin/zsh
 
-#   ████████                        ██      ██ ██
-#  ██░░░░░░   ██   ██              ████    ░██░░
-# ░██        ░░██ ██   ██████     ██░░██   ░██ ██  ██████    ██████  █████   ██████
-# ░█████████  ░░███   ██░░░░     ██  ░░██  ░██░██ ░░░░░░██  ██░░░░  ██░░░██ ██░░░░
-# ░░░░░░░░██   ░██   ░░█████    ██████████ ░██░██  ███████ ░░█████ ░███████░░█████
-#        ░██   ██     ░░░░░██  ░██░░░░░░██ ░██░██ ██░░░░██  ░░░░░██░██░░░░  ░░░░░██
-#  ████████   ██      ██████   ░██     ░██ ███░██░░████████ ██████ ░░██████ ██████
-# ░░░░░░░░   ░░      ░░░░░░    ░░      ░░ ░░░ ░░  ░░░░░░░░ ░░░░░░   ░░░░░░ ░░░░░░
+# ███ █ █ ███   ███ █   ███ ███ ███ ███ ███
+# █   █ █ █     █ █ █    █  █ █ █   █   █
+#  █   █   █    █ █ █    █  █ █  █  ███  █
+#   █  █    █   ███ █    █  ███   █ █     █
+# ███  █  ███   █ █ ███ ███ █ █ ███ ███ ███
 
 # Show figlet fonts
 alias figfonts="showfigfonts"
@@ -25,20 +22,6 @@ alias metaoverview='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlySh
 # Check swapp value 
 alias swappiness="bat /proc/sys/vm/swappiness"
 alias swappiness.10='echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.conf"'
-# jupyter notebook
-alias jn="jupyter notebook"
-
-# check update-notifier
-alias pacau="update-notifier"
-alias h='history'
-alias hs='history | grep'
-alias hsi='history | grep -i'
-
-# Nvidia settings
-alias s.graphics='glxinfo | grep "OpenGL renderer"'
-alias nvidia="optimus-manager --switch nvidia --no-confirm"
-alias intel="optimus-manager --switch integrated --no-confirm"
-alias hybrid="optimus-manager --switch hybrid --no-confirm"
 # Magic link
 alias magic.slack="while sleep .1; do ps aux | grep slack | grep -v grep | grep magic; done"
 alias magic.discord="while sleep .1; do ps aux | grep discord | grep -v grep | grep magic; done"
@@ -46,39 +29,26 @@ alias magic.discord="while sleep .1; do ps aux | grep discord | grep -v grep | g
 alias setcron="sudo cp -r /Backup/cron/* /var/spool/cron/"
 alias vide="neovide"
 alias v="nvim"
-alias mount.all="sudo mount -a"
 # search for files requires ripgrep, fzf and fd packages
 alias f="fd --hidden --exclude .git | fzf-tmux -p | xargs nvim"
-alias t="tree"
 alias q="exit"
-# Copy
-alias cp="cp -r"
 # Timeshift
 alias tsb="sudo timeshift --create --comments"
 alias tsr="sudo timeshift --restore"
 
 # Watch SASS and output to dist folder
 alias sass.watch="sass --watch scss:dist/css"
-
-alias cl="clear"
 alias mkdir="mkdir -p"
-# List Color
-alias ls="ls --color=auto"
 # List All
 alias l='eza -h   --icons=auto' # Grid
-alias lv='eza -1   --icons=auto' # List
+alias la='eza -a --icons=auto --sort=name --group-directories-first' # long list all
+alias ls='eza -1   --icons=auto' # List
 alias ll='eza -lh  --icons=auto' # long list
-alias la='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+alias lv='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
-# Terminal config
-alias zxterminal="sudo update-alternatives --config x-terminal-emulator"
 
-# Delete Directory or files
-alias rmr="rm -r"
-alias rm="rm -rf"
+alias rm="rm -rf" # Delete Directory or files
 alias cp="cp -r"
-# List Users
-alias list.users="cat /etc/passwd"
 
 # Hibernate
 alias hibernate="systemctl hibernate"
@@ -105,23 +75,14 @@ alias fgrep='fgrep --color=auto'
 # Nethogs
 alias netlog="sudo nethogs"
 
-# Symlink
-alias sym="ln -sf"
-
 # Grub file
 alias zxgrub="sudo nvim /etc/default/grub"
 alias zxacf="nvim ~/Dotfiles/etc/auto-cpufreq.conf"
 # Update Grub
-alias update.grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-# TimeShift configuration settings
-alias zxtimeshift="sudo nvim /etc/timeshift-autosnap.conf"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # System error
 alias s.journalctl="sudo journalctl -p 3 -xb"
-
-# Bpytop
-alias s.bpytop="bpytop"
 
 # Log out
 alias logout="qdbus org.kde.ksmserver /KSMServer logout 0 0 0"
@@ -136,12 +97,6 @@ alias npm.chown="sudo chown -R $USER $(npm root -g)"
 # Process ID
 alias pid="ps -ef|grep -i"
 
-# Btop settings
-# alias btop="btop --utf-force"
-
-# Nano config
-alias n="sudo nano"
-
 # NVIM Config
 alias vim="sudo nvim"
 
@@ -155,9 +110,6 @@ alias listen.port="sudo lsof -i -P -n | grep LISTEN"
 # Find process
 alias lsp="ps aux | grep"
 alias root="sudo -s"
-
-# Update clamav antivirus
-alias freshclam="sudo freshclam"
 
 # ##############################################
 # ############## AUTO-CPUFREQ ##################
