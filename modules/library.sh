@@ -2,17 +2,11 @@
 
 cat << "EOF"
 
- █████        ███  █████                                             
-░░███        ░░░  ░░███                                              
- ░███        ████  ░███████  ████████   ██████   ████████  █████ ████
- ░███       ░░███  ░███░░███░░███░░███ ░░░░░███ ░░███░░███░░███ ░███ 
- ░███        ░███  ░███ ░███ ░███ ░░░   ███████  ░███ ░░░  ░███ ░███ 
- ░███      █ ░███  ░███ ░███ ░███      ███░░███  ░███      ░███ ░███ 
- ███████████ █████ ████████  █████    ░░████████ █████     ░░███████ 
-░░░░░░░░░░░ ░░░░░ ░░░░░░░░  ░░░░░      ░░░░░░░░ ░░░░░       ░░░░░███ 
-                                                            ███ ░███ 
-                                                           ░░██████  
-                                                            ░░░░░░   
+█   ███ ██  ███ ███ ███ █ █
+█    █  █ █ █ █ █ █ █ █ █ █
+█    █  ██  ██  █ █ ██   █
+█    █  █ █ █ █ ███ █ █  █
+███ ███ ██  █ █ █ █ █ █  █
 
 EOF
 
@@ -62,7 +56,7 @@ _installPackagesPacman() {
     fi;
 
     printf "Packages not installed:\n%s\n" "${toInstall[@]}";
-    sudo pacman --noconfirm -S "${toInstall[@]}";
+    sudo pacman -S "${toInstall[@]}";
 }
 
 # ------------------------------------------------------
@@ -86,7 +80,7 @@ _installPackagesYay() {
     fi;
 
     printf "AUR ackages not installed:\n%s\n" "${toInstall[@]}";
-    yay --noconfirm -S "${toInstall[@]}";
+    yay -S "${toInstall[@]}";
 }
 
 # ------------------------------------------------------
@@ -135,6 +129,38 @@ _installSymLink() {
             [Nn]* )
                 # If user chooses not to install, break out of the loop
                 echo ""
+                break;;
+            * ) echo "Please answer yes or no.";;
+        esac
+    done
+}
+# -----------------------------------------
+# Function to prompt for user confirmation
+# -----------------------------------------
+confirm_execution() {
+    read -p "Do you want to run this step? (y/n): " choice
+    if [[ "$choice" =~ ^[Yy]$ ]]; then
+        "$@"
+    elif [[ "$choice" =~ ^[Nn]$ ]]; then
+        echo "Skipped."
+    else
+        echo "Invalid choice. Exiting."
+        exit 1
+    fi
+}
+
+# -----------------------------------------
+# Function to confirm start
+# -----------------------------------------
+confirm_start() {
+    while true; do
+        read -p "DO YOU WANT TO PROCEED (Yy/Nn): " yn
+        case $yn in
+            [Yy]* )
+                echo "Started."
+                break;;
+            [Nn]* ) 
+                exit;;
                 break;;
             * ) echo "Please answer yes or no.";;
         esac
