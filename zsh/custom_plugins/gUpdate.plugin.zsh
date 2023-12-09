@@ -1,13 +1,15 @@
 #!/bin/bash
 
+ZSH_PLUGIN_DIR="$HOME/.zsh-plugins"
+REPO_DIR="$HOME/Tmp"
 # -------------------------------------------------------
 # Function to update Git Repos in ~/Repo and ~/.zsh-plugins 
 # -------------------------------------------------------
 gupdate() {
     # Directories to update
     update_dirs=(
-      "$HOME/Tmp"
-      "$HOME/.zsh-plugins"
+      "$ZSH_PLUGIN_DIR"
+      "$REPO_DIR"
     )
 
     # Arrays to store updated, already up to date, and errored repositories
@@ -88,4 +90,5 @@ EOF
         echo "==> No repositories with local changes were updated."
     fi
 }
+
 
