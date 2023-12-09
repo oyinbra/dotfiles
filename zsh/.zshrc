@@ -44,7 +44,6 @@ gsource=(
   # ----------------------------------------------------
   "romkatv/powerlevel10k"
   # "wintermi/zsh-starship"
-	# "zap-zsh/satoshi-prompt"
 
   # ----------------------------------------------------
   # Pugins from OH-MY-ZSH DIR in "$HOME/.zsh-plugins"
@@ -83,3 +82,4 @@ for file in "$ZSH_CONFIG_DIR/aliases/"*.zsh; do source "$file"; done
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/zsh/.p10k.zsh.
 [[ ! -f "$P10K_CONFIG" ]] || source "$P10K_CONFIG"
 
+# eval "$(starship init zsh)"
