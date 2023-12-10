@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# ███ █   █ █ ███ ███ █   █   █   █ ███ █   █ ███ ███ ███ ███
+# █ █ █   █ █ █    █  ██  █   ██ ██ █ █ ██  █ █ █ █   █   █ █
+# ███ █   █ █ █    █  █ █ █   █ █ █ █ █ █ █ █ █ █ █   ███ ██
+# █   █   █ █ █ █  █  █  ██   █   █ ███ █  ██ ███ █ █ █   █ █
+# █   ███ ███ ███ ███ █   █   █   █ █ █ █   █ █ █ ███ ███ █ █
+
+# ------------------------------------------------------
+# Function to source plugins in zshrc file
+# ------------------------------------------------------
 source_plugin() {
     local plugin_name="$1"
     local plugin_path="$ZSH_PLUGIN_DIR/$plugin_name/$plugin_name.plugin.zsh"
@@ -32,7 +41,7 @@ source_plugin() {
 }
 
 # Loop to source plugins
-for plugin in "${plugins[@]}"; do
+for plugin in "${gsource[@]}"; do
     source_plugin "$(basename "$plugin")"
 done
 
