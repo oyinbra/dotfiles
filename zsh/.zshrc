@@ -27,7 +27,6 @@ gsource=(
   # Pugins from "$HOME/.zsh-plugins"
   # -----------------------------------------------------
   "zsh-users/zsh-autosuggestions" 
-  "hlissner/zsh-autopair" # Zsh autopairs like double "", ()
   "zsh-users/zsh-syntax-highlighting" # Syntax highlighting for Zsh
   "zsh-users/zsh-history-substring-search"
   "oyinbra/supercharge" # Supercharge Zsh with directory completions
@@ -36,6 +35,7 @@ gsource=(
   "zap-zsh/sudo"
   "djui/alias-tips" # Display helpful alias usage tips
   "esc/conda-zsh-completion" # Conda Zsh completion
+  "hlissner/zsh-autopair" # Zsh autopairs like double "", ()
   # "wintermi/zsh-lsd"
   # "wintermi/zsh-fnm" #  fast and simple Node.js version manager
 
