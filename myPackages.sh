@@ -34,6 +34,7 @@ confirm_start
 packagesPacman=(
     "vivaldi"
     "timeshift-autosnap"
+    "at"
     "eos-update-notifier"
     "fd"
     "figlet"

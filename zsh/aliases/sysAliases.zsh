@@ -109,7 +109,7 @@ alias listen.port="sudo lsof -i -P -n | grep LISTEN"
 
 # Find process
 alias lsp="ps aux | grep"
-alias root="sudo -s"
+alias root="sudo su"
 
 # ##############################################
 # ############## AUTO-CPUFREQ ##################
