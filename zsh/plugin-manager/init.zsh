@@ -45,3 +45,43 @@ for plugin in "${gsource[@]}"; do
     source_plugin "$(basename "$plugin")"
 done
 
+# ------------------------------------------------------
+# Function to clone plugins using gclone from terminal
+# ------------------------------------------------------
+gclone() {
+  # Prompt user for the repository name
+cat << "EOF"
+▄▖▖ ▖▄▖▄▖▄▖  ▄▖▄▖▄▖▖▖▖▖▄   ▄▖▄▖▄▖▄▖▄▖▄▖▄▖▄▖▄▖▖▖  ▖ ▖▄▖▖  ▖▄▖
+▙▖▛▖▌▐ ▙▖▙▘  ▌ ▐ ▐ ▙▌▌▌▙▘  ▙▘▙▖▙▌▌▌▚ ▐ ▐ ▌▌▙▘▌▌  ▛▖▌▌▌▛▖▞▌▙▖
+▙▖▌▝▌▐ ▙▖▌▌  ▙▌▟▖▐ ▌▌▙▌▙▘  ▌▌▙▖▌ ▙▌▄▌▟▖▐ ▙▌▌▌▐   ▌▝▌▛▌▌▝ ▌▙▖
+
+EOF
+  echo -n "e.g., oyinbra/supercharge): "
+  read repo_name
+
+  # Trim leading and trailing whitespace from the input
+  repo_name=$(echo "$repo_name" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+
+  # Check if the input is empty
+  if [ -z "$repo_name" ]; then
+    echo "Error: Please provide a valid repository name."
+    return 1
+  fi
+
+  # Create the GitHub repository link
+  repo_link="https://github.com/$repo_name.git"
+
+  # Set the destination directory
+  destination="$ZSH_PLUGIN_DIR/$(basename "$repo_name")"
+
+  # Check if the repository exists
+  if git ls-remote "$repo_link" &>/dev/null; then
+    # Clone the repository
+    git clone "$repo_link" "$destination"
+    # Print a success message
+    echo "Repository cloned to $destination"
+  else
+    echo "Error: The repository '$repo_link' does not exist or is private."
+  fi
+}
+
