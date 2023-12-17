@@ -1,9 +1,12 @@
-# ##############################################
-# ############## PYTHON ALIASES ################
-# ##############################################
+#!/bin/zsh
+
+# ███ █ █ ███ █ █ ███ █   █   ███ █   ███ ███ ███ ███ ███
+# █ █ █ █  █  █ █ █ █ ██  █   █ █ █    █  █ █ █   █   █
+# ███  █   █  ███ █ █ █ █ █   █ █ █    █  █ █  █  ███  █
+# █    █   █  █ █ █ █ █  ██   ███ █    █  ███   █ █     █
+# █    █   █  █ █ ███ █   █   █ █ ███ ███ █ █ ███ ███ ███
 
 # Activate or create environment variable for python in current directory if not available
-
 myenv() {
     venv_name="myenv"
 
@@ -23,9 +26,6 @@ alias pyapp="python app.py"
 
 # Run flask app with port 8000
 alias flaskrun="flask run --port=8000"
-
-# Deactivate myenv
-# alias myenv.d="deactivate"
 
 # Python version
 alias pv="py --version"
