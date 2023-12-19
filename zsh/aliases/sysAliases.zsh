@@ -38,9 +38,9 @@ alias tsr="sudo timeshift --restore"
 alias sass.watch="sass --watch scss:dist/css"
 alias mkdir="mkdir -p"
 # List All
-alias l='eza -h   --icons=auto' # Grid
+alias ls='eza -h   --icons=auto' # Grid
 alias la='eza -a --icons=auto --sort=name --group-directories-first' # long list all
-alias ls='eza -1   --icons=auto' # List
+alias l='eza -1   --icons=auto' # List
 alias ll='eza -lh  --icons=auto' # long list
 alias lv='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
