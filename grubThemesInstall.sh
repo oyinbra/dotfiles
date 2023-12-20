@@ -1,11 +1,12 @@
 #!/bin/bash
 
 cat << "EOF"
-  ____            _       _____ _
- / ___|_ __ _   _| |__   |_   _| |__   ___ _ __ ___   ___  ___
-| |  _| '__| | | | '_ \    | | | '_ \ / _ \ '_ ` _ \ / _ \/ __|
-| |_| | |  | |_| | |_) |   | | | | | |  __/ | | | | |  __/\__ \
- \____|_|   \__,_|_.__/    |_| |_| |_|\___|_| |_| |_|\___||___/
+
+███ ███ █ █ ██    ███ █ █ ███ █   █ ███ ███
+█   █ █ █ █ █ █    █  █ █ █   ██ ██ █   █
+█   ██  █ █ ██     █  ███ ███ █ █ █ ███  █
+█ █ █ █ █ █ █ █    █  █ █ █   █   █ █     █
+███ █ █ ███ ██     █  █ █ ███ █   █ ███ ███
 
 EOF
 
@@ -15,6 +16,21 @@ EOF
 TMP_DIR="$HOME/Tmp"
 if [ ! -d "$TMP_DIR" ]; then
   mkdir "$TMP_DIR"
+fi
+
+# ------------------------------------------------------
+# Change Directory to grub2-themest if exists
+# Update the old version if available
+# ------------------------------------------------------
+if [ -d "$TMP_DIR/grub2-themes/" ]; then
+  cd "$TMP_DIR/grub2-themes"
+  git pull origin master  # Update the existing version
+else
+  # ------------------------------------------------------
+  # Clone the grub2-themes repo
+  # ------------------------------------------------------
+  git clone "https://github.com/vinceliuice/grub2-themes.git" "$TMP_DIR/grub-themes"
+  cd "$TMP_DIR/grub-themes"
 fi
 
 # ------------------------------------------------------
@@ -29,3 +45,4 @@ cd "$TMP_DIR/grub2-themes/"
 # Install grub themes
 # ------------------------------------------------------
 sudo ./install.sh -b -t tela
+
