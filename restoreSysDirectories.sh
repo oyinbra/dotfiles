@@ -41,21 +41,15 @@ for directory in "${directories[@]}"; do
 done
 
 # -----------------------------------------------------------
-# Restore Home Directory
+# Update system
 # -----------------------------------------------------------
 cat << "EOF"
-▄▖▄▖▄▖▄▖▄▖▄▖▄▖  ▖▖▄▖▖  ▖▄▖  ▄ ▄▖▄▖▄▖
-▙▘▙▖▚ ▐ ▌▌▙▘▙▖  ▙▌▌▌▛▖▞▌▙▖  ▌▌▐ ▙▘▗▘
-▌▌▙▖▄▌▐ ▙▌▌▌▙▖  ▌▌▙▌▌▝ ▌▙▖  ▙▘▟▖▌▌▗
+▖▖▄▖▄ ▄▖▄▖▄▖  ▄▖▖▖▄▖▄▖▄▖▖  ▖▄▖
+▌▌▙▌▌▌▌▌▐ ▙▖  ▚ ▌▌▚ ▐ ▙▖▛▖▞▌▗▘
+▙▌▌ ▙▘▛▌▐ ▙▖  ▄▌▐ ▄▌▐ ▙▖▌▝ ▌▗
 
 EOF
-read -p "Do you want to restore /home? (y/n): " home_choice
-if [[ "$home_choice" =~ ^[Yy]$ ]]; then
-    sudo rsync -aAXv --ignore-times /Backup/home/ /home
-    echo "/home directory restored."
-else
-    echo "Skipping /home."
-fi
+confirm_execution sudo pacman -Syu
 
 cat << "EOF"
 
@@ -67,24 +61,3 @@ cat << "EOF"
 
 EOF
 
-# -----------------------------------------------------------
-# Update system
-# -----------------------------------------------------------
-cat << "EOF"
-▖▖▄▖▄ ▄▖▄▖▄▖  ▄▖▖▖▄▖▄▖▄▖▖  ▖▄▖
-▌▌▙▌▌▌▌▌▐ ▙▖  ▚ ▌▌▚ ▐ ▙▖▛▖▞▌▗▘
-▙▌▌ ▙▘▛▌▐ ▙▖  ▄▌▐ ▄▌▐ ▙▖▌▝ ▌▗
-
-EOF
-confirm_execution sudo pacman -Syu
-
-# -----------------------------------------------------------
-# Reboot system
-# -----------------------------------------------------------
-cat << "EOF"
-▄▖▄▖▄ ▄▖▄▖▄▖  ▄▖▖▖▄▖▄▖▄▖▖  ▖▄▖
-▙▘▙▖▙▘▌▌▌▌▐   ▚ ▌▌▚ ▐ ▙▖▛▖▞▌▗▘
-▌▌▙▖▙▘▙▌▙▌▐   ▄▌▐ ▄▌▐ ▙▖▌▝ ▌▗
-
-EOF
-confirm_execution reboot
