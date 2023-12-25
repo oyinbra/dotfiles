@@ -166,6 +166,50 @@ EOF
 
 confirm_execution systemctl enable --now preload.service
 
+# ------------------------------------------------------
+# Enable and configure firewalld
+# ------------------------------------------------------
+sudo systemctl enable --now firewalld
+sudo systemctl start firewalld
+sudo firewall-cmd --state
+sudo ufw disable
+sudo firewall-cmd --permanent --add-service=https
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-services
+sudo firewall-cmd --permanent --zone=public --add-service=kdeconnect
+sudo firewall-cmd --reload
+
+# ------------------------------------------------------
+# Stop reboot watchdog on boot
+# ------------------------------------------------------
+echo "RebootWatchdogSec=0" | sudo tee --append "/etc/systemd/system.conf"
+
+# ------------------------------------------------------
+# Reduce swappiness to 10
+# ------------------------------------------------------
+echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.d/99-swappiness.conf"
+
+# ------------------------------------------------------
+# Reload the sysctl configuration
+# ------------------------------------------------------
+sudo systemctl daemon-reload
+
+# ------------------------------------------------------
+# Enable crontab
+# ------------------------------------------------------
+sudo systemctl enable --now cronie.service
+
+# ------------------------------------------------------
+# Install mechvibes
+# ------------------------------------------------------
+cat << "EOF"
+▄▖▖ ▖▄▖▄▖▄▖▖ ▖   ▖  ▖▄▖▄▖▖▖▖▖▄▖▄ ▄▖▄▖
+▐ ▛▖▌▚ ▐ ▌▌▌ ▌   ▛▖▞▌▙▖▌ ▙▌▌▌▐ ▙▘▙▖▚
+▟▖▌▝▌▄▌▐ ▛▌▙▖▙▖  ▌▝ ▌▙▖▙▖▌▌▚▘▟▖▙▘▙▖▄▌
+
+EOF
+sudo pacman -U /var/cache/pacman/pkg/mechvibes-2.3.0-1-x86_64.pkg.tar.zst
+
 cat << "EOF"
 
 ██  ███ █   █ ███
