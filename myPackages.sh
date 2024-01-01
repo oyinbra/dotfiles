@@ -32,6 +32,9 @@ EOF
 confirm_start
 
 packagesPacman=(
+    "deluge"
+    "transmission-qt"
+    "qbittorrent"
     "vivaldi"
     "timeshift-autosnap"
     "at"
@@ -144,6 +147,8 @@ packagesPacman=(
 );
 
 packagesYay=(
+    "webtorrent-cli"
+    "frostwire"
     "preload"
     "tradingview"
 );
