@@ -35,6 +35,7 @@ packagesPacman=(
     "deluge"
     "transmission-qt"
     "qbittorrent"
+    "aria2"
     "vivaldi"
     "timeshift-autosnap"
     "at"
