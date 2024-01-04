@@ -36,3 +36,4 @@ alias pipug="pip3 install --upgrade"
 
 # Switch Python Version
 alias zxpython="sudo update-alternatives --config python3"
+

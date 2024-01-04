@@ -132,3 +132,4 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'     # human-readable sizes
 alias fs="du -sh" # Check Folder size
 alias free='free -m' # show sizes in MB
+
