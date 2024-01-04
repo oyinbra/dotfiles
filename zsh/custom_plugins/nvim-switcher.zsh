@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# █   █ ███ ███ █ █ ███ █   █   ███ █   █ ███ ███ ███ █ █ ███ ███
+# ██  █ █   █ █ █ █  █  ██ ██   █   █   █  █   █  █   █ █ █   █ █
+# █ █ █ ███ █ █ █ █  █  █ █ █    █  █ █ █  █   █  █   ███ ███ ██
+# █  ██ █   █ █ █ █  █  █   █     █ ██ ██  █   █  █   █ █ █   █ █
+# █   █ ███ ███  █  ███ █   █   ███ █   █ ███  █  ███ █ █ ███ █ █
+
 # Name on folder in .config directory
 alias lazy="NVIM_APPNAME=LazyVim nvim"
 alias kick="NVIM_APPNAME=KickStart nvim"
@@ -20,3 +26,4 @@ function vs() {
 }
 # Bind ctrl+y to vs for neovim switcher
 bindkey "^Y" vs
+

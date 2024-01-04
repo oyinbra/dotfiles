@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# ███ █ █ ███ ███ ███ ███ ███
+# █   █ █ █ █ █ █ █ █  █  █
+# ███  █  ███ █ █ ██   █   █
+# █   █ █ █   █ █ █ █  █    █
+# ███ █ █ █   ███ █ █  █  ███
+
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="vivaldi"
@@ -63,3 +69,4 @@ zle_highlight=('paste:none')
 # -------------------------------------------------------
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
