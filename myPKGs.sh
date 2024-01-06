@@ -33,8 +33,9 @@ confirm_start
 
 packagesPacman=(
     "deluge"
-    "transmission-qt"
-    "qbittorrent"
+    "deluge-gtk"
+    # "transmission-qt"
+    # "qbittorrent"
     "aria2"
     "vivaldi"
     "timeshift-autosnap"
