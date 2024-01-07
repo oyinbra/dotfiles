@@ -6,7 +6,7 @@
 #   █  █    █   ███ █    █  ███   █ █     █
 # ███  █  ███   █ █ ███ ███ █ █ ███ ███ ███
 
-alias torrent="aria2c"
+alias torrent="aria2c --seed-time=0"
 # Show figlet fonts
 alias figfonts="showfigfonts"
 # Reconfigure kwin
