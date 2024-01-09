@@ -6,7 +6,6 @@
 #   █  █    █   ███ █    █  ███   █ █     █
 # ███  █  ███   █ █ ███ ███ █ █ ███ ███ ███
 
-alias torrent="aria2c --seed-time=0"
 # Show figlet fonts
 alias figfonts="showfigfonts"
 # Reconfigure kwin
@@ -72,8 +71,6 @@ alias zxgrub="sudo nvim /etc/default/grub"
 alias zxacf="nvim ~/Dotfiles/etc/auto-cpufreq.conf"
 # Update Grub
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-# System error
-alias s.journalctl="sudo journalctl -p 3 -xb"
 # Log out
 alias logout="qdbus org.kde.ksmserver /KSMServer logout 0 0 0"
  # List npm package owners
