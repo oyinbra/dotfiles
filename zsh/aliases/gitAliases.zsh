@@ -9,9 +9,6 @@
 # Lazy Git
 alias lg="lazygit"
 
-# Check Git current version
-alias gv="git --version"
-
 # To edit your global Git configuration
 alias gcedit="git config --global --edit"
 
