@@ -6,7 +6,9 @@
 # █    █   █  █ █ █ █ █  ██   ███ █    █  ███   █ █     █
 # █    █   █  █ █ ███ █   █   █ █ ███ ███ █ █ ███ ███ ███
 
+# -------------------------------------------
 # Activate or create environment variable for python in current directory if not available
+# -------------------------------------------
 myenv() {
     venv_name="myenv"
 
