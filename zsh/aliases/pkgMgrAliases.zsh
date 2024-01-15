@@ -6,9 +6,6 @@
 # █   █ █ █ █   █   █ ███ █  ██ ███ █ █ █   █ █
 # █   █ █ ███   █   █ █ █ █   █ █ █ ███ ███ █ █
 
-# -------------------------------------------
-# Configure Arch mirror list
-# -------------------------------------------
 # Install a package using (AUR helper)
 alias deploy="yay -S"
 
@@ -75,7 +72,7 @@ alias pacrns="yay -Rns"
 # Find the package providing a specific file with 'yay -F'
 alias pacfind="yay -F"
 
-# Unlock yay database if stuck by removing the lock file
+# Unlock pacman database if stuck by removing the lock file
 alias pacunlock="sudo rm -rf /var/lib/pacman/db.lck"
 
 # View last installed packages
