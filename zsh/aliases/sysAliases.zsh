@@ -23,7 +23,6 @@ alias swappiness="bat /proc/sys/vm/swappiness"
 alias swappiness.10='echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.conf"'
 # Magic link
 alias magic.slack="while sleep .1; do ps aux | grep slack | grep -v grep | grep magic; done"
-alias magic.discord="while sleep .1; do ps aux | grep discord | grep -v grep | grep magic; done"
 # set crontab
 alias setcron="sudo cp -r /Backup/cron/* /var/spool/cron/"
 alias vide="neovide"
