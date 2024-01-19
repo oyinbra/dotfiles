@@ -30,6 +30,7 @@ gsource=(
   "zsh-users/zsh-syntax-highlighting" # Syntax highlighting for Zsh
   "zsh-users/zsh-history-substring-search"
   "oyinbra/supercharge" # Supercharge Zsh with directory completions
+  "oyinbra/gitinit" # Supercharge git init
   "zap-zsh/vim" # Vim integration for Zsh
   "zap-zsh/fzf" # Fuzzy finder for Zsh
   "zap-zsh/sudo"
