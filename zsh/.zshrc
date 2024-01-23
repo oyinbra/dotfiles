@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # ███ ███ █ █ ███ ███
 #   █ █   █ █ █ █ █
@@ -37,7 +37,6 @@ gsource=(
   "djui/alias-tips" # Display helpful alias usage tips
   "esc/conda-zsh-completion" # Conda Zsh completion
   "hlissner/zsh-autopair" # Zsh autopairs like double "", ()
-  # "wintermi/zsh-lsd"
   # "wintermi/zsh-fnm" #  fast and simple Node.js version manager
 
   # ----------------------------------------------------
