@@ -88,9 +88,9 @@ alias grshh="git reset --hard HEAD~1"
 # Check the remote link
 alias gl="git remote -v"
 # Set fetch url for remote origin 
-alias gfurl="git remote set-url origin"
+alias glf="git remote set-url origin"
 # Set push url for remote origin
-alias gpurl="git remote set-url --push origin"
+alias glp="git remote set-url --push origin"
 # Git log
 alias glg="git log"
 
