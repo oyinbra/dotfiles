@@ -1,18 +1,18 @@
 <!-- BADGE START -->
 <div class="badges-container" align="center">
-  <style>
-    /* Increase the size of badge images */
-    .badges-container img {
-      height: 30px; /* Adjust the height as needed */
-    }
-  </style>
+
+  <!-- Open Source Badges -->
+  <div class="open-source-badges">
+    <!-- Open Source Love -->
+    <a href="#"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103&style=for-the-badge" alt="Open Source Love" height="30px"></a>
+    <!-- MIT License -->
+    <a href="#"><img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103&style=for-the-badge" alt="MIT License" height="30px"></a>
+    <!-- Awesome -->
+    <a href="#"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" height="30px"></a>
+  </div>
   
-  <!-- Open Source -->
-  [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103&style=for-the-badge)](https://github.com/ellerbrock/open-source-badge/)
-  [![MIT License](https://badges.frapsoft.com/os/mit/mit.svg?v=103&style=for-the-badge)](https://opensource.org/licenses/mit-license.php)
-  [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) 
   <!-- Activities -->
-  [![Linux](https://img.shields.io/badge/Linux-%23.svg?v=103&logo=linux&color=FCC624&logoColor=black)](https://github.com/Oyinbra/nvim-config/search?l=vim-script)
+  [![Linux](https://img.shields.io/badge/Linux-%23.svg?v=103&logo=linux&color=FCC624&logoColor=black&style=for-the-badge)](#)
   [![Commit Activity](https://img.shields.io/github/commit-activity/m/Oyinbra/nvim-config?svg?v=103&style=for-the-badge)](https://github.com/Oyinbra/nvim-config/graphs/commit-activity)
   [![Last commit](https://img.shields.io/github/last-commit/Oyinbra/nvim-config?svg?v=103&logo=git&color=000F10&logoColor=darkorange&labelColor=302D41&style=for-the-badge)](#)
   [![Contributors](https://img.shields.io/github/contributors/Oyinbra/nvim-config?svg?v=103&style=for-the-badge)](https://github.com/Oyinbra/nvim-config/graphs/contributors)
