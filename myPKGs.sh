@@ -150,6 +150,7 @@ packagesPacman=(
 
 packagesYay=(
     "webtorrent-cli"
+    "mechvibes"
     "frostwire"
     "preload"
     "tradingview"
@@ -205,17 +206,6 @@ sudo systemctl daemon-reload
 # Enable crontab
 # ------------------------------------------------------
 sudo systemctl enable --now cronie.service
-
-# ------------------------------------------------------
-# Install mechvibes
-# ------------------------------------------------------
-cat << "EOF"
-▄▖▖ ▖▄▖▄▖▄▖▖ ▖   ▖  ▖▄▖▄▖▖▖▖▖▄▖▄ ▄▖▄▖
-▐ ▛▖▌▚ ▐ ▌▌▌ ▌   ▛▖▞▌▙▖▌ ▙▌▌▌▐ ▙▘▙▖▚
-▟▖▌▝▌▄▌▐ ▛▌▙▖▙▖  ▌▝ ▌▙▖▙▖▌▌▚▘▟▖▙▘▙▖▄▌
-
-EOF
-sudo pacman -U /var/cache/pacman/pkg/mechvibes-2.3.0-1-x86_64.pkg.tar.zst
 
 cat << "EOF"
 
