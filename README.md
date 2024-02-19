@@ -5,10 +5,10 @@
   <div class="open-source-badges">
     <!-- Open Source Love -->
     <a href="#"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103&style=for-the-badge" alt="Open Source Love" height="30px"></a>
-    <!-- MIT License -->
-    <a href="#"><img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103&style=for-the-badge" alt="MIT License" height="30px"></a>
     <!-- Awesome -->
     <a href="#"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome" height="30px"></a>
+    <!-- MIT License -->
+    <a href="#"><img src="https://badges.frapsoft.com/os/mit/mit.svg?v=103&style=for-the-badge" alt="MIT License" height="30px"></a>
   </div>
   
   <!-- Activities -->
