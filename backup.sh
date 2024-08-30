@@ -27,7 +27,7 @@ confirm_start
 # ------------------------------------------------------
 # Backup home directory
 # ------------------------------------------------------
-sudo rsync -aAXv --delete --exclude={"/home/oyinbra/.local/share/Trash/","/home/oyinbra/Downloads/"} /home /Backup
+sudo rsync -aAXv --delete --exclude={"/home/oyinbra/.local/share/Trash/","/home/oyinbra/Downloads/","/home/oyinbra/.docker/"} /home /Backup
 
 # ------------------------------------------------------
 # Backup important directory
@@ -35,7 +35,7 @@ sudo rsync -aAXv --delete --exclude={"/home/oyinbra/.local/share/Trash/","/home/
 directories=(
     "/root"
     "/usr"
-    "/var"
+    "/var/cache/pacman/pkg"
 )
 
 for directory in "${directories[@]}"; do
