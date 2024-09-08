@@ -16,7 +16,7 @@ alias metalist="qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.
 alias metakrunner='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.krunner,/App,,toggleDisplay" && metareload'
 alias metalauncher='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu" && metareload'
 alias metaexposeall='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,ExposeAll" && metareload'
-alias metadisable='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta ""'
+alias metadisable='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "" && metareload'
 # Windows overview
 alias metaoverview='kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview" && metareload'
 # Check swapp value 
@@ -72,7 +72,8 @@ alias zxacf="nvim ~/Dotfiles/etc/auto-cpufreq.conf"
 # Update Grub
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 # Log out
-alias logout="qdbus org.kde.ksmserver /KSMServer logout 0 0 0"
+alias logout="qdbus org.kde.KWin /Session org.kde.KWin.Session.quit"
+# alias logout="qdbus org.kde.ksmserver /KSMServer logout 0 0 0"
  # List npm package owners
 alias npm.owner="ls -la $(npm root -g)"
  # List npm packages

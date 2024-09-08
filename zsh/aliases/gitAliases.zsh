@@ -74,17 +74,13 @@ alias grvh="git revert HEAD"
 # Unstaged changes when used with options or specific files/folders
 alias gr="git reset"
 
-# Create a new commit to undo changes of last commit and deleting it from history
-alias grh-1="git reset HEAD~1"
-alias grh-2="git reset HEAD~2"
-alias grh-3="git reset HEAD~3"
+# Delete remote commit and set local to current head after deleting head.
+alias grhh-1="git reset --hard HEAD~1"
+alias grhh-2="git reset --hard HEAD~2"
+alias grhh-3="git reset --hard HEAD~3"
 
-# Reset local branch to origin main branch
-alias grm="git reset --hard origin/main"
-
-# Create a new commit to undo changes of last commit and delete unstaged changes
-alias grshh="git reset --hard HEAD~1"
-
+# Reset Local to Remote in branch main 
+alias grl2r="git fetch origin && git reset --hard origin/main && git clean -fd"
 # Check the remote link
 alias gl="git remote -v"
 # Set fetch url for remote origin 

@@ -13,10 +13,10 @@ alias deploy="yay -S"
 alias purge="yay -R"
 
 # Update the package list with 'yay'
-alias update="yay -Sy"
+alias aur="yay"
 
 # Upgrade installed packages with 'yay'
-alias upgrade="yay"
+alias arch="sudo pacman -Syu"
 
 # Refresh the file database with 'yay'
 alias refresh="yay -Fy"
