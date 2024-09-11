@@ -11,7 +11,7 @@ cat << "EOF"
 EOF
 
 # ------------------------------------------------------
-# Load library from modules directory in Dotfiles
+# Load library from modules directory in dotfiles
 # ------------------------------------------------------
 source $(dirname "$0")/modules/library.sh
 clear
@@ -58,14 +58,14 @@ check_and_create_config_directory() {
 # Create symbolic links for zsh shell configurations
 # ------------------------------------------------------
 # FUNCTION      NAME          SOURCE                        TARGET
-_installSymLink ".zshrc" "$HOME/Dotfiles/zsh/.zshrc" "$HOME/.zshrc"
-_installSymLink "zsh" "$HOME/Dotfiles/zsh" "$HOME/.config/.zsh"
+_installSymLink ".zshrc" "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+_installSymLink "zsh" "$HOME/dotfiles/zsh" "$HOME/.zsh"
 
 # ------------------------------------------------------
 # install a symbolic link for neofetch
 # ------------------------------------------------------
 # FUNCTION      NAME          SOURCE                        TARGET
-_installSymLink "neofetch" "$HOME/Dotfiles/zsh/usr/bin/neofetch" "/usr/bin/neofetch"
+_installSymLink "neofetch" "$HOME/dotfiles/zsh/usr/bin/neofetch" "/usr/bin/neofetch"
 clear
 
 # ------------------------------------------------------
@@ -121,6 +121,11 @@ if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
 else
     echo "Command execution aborted."
 fi
+
+# -----------------------------------------
+# Restore figlet fonts
+# -----------------------------------------
+sudo cp -r ~/dotfiles/usr/share/figlet/* /usr/share/figlet/fonts
 
 # -----------------------------------------
 # Done

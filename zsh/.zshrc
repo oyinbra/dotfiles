@@ -83,3 +83,6 @@ for file in "$ZSH_CONFIG_DIR/aliases/"*.zsh; do source "$file"; done
 [[ ! -f "$P10K_CONFIG" ]] || source "$P10K_CONFIG"
 
 # eval "$(starship init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

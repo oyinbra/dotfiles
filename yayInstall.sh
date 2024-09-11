@@ -47,7 +47,7 @@ else
     git clone https://aur.archlinux.org/yay-git.git "$TMP_DIR/yay-git"
     cd "$TMP_DIR/yay-git"
     makepkg -si
-    cd "$HOME/Dotfiles/"
+    cd "$HOME/dotfiles/"
     clear
     echo "yay has been installed successfully."
 fi
