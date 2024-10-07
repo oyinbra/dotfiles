@@ -81,8 +81,8 @@ alias paclast='if [ -f /var/log/pacman.log ]; then expac --timefmt="%Y-%m-%d %T"
 # -------------------------------------------
 # FLATPAK
 # -------------------------------------------
-alias flatins="flatpak install flathub"
-alias flatrem="flatpak remove"
+alias fdeploy="flatpak install"
+alias fpurge="flatpak uninstall"
 
 # -------------------------------------------
 # SNAP

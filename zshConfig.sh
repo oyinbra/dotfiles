@@ -62,6 +62,16 @@ _installSymLink ".zshrc" "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 _installSymLink "zsh" "$HOME/dotfiles/zsh" "$HOME/.zsh"
 
 # ------------------------------------------------------
+# Create symbolic links for zsh root shell configurations
+# ------------------------------------------------------
+# FUNCTION      NAME          SOURCE                        TARGET
+_installSymLink ".zshrc" "$HOME/dotfiles/zsh/.zshrc" "/root/.zshrc"
+_installSymLink "zsh" "$HOME/dotfiles/zsh" "/root/.zsh"
+_installSymLink ".env" "$HOME/.env" "/root/.env"
+_installSymLink ".env" "$HOME/.zsh-plugins" "/root/zsh-plugins"
+_installSymLink ".zshrc" "$HOME/dotfiles/zsh/p10k-root/.p10k.zsh" "/root/.p10k"
+
+# ------------------------------------------------------
 # install a symbolic link for neofetch
 # ------------------------------------------------------
 # FUNCTION      NAME          SOURCE                        TARGET

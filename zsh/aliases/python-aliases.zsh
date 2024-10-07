@@ -21,7 +21,7 @@ myenv() {
 }
 
 # Python alias
-alias py="python"
+# alias py="python"
 
 # Run python app
 alias pyapp="python app.py"
@@ -38,4 +38,15 @@ alias pipug="pip3 install --upgrade"
 
 # Switch Python Version
 alias zxpython="sudo update-alternatives --config python3"
+
+# Run python
+p() {
+    local file
+    file=$( (echo "main.py"; find . -type f -name "*.py" ! -path "./myenv/*" ! -path "./__pycache__/*" ! -name "main.py" | sed 's|^\./||') | fzf --preview "bat --style=numbers --color=always --line-range :500 {}" --height 40% --border --ansi)
+    if [[ -n "$file" ]]; then
+        python "$file"
+    else
+        echo "No file selected"
+    fi
+}
 

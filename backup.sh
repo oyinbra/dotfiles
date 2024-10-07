@@ -33,9 +33,10 @@ sudo rsync -aAXv --delete --exclude={"/home/oyinbra/.local/share/Trash/","/home/
 # Backup important directory
 # ------------------------------------------------------
 directories=(
-    "/root"
-    "/usr"
-    "/var/cache/pacman/pkg"
+    # "/root"
+    # "/usr"
+    # "/var/cache/pacman/pkg"
+    "/var/spool/cron"
 )
 
 for directory in "${directories[@]}"; do

@@ -11,10 +11,10 @@
 # -------------------------------------------------------
 NEOFETCH_CONFIG="$HOME/.zsh/.neofetch-config.conf"
 ZSH_CONFIG_DIR="$HOME/.zsh"
+ZSH_PLUGIN_MANAGER="$HOME/.zsh/plugin-manager/init.zsh"
 ENV_FILE="$HOME/.env"
 ZSH_PLUGIN_DIR="$HOME/.zsh-plugins"
 OMZ_PLUGIN_DIR="$HOME/.zsh-plugins/ohmyzsh/plugins"
-ZSH_PLUGIN_MANAGER="$HOME/.zsh/plugin-manager/init.zsh"
 P10K_CONFIG="$HOME/.p10k.zsh"
 
 # -------------------------------------------------------

@@ -70,3 +70,14 @@ zle_highlight=('paste:none')
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# -------------------------------------------------------
+# Golang environment variables
+# -------------------------------------------------------
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+
+# -------------------------------------------------------
+# Update PATH to include GOPATH and GOROOT binaries
+# -------------------------------------------------------
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
+
