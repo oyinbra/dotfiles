@@ -23,12 +23,13 @@ alias rm="rm -rf"
 alias cp="cp -r"
 
 # File Listing (with eza)
-alias ls='eza -h --icons=auto'
-alias la='eza -a --icons=auto --sort=name --group-directories-first'
-alias l='eza -1 --icons=auto'
-alias ll='eza -lh --icons=auto'
-alias lv='eza -lha --icons=auto --sort=name --group-directories-first'
-alias ld='eza -lhD --icons=auto'
+alias list-row='eza -h --icons=auto'
+alias list-all-row='eza -a --icons=auto --sort=name --group-directories-first'
+alias list='eza -1 --icons=auto'
+alias list-all='eza -a --icons=auto --sort=name --group-directories-first -1'
+alias list-details='eza -lh --icons=auto'
+alias list-all-details='eza -lha --icons=auto --sort=name --group-directories-first'
+alias list-dir='eza -lhD --icons=auto'
 
 # Process Management
 alias listen.port="sudo lsof -i -P -n | grep LISTEN"

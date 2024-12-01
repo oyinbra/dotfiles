@@ -8,6 +8,7 @@ kernel() {
     ["List all installed kernels"]="pacman -Q | grep linux"
     ["Remove old kernels"]="sudo pacman -Rns $(pacman -Qdtq)"
     ["Update initramfs"]="sudo mkinitcpio -P"
+    ["Update GRUB"]="sudo grub-mkconfig -o /boot/grub/grub.cfg"
     ["Update grub and initramfs"]="sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo mkinitcpio -P"
     ["Install latest kernel"]="sudo pacman -Syu linux"
     ["Install Zen kernel"]="sudo pacman -S linux-zen linux-zen-headers"

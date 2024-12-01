@@ -1,3 +1,7 @@
 # Igonre git
 git/.git-credentials
 git/.gitconfig
+
+# Ignore the droid-aliases.zsh file
+droid-aliases.zsh
+

@@ -6,40 +6,29 @@
 # █   █  █  █ █ █ █ █ █ █ █   ███ █    █  ███   █ █     █
 # █   █ ███ █ █ █ █ ███ █ █   █ █ ███ ███ █ █ ███ ███ ███
 
-# -------------------------------------------
-# Configure Arch mirror list
-# -------------------------------------------
-alias zxarch.mirror="sudo vim /etc/pacman.d/mirrorlist"
+mirror() {
+  # Define an associative array with mirror-related commands as keys and corresponding commands as values
+  declare -A commands=(
+    ["Reflector Update Fastest Mirror Worldwide"]="sudo reflector --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+    ["Reflector Update 30 Fastest Mirror Worldwide"]="sudo reflector --protocol https --sort rate --number 30 --save /etc/pacman.d/mirrorlist"
+    ["Rate Update Manjaro Mirrors"]="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
+    ["Rate Update EndeavourOS Mirrors"]="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"
+    ["Rank Current Mirrors"]="rankmirrors /etc/pacman.d/mirrorlist"
+    ["EndeavourOS Mirror List"]="sudo nvim /etc/pacman.d/endeavouros-mirrorlist"
+    ["Arch Mirror List"]="sudo nvim /etc/pacman.d/mirrorlist"
+    ["Chaotic Mirror List"]="sudo nvim /etc/pacman.d/chaotic-mirrorlist"
+    ["Configure pacman.conf"]="sudo nvim /etc/pacman.conf"
+    ["Quit"]=": # Do nothing"
+  )
 
-# -------------------------------------------
-# Update Arch Mirrors
-# -------------------------------------------
-alias mirror="sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+  # Use fzf to display the options and store the selection
+  local choice=$(printf "%s\n" "${(@k)commands}" | fzf --height 10 --prompt "Select a mirror command: " --border)
 
-alias mirrorv="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
-
-alias rate.arch="rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist"
-
-# -------------------------------------------
-# Configure EndeavourOS Mirror List
-# -------------------------------------------
-alias zxendeavouros.mirror="sudo vim /etc/pacman.d/endeavouros-mirrorlist"
-
-# -------------------------------------------
-# Configure Chaotic Mirror List
-# -------------------------------------------
-alias zxchaotic.mirror="sudo vim /etc/pacman.d/chaotic-mirrorlistt"
-
-# -------------------------------------------
-# Update Manjaro Mirrors
-# -------------------------------------------
-alias rate.manjaro="rate-mirrors --allow-root --protocol https manjaro | sudo tee /etc/pacman.d/mirrorlist"
-
-# -------------------------------------------
-# Update EndeavourOS mirror
-# -------------------------------------------
-alias rate.endeavouros="rate-mirrors --allow-root --protocol https endeavouros | sudo tee /etc/pacman.d/endeavouros-mirrorlist"
+  # Execute the corresponding command based on the selection
+  if [[ -n $choice ]]; then
+    eval "${commands[$choice]}"
+  else
+    echo "Invalid option. Please choose a valid command."
+  fi
+}
 

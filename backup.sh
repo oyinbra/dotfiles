@@ -36,6 +36,7 @@ directories=(
     # "/root"
     # "/usr"
     # "/var/cache/pacman/pkg"
+    "/etc/pacman.d"
     "/var/spool/cron"
 )
 
