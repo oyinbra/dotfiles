@@ -6,7 +6,7 @@
 # █ █  █   █    ███ █    █  ███   █ █     █
 # ███ ███  █    █ █ ███ ███ █ █ ███ ███ ███
 
-g() {
+vcg() {
   # Define an associative array with Git commands
   declare -A commands=(
     ["Initialize New Git Repository"]="git init"
