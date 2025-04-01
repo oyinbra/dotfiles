@@ -33,8 +33,12 @@ alias list-dir='eza -lhD --icons=auto'
 
 # Process Management
 alias listen.port="sudo lsof -i -P -n | grep LISTEN"
-alias frp="ps aux | grep -i"
-alias fpid="ps -ef | grep -i"
+alias fpid="ps aux | grep -i"
+alias kpid="kill -9"
+nuke() {
+  kill -9 $(ps aux | grep "[${1:0:1}]${1:1}" | awk '{print $2}')
+}
+# alias fpid="ps -ef | grep -i"
 
 # File Searching
 alias f="ls -a | fzf -i"

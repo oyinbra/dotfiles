@@ -1,12 +1,13 @@
 
 #!/bin/zsh
 
-acf() {
+cpu() {
   # Define an associative array with command names as keys and corresponding commands as values
   declare -A commands=(
     ["View CPU Stats"]="sudo auto-cpufreq --stats"
     ["Start Auto-CPUFreq"]="sudo auto-cpufreq --install"
     ["Stop Auto-CPUFreq"]="sudo auto-cpufreq --remove"
+    ["Edit Auto-CPUFreq Config"]="sudo nvim /etc/auto-cpufreq.conf"
     ["Edit Optimus Manager Config"]="nvim /usr/share/optimus-manager.conf"
     ["Quit"]=": # Do nothing"
   )
@@ -16,6 +17,7 @@ acf() {
     "View CPU Stats"
     "Start Auto-CPUFreq"
     "Stop Auto-CPUFreq"
+    "Edit Auto-CPUFreq Config"
     "Edit Optimus Manager Config"
     "Quit"
   )
