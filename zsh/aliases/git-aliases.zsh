@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-vcg() {
+gvc() {
   # Define an associative array with emoji-labeled Git commands
   declare -A commands=(
     ["🆕 Initialize New Git Repository"]="git init"
@@ -10,7 +10,7 @@ vcg() {
     ["💬 Commit with Message"]="git_commit"
     ["✏️ Amend Last Commit Message"]="git_amend_commit"
     ["🌐 Add Remote Origin"]="git_remote_add"
-    ["🌲 Set Default Branch to Main"]="git branch -M main"
+    ["🌲 Set Default Branch to main"]="git branch -M main"
     ["🚀 Push Initial Commit to Origin"]="git push -u origin main"
     ["📤 Push to Current Branch"]="git push"
     ["💣 Force Push to Current Branch"]="git push -f"

@@ -1,9 +1,38 @@
+#!/bin/zsh
+
+# Function to update a specific section of auto-cpufreq.conf
+change_cpu_mode() {
+  local mode=$1        # Governor mode: performance, powersave, etc.
+  local section=$2     # charger or battery
+  local conf="/etc/auto-cpufreq.conf"
+
+  # Map governor → energy preference
+  local preference
+  case $mode in
+    performance) preference="performance" ;;
+    schedutil|ondemand) preference="balance_performance" ;;
+    conservative|powersave) preference="power" ;;
+    *) preference="default" ;;
+  esac
+
+  sudo sed -i "/^\[$section\]/,/^\[.*\]/ {
+    s/^governor = .*/governor = $mode/
+    s/^energy_performance_preference = .*/energy_performance_preference = $preference/
+    s/^turbo = .*/turbo = never/
+  }" $conf
+
+  echo "✅ [$section] governor set to $mode (energy_pref: $preference)"
+}
+
+# Main interactive CPU menu
 cpu() {
   local options=(
+    # View actions
     "📊 View CPU Stats"
     "🔍 Check CPU Governor"
     "🛠 Edit Auto-CPUFreq Config (System)"
 
+    # Charger governor options
     "🔌 Set Charger Governor: performance"
     "🔌 Set Charger Governor: schedutil"
     "🔌 Set Charger Governor: userspace"
@@ -11,6 +40,7 @@ cpu() {
     "🔌 Set Charger Governor: conservative"
     "🔌 Set Charger Governor: powersave"
 
+    # Battery governor options
     "🔋 Set Battery Governor: performance"
     "🔋 Set Battery Governor: schedutil"
     "🔋 Set Battery Governor: userspace"
@@ -18,10 +48,11 @@ cpu() {
     "🔋 Set Battery Governor: conservative"
     "🔋 Set Battery Governor: powersave"
 
+    # Exit
     "🚪 Quit"
   )
 
-  local choice=$(printf "%s\n" "${options[@]}" | fzf --height 20 --prompt "⚙️  Select CPU Mode: " --border)
+  local choice=$(printf "%s\n" "${options[@]}" | fzf --height 20 --prompt "⚙️  Select CPU Option: " --border)
 
   case $choice in
     "📊 View CPU Stats") sudo auto-cpufreq --stats ;;
