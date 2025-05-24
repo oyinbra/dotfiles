@@ -1,42 +1,42 @@
 #!/bin/zsh
 
 db() {
-  # Define an associative array with PostgreSQL commands
+  # Define an associative array with PostgreSQL commands + emojis
   declare -A commands=(
-    ["Show Network Interfaces"]="ip addr show"
-    ["Start PostgreSQL"]="sudo systemctl start postgresql"
-    ["Stop PostgreSQL"]="sudo systemctl stop postgresql"
-    ["Restart PostgreSQL"]="sudo systemctl restart postgresql"
-    ["Check PostgreSQL Status"]="sudo systemctl status postgresql"
-    ["Enable PostgreSQL on Startup"]="sudo systemctl enable postgresql"
-    ["Disable PostgreSQL on Startup"]="sudo systemctl disable postgresql"
-    ["Log into PostgreSQL"]="psql -U oyinbra -d postgres"
-    ["Log into Specific Database"]="log_into_database"
-    ["List Databases"]="psql -U oyinbra -c '\l'"
-    ["Create New Database"]="create_database"
-    ["Drop Database"]="drop_database"
-    ["Create New User"]="create_user"
-    ["Change User Password"]="change_user_password"
-    ["List Tables in Database"]="list_tables"
-    ["Backup Database"]="backup_database"
-    ["Restore Database"]="restore_database"
-    ["Show Active Connections"]="psql -U oyinbra -c 'SELECT * FROM pg_stat_activity;'"
-    ["Quit"]=": # Quit the function"
+    ["🌐 Show Network Interfaces"]="ip addr show"
+    ["▶️ Start PostgreSQL"]="sudo systemctl start postgresql"
+    ["⏹ Stop PostgreSQL"]="sudo systemctl stop postgresql"
+    ["🔄 Restart PostgreSQL"]="sudo systemctl restart postgresql"
+    ["📊 Check PostgreSQL Status"]="sudo systemctl status postgresql"
+    ["📌 Enable PostgreSQL on Startup"]="sudo systemctl enable postgresql"
+    ["📴 Disable PostgreSQL on Startup"]="sudo systemctl disable postgresql"
+    ["🔐 Log into PostgreSQL"]="psql -U oyinbra -d postgres"
+    ["🔓 Log into Specific Database"]="log_into_database"
+    ["📋 List Databases"]="psql -U oyinbra -c '\\l'"
+    ["➕ Create New Database"]="create_database"
+    ["🗑 Drop Database"]="drop_database"
+    ["👤 Create New User"]="create_user"
+    ["🔑 Change User Password"]="change_user_password"
+    ["📂 List Tables in Database"]="list_tables"
+    ["💾 Backup Database"]="backup_database"
+    ["♻️ Restore Database"]="restore_database"
+    ["🔍 Show Active Connections"]="psql -U oyinbra -c 'SELECT * FROM pg_stat_activity;'"
+    ["🚪 Quit"]=": # Quit the function"
   )
 
-  # Helper functions for commands requiring additional input
+  # Helper functions
   create_database() {
     echo "Enter the name of the new database: "
     read dbname
     psql -U oyinbra -c "CREATE DATABASE $dbname;"
-    echo "Database '$dbname' created."
+    echo "✅ Database '$dbname' created."
   }
 
   drop_database() {
     echo "Enter the name of the database to drop: "
     read dbname
     psql -U oyinbra -c "DROP DATABASE $dbname;"
-    echo "Database '$dbname' dropped."
+    echo "❌ Database '$dbname' dropped."
   }
 
   create_user() {
@@ -45,7 +45,7 @@ db() {
     echo "Enter the password for the new user: "
     read -s password
     psql -U oyinbra -c "CREATE USER $username WITH PASSWORD '$password';"
-    echo -e "\nUser '$username' created."
+    echo -e "✅ User '$username' created."
   }
 
   change_user_password() {
@@ -54,13 +54,13 @@ db() {
     echo "Enter the new password: "
     read -s password
     psql -U oyinbra -c "ALTER USER $username WITH PASSWORD '$password';"
-    echo -e "\nPassword for user '$username' changed."
+    echo -e "🔑 Password for user '$username' changed."
   }
 
   list_tables() {
     echo "Enter the database name: "
     read dbname
-    psql -U oyinbra -d "$dbname" -c "\dt"
+    psql -U oyinbra -d "$dbname" -c "\\dt"
   }
 
   backup_database() {
@@ -69,7 +69,7 @@ db() {
     echo "Enter the path to save the backup (e.g., /path/to/backup.sql): "
     read filepath
     pg_dump -U oyinbra -d "$dbname" -F c -f "$filepath"
-    echo "Backup of '$dbname' saved to '$filepath'."
+    echo "💾 Backup of '$dbname' saved to '$filepath'."
   }
 
   restore_database() {
@@ -78,7 +78,7 @@ db() {
     echo "Enter the name of the database to restore to: "
     read dbname
     pg_restore -U oyinbra -d "$dbname" -1 "$filepath"
-    echo "Database '$dbname' restored from '$filepath'."
+    echo "♻️ Database '$dbname' restored from '$filepath'."
   }
 
   log_into_database() {
@@ -88,16 +88,13 @@ db() {
   }
 
   while true; do
-    # Use fzf to display the commands and store the selection
-    local choice=$(printf "%s\n" "${(@k)commands}" | fzf --height 10 --prompt "Select a PostgreSQL command (or Quit): " --border)
+    local choice=$(printf "%s\n" "${(@k)commands}" | fzf --height 20 --prompt "🐘 Select a PostgreSQL Command: " --border)
 
-    # If no command is selected or 'Quit' is chosen, exit the loop
-    if [[ -z "$choice" || "$choice" == "Quit" ]]; then
-      echo "Exiting PostgreSQL Command Manager."
+    if [[ -z "$choice" || "$choice" == "🚪 Quit" ]]; then
+      echo "👋 Exiting PostgreSQL Command Manager."
       break
     fi
 
-    # Execute the selected command
     eval "${commands[$choice]}"
   done
 }
