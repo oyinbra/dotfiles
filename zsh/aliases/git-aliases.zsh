@@ -1,7 +1,6 @@
-
 #!/bin/zsh
 
-ginit() {
+vc() {
   # Define an associative array with emoji-labeled Git commands
   declare -A commands=(
     ["🆕 Initialize New Git Repository"]="git init"
@@ -12,7 +11,7 @@ ginit() {
     ["✏️ Amend Last Commit Message"]="git_amend_commit"
     ["🌐 Add Remote Origin"]="git_remote_add"
     ["🌲 Set Default Branch to main"]="git branch -M main"
-    ["🚀 Push Initial Commit to Origin"]="git push -u origin main"
+    ["🚀 Push Initial Commit to Origin main"]="git push -u origin main"
     ["💣 Force Push to Current Branch"]="git push -f"
     ["🔍 Check Git Status"]="git status"
     ["🌿 List Git Branches"]="git branch"
@@ -46,15 +45,20 @@ ginit() {
   git_commit() {
     local msg
     echo -n "Enter commit message: "
-    read msg
-    [[ -z "$msg" ]] && echo "Aborting commit due to empty message." && return 1
+    # Ensure that paste + Enter works correctly
+    read -r msg
+    # If the message is empty, abort
+    if [[ -z "$msg" ]]; then
+      echo "Aborting commit due to empty message."
+      return 1
+    fi
     git commit -m "$msg"
   }
 
   git_amend_commit() {
     local msg
     echo -n "Enter new commit message: "
-    read msg
+    read -r msg
     [[ -z "$msg" ]] && echo "Aborting amend due to empty message." && return 1
     git commit --amend -m "$msg"
   }
@@ -197,3 +201,4 @@ ginit() {
     eval "${commands[$choice]}"
   done
 }
+

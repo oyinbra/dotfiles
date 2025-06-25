@@ -69,10 +69,10 @@ alias free='free -m' # show sizes in MB
 alias logout="qdbus org.kde.KWin /Session org.kde.KWin.Session.quit"
 alias q="exit"
 alias hibernate="systemctl hibernate"
-# alias suspend="systemctl suspend"
+alias suspend="systemctl suspend"
 # alias suspend="systemctl suspend -i"
-# alias suspend='sudo /bin/systemctl suspend -i'
-alias suspend='sudo /usr/bin/systemctl suspend -i'
+alias suspend-i='sudo /bin/systemctl suspend -i'
+# alias suspend='sudo /usr/bin/systemctl suspend -i'
 
 # Magic Slack (Utility)
 alias magic.slack="while sleep .1; do ps aux | grep slack | grep -v grep | grep magic; done"
