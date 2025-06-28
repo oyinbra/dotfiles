@@ -1,5 +1,9 @@
 #!/bin/bash
+set -euo pipefail
 
+# -------------------------
+# Fancy ASCII Header
+# -------------------------
 cat << "EOF"
  _____                             _           _
 | ____|_ __   ___ _ __ _   _ _ __ | |_ ___  __| |
@@ -9,33 +13,51 @@ cat << "EOF"
                        |___/|_|
 EOF
 
-# -----------------------------------------
-# Create a mount point
-# -----------------------------------------
-MOUNT_POINT="/Backup"
+# -------------------------
+# Config
+# -------------------------
+DEVICE="/dev/nvme0n1p5"
+MAPPER_NAME="encrypted_backup"
+MOUNT_POINT="/backup"
+CRYPTTAB="/etc/crypttab"
+FSTAB="/etc/fstab"
+USERNAME="oyinbra"
+GROUPNAME="oyinbra"
+
+# -------------------------
+# Ensure mount point exists
+# -------------------------
 sudo mkdir -p "$MOUNT_POINT"
 
-# Add an entry to /etc/crypttab to automatically unlock the encrypted partition during boot
-CRYPT_TAB_ENTRY="encrypted_backup /dev/nvme0n1p5 none"
-echo "$CRYPT_TAB_ENTRY" | sudo tee -a /etc/crypttab
+# -------------------------
+# Append to /etc/crypttab if not already present
+# -------------------------
+CRYPT_ENTRY="$MAPPER_NAME $DEVICE none"
+if ! grep -q "^$CRYPT_ENTRY" "$CRYPTTAB"; then
+  echo "$CRYPT_ENTRY" | sudo tee -a "$CRYPTTAB" > /dev/null
+fi
 
-# Add an entry to /etc/crypttab to automatically unlock the encrypted partition during boot
-FSTAB_ENTRY="/dev/mapper/encrypted_backup $MOUNT_POINT btrfs defaults 0 0"
-echo "$FSTAB_ENTRY" | sudo tee -a /etc/fstab
+# -------------------------
+# Append to /etc/fstab if not already present
+# -------------------------
+FSTAB_ENTRY="/dev/mapper/$MAPPER_NAME $MOUNT_POINT btrfs defaults 0 0"
+if ! grep -q "^/dev/mapper/$MAPPER_NAME " "$FSTAB"; then
+  echo "$FSTAB_ENTRY" | sudo tee -a "$FSTAB" > /dev/null
+fi
 
-# Optionally, set permissions on the mount point to allow regular users to access it
-sudo chmod 777 "$MOUNT_POINT"
-# Replace oyinbra:oyinbra with your own username
-sudo chown -R oyinbra:oyinbra "$MOUNT_POINT"
+# -------------------------
+# Permissions
+# -------------------------
+sudo chown -R "$USERNAME:$GROUPNAME" "$MOUNT_POINT"
+sudo chmod 755 "$MOUNT_POINT"
 
-# -----------------------------------------
+# -------------------------
 # Done
-# -----------------------------------------
+# -------------------------
 cat << "EOF"
  ____   ___  _   _ _____
 |  _ \ / _ \| \ | | ____|
 | | | | | | |  \| |  _|
 | |_| | |_| | |\  | |___
 |____/ \___/|_| \_|_____|
-
 EOF
