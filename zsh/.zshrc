@@ -20,7 +20,10 @@ P10K_CONFIG="$HOME/.p10k.zsh"
 # -------------------------------------------------------
 # Source username
 # -------------------------------------------------------
-figlet -f dosrebel "$(echo $USER | tr '[:lower:]' '[:upper:]' | head -c 1)${USER:1}" | lolcat
+FIGFONTDIR="$HOME/dotfiles/usr/share/figlet"
+figlet -d "$FIGFONTDIR" -f dosrebel "$(echo $USER | tr '[:lower:]' '[:upper:]' | head -c 1)${USER:1}" | lolcat
+
+# figlet -f dosrebel "$(echo $USER | tr '[:lower:]' '[:upper:]' | head -c 1)${USER:1}" | lolcat
 
 gsource=(
   # -----------------------------------------------------
@@ -29,7 +32,8 @@ gsource=(
   "zsh-users/zsh-autosuggestions" 
   "zsh-users/zsh-syntax-highlighting" # Syntax highlighting for Zsh
   "zsh-users/zsh-history-substring-search"
-  "oyinbra/supercharge" # Supercharge Zsh with directory completions
+  # "oyinbra/supercharge" # Supercharge Zsh with directory completions
+  "zap-zsh/supercharge" # Supercharge Zsh with directory completions
   "oyinbra/ginit" # Supercharge git init
   "zap-zsh/vim" # Vim integration for Zsh
   "zap-zsh/fzf" # Fuzzy finder for Zsh

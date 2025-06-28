@@ -29,22 +29,26 @@ EOF
 # ------------------------------------------------------
 # Confirm Start
 # ------------------------------------------------------
-confirm_start
+# confirm_start
+confirm_start() {
+    read -p "Proceed with package installation? [y/N]: " choice
+    [[ "$choice" == [Yy]* ]] || exit 1
+}
 
 packagesPacman=(
     "deluge"
     "obsidian"
     "deluge-gtk"
     "noto-fonts-emoji"
-    "gnome-characters"
-    "openoffice-bin"
-    "freeoffice"
-    "wine"
+    # "gnome-characters"
+    # "openoffice-bin"
+    # "freeoffice"
+    # "wine"
     "xf86-video-intel"
     "mesa"
-    "wine-gecko"
-    "winetricks"
-    "wine-mono"
+    # "wine-gecko"
+    # "winetricks"
+    # "wine-mono"
     # "bottle"
     # "transmission-qt"
     # "qbittorrent"
@@ -66,8 +70,8 @@ packagesPacman=(
     "sxhkd"
     "webapp-manager"
     "expac"
-  "dbeaver"
-  "mysql-workbench"
+  # "dbeaver"
+  # "mysql-workbench"
 #   "marktext"
     "haruna"
     "electron"
@@ -78,7 +82,7 @@ packagesPacman=(
     "yarn"
     "sass"
     "zsh"
-    "spotify"
+    # "spotify"
     # "kdeplasma-addons"
     "grub-btrfs"
     # "microsoft-edge-dev-bin"
@@ -111,8 +115,8 @@ packagesPacman=(
 #   "latte-dock"
     "nano-syntax-highlighting"
 #   "alacritty"
-    "chromium"
-    "obs-studio"
+    # "chromium"
+    # "obs-studio"
     "gparted"
     # "brave-bin"
 #   "jdk8-openjdk"
@@ -127,7 +131,7 @@ packagesPacman=(
     "xclip"
     "duf"
     "btop"
-#   "ksysguard"
+  "ksysguard"
     # "onlyoffice-bin"
 #   "libreoffice-fresh"
 #   "gthumb"
@@ -166,7 +170,7 @@ packagesPacman=(
 
 packagesYay=(
     # "webtorrent-cli"
-    # "mechvibes"
+    "mechvibes"
     # "frostwire"
     # "preload"
     # "tradingview"
