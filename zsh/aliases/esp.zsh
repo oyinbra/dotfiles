@@ -9,8 +9,7 @@ esp() {
     ["💀 Kill Espanso"]="pkill -9 espanso"
     ["📜 View Logs"]="espanso log"
     ["⚙️ Edit Config (nvim)"]="nvim ~/.config/espanso/config/default.yml"
-    ["🧩 Edit Matches"]="nvim ~/.config/espanso/match/config.yml"
-    ["🧵 Edit X Search Matches"]="nvim ~/.config/espanso/match/x_search.yml"
+    ["🧩 Edit Matches"]="edit_match"
     ["📦 Edit Packages"]="nvim ~/.config/espanso/match/packages"
     ["🔧 Doctor (Debug)"]="espanso doctor"
     ["🔁 Reload Config"]="espanso restart"
@@ -28,14 +27,59 @@ esp() {
 }
 
 add() {
-  echo "✏️ Copy and paste the new trigger entry below (in valid YAML format):"
-  echo "Example:"
-  echo "  - trigger: \";your_trigger\""
-  echo "    replace: \"Your replacement text\""
+  local match_dir="$HOME/.config/espanso/match"
+  local target=$(find "$match_dir" -type f -name '*.yml' | fzf --prompt="📄 Select target YAML: " --height=10)
+  local tmpfile=$(mktemp)
+
+  if [[ -z "$target" ]]; then
+    echo "❌ No file selected."
+    return 1
+  fi
+
+  echo "📄 Selected file: $target"
+  echo "🧠 You can add multiple triggers. Press ENTER on an empty trigger to finish."
   echo
-  echo "➕ Paste below (press CTRL+D when done):"
 
-  cat >> ~/.config/espanso/match/config.yml
+  while true; do
+    echo -n "🧵 Enter full trigger (e.g. ;sea or :g): "
+    read trigger
+    [[ -z "$trigger" ]] && break
 
-  echo "✅ Trigger added. Run 'espanso restart' to apply changes."
+    echo -n "💬 Enter replacement text: "
+    read replace
+
+    if [[ -z "$replace" ]]; then
+      echo "❌ Replace text cannot be empty."
+      continue
+    fi
+
+    # echo >> "$tmpfile"
+    echo "  - trigger: \"$trigger\"" >> "$tmpfile"
+    echo "    replace: \"$replace\"" >> "$tmpfile"
+    echo "✅ Buffered trigger \"$trigger\""
+  done
+
+  if [[ -s "$tmpfile" ]]; then
+    echo >> "$target"
+    cat "$tmpfile" >> "$target"
+    echo "📦 All triggers appended to $target"
+    echo "🔁 Run 'espanso restart' manually when ready."
+  else
+    echo "⚠️ No triggers were added."
+  fi
+
+  rm -f "$tmpfile"
 }
+
+edit_match() {
+  local match_dir="$HOME/.config/espanso/match"
+  local target=$(find "$match_dir" -type f -name '*.yml' | fzf --prompt="📝 Select YAML to edit: " --height=10)
+
+  if [[ -z "$target" ]]; then
+    echo "❌ No file selected."
+    return 1
+  fi
+
+  nvim "$target"
+}
+

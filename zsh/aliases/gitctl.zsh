@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-vc() {
+gitctl() {
   # Define an associative array with emoji-labeled Git commands
   declare -A commands=(
     ["🆕 Initialize New Git Repository"]="git init"
@@ -37,17 +37,16 @@ vc() {
     ["🌍 Configure Global Git Ignore"]="git_configure_global_ignore"
     ["🗒 Edit .gitignore in Current Directory"]="edit_repo_gitignore"
     ["🔑 Update Git Credential"]="git_update_credential"
+    ["🛠 Edit Git Credentials File"]="edit_git_credentials"
     ["🚪 Quit"]=": # Quit the function"
   )
 
-  # Helper functions for commands requiring input
+  # Helper functions
 
   git_commit() {
     local msg
     echo -n "Enter commit message: "
-    # Ensure that paste + Enter works correctly
     read -r msg
-    # If the message is empty, abort
     if [[ -z "$msg" ]]; then
       echo "Aborting commit due to empty message."
       return 1
@@ -154,39 +153,48 @@ vc() {
   }
 
   git_update_credential() {
-    # Prompt for just the GitHub token
-    local token
+    echo -n "Enter GitHub username: "
+    read -r username
+    if [[ -z "$username" ]]; then
+      echo "❌ Username is required. Aborting."
+      return 1
+    fi
+
     echo -n "Paste your GitHub token (e.g. ghp_abcd1234efgh5678ijkl90mnopqrstuvwx): "
-    read token
-    [[ -z "$token" ]] && echo "Aborting: No token entered." && return 1
+    read -r token
+    if [[ -z "$token" || ! "$token" =~ ^ghp_ ]]; then
+      echo "❌ Invalid or empty token. Aborting."
+      return 1
+    fi
 
-    # Get the GitHub username (you'll need to change this if your username is something else)
-    local username
-    username="$USER"  # Default to the shell's username, change if needed
+    local credential="https://$username:$token@github.com"
+    local cred_file="$HOME/.git-credentials"
 
-    # Construct the full Git credential URL
-    local token_url="https://$username:$token@github.com"
+    # Ensure credentials file exists
+    touch "$cred_file"
 
-    # Git credentials file location
-    local cred_file=~/.git-credentials
+    # Delete all GitHub entries (GNU sed for Linux)
+    sed -i '/github\.com/d' "$cred_file"
 
-    # Create the file if it doesn't exist
-    [[ -f "$cred_file" ]] || touch "$cred_file"
+    # Append new credential
+    echo "$credential" >> "$cred_file"
 
-    # Backup the original credentials file before modifying it
-    cp "$cred_file" "${cred_file}.bak"
+    # Enable Git credential store
+    git config --global credential.helper store
 
-    # Remove any existing credentials for this username
-    local escaped_username
-    escaped_username=$(printf '%s\n' "$username" | sed -e 's/[]\/$*.^[]/\\&/g')
+    echo "✅ GitHub credential for '$username' saved to $cred_file."
 
-    # Remove old credentials for this username
-    sed -i.bak "/^https:\/\/$escaped_username:/d" "$cred_file"
+    echo -n "Open $cred_file in nvim for review? (y/n): "
+    read -r confirm
+    if [[ "$confirm" =~ ^[Yy]$ ]]; then
+      nvim "$cred_file"
+    fi
+  }
 
-    # Append the new token URL
-    echo "$token_url" >> "$cred_file"
-
-    echo "✅ GitHub credential updated in $cred_file."
+  edit_git_credentials() {
+    local cred_file="$HOME/.git-credentials"
+    [[ -f "$cred_file" ]] || { echo "No credentials file found. Creating..."; touch "$cred_file"; }
+    nvim "$cred_file"
   }
 
   while true; do

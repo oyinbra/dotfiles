@@ -8,7 +8,13 @@
 
 # Figlet Fonts
 alias figfonts="showfigfonts"
+alias s="subl"
 
+ip-show() {
+  ip route get 1.1.1.1 | awk '{print $7}'
+}
+
+alias switch="sudo -i -u"
 # Swappiness
 alias swappiness="bat /proc/sys/vm/swappiness"
 alias swappiness.10='echo "vm.swappiness=10" | sudo tee --append "/etc/sysctl.conf"'
@@ -19,7 +25,8 @@ alias tsr="sudo timeshift --restore"
 
 # Directory Management
 alias mkdir="mkdir -p"
-alias rm="rm -rf"
+alias rf="rm -rf"
+alias rm="rm -r"
 alias cp="cp -r"
 
 # File Listing (with eza)
@@ -51,7 +58,7 @@ alias npm.installed="npm list -g --depth=0"
 alias npm.chown="sudo chown -R $USER $(npm root -g)"
 
 # Local user Backup
-alias backup="sudo /home/oyinbra/dotfiles/backup.sh"
+alias backup="sudo $HOME/dotfiles/backup.sh"
 alias ezsh="exec zsh"
 alias zz='zi'
 

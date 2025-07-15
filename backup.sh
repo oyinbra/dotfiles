@@ -1,55 +1,81 @@
+
 #!/bin/bash
 
-cat << "EOF"
+# File location: ~/dotfiles/backup.sh
 
-██  ███ ███ █ █ █ █ ███   ███ █ █ ███
-█ █ █ █ █   █ █ █ █ █ █   █   █ █ █
-██  █ █ █   ██  █ █ ███    █   █   █
-█ █ ███ █   █ █ █ █ █       █  █    █
-██  █ █ ███ █ █ ███ █     ███  █  ███
+set -euo pipefail
+IFS=$'\n\t'
 
-EOF
-
-# ------------------------------------------------------
-# Load library from modules directory in Dotfiles
-# ------------------------------------------------------
-source $(dirname "$0")/modules/library.sh
-clear
-
-cat << "EOF"
-▄▖▄▖▄▖▄▖▄▖  ▄▖▖▖▄▖  ▄ ▄▖▄▖▖▖▖▖▄▖
-▚ ▐ ▌▌▙▘▐   ▚ ▌▌▚   ▙▘▌▌▌ ▙▘▌▌▙▌
-▄▌▐ ▛▌▌▌▐   ▄▌▐ ▄▌  ▙▘▛▌▙▖▌▌▙▌▌
-
-EOF
-confirm_start
-
-# ------------------------------------------------------
-# Backup home directory
-# ------------------------------------------------------
-sudo rsync -aAXv --delete --exclude={"/home/oyinbra/.local/share/Trash/","/home/oyinbra/Downloads/","/home/oyinbra/.docker/"} /home /Backup
-
-# ------------------------------------------------------
-# Backup important directory
-# ------------------------------------------------------
-directories=(
-    # "/root"
-    # "/usr"
-    # "/var/cache/pacman/pkg"
-    "/etc/pacman.d"
-    "/var/spool/cron"
+# ───────────────────────────────────────────────────────────────
+# Config
+# ───────────────────────────────────────────────────────────────
+BACKUP_DIR="/backup"
+RSYNC_FLAGS=(-aAXv --delete)
+EXCLUDES=(
+  "$HOME/.local/share/Trash/"
+  "$HOME/Downloads/"
+  "$HOME/.docker/"
 )
 
-for directory in "${directories[@]}"; do
-    sudo rsync -aAXv "$directory" /Backup
+SYSTEM_DIRS=(
+  "/etc/pacman.d"
+  "/var/spool/cron"
+)
+
+# ───────────────────────────────────────────────────────────────
+# Exit if backup partition is not mounted
+# ───────────────────────────────────────────────────────────────
+if ! mountpoint -q "$BACKUP_DIR"; then
+  echo "[✘] Backup directory $BACKUP_DIR is not mounted. Aborting."
+  exit 1
+fi
+
+# ───────────────────────────────────────────────────────────────
+# Stylized banner
+# ───────────────────────────────────────────────────────────────
+cat << "EOF"
+▄▖▄▖▄▖▄▖▄▖  ▄▖▖▖▄▖  ▄ ▄▖▄▖▖▖▖▖▄▖
+▚ ▐ ▌▌▙▘▐   ▚ ▌▌▚   ▙▘▌▌▌ ▙▘▌▌▙▌
+▄▌▐ ▛▌▌▌▐   ▄▌▐ ▄▌  ▙▘▛▌▙▖▌▌▙▌▌
+EOF
+
+# ───────────────────────────────────────────────────────────────
+# Ensure backup directory exists (redundant if mounted, safe if not)
+# ───────────────────────────────────────────────────────────────
+sudo mkdir -p "$BACKUP_DIR"
+
+# ───────────────────────────────────────────────────────────────
+# Build exclude arguments
+# ───────────────────────────────────────────────────────────────
+EXCLUDE_ARGS=()
+for path in "${EXCLUDES[@]}"; do
+  EXCLUDE_ARGS+=(--exclude="$path")
 done
 
+# ───────────────────────────────────────────────────────────────
+# Backup home
+# ───────────────────────────────────────────────────────────────
+echo "[+] Backing up /home → $BACKUP_DIR"
+sudo rsync "${RSYNC_FLAGS[@]}" "${EXCLUDE_ARGS[@]}" /home "$BACKUP_DIR"
+
+# ───────────────────────────────────────────────────────────────
+# Backup system dirs
+# ───────────────────────────────────────────────────────────────
+for dir in "${SYSTEM_DIRS[@]}"; do
+  echo "[+] Backing up $dir → $BACKUP_DIR"
+  sudo rsync "${RSYNC_FLAGS[@]}" "$dir" "$BACKUP_DIR"
+done
+
+# ───────────────────────────────────────────────────────────────
+# Footer
+# ───────────────────────────────────────────────────────────────
 cat << "EOF"
 
-██  ███ █   █ ███
-█ █ █ █ ██  █ █
+██  ███ █   █ ███
+█ █ █ █ ██  █ █
 █ █ █ █ █ █ █ ███
-█ █ █ █ █  ██ █
-██  ███ █   █ ███
+█ █ █ █ █  ██ █
+██  ███ █   █ ███
 
+Backup completed successfully.
 EOF

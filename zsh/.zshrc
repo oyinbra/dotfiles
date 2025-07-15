@@ -88,5 +88,15 @@ for file in "$ZSH_CONFIG_DIR/aliases/"*.zsh; do source "$file"; done
 
 # eval "$(starship init zsh)"
 
+# force correct SSL chain
+export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+export PYTHON_CONFIGURE_OPTS="--with-openssl=/usr"
+export LDFLAGS="-L/usr/lib"
+export CPPFLAGS="-I/usr/include"
+
+. "$HOME/.asdf/asdf.sh"
+fpath=("$HOME/.asdf/completions" $fpath)
+autoload -Uz compinit && compinit
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

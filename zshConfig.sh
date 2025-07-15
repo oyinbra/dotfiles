@@ -129,24 +129,24 @@ clear
 # -----------------------------------------
 # Shell switching
 # -----------------------------------------
-if [ "$SHELL" = "/bin/zsh" ]; then
-    echo "💡 Shell is already Zsh."
-else
-    read -p "Do you want to change your shell to Zsh? (y/n, default: n): " choice
-    choice=${choice:-n}
-    if [[ "$choice" =~ ^[Yy]$ ]]; then
-        chsh -s /bin/zsh "$USER"
-        echo "✅ Shell changed to Zsh."
-    else
-        echo "ℹ️ Shell remains unchanged."
-    fi
-fi
+# if [ "$SHELL" = "/bin/zsh" ]; then
+#     echo "💡 Shell is already Zsh."
+# else
+#     read -p "Do you want to change your shell to Zsh? (y/n, default: n): " choice
+#     choice=${choice:-n}
+#     if [[ "$choice" =~ ^[Yy]$ ]]; then
+#         chsh -s /bin/zsh "$USER"
+#         echo "✅ Shell changed to Zsh."
+#     else
+#         echo "ℹ️ Shell remains unchanged."
+#     fi
+# fi
 
-# -----------------------------------------
-# Option to log into Zsh now
-# -----------------------------------------
-read -p "DO YOU WANT TO LOG INTO ZSH NOW? (y/n): " answer
-[[ "$answer" =~ ^[Yy]$ ]] && exec zsh || echo "Skipped Zsh login."
+# # -----------------------------------------
+# # Option to log into Zsh now
+# # -----------------------------------------
+# read -p "DO YOU WANT TO LOG INTO ZSH NOW? (y/n): " answer
+# [[ "$answer" =~ ^[Yy]$ ]] && exec zsh || echo "Skipped Zsh login."
 
 # -----------------------------------------
 # Restore figlet fonts
