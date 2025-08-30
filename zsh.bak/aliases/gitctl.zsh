@@ -58,7 +58,10 @@ gitctl() {
     local msg
     echo -n "Enter new commit message: "
     read -r msg
-    [[ -z "$msg" ]] && echo "Aborting amend due to empty message." && return 1
+    if [[ -z "$msg" ]]; then
+      echo "Aborting amend due to empty message."
+      return 1
+    fi
     git commit --amend -m "$msg"
   }
 
@@ -170,16 +173,10 @@ gitctl() {
     local credential="https://$username:$token@github.com"
     local cred_file="$HOME/.git-credentials"
 
-    # Ensure credentials file exists
     touch "$cred_file"
-
-    # Delete all GitHub entries (GNU sed for Linux)
     sed -i '/github\.com/d' "$cred_file"
-
-    # Append new credential
     echo "$credential" >> "$cred_file"
 
-    # Enable Git credential store
     git config --global credential.helper store
 
     echo "✅ GitHub credential for '$username' saved to $cred_file."

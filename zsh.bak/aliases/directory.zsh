@@ -8,7 +8,7 @@ dir() {
     ["📁 Dotfiles"]="cd ~/dotfiles"
     ["🧩 Hub"]="cd ~/Hub"
     ["🐱 Kitty Config"]="cd ~/.config/kitty/"
-    ["📦 Pacman Cache"]="cd /var/cache/pacman/pkg"
+    ["📦 Pacman Cache (PKG)"]="cd /var/cache/pacman/pkg"
     ["🎨 Alacritty Config"]="cd ~/.config/alacritty/"
     ["🖼 Pictures"]="cd ~/Pictures"
     ["📜 Aliases"]="cd ~/dotfiles/zsh/aliases"

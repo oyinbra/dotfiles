@@ -14,7 +14,7 @@ change_cpu_mode() {
     *) preference="default" ;;
   esac
 
-  sudo sed -i "/^\[$section\]/,/^\[.*\]/ {
+  sed -i "/^\[$section\]/,/^\[.*\]/ {
     s/^governor = .*/governor = $mode/
     s/^energy_performance_preference = .*/energy_performance_preference = $preference/
     s/^turbo = .*/turbo = never/
@@ -57,12 +57,12 @@ cpu() {
   local choice=$(printf "%s\n" "${options[@]}" | fzf --height 22 --prompt "⚙️  Select CPU Option: " --border)
 
   case $choice in
-    "📊 View CPU Stats") sudo auto-cpufreq --stats ;;
+    "📊 View CPU Stats") auto-cpufreq --stats ;;
     "🔍 Check CPU Governor") cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor ;;
-    "🛠 Edit Auto-CPUFreq Config (System)") sudo nvim /etc/auto-cpufreq.conf ;;
+    "🛠 Edit Auto-CPUFreq Config (System)") nvim /etc/auto-cpufreq.conf ;;
 
-    "▶️ Start Auto-CPUFreq") sudo auto-cpufreq --install ;;
-    "⏹ Stop Auto-CPUFreq") sudo auto-cpufreq --remove ;;
+    "▶️ Start Auto-CPUFreq") auto-cpufreq --install ;;
+    "⏹ Stop Auto-CPUFreq") auto-cpufreq --remove ;;
 
     "🔌 performance") change_cpu_mode performance charger ;;
     "🔌 schedutil") change_cpu_mode schedutil charger ;;

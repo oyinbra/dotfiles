@@ -41,11 +41,11 @@ add() {
   echo
 
   while true; do
-    echo -n "🧵 Enter full trigger (e.g. ;sea or :g): "
+    echo -n "🧵 Enter Trigger (e.g ;sea) or ENTER to Exit: "
     read trigger
     [[ -z "$trigger" ]] && break
 
-    echo -n "💬 Enter replacement text: "
+    echo -n "💬 Enter Replacment: "
     read replace
 
     if [[ -z "$replace" ]]; then

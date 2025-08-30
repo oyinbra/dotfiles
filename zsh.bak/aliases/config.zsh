@@ -14,6 +14,7 @@ conf() {
     ["📜 Edit Bash Config"]="nvim ~/.bashrc"
     ["🌍 Edit Environment Variables"]="sudo nvim /etc/environment"
     ["🏠 Edit Hosts File"]="sudo nvim /etc/hosts"
+    ["🌐 Edit AdGuard DNS Config"]="sudo nvim /etc/systemd/resolved.conf"
     ["💾 Edit FSTAB"]="sudo nvim /etc/fstab"
     ["🚪 Quit"]=": # Do nothing"
   )
